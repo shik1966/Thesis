@@ -1,0 +1,103 @@
+\chapter{Introduction}
+\label{chap:intro}
+
+\section{Background and Motivation} 
+\label{sec:background_motivation}
+
+Accurate delineation of anatomical structures and pathological regions in medical images is a fundamental task in computer-aided diagnosis and treatment planning. In particular, segmentation of brain tumors on magnetic resonance imaging (MRI) enables volumetric quantification, radiotherapy targeting, and surgical guidance. Manual segmentation by radiologists, while considered the gold standard, is time-consuming, labor-intensive, and subject to inter-observer variability. This has driven the need for automated segmentation methods that can provide consistent, accurate, and efficient tumor delineation.
+
+Early approaches to automated brain tumor segmentation relied on classical image processing techniques such as thresholding, region growing, and edge detection \cite{gonzalez2002digital}, combined with handcrafted features and traditional machine learning classifiers \cite{gordillo2013state}. However, these methods struggled with the high variability in tumor appearance, low contrast boundaries, heterogeneous tissue characteristics, and imaging artifacts inherent in brain MRI. The advent of deep learning, particularly Convolutional Neural Networks (CNNs), has revolutionized medical image segmentation by learning hierarchical features directly from the data without manual feature engineering.
+
+Among deep learning approaches, encoder-decoder architectures have emerged as the dominant paradigm for semantic segmentation. Models such as U-Net \cite{ronneberger2015unet} and SegNet \cite{badrinarayanan2017segnet} have demonstrated remarkable improvements in segmentation accuracy. These architectures progressively encode spatial information into abstract features, then decode these features back to full resolution segmentation maps. However, a critical observation in medical image analysis is that while these networks can learn features automatically, incorporating domain knowledge through classical feature detection can further enhance performance.
+
+\section{Problem Statement and Research Gap}
+\label{sec:problem_statement}
+
+Despite the success of deep learning models in brain tumor segmentation, several challenges persist:
+
+\begin{enumerate}
+    \item \textbf{Computational Efficiency:} State-of-the-art networks like U-Net demand substantial GPU memory due to their skip connections that store full-resolution feature maps. This requirement may exceed the resources available in many clinical settings, particularly in resource-constrained environments.
+    
+    \item \textbf{Boundary Precision:} While modern segmentation networks achieve high overall accuracy, they often struggle with precise tumor boundary delineation, producing smooth or imprecise edges that may miss clinically important details.
+    
+    \item \textbf{Feature Utilization:} Current approaches typically feed raw MRI intensities directly to the network, potentially missing valuable structural information that classical feature detectors can explicitly capture.
+    
+    \item \textbf{Multi-Modal Integration:} Brain tumor segmentation benefits from multiple MRI modalities (T1, T1-CE, T2, FLAIR), each highlighting different tissue characteristics. Effective fusion of these modalities remains an open challenge.
+\end{enumerate}
+
+SegNet \cite{badrinarayanan2017segnet} partially addresses the efficiency concern by storing only pooling indices during encoding and using them for unpooling in the decoder, thereby significantly reducing memory footprint while preserving spatial information. However, standard SegNet can yield smoother segmentations than desired for fine tumor boundaries, potentially missing critical structural details.
+
+\section{Proposed Approach}
+\label{sec:proposed_approach}
+
+This thesis proposes a novel approach that combines the efficiency of SegNet with the precision of classical feature detection techniques. The key innovation is the generation of RGB-like images through the integration of:
+
+\begin{itemize}
+    \item \textbf{Multi-modal MRI fusion:} Mapping T1-CE, T2, and FLAIR modalities to RGB channels
+    \item \textbf{Classical feature detection:} Incorporating Sobel edge detection \cite{sobel1968isotropic}, Gabor texture analysis \cite{gabor1946theory}, and Laplacian-of-Gaussian blob detection \cite{gonzalez2002digital}
+    \item \textbf{Feature-enhanced representation:} Creating rich, multi-channel inputs that explicitly highlight structural information
+\end{itemize}
+
+The use of Gabor filters for brain tumor segmentation has shown promise in previous work \cite{fathi2013automatic}, demonstrating that texture-based features can effectively capture tumor characteristics. By preprocessing MRI data to generate enhanced RGB images where additional channels carry explicit edge, texture, and structural information, we aim to compensate for SegNet's architectural limitations while maintaining its computational efficiency. This approach leverages domain knowledge about tumor characteristics to guide the learning process, potentially achieving better segmentation performance than using raw intensities alone.
+
+\section{Research Objectives}
+\label{sec:objectives}
+
+This thesis has the following specific objectives:
+
+\begin{enumerate}
+    \item \textbf{Develop a Feature-Enhanced Preprocessing Pipeline:} Design and implement methods to extract and combine classical image features (edges, textures, blobs) with multi-modal MRI data to create informative RGB-like representations.
+    
+    \item \textbf{Adapt SegNet for Multi-Class Brain Tumor Segmentation:} Modify the SegNet architecture to effectively utilize feature-enhanced inputs for segmenting multiple tumor sub-regions (tumor core, peritumoral edema, enhancing tumor).
+    
+    \item \textbf{Comprehensive Evaluation:} Conduct extensive experiments comparing different feature detection techniques (Sobel, Gabor, Laplacian) individually and in combination, using both quantitative metrics (Dice coefficient, IoU, Hausdorff distance) and qualitative visual assessment.
+    
+    \item \textbf{Clinical Feasibility Analysis:} Assess the computational efficiency and practical applicability of the proposed approach for potential clinical deployment.
+\end{enumerate}
+
+\section{Research Questions}
+\label{sec:research_questions}
+
+This thesis addresses the following research questions:
+
+\begin{enumerate}
+    \item Can classical feature detection techniques improve the segmentation performance of efficient CNN architectures like SegNet?
+    \item Which feature detection method (Sobel, Gabor, or Laplacian) provides the most valuable information for brain tumor segmentation?
+    \item Does combining multiple feature detectors yield better results than individual methods?
+    \item How does the proposed feature-enhanced SegNet compare to standard approaches in terms of both accuracy and computational efficiency?
+    \item What is the optimal way to integrate multi-modal MRI information with extracted features?
+\end{enumerate}
+
+\section{Contributions}
+\label{sec:contributions}
+
+The main contributions of this thesis are:
+
+\begin{enumerate}
+    \item A novel preprocessing pipeline that generates feature-enhanced RGB representations from multi-modal brain MRI, explicitly incorporating edge, texture, and structural information.
+    
+    \item A systematic evaluation of classical feature detection techniques (Sobel, Gabor, Laplacian) in the context of deep learning-based brain tumor segmentation.
+    
+    \item An adapted SegNet architecture optimized for multi-class brain tumor segmentation using feature-enhanced inputs.
+    
+    \item Comprehensive experimental results on the BraTS dataset demonstrating that combining classical feature detection with modern deep learning can improve segmentation performance while maintaining computational efficiency.
+    
+    \item Insights into the complementary nature of different feature types and their impact on segmenting various tumor sub-regions.
+\end{enumerate}
+
+\section{Thesis Organization}
+\label{sec:organization}
+
+The remainder of this thesis is organized as follows:
+
+\begin{itemize}
+    \item \textbf{Chapter~\ref{chap:background}} provides a comprehensive literature review covering medical image segmentation techniques, deep learning architectures (particularly encoder-decoder networks), classical feature detection methods, and recent advances in brain tumor segmentation. It also includes detailed explanations of key concepts and the SegNet architecture.
+    
+    \item \textbf{Chapter~\ref{chap:methodology}} presents the complete methodology and experimental results. This chapter describes the proposed feature extraction pipeline, dataset preparation, implementation details, and comprehensive results for each preprocessing approach (raw intensity, Sobel, Gabor, Laplacian, and combined features). It includes both quantitative metrics and qualitative visualizations, along with detailed analysis of each method's performance.
+    
+    \item \textbf{Chapter~\ref{chap:conclusion}} summarizes the key findings from all experiments, discusses the implications of combining classical and deep learning approaches, addresses limitations of the current work, and provides final insights on the effectiveness of feature-enhanced segmentation.
+    
+    \item \textbf{Chapter~\ref{chap:future_work}} outlines potential extensions and improvements to the proposed approach, including 3D volumetric implementations, attention mechanisms, advanced fusion strategies, and clinical validation pathways.
+\end{itemize}
+
+Through this work, we demonstrate that thoughtful integration of domain knowledge through classical computer vision techniques can enhance modern deep learning models, achieving a balance between segmentation accuracy and computational efficiency that is crucial for clinical deployment.

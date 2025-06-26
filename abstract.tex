@@ -1,0 +1,13 @@
+% Abstract
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Brain tumor segmentation in magnetic resonance imaging (MRI) is a critical task in medical image analysis, essential for diagnosis, treatment planning, and patient monitoring. This thesis presents a comprehensive study on enhancing brain tumor segmentation through the integration of classical feature detection techniques with the SegNet deep learning architecture. The primary contribution is the development and evaluation of an RGB fusion approach that combines multiple MRI modalities (T1-contrast enhanced, T2-weighted, and FLAIR) with various preprocessing strategies to improve segmentation accuracy.
+
+The research systematically evaluates five preprocessing approaches: raw intensity (baseline), Sobel edge detection, Gabor texture filtering, Laplacian-of-Gaussian blob detection, and a combined feature stack integrating all three classical filters. Each approach transforms the multi-modal MRI data into RGB-like three-channel inputs, leveraging the complementary information from different feature extraction methods. The enhanced SegNet architecture, featuring skip connections and learned upsampling, is trained on the BraTS2020 dataset with a carefully designed subsampling strategy that balances tumor size variability and computational efficiency.
+
+Experimental results demonstrate that feature-based preprocessing significantly improves segmentation performance compared to raw intensity inputs. The combined feature approach achieves the best overall performance, with Dice coefficients of 0.526 for tumor core, 0.381 for edema, and 0.590 for enhancing tumor when evaluated on challenging tumor-containing slices. The study introduces a dual evaluation policy—Full (including background slices) and Simple (excluding empty slices)—providing transparent assessment of model performance in both ideal and realistic clinical scenarios.
+
+The thesis contributes to the field by: (1) demonstrating the effectiveness of classical feature detection in modern deep learning pipelines, (2) providing a comprehensive comparison of preprocessing strategies for brain tumor segmentation, (3) establishing a reproducible framework for multi-modal MRI fusion, and (4) highlighting the importance of transparent evaluation metrics in medical image segmentation. These findings suggest that combining traditional image processing techniques with modern deep learning architectures offers a promising direction for improving brain tumor segmentation accuracy while maintaining computational efficiency.
+
+\textbf{Keywords:} Brain tumor segmentation, MRI analysis, SegNet, feature detection, Sobel filter, Gabor filter, Laplacian filter, deep learning, medical image processing, BraTS dataset

@@ -1,0 +1,610 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{allah2023edge}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=AAM}{%
+         family={Allah},
+         familyi={A\bibinitperiod},
+         given={Ahmed\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AAM+1}
+    \strng{fullhash}{AAM+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{102512}
+    \field{title}{Edge-enhanced brain tumor segmentation using deep learning}
+    \field{volume}{80}
+    \field{journaltitle}{Medical Image Analysis}
+    \field{year}{2023}
+  \endentry
+
+  \entry{alqazzaz2019brats}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AS}{%
+         family={Alqazzaz},
+         familyi={A\bibinitperiod},
+         given={Salma},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SX}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Xianfang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=YX}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Xin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=NL}{%
+         family={Nokes},
+         familyi={N\bibinitperiod},
+         given={Len},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AS+1}
+    \strng{fullhash}{ASSXYXNL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{2}
+    \field{pages}{209\bibrangedash 219}
+    \field{title}{Automated brain tumor segmentation on multi-modal MR image
+  using SegNet}
+    \field{volume}{5}
+    \field{journaltitle}{Computational Visual Media}
+    \field{year}{2019}
+  \endentry
+
+  \entry{badrinarayanan2017segnet}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BV}{%
+         family={Badrinarayanan},
+         familyi={B\bibinitperiod},
+         given={Vijay},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kendall},
+         familyi={K\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Cipolla},
+         familyi={C\bibinitperiod},
+         given={Roberto},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BVKACR1}
+    \strng{fullhash}{BVKACR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{12}
+    \field{pages}{2481\bibrangedash 2495}
+    \field{title}{SegNet: A Deep Convolutional Encoder-Decoder Architecture for
+  Image Segmentation}
+    \field{volume}{39}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2017}
+  \endentry
+
+  \entry{bakas2017brats}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=BS}{%
+         family={Bakas},
+         familyi={B\bibinitperiod},
+         given={Spyridon},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BS+1}
+    \strng{fullhash}{BS+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{170117}
+    \field{title}{Advancing The Cancer Genome Atlas glioma MRI collections with
+  expert segmentation labels and radiomic features}
+    \field{volume}{4}
+    \field{journaltitle}{Scientific Data}
+    \field{year}{2017}
+  \endentry
+
+  \entry{brats2020}{misc}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=BS}{%
+         family={Bakas},
+         familyi={B\bibinitperiod},
+         given={Spyridon},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BS+1}
+    \strng{fullhash}{BS+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{note}{arXiv preprint arXiv:1811.02629}
+    \field{title}{Identifying the Best Machine Learning Algorithms for Brain
+  Tumor Segmentation, Progression Assessment, and Overall Survival Prediction
+  in the BRATS Challenge}
+    \field{year}{2020}
+  \endentry
+
+  \entry{bidkar2022evolutionary}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BP}{%
+         family={Bidkar},
+         familyi={B\bibinitperiod},
+         given={Pratik},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Sandeep},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Ghosh},
+         familyi={G\bibinitperiod},
+         given={Anirban},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BPKSGA1}
+    \strng{fullhash}{BPKSGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{105067}
+    \field{title}{Evolutionary optimization of SegNet for brain tumor
+  segmentation}
+    \field{volume}{140}
+    \field{journaltitle}{Computers in Biology and Medicine}
+    \field{year}{2022}
+  \endentry
+
+  \entry{cheng2023feature}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=CL}{%
+         family={Cheng},
+         familyi={C\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CL+1}
+    \strng{fullhash}{CL+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{104234}
+    \field{title}{Feature-enhanced segmentation of brain tumors using hybrid
+  deep learning}
+    \field{volume}{79}
+    \field{journaltitle}{Biomedical Signal Processing and Control}
+    \field{year}{2023}
+  \endentry
+
+  \entry{cui2021gansegnet}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=CZ}{%
+         family={Cui},
+         familyi={C\bibinitperiod},
+         given={Zhiwei},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CZ+1}
+    \strng{fullhash}{CZ+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{103075\bibrangedash 103084}
+    \field{title}{GAN-SegNet: Adversarial training for brain tumor
+  segmentation}
+    \field{volume}{9}
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2021}
+  \endentry
+
+  \entry{fathi2013automatic}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FA}{%
+         family={Fathi},
+         familyi={F\bibinitperiod},
+         given={Atefeh},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HH}{%
+         family={Hajati},
+         familyi={H\bibinitperiod},
+         given={Hossein},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Dehghani},
+         familyi={D\bibinitperiod},
+         given={Mehdi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AMR}{%
+         family={Ahmadzadeh},
+         familyi={A\bibinitperiod},
+         given={Mohammad\bibnamedelima Reza},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FA+1}
+    \strng{fullhash}{FAHHDMAMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{7}
+    \field{pages}{25\bibrangedash 30}
+    \field{title}{Automatic brain tumor detection and segmentation using Gabor
+  wavelets and neural networks}
+    \field{volume}{83}
+    \field{journaltitle}{International Journal of Computer Applications}
+    \field{year}{2013}
+  \endentry
+
+  \entry{gabor1946theory}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GD}{%
+         family={Gabor},
+         familyi={G\bibinitperiod},
+         given={Dennis},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GD1}
+    \strng{fullhash}{GD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{26}
+    \field{pages}{429\bibrangedash 457}
+    \field{title}{Theory of communication}
+    \field{volume}{93}
+    \field{journaltitle}{Journal of the Institution of Electrical Engineers -
+  Part III: Radio and Communication Engineering}
+    \field{year}{1946}
+  \endentry
+
+  \entry{gonzalez2002digital}{book}{}
+    \name{author}{2}{}{%
+      {{hash=GRC}{%
+         family={Gonzalez},
+         familyi={G\bibinitperiod},
+         given={Rafael\bibnamedelima C.},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=WRE}{%
+         family={Woods},
+         familyi={W\bibinitperiod},
+         given={Richard\bibnamedelima E.},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Prentice Hall}%
+    }
+    \strng{namehash}{GRCWRE1}
+    \strng{fullhash}{GRCWRE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{edition}{2nd}
+    \field{title}{Digital Image Processing}
+    \field{year}{2002}
+  \endentry
+
+  \entry{gordillo2013state}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GN}{%
+         family={Gordillo},
+         familyi={G\bibinitperiod},
+         given={Nelly},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=ME}{%
+         family={Montseny},
+         familyi={M\bibinitperiod},
+         given={Eduard},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Sobrevilla},
+         familyi={S\bibinitperiod},
+         given={Pilar},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GNMESP1}
+    \strng{fullhash}{GNMESP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{8}
+    \field{pages}{1426\bibrangedash 1438}
+    \field{title}{State of the art survey on MRI brain tumor segmentation}
+    \field{volume}{31}
+    \field{journaltitle}{Magnetic Resonance Imaging}
+    \field{year}{2013}
+  \endentry
+
+  \entry{kasar2024comparative}{inproceedings}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=KS}{%
+         family={Kasar},
+         familyi={K\bibinitperiod},
+         given={Shubham},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KS+1}
+    \strng{fullhash}{KS+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{2024 International Conference on Medical Imaging}
+    \field{pages}{245\bibrangedash 252}
+    \field{title}{Comparative analysis of U-Net and SegNet for brain tumor
+  segmentation}
+    \field{year}{2024}
+  \endentry
+
+  \entry{litjens2017survey}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=LG}{%
+         family={Litjens},
+         familyi={L\bibinitperiod},
+         given={Geert},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LG+1}
+    \strng{fullhash}{LG+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{60\bibrangedash 88}
+    \field{title}{A survey on deep learning in medical image analysis}
+    \field{volume}{42}
+    \field{journaltitle}{Medical Image Analysis}
+    \field{year}{2017}
+  \endentry
+
+  \entry{menze2015brats}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=MBH}{%
+         family={Menze},
+         familyi={M\bibinitperiod},
+         given={Bjoern\bibnamedelima H.},
+         giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MBH+1}
+    \strng{fullhash}{MBH+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{10}
+    \field{pages}{1993\bibrangedash 2024}
+    \field{title}{The Multimodal Brain Tumor Image Segmentation Benchmark
+  (BRATS)}
+    \field{volume}{34}
+    \field{journaltitle}{IEEE Transactions on Medical Imaging}
+    \field{year}{2015}
+  \endentry
+
+  \entry{palleti2025modified}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PSR}{%
+         family={Palleti},
+         familyi={P\bibinitperiod},
+         given={Srinivasa\bibnamedelima Rao},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=RRK}{%
+         family={Reddy},
+         familyi={R\bibinitperiod},
+         given={Rajesh\bibnamedelima Kumar},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PSRRRK1}
+    \strng{fullhash}{PSRRRK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{122456}
+    \field{title}{Modified SegNet with hybrid feature extraction for brain
+  tumor segmentation}
+    \field{volume}{239}
+    \field{journaltitle}{Expert Systems with Applications}
+    \field{year}{2025}
+  \endentry
+
+  \entry{ronneberger2015unet}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=RO}{%
+         family={Ronneberger},
+         familyi={R\bibinitperiod},
+         given={Olaf},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=FP}{%
+         family={Fischer},
+         familyi={F\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Brox},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{ROFPBT1}
+    \strng{fullhash}{ROFPBT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{booktitle}{Medical Image Computing and Computer-Assisted
+  Intervention – MICCAI 2015}
+    \field{pages}{234\bibrangedash 241}
+    \field{title}{U-Net: Convolutional Networks for Biomedical Image
+  Segmentation}
+    \field{year}{2015}
+  \endentry
+
+  \entry{sobel1968isotropic}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SI}{%
+         family={Sobel},
+         familyi={S\bibinitperiod},
+         given={I.},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=FG}{%
+         family={Feldman},
+         familyi={F\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SIFG1}
+    \strng{fullhash}{SIFG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{A 3x3 isotropic gradient operator for image processing}
+    \field{journaltitle}{Presented at the Stanford Artificial Intelligence
+  Project}
+    \field{year}{1968}
+  \endentry
+
+  \entry{vedhasri2024segmentation}{article}{}
+    \name{author}{2}{}{%
+      {{hash=VM}{%
+         family={Vedhasri},
+         familyi={V\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Vijayakumar},
+         familyi={V\bibinitperiod},
+         given={V.},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VMVV1}
+    \strng{fullhash}{VMVV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{1}
+    \field{pages}{15}
+    \field{title}{Brain tumor segmentation using SegNet: A comparative study}
+    \field{volume}{48}
+    \field{journaltitle}{Journal of Medical Systems}
+    \field{year}{2024}
+  \endentry
+
+  \entry{zhou20193dsegnet}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=ZX}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Xiaofeng},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZX+1}
+    \strng{fullhash}{ZX+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{number}{5}
+    \field{pages}{2342\bibrangedash 2351}
+    \field{title}{3D-SegNet: Volumetric brain tumor segmentation using 3D deep
+  learning}
+    \field{volume}{46}
+    \field{journaltitle}{Medical Physics}
+    \field{year}{2019}
+  \endentry
+\enddatalist
+\endinput

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  26 JUN 2025 20:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  27 JUN 2025 02:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -875,60 +875,84 @@ nment
 (C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 )
+(C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes
+.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count454
+\csq@gtype=\count455
+\csq@glevel=\count456
+\csq@qlevel=\count457
+\csq@maxlvl=\count458
+\csq@tshold=\count459
+\csq@ltx@everypar=\toks33
+
+(C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes
+.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes
+.cfg
+File: csquotes.cfg 
+))
 (C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1
 .sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count454
-\@quotereset=\count455
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
 
 (C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backe
 nd-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count456
+\l__color_backend_stack_int=\count460
 \l__pdf_internal_box=\box61
-)
-No file bachelor.aux.
+) (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux)
+(abstract.aux) (introduction.aux) (background.aux) (methodology.aux
+
+LaTeX Warning: Label `fig:sobel_dice' multiply defined.
+
+) (conclusion.aux) (future_work.aux) (appendix.aux))
 \openout1 = `bachelor.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-\c@lstlisting=\count457
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+\c@lstlisting=\count461
 
 (C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
 pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count458
+\scratchcounter=\count462
 \scratchdimen=\dimen269
 \scratchbox=\box62
-\nofMPsegments=\count459
-\nofMParguments=\count460
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count461
+\nofMPsegments=\count463
+\nofMParguments=\count464
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count465
 \MPscratchDim=\dimen270
-\MPnumerator=\count462
-\makeMPintoPDFobject=\count463
-\everyMPtoPDFconversion=\toks34
+\MPnumerator=\count466
+\makeMPintoPDFobject=\count467
+\everyMPtoPDFconversion=\toks35
 )
 (C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epst
 opdf-base.sty
@@ -940,7 +964,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 -sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 132.
+Package hyperref Info: Link coloring ON on input line 135.
+ (bachelor.out) (bachelor.out)
 \@outlinefile=\write4
 \openout4 = `bachelor.out'.
 
@@ -997,31 +1022,27 @@ Package biblatex Info: Data encoding 'ascii' specified.
 \openout3 = `bachelor-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'bachelor.bbl' not found.
-
-No file bachelor.bbl.
-Package biblatex Info: Reference section=0 on input line 132.
-Package biblatex Info: Reference segment=0 on input line 132.
+Package biblatex Info: ... file 'bachelor.bbl' found.
+ (bachelor.bbl)
+Package biblatex Info: Reference section=0 on input line 135.
+Package biblatex Info: Reference segment=0 on input line 135.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `GUC_TitlePage.aux'.
 
-(GUC_TitlePage.tex
+ (GUC_TitlePage.tex
 Package epstopdf Info: Source file: <GUC-logo-ss.eps>
 (epstopdf)                    date: 2025-06-26 16:48:31
 (epstopdf)                    size: 23913 bytes
 (epstopdf)             Output file: <GUC-logo-ss-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-06-26 20:43:35
+(epstopdf)                    size: 7043 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=GUC-logo-ss-eps-conv
 erted-to.pdf GUC-logo-ss.eps>
 (epstopdf)             \includegraphics on input line 35.
-runsystem(miktex-epstopdf --outfile=GUC-logo-ss-eps-converted-to.pdf GUC-logo-s
-s.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <GUC-logo-ss-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-06-26 20:43:35
-(epstopdf)                    size: 7043 bytes.
-<GUC-logo-ss-eps-converted-to.pdf, id=3, 271.0125pt x 259.97125pt>
+Package epstopdf Info: Output file is already uptodate.
+<GUC-logo-ss-eps-converted-to.pdf, id=323, 271.0125pt x 259.97125pt>
 File: GUC-logo-ss-eps-converted-to.pdf Graphic file (type pdf)
 <use GUC-logo-ss-eps-converted-to.pdf>
 Package pdftex.def Info: GUC-logo-ss-eps-converted-to.pdf  used on input line 3
@@ -1031,7 +1052,8 @@ Package pdftex.def Info: GUC-logo-ss-eps-converted-to.pdf  used on input line 3
 
 
 {C:/Users/Shakib's PC/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./GUC-
-logo-ss-eps-converted-to.pdf>] [2
+logo-ss-eps-converted-to.pdf>]
+[2
 
 ]
 Package epstopdf Info: Source file: <GUC-logo-ss.eps>
@@ -1056,8 +1078,7 @@ Package pdftex.def Info: GUC-logo-ss-eps-converted-to.pdf  used on input line 3
 ])
 \openout2 = `acknowledgments.aux'.
 
-
-(acknowledgments.tex) [5
+ (acknowledgments.tex) [5
 
 
 
@@ -1078,155 +1099,47 @@ Missing character: There is no î in font cmr12!
 
 
 
-]) [7]
-No file bachelor.toc.
-\tf@toc=\write5
-\openout5 = `bachelor.toc'.
-
+]) [7] (bachelor.toc
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
 [8
 
 
 
-]
+] [9] [10])
+\tf@toc=\write5
+\openout5 = `bachelor.toc'.
+
+ [11]
 \openout2 = `introduction.aux'.
 
  (introduction.tex
 Chapter 1.
-
-LaTeX Warning: Citation 'gonzalez2002digital' on page 1 undefined on input line
- 9.
-
-
-LaTeX Warning: Citation 'gordillo2013state' on page 1 undefined on input line 9
-.
-
-
-Overfull \hbox (49.47667pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/12 cess-ing tech-niques such as thresh-old-ing, re-gion grow-ing, 
-and edge de-tec-tion [[]],
- []
-
-
-Overfull \hbox (57.29453pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/12 com-bined with hand-crafted fea-tures and tra-di-tional ma-chin
-e learn-ing clas-si-fiers [[]].
- []
-
-
-LaTeX Warning: Citation 'ronneberger2015unet' on page 1 undefined on input line
- 11.
-
-
-LaTeX Warning: Citation 'badrinarayanan2017segnet' on page 1 undefined on input
- line 11.
-
-
-Overfull \hbox (31.71957pt too wide) in paragraph at lines 11--12
-\OT1/cmr/m/n/12 dom-i-nant paradigm for se-man-tic seg-men-ta-tion. Mod-els suc
-h as U-Net [[]]
- []
-
-
-Overfull \hbox (0.7582pt too wide) in paragraph at lines 11--12
-\OT1/cmr/m/n/12 and Seg-Net [[]] have demon-strated re-mark-able im-prove-ments
-
- []
-
 [1
 
 
 
-]
-
-LaTeX Warning: Citation 'badrinarayanan2017segnet' on page 2 undefined on input
- line 28.
-
-
-LaTeX Warning: Citation 'sobel1968isotropic' on page 2 undefined on input line 
-37.
-
-
-LaTeX Warning: Citation 'gabor1946theory' on page 2 undefined on input line 37.
-
-
-
-LaTeX Warning: Citation 'gonzalez2002digital' on page 2 undefined on input line
- 37.
-
-
-Overfull \hbox (32.20761pt too wide) in paragraph at lines 37--38
-[]\OT1/cmr/bx/n/12 Classical fea-ture de-tec-tion: \OT1/cmr/m/n/12 In-cor-po-ra
-t-ing So-bel edge de-tec-tion [[]],
- []
-
-[2]
-
-LaTeX Warning: Citation 'fathi2013automatic' on page 3 undefined on input line 
-41.
-
-[3]
-
-LaTeX Warning: Reference `chap:background' on page 4 undefined on input line 94
-.
-
-
-LaTeX Warning: Reference `chap:methodology' on page 4 undefined on input line 9
-6.
-
-[4]
-
-LaTeX Warning: Reference `chap:conclusion' on page 5 undefined on input line 98
-.
-
-
-LaTeX Warning: Reference `chap:future_work' on page 5 undefined on input line 1
-00.
-
-) [5]
+] [2] [3] [4]) [5]
 \openout2 = `background.aux'.
 
  (background.tex
 Chapter 2.
-
-LaTeX Warning: Citation 'menze2015brats' on page 6 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'bakas2017brats' on page 6 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'brats2020' on page 6 undefined on input line 13.
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
-
-LaTeX Warning: Citation 'ronneberger2015unet' on page 6 undefined on input line
- 15.
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
-
-LaTeX Warning: Citation 'badrinarayanan2017segnet' on page 6 undefined on input
- line 17.
-
 [6
 
 
 
 
 ]
-
-LaTeX Warning: Citation 'sobel1968isotropic' on page 7 undefined on input line 
-24.
-
-
-LaTeX Warning: Citation 'gordillo2013state' on page 7 undefined on input line 2
-4.
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
@@ -1239,10 +1152,6 @@ Missing character: There is no î in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
-
-LaTeX Warning: Citation 'litjens2017survey' on page 7 undefined on input line 3
-5.
-
 [7]
 Missing character: There is no ‚ in font cmbx12!
 Missing character: There is no Ä in font cmbx12!
@@ -1250,66 +1159,23 @@ Missing character: There is no ì in font cmbx12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
-
-LaTeX Warning: Citation 'ronneberger2015unet' on page 8 undefined on input line
- 45.
-
 Missing character: There is no ‚ in font cmbx12!
 Missing character: There is no Ä in font cmbx12!
 Missing character: There is no ì in font cmbx12!
-
-LaTeX Warning: Citation 'ronneberger2015unet' on page 8 undefined on input line
- 54.
-
 [8]
-
-LaTeX Warning: Citation 'badrinarayanan2017segnet' on page 9 undefined on input
- line 61.
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
 [9]
-
-LaTeX Warning: Citation 'kasar2024comparative' on page 10 undefined on input li
-ne 87.
-
-
-LaTeX Warning: Citation 'vedhasri2024segmentation' on page 10 undefined on inpu
-t line 87.
-
-
 Overfull \hbox (8.64838pt too wide) in paragraph at lines 87--88
  []\OT1/cmr/bx/n/12 Limitations and Trade-Offs[] \OT1/cmr/m/n/12 While Seg-Net 
 is ef-fi-cient, it may pro-duce slightly smoother
  []
 
-
-Overfull \hbox (15.81703pt too wide) in paragraph at lines 87--88
-\OT1/cmr/m/n/12 lead to sub-tle in-ac-cu-ra-cies in fine struc-tures. Com-par-a
--tive stud-ies [[],
- []
-
-
-LaTeX Warning: Citation 'allah2023edge' on page 10 undefined on input line 105.
-
-
-
-LaTeX Warning: Citation 'sobel1968isotropic' on page 10 undefined on input line
- 105.
-
 [10]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
-
-LaTeX Warning: Citation 'alqazzaz2019brats' on page 11 undefined on input line 
-109.
-
-
-LaTeX Warning: Citation 'cheng2023feature' on page 11 undefined on input line 1
-20.
-
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
@@ -1319,36 +1185,7 @@ Missing character: There is no î in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
-[11]
-
-LaTeX Warning: Citation 'palleti2025modified' on page 12 undefined on input lin
-e 128.
-
-
-LaTeX Warning: Citation 'gabor1946theory' on page 12 undefined on input line 12
-8.
-
-
-LaTeX Warning: Citation 'bidkar2022evolutionary' on page 12 undefined on input 
-line 132.
-
-
-LaTeX Warning: Citation 'kasar2024comparative' on page 12 undefined on input li
-ne 136.
-
-
-LaTeX Warning: Citation 'vedhasri2024segmentation' on page 12 undefined on inpu
-t line 136.
-
-[12]
-
-LaTeX Warning: Citation 'zhou20193dsegnet' on page 13 undefined on input line 1
-40.
-
-
-LaTeX Warning: Citation 'cui2021gansegnet' on page 13 undefined on input line 1
-44.
-
+[11] [12]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no î in font cmr12!
@@ -1648,4 +1485,2917 @@ LaTeX Warning: Citation 'nature2023mri' on page 27 undefined on input line 338.
 
 
 
-Overfull \hbox (2.52806pt too wide) in paragraph 
+Overfull \hbox (2.52806pt too wide) in paragraph at lines 338--339
+\OT1/cmr/m/n/12 med-i-cal imag-ing, in-clud-ing def-i-ni-tions of CNNs [[], []]
+,
+ []
+
+
+Overfull \hbox (34.48422pt too wide) in paragraph at lines 338--339
+\OT1/cmr/m/n/12 ture and its pool-ing in-dex ap-proach [[], []],
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+fvm on input line 3
+44.
+LaTeX Font Info:    No file OT1fvm.fd. on input line 344.
+
+LaTeX Font Warning: Font shape `OT1/fvm/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 344.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+) [27]
+\openout2 = `methodology.aux'.
+
+ (methodology.tex
+Chapter 3.
+[28
+
+
+
+
+] [29] [30]
+
+LaTeX Font Warning: Font shape `OT1/fvm/m/it' undefined
+(Font)              using `OT1/fvm/m/n' instead on input line 97.
+
+
+LaTeX Font Warning: Font shape `OT1/fvm/b/n' undefined
+(Font)              using `OT1/fvm/m/n' instead on input line 99.
+
+[31] [32]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+[33
+
+]
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ¶ in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ö in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ∏ in font cmr10!
+Missing character: There is no è in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ¶ in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+[34]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ¶ in font cmr10!
+[35] [36
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+
+Overfull \hbox (664.35806pt too wide) in paragraph at lines 292--293
+[][][][] 
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+[37
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ¶ in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ö in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ∏ in font cmr10!
+Missing character: There is no è in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ¶ in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+[38]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ¶ in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+[39
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no à in font cmr10!
+[40]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+[41
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+[42
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+[43
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+
+Overfull \hbox (17.97037pt too wide) in paragraph at lines 630--631
+[]\OT1/fvm/m/n/12 The BraTS con-ven-tion uses four chan-nels: back-ground, tu-m
+or core (necrotic/non-enhancing),
+ []
+
+[44]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ú in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ù in font cmbx12!
+[45]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+[46]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+[47] [48]
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no í in font cmr10!
+[49]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
+40.
+(C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 840.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr8!
+Missing character: There is no Ä in font cmr8!
+Missing character: There is no ô in font cmr8!
+
+Underfull \hbox (badness 1173) in paragraph at lines 882--883
+\OT1/cmr/m/n/8 small datasets, sharp
+ []
+
+[50
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+[51]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no á in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+[52]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+[53]
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ñ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ø in font cmr10!
+Missing character: There is no Ω in font cmr10!
+[54]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[55
+
+]
+Overfull \hbox (71.40771pt too wide) detected at line 1098
+[]
+ []
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ú in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ù in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+[56]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[57] [58]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+[59
+
+]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+<subsample1_no.png, id=1474, 461.8053pt x 255.8358pt>
+File: subsample1_no.png Graphic file (type png)
+<use subsample1_no.png>
+Package pdftex.def Info: subsample1_no.png  used on input line 1210.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+
+Underfull \hbox (badness 1509) in paragraph at lines 1211--1211
+\OT1/fvm/b/n/12 intensity RGB com-pos-ite show-ing pre-
+ []
+
+<subsample2_no.png, id=1476, 461.8053pt x 255.8358pt>
+File: subsample2_no.png Graphic file (type png)
+<use subsample2_no.png>
+Package pdftex.def Info: subsample2_no.png  used on input line 1215.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+<subsample_no.png, id=1477, 461.8053pt x 255.8358pt>
+File: subsample_no.png Graphic file (type png)
+<use subsample_no.png>
+Package pdftex.def Info: subsample_no.png  used on input line 1223.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+[60
+
+] [61 <./subsample1_no.png> <./subsample2_no.png> <./subsample_no.png>]
+<dice_no.png, id=1490, 387.3672pt x 339.669pt>
+File: dice_no.png Graphic file (type png)
+<use dice_no.png>
+Package pdftex.def Info: dice_no.png  used on input line 1248.
+(pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
+
+[62]
+<accuracy and loss_no.png, id=1497, 859.2903pt x 354.123pt>
+File: accuracy and loss_no.png Graphic file (type png)
+<use accuracy and loss_no.png>
+Package pdftex.def Info: accuracy and loss_no.png  used on input line 1256.
+(pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
+ [63 <./dice_no.png>] [64 <./accuracy and loss_no.png>]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<results_no.png, id=1510, 875.1897pt x 1164.2697pt>
+File: results_no.png Graphic file (type png)
+<use results_no.png>
+Package pdftex.def Info: results_no.png  used on input line 1278.
+(pdftex.def)             Requested size: 443.9066pt x 590.51865pt.
+[65
+
+] [66 <./results_no.png>]
+Overfull \hbox (27.66739pt too wide) in paragraph at lines 1343--1344
+\OT1/fvm/b/n/12 To pro-vide a gran-u-lar eval-u-a-tion of the seg-men-ta-tion m
+odel trained with raw (no-preprocessing)
+ []
+
+[67] [68]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 591.81741pt, 5.69046pt)
+* v-part:(T,H,B)=(0.0pt, 845.04684pt, 0.0pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=591.81741pt
+* \textheight=845.04684pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-109.26999pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<truth_no.png, id=1532, 1015.3935pt x 895.4253pt>
+File: truth_no.png Graphic file (type png)
+<use truth_no.png>
+Package pdftex.def Info: truth_no.png  used on input line 1348.
+(pdftex.def)             Requested size: 597.51212pt x 526.91638pt.
+
+Overfull \hbox (5.6947pt too wide) in paragraph at lines 1348--1349
+ [][] 
+ []
+
+[69 <./truth_no.png>]
+Overfull \hbox (2.77383pt too wide) in paragraph at lines 1360--1361
+[]\OT1/cmr/bx/n/12 Precision: \OT1/fvm/b/n/12 High-est for Tu-mor Core ($0\OML/
+cmm/m/it/12 :\OT1/fvm/b/n/12 805$), mod-er-ate for En-hanc-ing Tu-mor ($0\OML/c
+mm/m/it/12 :\OT1/fvm/b/n/12 733$),
+ []
+
+[70
+
+
+]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[71]
+<result_no.png, id=1547, 829.6596pt x 252.945pt>
+File: result_no.png Graphic file (type png)
+<use result_no.png>
+Package pdftex.def Info: result_no.png  used on input line 1410.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result1_no.png, id=1548, 829.6596pt x 252.945pt>
+File: result1_no.png Graphic file (type png)
+<use result1_no.png>
+Package pdftex.def Info: result1_no.png  used on input line 1421.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result2_no.png, id=1549, 829.6596pt x 252.945pt>
+File: result2_no.png Graphic file (type png)
+<use result2_no.png>
+Package pdftex.def Info: result2_no.png  used on input line 1430.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[72
+
+ <./result_no.png> <./result1_no.png>]
+<result3_no.png, id=1559, 829.6596pt x 252.945pt>
+File: result3_no.png Graphic file (type png)
+<use result3_no.png>
+Package pdftex.def Info: result3_no.png  used on input line 1439.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result4_no.png, id=1560, 829.6596pt x 252.945pt>
+File: result4_no.png Graphic file (type png)
+<use result4_no.png>
+Package pdftex.def Info: result4_no.png  used on input line 1448.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[73 <./result2_no.png> <./result3_no.png>]
+<result5_no.png, id=1569, 829.6596pt x 252.945pt>
+File: result5_no.png Graphic file (type png)
+<use result5_no.png>
+Package pdftex.def Info: result5_no.png  used on input line 1457.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[74 <./result4_no.png> <./result5_no.png>]
+<train_no.png, id=1579, 461.8053pt x 255.8358pt>
+File: train_no.png Graphic file (type png)
+<use train_no.png>
+Package pdftex.def Info: train_no.png  used on input line 1477.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<train1_no.png, id=1580, 461.8053pt x 255.8358pt>
+File: train1_no.png Graphic file (type png)
+<use train1_no.png>
+Package pdftex.def Info: train1_no.png  used on input line 1487.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+[75
+
+ <./train_no.png>]
+<val_no.png, id=1588, 461.8053pt x 255.8358pt>
+File: val_no.png Graphic file (type png)
+<use val_no.png>
+Package pdftex.def Info: val_no.png  used on input line 1497.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<val1_no.png, id=1589, 461.8053pt x 255.8358pt>
+File: val1_no.png Graphic file (type png)
+<use val1_no.png>
+Package pdftex.def Info: val1_no.png  used on input line 1507.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+[76 <./train1_no.png> <./val_no.png>]
+<test_no.png, id=1598, 461.8053pt x 255.8358pt>
+File: test_no.png Graphic file (type png)
+<use test_no.png>
+Package pdftex.def Info: test_no.png  used on input line 1517.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+<test1_no.png, id=1599, 461.8053pt x 255.8358pt>
+File: test1_no.png Graphic file (type png)
+<use test1_no.png>
+Package pdftex.def Info: test1_no.png  used on input line 1527.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+ [77 <./val1_no.png> <./test_no.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[78 <./test1_no.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+[79]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+[80] [81]
+<subsample1.png, id=1648, 383.93437pt x 213.04594pt>
+File: subsample1.png Graphic file (type png)
+<use subsample1.png>
+Package pdftex.def Info: subsample1.png  used on input line 1622.
+(pdftex.def)             Requested size: 217.42265pt x 120.65074pt.
+<subsample2.png, id=1649, 382.42876pt x 218.31563pt>
+File: subsample2.png Graphic file (type png)
+<use subsample2.png>
+Package pdftex.def Info: subsample2.png  used on input line 1627.
+(pdftex.def)             Requested size: 217.42265pt x 124.11806pt.
+<subsample3.png, id=1650, 384.6872pt x 215.30438pt>
+File: subsample3.png Graphic file (type png)
+<use subsample3.png>
+Package pdftex.def Info: subsample3.png  used on input line 1635.
+(pdftex.def)             Requested size: 217.42265pt x 121.6899pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+[82
+
+] [83 <./subsample1.png> <./subsample2.png> <./subsample3.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+[84
+
+]
+<Dice coefficient.png, id=1668, 319.94531pt x 282.30469pt>
+File: Dice coefficient.png Graphic file (type png)
+<use Dice coefficient.png>
+Package pdftex.def Info: Dice coefficient.png  used on input line 1665.
+(pdftex.def)             Requested size: 452.9679pt x 399.68224pt.
+<accuracy and loss.png, id=1669, 719.68875pt x 297.36093pt>
+File: accuracy and loss.png Graphic file (type png)
+<use accuracy and loss.png>
+Package pdftex.def Info: accuracy and loss.png  used on input line 1673.
+(pdftex.def)             Requested size: 439.37941pt x 181.5487pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+[85
+
+ <./Dice coefficient.png>]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+<HD95.png, id=1676, 730.98094pt x 244.66406pt>
+File: HD95.png Graphic file (type png)
+<use HD95.png>
+Package pdftex.def Info: HD95.png  used on input line 1691.
+(pdftex.def)             Requested size: 730.97916pt x 244.66345pt.
+[86 <./accuracy and loss.png>]
+<IoU.png, id=1685, 730.98094pt x 238.64156pt>
+File: IoU.png Graphic file (type png)
+<use IoU.png>
+Package pdftex.def Info: IoU.png  used on input line 1700.
+(pdftex.def)             Requested size: 452.9679pt x 147.87976pt.
+<ASSD.png, id=1686, 730.22812pt x 245.41687pt>
+File: ASSD.png Graphic file (type png)
+<use ASSD.png>
+Package pdftex.def Info: ASSD.png  used on input line 1708.
+(pdftex.def)             Requested size: 452.9679pt x 152.23552pt.
+ [87 <./HD95.png> <./IoU.png>]
+<dice.png, id=1695, 731.73375pt x 240.9pt>
+File: dice.png Graphic file (type png)
+<use dice.png>
+Package pdftex.def Info: dice.png  used on input line 1716.
+(pdftex.def)             Requested size: 452.9679pt x 149.12486pt.
+ [88 <./ASSD.png> <./dice.png>] [89
+
+]
+Overfull \hbox (37.55347pt too wide) in paragraph at lines 1768--1777
+ [] 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[90]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 591.81741pt, 5.69046pt)
+* v-part:(T,H,B)=(0.0pt, 845.04684pt, 0.0pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=591.81741pt
+* \textheight=845.04684pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-109.26999pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<Metrics.png, id=1713, 1019.7297pt x 895.4253pt>
+File: Metrics.png Graphic file (type png)
+<use Metrics.png>
+Package pdftex.def Info: Metrics.png  used on input line 1792.
+(pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
+
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 1792--1794
+ [][] 
+ []
+
+[91 <./Metrics.png>] [92
+
+
+]
+<results.png, id=1726, 829.6596pt x 252.945pt>
+File: results.png Graphic file (type png)
+<use results.png>
+Package pdftex.def Info: results.png  used on input line 1837.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<results1.png, id=1727, 829.6596pt x 252.945pt>
+File: results1.png Graphic file (type png)
+<use results1.png>
+Package pdftex.def Info: results1.png  used on input line 1847.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<results2.png, id=1728, 829.6596pt x 252.945pt>
+File: results2.png Graphic file (type png)
+<use results2.png>
+Package pdftex.def Info: results2.png  used on input line 1857.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[93 <./results.png> <./results1.png>]
+<results3.png, id=1737, 829.6596pt x 252.945pt>
+File: results3.png Graphic file (type png)
+<use results3.png>
+Package pdftex.def Info: results3.png  used on input line 1867.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<results4.png, id=1738, 829.6596pt x 252.945pt>
+File: results4.png Graphic file (type png)
+<use results4.png>
+Package pdftex.def Info: results4.png  used on input line 1877.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[94 <./results2.png> <./results3.png>]
+<results5.png, id=1747, 829.6596pt x 252.945pt>
+File: results5.png Graphic file (type png)
+<use results5.png>
+Package pdftex.def Info: results5.png  used on input line 1887.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<train.png, id=1748, 461.8053pt x 255.8358pt>
+File: train.png Graphic file (type png)
+<use train.png>
+Package pdftex.def Info: train.png  used on input line 1908.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+[95 <./results4.png> <./results5.png>]
+<test1.png, id=1758, 461.8053pt x 255.8358pt>
+File: test1.png Graphic file (type png)
+<use test1.png>
+Package pdftex.def Info: test1.png  used on input line 1919.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+<test.png, id=1759, 461.8053pt x 255.8358pt>
+File: test.png Graphic file (type png)
+<use test.png>
+Package pdftex.def Info: test.png  used on input line 1930.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+ [96 <./train.png> <./test1.png>]
+<val1.png, id=1768, 461.8053pt x 255.8358pt>
+File: val1.png Graphic file (type png)
+<use val1.png>
+Package pdftex.def Info: val1.png  used on input line 1941.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+<val.png, id=1769, 461.8053pt x 255.8358pt>
+File: val.png Graphic file (type png)
+<use val.png>
+Package pdftex.def Info: val.png  used on input line 1952.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+
+[97 <./test.png> <./val1.png>]
+<train1.png, id=1778, 461.8053pt x 255.8358pt>
+File: train1.png Graphic file (type png)
+<use train1.png>
+Package pdftex.def Info: train1.png  used on input line 1963.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+ [98 <./val.png> <./train1.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[99
+
+] [100] [101
+
+] [102]
+<subsample1_gabor.png, id=1860, 461.8053pt x 255.8358pt>
+File: subsample1_gabor.png Graphic file (type png)
+<use subsample1_gabor.png>
+Package pdftex.def Info: subsample1_gabor.png  used on input line 2095.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+<subsample2_gabor.png, id=1861, 461.8053pt x 255.8358pt>
+File: subsample2_gabor.png Graphic file (type png)
+<use subsample2_gabor.png>
+Package pdftex.def Info: subsample2_gabor.png  used on input line 2100.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+<subsample3_gabor.png, id=1862, 461.8053pt x 255.8358pt>
+File: subsample3_gabor.png Graphic file (type png)
+<use subsample3_gabor.png>
+Package pdftex.def Info: subsample3_gabor.png  used on input line 2108.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+ [103
+
+] [104 <./subsample1_gabor.png> <./subsample2_gabor.png> <./subsample3_gabor.pn
+g>]
+<dice_gabor.png, id=1876, 387.3672pt x 339.669pt>
+File: dice_gabor.png Graphic file (type png)
+<use dice_gabor.png>
+Package pdftex.def Info: dice_gabor.png  used on input line 2129.
+(pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
+ [105
+
+]
+<accuracy and loss_gabor.png, id=1882, 859.2903pt x 354.123pt>
+File: accuracy and loss_gabor.png Graphic file (type png)
+<use accuracy and loss_gabor.png>
+Package pdftex.def Info: accuracy and loss_gabor.png  used on input line 2137.
+(pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
+ [106 <./dice_gabor.png>]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<simple and full policy.png, id=1889, 875.1897pt x 1164.2697pt>
+File: simple and full policy.png Graphic file (type png)
+<use simple and full policy.png>
+Package pdftex.def Info: simple and full policy.png  used on input line 2149.
+(pdftex.def)             Requested size: 452.9679pt x 602.58128pt.
+[107 <./accuracy and loss_gabor.png>]
+Overfull \vbox (8.0744pt too high) has occurred while \output is active []
+
+
+[108 <./simple and full policy.png>]
+Missing character: There is no ¬ in font cmbx12!
+Missing character: There is no ± in font cmbx12!
+
+Overfull \hbox (4.11452pt too wide) in paragraph at lines 2182--2191
+ [] 
+ []
+
+[109]
+Overfull \hbox (0.36662pt too wide) in paragraph at lines 2197--2208
+|  [] 
+ []
+
+[110]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 591.81741pt, 5.69046pt)
+* v-part:(T,H,B)=(0.0pt, 845.04684pt, 0.0pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=591.81741pt
+* \textheight=845.04684pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-109.26999pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<metrics_gabor.png, id=1913, 1019.7297pt x 895.4253pt>
+File: metrics_gabor.png Graphic file (type png)
+<use metrics_gabor.png>
+Package pdftex.def Info: metrics_gabor.png  used on input line 2216.
+(pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
+
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 2216--2218
+ [][] 
+ []
+
+[111 <./metrics_gabor.png>] [112
+
+
+]
+Overfull \hbox (6.00987pt too wide) in paragraph at lines 2260--2260
+[][]\OT1/cmr/bx/n/14.4 Gabor Qual-i-ta-tive Val-i-da-tion: Pre-dicted vs. Groun
+d Truth Masks 
+ []
+
+<result_gabor.png, id=1924, 829.6596pt x 252.945pt>
+File: result_gabor.png Graphic file (type png)
+<use result_gabor.png>
+Package pdftex.def Info: result_gabor.png  used on input line 2268.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result1_gabor.png, id=1925, 829.6596pt x 252.945pt>
+File: result1_gabor.png Graphic file (type png)
+<use result1_gabor.png>
+Package pdftex.def Info: result1_gabor.png  used on input line 2279.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[113 <./result_gabor.png>]
+<result2_gabor.png, id=1933, 829.6596pt x 252.945pt>
+File: result2_gabor.png Graphic file (type png)
+<use result2_gabor.png>
+Package pdftex.def Info: result2_gabor.png  used on input line 2288.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result3_gabor.png, id=1934, 829.6596pt x 252.945pt>
+File: result3_gabor.png Graphic file (type png)
+<use result3_gabor.png>
+Package pdftex.def Info: result3_gabor.png  used on input line 2297.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result4_gabor.png, id=1935, 829.6596pt x 252.945pt>
+File: result4_gabor.png Graphic file (type png)
+<use result4_gabor.png>
+Package pdftex.def Info: result4_gabor.png  used on input line 2306.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[114 <./result1_gabor.png> <./result2_gabor.png> <./result3_gabor.png>]
+<result5_gabor.png, id=1946, 829.6596pt x 252.945pt>
+File: result5_gabor.png Graphic file (type png)
+<use result5_gabor.png>
+Package pdftex.def Info: result5_gabor.png  used on input line 2315.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[115 <./result4_gabor.png> <./result5_gabor.png>]
+<train1_gabor.png, id=1955, 461.8053pt x 255.8358pt>
+File: train1_gabor.png Graphic file (type png)
+<use train1_gabor.png>
+Package pdftex.def Info: train1_gabor.png  used on input line 2333.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+<train_gabor.png, id=1956, 461.8053pt x 255.8358pt>
+File: train_gabor.png Graphic file (type png)
+<use train_gabor.png>
+Package pdftex.def Info: train_gabor.png  used on input line 2344.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[116
+
+ <./train1_gabor.png>]
+<val_gabor.png, id=1965, 461.8053pt x 255.8358pt>
+File: val_gabor.png Graphic file (type png)
+<use val_gabor.png>
+Package pdftex.def Info: val_gabor.png  used on input line 2355.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+<val1_gabor.png, id=1966, 461.8053pt x 255.8358pt>
+File: val1_gabor.png Graphic file (type png)
+<use val1_gabor.png>
+Package pdftex.def Info: val1_gabor.png  used on input line 2366.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+ [117 <./train_gabor.png> <./val_gabor.png>]
+<test_gabor.png, id=1975, 461.8053pt x 255.8358pt>
+File: test_gabor.png Graphic file (type png)
+<use test_gabor.png>
+Package pdftex.def Info: test_gabor.png  used on input line 2377.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<test1_gabor.png, id=1976, 461.8053pt x 255.8358pt>
+File: test1_gabor.png Graphic file (type png)
+<use test1_gabor.png>
+Package pdftex.def Info: test1_gabor.png  used on input line 2388.
+(pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
+[118 <./val1_gabor.png> <./test_gabor.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[119 <./test1_gabor.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[120]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no œ in font cmr10!
+Missing character: There is no É in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no • in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ó in font cmr10!
+[121]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ê in font cmr10!
+[122]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+File: subsample1.png Graphic file (type png)
+<use subsample1.png>
+Package pdftex.def Info: subsample1.png  used on input line 2496.
+(pdftex.def)             Requested size: 217.42265pt x 120.65074pt.
+File: subsample2.png Graphic file (type png)
+<use subsample2.png>
+Package pdftex.def Info: subsample2.png  used on input line 2501.
+(pdftex.def)             Requested size: 217.42265pt x 124.11806pt.
+File: subsample3.png Graphic file (type png)
+<use subsample3.png>
+Package pdftex.def Info: subsample3.png  used on input line 2509.
+(pdftex.def)             Requested size: 217.42265pt x 121.6899pt.
+[123
+
+] [124]
+<dice_laplacian.png, id=2053, 387.3672pt x 339.669pt>
+File: dice_laplacian.png Graphic file (type png)
+<use dice_laplacian.png>
+Package pdftex.def Info: dice_laplacian.png  used on input line 2533.
+(pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
+ [125
+
+]
+<accuracy and loss_laplacian.png, id=2059, 859.2903pt x 354.123pt>
+File: accuracy and loss_laplacian.png Graphic file (type png)
+<use accuracy and loss_laplacian.png>
+Package pdftex.def Info: accuracy and loss_laplacian.png  used on input line 25
+41.
+(pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
+ [126 <./dice_laplacian.png>] [127 <./accuracy and loss_laplacian.png>]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<metrics_laplacian.png, id=2072, 875.1897pt x 1164.2697pt>
+File: metrics_laplacian.png Graphic file (type png)
+<use metrics_laplacian.png>
+Package pdftex.def Info: metrics_laplacian.png  used on input line 2558.
+(pdftex.def)             Requested size: 452.9679pt x 602.58128pt.
+[128
+
+]
+Overfull \vbox (8.0744pt too high) has occurred while \output is active []
+
+
+[129 <./metrics_laplacian.png>] [130]
+Overfull \hbox (37.55347pt too wide) in paragraph at lines 2610--2619
+ [][] 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[131
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 591.81741pt, 5.69046pt)
+* v-part:(T,H,B)=(0.0pt, 845.04684pt, 0.0pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=591.81741pt
+* \textheight=845.04684pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-109.26999pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<results_laplacian.png, id=2095, 1019.7297pt x 895.4253pt>
+File: results_laplacian.png Graphic file (type png)
+<use results_laplacian.png>
+Package pdftex.def Info: results_laplacian.png  used on input line 2634.
+(pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
+
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 2634--2636
+ [][] 
+ []
+
+[132 <./results_laplacian.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[133
+
+
+]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<result_laplacian.png, id=2106, 829.6596pt x 252.945pt>
+File: result_laplacian.png Graphic file (type png)
+<use result_laplacian.png>
+Package pdftex.def Info: result_laplacian.png  used on input line 2686.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result1_laplacian.png, id=2107, 829.6596pt x 252.945pt>
+File: result1_laplacian.png Graphic file (type png)
+<use result1_laplacian.png>
+Package pdftex.def Info: result1_laplacian.png  used on input line 2697.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[134 <./result_laplacian.png>]
+<result2_laplacian.png, id=2116, 829.6596pt x 252.945pt>
+File: result2_laplacian.png Graphic file (type png)
+<use result2_laplacian.png>
+Package pdftex.def Info: result2_laplacian.png  used on input line 2706.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result3_laplacian.png, id=2117, 829.6596pt x 252.945pt>
+File: result3_laplacian.png Graphic file (type png)
+<use result3_laplacian.png>
+Package pdftex.def Info: result3_laplacian.png  used on input line 2715.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result4_laplacian.png, id=2118, 829.6596pt x 252.945pt>
+File: result4_laplacian.png Graphic file (type png)
+<use result4_laplacian.png>
+Package pdftex.def Info: result4_laplacian.png  used on input line 2724.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[135 <./result1_laplacian.png> <./result2_laplacian.png> <./result3_laplacian.p
+ng>]
+<result5_laplacian.png, id=2129, 829.6596pt x 252.945pt>
+File: result5_laplacian.png Graphic file (type png)
+<use result5_laplacian.png>
+Package pdftex.def Info: result5_laplacian.png  used on input line 2733.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[136 <./result4_laplacian.png> <./result5_laplacian.png>]
+<Train_laplacian.png, id=2138, 462.528pt x 255.8358pt>
+File: Train_laplacian.png Graphic file (type png)
+<use Train_laplacian.png>
+Package pdftex.def Info: Train_laplacian.png  used on input line 2752.
+(pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<Train1_laplacian.png, id=2139, 462.528pt x 255.8358pt>
+File: Train1_laplacian.png Graphic file (type png)
+<use Train1_laplacian.png>
+Package pdftex.def Info: Train1_laplacian.png  used on input line 2762.
+(pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
+[137
+
+ <./Train_laplacian.png>]
+<val_laplacian.png, id=2147, 462.528pt x 255.8358pt>
+File: val_laplacian.png Graphic file (type png)
+<use val_laplacian.png>
+Package pdftex.def Info: val_laplacian.png  used on input line 2772.
+(pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
+<val1_laplacian.png, id=2148, 462.528pt x 255.8358pt>
+File: val1_laplacian.png Graphic file (type png)
+<use val1_laplacian.png>
+Package pdftex.def Info: val1_laplacian.png  used on input line 2782.
+(pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[138 <./Train1_laplacian.png> <./val_laplacian.png>]
+<test_laplacian.png, id=2157, 462.528pt x 255.8358pt>
+File: test_laplacian.png Graphic file (type png)
+<use test_laplacian.png>
+Package pdftex.def Info: test_laplacian.png  used on input line 2792.
+(pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+<test1_laplacian.png, id=2158, 462.528pt x 255.8358pt>
+File: test1_laplacian.png Graphic file (type png)
+<use test1_laplacian.png>
+Package pdftex.def Info: test1_laplacian.png  used on input line 2802.
+(pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[139 <./val1_laplacian.png> <./test_laplacian.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[140 <./test1_laplacian.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[141]
+Overfull \hbox (7.1487pt too wide) in paragraph at lines 2841--2842
+[]\OT1/cmr/bx/n/12 Laplacian-of-Gaussian Fil-ter-ing \OT1/fvm/b/n/12 ac-cen-tu-
+ates re-gions with rapid in-ten-sity changes,
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no î in font cmr10!
+Missing character: There is no Ä in font cmr10!
+[142] [143]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no Ö in font cmr10!
+[144] [145]
+Overfull \hbox (5.27734pt too wide) in paragraph at lines 2973--2974
+\OT1/fvm/b/n/12 mance across di-verse mor-pholo-gies, small tu-mors, large le-s
+ions, and even background-
+ []
+
+<sub1.png, id=2291, 534.0753pt x 286.9119pt>
+File: sub1.png Graphic file (type png)
+<use sub1.png>
+Package pdftex.def Info: sub1.png  used on input line 2979.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+<sub2.png, id=2292, 534.0753pt x 286.9119pt>
+File: sub2.png Graphic file (type png)
+<use sub2.png>
+Package pdftex.def Info: sub2.png  used on input line 2986.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+[146
+
+ <./sub1.png>]
+<sub3.png, id=2300, 534.0753pt x 286.9119pt>
+File: sub3.png Graphic file (type png)
+<use sub3.png>
+Package pdftex.def Info: sub3.png  used on input line 2993.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+<sub4.png, id=2301, 534.0753pt x 286.9119pt>
+File: sub4.png Graphic file (type png)
+<use sub4.png>
+Package pdftex.def Info: sub4.png  used on input line 3000.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+ [147 <./sub2.png> <./sub3.png>]
+<sub5.png, id=2310, 534.0753pt x 286.9119pt>
+File: sub5.png Graphic file (type png)
+<use sub5.png>
+Package pdftex.def Info: sub5.png  used on input line 3007.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+<sub6.png, id=2311, 534.0753pt x 286.9119pt>
+File: sub6.png Graphic file (type png)
+<use sub6.png>
+Package pdftex.def Info: sub6.png  used on input line 3014.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+ [148 <./sub4.png> <./sub5.png>]
+<sub7.png, id=2320, 534.0753pt x 286.9119pt>
+File: sub7.png Graphic file (type png)
+<use sub7.png>
+Package pdftex.def Info: sub7.png  used on input line 3021.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+<sub8.png, id=2321, 534.0753pt x 286.9119pt>
+File: sub8.png Graphic file (type png)
+<use sub8.png>
+Package pdftex.def Info: sub8.png  used on input line 3028.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+ [149 <./sub6.png> <./sub7.png>]
+<sub9.png, id=2330, 534.0753pt x 286.9119pt>
+File: sub9.png Graphic file (type png)
+<use sub9.png>
+Package pdftex.def Info: sub9.png  used on input line 3035.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+<sub10.png, id=2331, 534.0753pt x 286.9119pt>
+File: sub10.png Graphic file (type png)
+<use sub10.png>
+Package pdftex.def Info: sub10.png  used on input line 3042.
+(pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
+ [150 <./sub8.png> <./sub9.png>] [151 <./sub10.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[152
+
+]
+<dice 3.png, id=2352, 387.3672pt x 339.669pt>
+File: dice 3.png Graphic file (type png)
+<use dice 3.png>
+Package pdftex.def Info: dice 3.png  used on input line 3064.
+(pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+<accuracy and loss 3.png, id=2353, 859.2903pt x 354.123pt>
+File: accuracy and loss 3.png Graphic file (type png)
+<use accuracy and loss 3.png>
+Package pdftex.def Info: accuracy and loss 3.png  used on input line 3072.
+(pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
+[153
+
+ <./dice 3.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+Overfull \hbox (5.96548pt too wide) in paragraph at lines 3090--3092
+[]\OT1/cmr/bx/n/12 Summary: \OT1/fvm/b/n/12 The com-pre-hen-sive train-ing his-
+tory con-firms that com-bin-ing So-bel, Laplacian-
+ []
+
+[154 <./accuracy and loss 3.png>]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ê in font cmbx12!
+[155]
+<metrics 3.png, id=2371, 875.1897pt x 1164.2697pt>
+File: metrics 3.png Graphic file (type png)
+<use metrics 3.png>
+Package pdftex.def Info: metrics 3.png  used on input line 3109.
+(pdftex.def)             Requested size: 430.31812pt x 572.45134pt.
+ [156
+
+ <./metrics 3.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+Overfull \hbox (4.58981pt too wide) in paragraph at lines 3134--3135
+\OT1/fvm/b/n/12 En-hanc-ing Tu-mor main-tains rel-a-tively strong met-rics com-
+pared to other classes,
+ []
+
+Missing character: There is no ¬ in font cmbx12!
+Missing character: There is no ± in font cmbx12!
+[157
+
+]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ± in font cmr12!
+[158]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 591.81741pt, 5.69046pt)
+* v-part:(T,H,B)=(0.0pt, 845.04684pt, 0.0pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=591.81741pt
+* \textheight=845.04684pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-109.26999pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<truths 3.png, id=2388, 1019.7297pt x 895.4253pt>
+File: truths 3.png Graphic file (type png)
+<use truths 3.png>
+Package pdftex.def Info: truths 3.png  used on input line 3188.
+(pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
+
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 3188--3189
+ [][] 
+ []
+
+[159
+
+
+ <./truths 3.png>] [160
+
+
+]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+<result7 3.png, id=2399, 829.6596pt x 252.945pt>
+File: result7 3.png Graphic file (type png)
+<use result7 3.png>
+Package pdftex.def Info: result7 3.png  used on input line 3252.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[161]
+<result1 3.png, id=2405, 829.6596pt x 252.945pt>
+File: result1 3.png Graphic file (type png)
+<use result1 3.png>
+Package pdftex.def Info: result1 3.png  used on input line 3262.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result2 3.png, id=2406, 829.6596pt x 252.945pt>
+File: result2 3.png Graphic file (type png)
+<use result2 3.png>
+Package pdftex.def Info: result2 3.png  used on input line 3272.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[162 <./result7 3.png> <./result1 3.png>]
+<result3 3.png, id=2415, 829.6596pt x 252.945pt>
+File: result3 3.png Graphic file (type png)
+<use result3 3.png>
+Package pdftex.def Info: result3 3.png  used on input line 3282.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result4 3.png, id=2416, 829.6596pt x 252.945pt>
+File: result4 3.png Graphic file (type png)
+<use result4 3.png>
+Package pdftex.def Info: result4 3.png  used on input line 3292.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[163 <./result2 3.png> <./result3 3.png>]
+<result5 3.png, id=2425, 829.6596pt x 252.945pt>
+File: result5 3.png Graphic file (type png)
+<use result5 3.png>
+Package pdftex.def Info: result5 3.png  used on input line 3302.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+<result6 3.png, id=2426, 829.6596pt x 252.945pt>
+File: result6 3.png Graphic file (type png)
+<use result6 3.png>
+Package pdftex.def Info: result6 3.png  used on input line 3312.
+(pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[164 <./result4 3.png> <./result5 3.png>]
+Overfull \hbox (0.31628pt too wide) in paragraph at lines 3323--3324
+[]\OT1/fvm/b/n/12 The model demon-strates strong seg-men-ta-tion per-for-mance 
+for large and well-defined
+ []
+
+[165 <./result6 3.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+<train 3.png, id=2442, 534.0753pt x 286.9119pt>
+File: train 3.png Graphic file (type png)
+<use train 3.png>
+Package pdftex.def Info: train 3.png  used on input line 3344.
+(pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
+<test 3.png, id=2443, 534.0753pt x 286.9119pt>
+File: test 3.png Graphic file (type png)
+<use test 3.png>
+Package pdftex.def Info: test 3.png  used on input line 3354.
+(pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
+[166
+
+ <./train 3.png>]
+<train1 3.png, id=2451, 534.0753pt x 286.9119pt>
+File: train1 3.png Graphic file (type png)
+<use train1 3.png>
+Package pdftex.def Info: train1 3.png  used on input line 3364.
+(pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
+<test1 3.png, id=2452, 534.0753pt x 286.9119pt>
+File: test1 3.png Graphic file (type png)
+<use test1 3.png>
+Package pdftex.def Info: test1 3.png  used on input line 3374.
+(pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
+ [167 <./test 3.png> <./train1 3.png>]
+<val 3.png, id=2461, 534.0753pt x 286.9119pt>
+File: val 3.png Graphic file (type png)
+<use val 3.png>
+Package pdftex.def Info: val 3.png  used on input line 3384.
+(pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
+<val1 3.png, id=2462, 534.0753pt x 286.9119pt>
+File: val1 3.png Graphic file (type png)
+<use val1 3.png>
+Package pdftex.def Info: val1 3.png  used on input line 3394.
+(pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
+ [168 <./test1 3.png> <./val 3.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[169 <./val1 3.png>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[170] [171]
+Overfull \hbox (1.43167pt too wide) in paragraph at lines 3445--3445
+[]\OT1/cmr/bx/n/14.4 Stage 1: Es-tab-lish-ing the No-Preprocessing Base-line (R
+aw
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[172
+
+]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[173]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[174] [175] [176]
+Overfull \hbox (22.30669pt too wide) in paragraph at lines 3581--3582
+ []\OT1/cmr/bx/n/12 Second-derivative Ad-van-tage[] \OT1/fvm/b/n/12 The su-pe-r
+ior per-for-mance of Lapla-cian (second-derivative)
+ []
+
+[177]) [178]
+\openout2 = `conclusion.aux'.
+
+ (conclusion.tex
+Chapter 4.
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[179
+
+
+
+
+] [180] [181]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[182]) [183]
+\openout2 = `future_work.aux'.
+
+ (future_work.tex
+Chapter 5.
+[184
+
+
+
+
+]
+Overfull \hbox (3.91512pt too wide) in paragraph at lines 28--29
+[]\OT1/cmr/bx/n/12 Multi-Resolution Anal-y-sis\OT1/fvm/b/n/12 : Im-ple-men-ta-t
+ion of wavelet trans-forms or other multi-
+ []
+
+[185] [186] [187]
+Overfull \hbox (3.03027pt too wide) in paragraph at lines 144--145
+[]\OT1/cmr/bx/n/12 Tumor Growth Mod-el-ing\OT1/fvm/b/n/12 : In-cor-po-rat-ing b
+i-o-log-i-cal con-straints and tu-mor growth
+ []
+
+[188] [189]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+) [190]
+\openout2 = `appendix.aux'.
+
+ (appendix.tex [191
+
+
+
+
+]
+Appendix A.
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 9.
+
+[192
+
+] (bachelor.lof
+Overfull \hbox (3.77121pt too wide) in paragraph at lines 7--7
+ [][] [][][]\OT1/cmr/bx/n/12 Sample 1. \OT1/cmr/m/it/12 Left: \OT1/fvm/b/n/12 R
+aw-intensity RGB com-pos-ite show-ing pre-served anatom- 
+ []
+
+[193
+
+
+]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[194]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+
+Overfull \hbox (2.39027pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/bx/n/12 Left: \OT1/fvm/b/n/12 Raw RGB in-put, pre-dom-i-nantly back-g
+round with brain edge. \OT1/cmr/bx/n/12 Right: 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+[195]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+[196]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[197] [198]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+
+Overfull \hbox (15.0037pt too wide) in paragraph at lines 59--59
+ \OT1/fvm/b/n/12 The model cap-tures the gen-eral lo-ca-tion of the tu-mor, but
+ under-segmentation 
+ []
+
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[199]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+
+Overfull \hbox (10.27353pt too wide) in paragraph at lines 64--64
+ \OT1/cmr/bx/n/12 Left: \OT1/fvm/b/n/12 Gabor-filtered RGB in-put with mul-ti-p
+le ori-en-ta-tion high-lights. \OT1/cmr/bx/n/12 Right: 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[200]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[201]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+
+Overfull \hbox (35.76181pt too wide) in paragraph at lines 83--83
+ \OT1/fvm/b/n/12 shows a siz-able tu-mor, re-flect-ing the method's ca-pa-bil-i
+ty to en-hance segmentation- 
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no î in font cmr12!
+[202]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+[203]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+[204]
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+Missing character: There is no ‚ in font cmbx12!
+Missing character: There is no Ä in font cmbx12!
+Missing character: There is no ì in font cmbx12!
+)
+\tf@lof=\write6
+\openout6 = `bachelor.lof'.
+
+) [205] [206
+
+
+
+]
+Overfull \hbox (1.72858pt too wide) in paragraph at lines 164--164
+\OT1/fvm/b/n/12 mark (BRATS)". In: \OT1/cmr/m/it/12 IEEE Trans-ac-tions on Med-
+i-cal Imag-ing \OT1/fvm/b/n/12 34.10 (2015), pp. 1993{
+ []
+
+Missing character: There is no ‚ in font cmti12!
+Missing character: There is no Ä in font cmti12!
+Missing character: There is no ì in font cmti12!
+[207] (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux) (abstract.aux)
+(introduction.aux) (background.aux) (methodology.aux) (conclusion.aux)
+(future_work.aux) (appendix.aux))
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `bachelor.out' has not changed.
+(rerunfilecheck)             Checksum: 952EE5590014A6F301CCFAEB71FFBD11;16495.
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                bachelor
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'bachelor.run.xml'.
+\openout1 = `bachelor.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 27416 strings out of 474486
+ 480152 string characters out of 5740887
+ 2480542 words of memory out of 5000000
+ 47906 multiletter control sequences out of 15000+600000
+ 565175 words of font info for 60 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 85i,12n,133p,1910b,2296s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Shakib's PC\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1200.pk><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Shakib's PC/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Shakib's PC
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Us
+ers/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi6.pfb><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Shakib's PC/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Shakib's PC/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Shakib
+'s PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsl12.pfb><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Shakib's PC/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on bachelor.pdf (218 pages, 8606727 bytes).
+PDF statistics:
+ 3512 PDF objects out of 3580 (max. 8388607)
+ 1419 named destinations out of 1440 (max. 500000)
+ 1161 words of extra memory for PDF output out of 10000 (max. 10000000)
+

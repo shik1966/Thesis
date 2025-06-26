@@ -1,69 +1,4 @@
-\documentclass[12pt,a4paper]{report}
-\UseRawInputEncoding
 
-% === Packages ===
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{amsmath}
-\usepackage[scaled]{beramono}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black, citecolor=black}
-\usepackage{graphicx}
-\usepackage{placeins}
-\usepackage{tabularx}
-\usepackage{booktabs} % for better lines (optional, but improves look)
-\renewcommand{\tabularxcolumn}[1]{>{\raggedright\arraybackslash}p{#1}}
-\usepackage{multirow}
-\usepackage{csquotes}
-\usepackage{float}
-\usepackage[english]{babel}         % enable hyphenation rules for English
-
-\usepackage{lscape}
-\usepackage[a4paper]{geometry}
-\usepackage[export]{adjustbox}
-
-\usepackage[backend=bibtex,style=numeric,citestyle=numeric]{biblatex}
-\addbibresource{bachelor.bib} % Adjust to your actual filename
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{1em}
-
-% === Listings Setup ===
-\definecolor{codebg}{rgb}{0.97,0.97,0.97}
-\definecolor{stringcolor}{rgb}{0.7,0.3,0.1}
-\definecolor{commentcolor}{rgb}{0.25,0.5,0.35}
-
-\lstset{
-    language=Python,
-    basicstyle=\ttfamily\footnotesize,
-    backgroundcolor=\color{codebg},
-    frame=single,
-    columns=flexible,
-    breaklines=true,
-    showstringspaces=false,
-    tabsize=4,
-    xleftmargin=1em,
-    xrightmargin=1em,
-    aboveskip=1em,
-    belowskip=1em,
-    keywordstyle=\color{blue!70!black}\bfseries,
-    stringstyle=\color{stringcolor},
-    commentstyle=\color{commentcolor}\itshape,
-    morecomment=[l][\color{magenta}]{\#},
-    numbers=none
-}
-\lstdefinestyle{output}{
-    basicstyle=\ttfamily\footnotesize,
-    frame=single,
-    backgroundcolor=\color{gray!10},
-    xleftmargin=1em,
-    xrightmargin=1em,
-    aboveskip=0.7em,
-    belowskip=0.7em,
-    numbers=none
-}
-
-\begin{document}
 
 
 
@@ -114,7 +49,7 @@ No intensity normalization, histogram matching, or augmentation was performed at
 The core segmentation network is based on the \textbf{SegNet} architecture---an encoder-decoder convolutional network designed for pixel-wise semantic segmentation~\cite{badrinarayanan2017segnet}. In this work:
 \begin{itemize}
     \item The \textbf{encoder} comprises stacked convolutional blocks with interleaved max-pooling layers, closely mirroring the VGG16 backbone.
-    \item The \textbf{decoder} mirrors the encoder, employing transposed convolutions (“learned upsampling”) and skip connections to recover spatial detail.
+    \item The \textbf{decoder} mirrors the encoder, employing transposed convolutions ("learned upsampling") and skip connections to recover spatial detail.
     \item \textbf{Dropout layers} are added after pooling to reduce overfitting.
     \item The final layer outputs a 4-channel softmax probability map (for each tissue class: 0, 1, 2, 4).
 \end{itemize}
@@ -177,7 +112,7 @@ Mounting Google Drive allows the notebook to read from and write to persistent s
 
 \begin{lstlisting}[language=Python]
 # Cell 2: Force-remount Google Drive
-# Purpose: Re-mounts your Drive even if it’s already mounted in Cell 1.
+# Purpose: Re-mounts your Drive even if it's already mounted in Cell 1.
 drive.mount("/content/drive", force_remount=True)
 \end{lstlisting}
 
@@ -197,7 +132,7 @@ Force-remounting is useful if the drive was unmounted, changed, or you need to r
 \begin{lstlisting}[language=Python]
 # Cell 3: Imports & Paths
 # Purpose: Pull in core libraries once, define the base/raw-data paths,
-#          set any hyperparameters or filenames you’ll need later,
+#          set any hyperparameters or filenames you'll need later,
 #          and report how many patient folders exist.
 
 import os
@@ -249,7 +184,7 @@ This cell imports all required libraries for data processing and model training,
 #          resize to 256×256, stack the modalities into a 3-channel array,
 #          and save X_raw/Y_raw .npy files for fast reload.
 
-# 1) Define where we will save/load the “raw” .npy files
+# 1) Define where we will save/load the "raw" .npy files
 X_PATH_RAW = os.path.join(BASE_PATH, 'raw_X.npy')
 Y_PATH_RAW = os.path.join(BASE_PATH, 'raw_Y.npy')
 
@@ -453,7 +388,7 @@ By default, I preserve the native $240 \times 240$ pixel size of BraTS MRI slice
 
 \begin{lstlisting}[language=Python]
 # Cell 6 (v_raw): Memory-map Raw Subsampled Dataset and Show Random Samples
-# Purpose: Load the “no-resize” subsampled raw arrays (H×W×3), normalize per-channel,
+# Purpose: Load the "no-resize" subsampled raw arrays (H×W×3), normalize per-channel,
 # and visualize a few random slices in true RGB.
 
 import numpy as np
@@ -529,7 +464,7 @@ import numpy as np
 # 1) Assume Xs, Ys are loaded or built by Cell 5:
 #    Xs.shape = (900, 240, 240, 3),  Ys.shape = (900, 240, 240)
 
-# 2) Expand Ys so it has a channel dimension (needed for data_gen’s one-hot logic)
+# 2) Expand Ys so it has a channel dimension (needed for data_gen's one-hot logic)
 Ys_expanded = np.expand_dims(Ys, axis=-1)  # now shape = (900, 240, 240, 1)
 
 # 3) Reserve 15% for test
@@ -640,7 +575,7 @@ def data_gen(X_array, Y_array, batch_size=16):
         Y_array = np.expand_dims(Y_array, axis=-1)
 
     while True:
-        # Shuffle indices each “epoch”
+        # Shuffle indices each "epoch"
         indices = np.arange(N)
         np.random.shuffle(indices)
 
@@ -692,12 +627,12 @@ This ensures the data is ready for input into Keras/TensorFlow segmentation mode
 
 \noindent\textbf{Why Four Classes?}
 
-The BraTS convention uses four channels: background, tumor core (necrotic/non-enhancing), edema, and enhancing tumor. “Tumor core” as a union can be computed later if needed, so a fifth channel is unnecessary and can create ambiguity.
+The BraTS convention uses four channels: background, tumor core (necrotic/non-enhancing), edema, and enhancing tumor. "Tumor core" as a union can be computed later if needed, so a fifth channel is unnecessary and can create ambiguity.
 
 \noindent\textbf{Practical Notes:}
 \begin{itemize}
     \item Four-channel output aligns with standard BraTS benchmarks and keeps the model simple.
-    \item At inference, predicted masks are reconstructed via argmax; “tumor core” can be formed by merging relevant channels if required.
+    \item At inference, predicted masks are reconstructed via argmax; "tumor core" can be formed by merging relevant channels if required.
 \end{itemize}
 
 \noindent\textbf{Summary:}
@@ -3674,15 +3609,7 @@ The complete experimental timeline revealed that while classical feature detecti
 This timeline of findings ultimately supported the thesis conclusion that while feature detection techniques can improve segmentation performance, careful selection and implementation are crucial for success, and the benefits may be more modest than initially hypothesized for modern deep learning architectures operating on high-quality medical imaging data.
 
 
-\include{future_work}
 
-
-\printbibliography
-
-
-
-    
-\end{document}
 
 
 

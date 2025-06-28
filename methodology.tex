@@ -1391,14 +1391,15 @@ To comprehensively evaluate the performance of our SegNet model trained on the o
     High scores under Full Policy should be interpreted with caution, as they are strongly influenced by the large number of background slices. Simple Policy results offer a more realistic assessment of clinical segmentation performance, underscoring the need for transparent, robust evaluation in highly imbalanced datasets like BraTS.
 \end{itemize}
 
-\vspace{1em}
+\textbf{Quantitative Summary (mean):}
 
-\textbf{Metric Values (Mean, Per Class):}
+\vspace{1em}
+\noindent\textbf{Full Policy:}
 
 \begin{center}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Class} & \textbf{Dice (Full)} & \textbf{IoU (Full)} & \textbf{HD95 (Full)} & \textbf{ASSD (Full)} \\
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
 Tumor Core       & 0.8353 & 0.7953 & 2.62 & 0.75 \\
 Edema            & 0.6336 & 0.5770 & 7.64 & 2.46 \\
@@ -1407,17 +1408,25 @@ Enhancing Tumor  & 0.8730 & 0.8322 & 4.06 & 1.41 \\
 \end{tabular}
 \end{center}
 
-\noindent
-\hspace*{-1.5cm}
+\vspace{1em}
+\noindent\textbf{Simple Policy (Tumor-containing slices only):}
+
+\begin{center}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Class} & \textbf{Dice (Simple)} & \textbf{IoU (Simple)} & \textbf{HD95 (Simple)} & \textbf{ASSD (Simple)} \\
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
 Tumor Core       & 0.5168 & 0.3993 & 8.60 & 2.48 \\
 Edema            & 0.4181 & 0.3281 & 14.12 & 4.55 \\
 Enhancing Tumor  & 0.6572 & 0.5469 & 11.89 & 4.14 \\
 \bottomrule
 \end{tabular}
+\end{center}
+
+\vspace{1em}
+
+\textbf{Summary:}  
+The comprehensive evaluation confirms the effectiveness of raw intensity inputs for brain tumor segmentation, with the Full Policy highlighting strong theoretical performance across all tumor subtypes. However, the Simple Policy reveals the true challenge of tumor segmentation, particularly for diffuse regions like Edema, emphasizing the importance of careful evaluation methodology in highly imbalanced medical datasets.
 
 
 
@@ -1838,7 +1847,7 @@ To comprehensively evaluate the performance of our Sobel-processed SegNet model,
 \begin{center}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Class} & \textbf{Dice (Full)} & \textbf{IoU (Full)} & \textbf{HD95 (Full)} & \textbf{ASSD (Full)} \\
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
 Tumor Core       & 0.8027 & 0.7709 & 2.03 & 0.63 \\
 Edema            & 0.5979 & 0.5448 & 6.40 & 2.43 \\
@@ -1848,12 +1857,12 @@ Enhancing Tumor  & 0.8530 & 0.8093 & 1.38 & 0.41 \\
 \end{center}
 
 \vspace{1em}
-\noindent\textbf{Simple Policy (tumor-containing slices only):}
+\noindent\textbf{Simple Policy (Tumor-containing slices only):}
 
 \begin{center}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Class} & \textbf{Dice (Simple)} & \textbf{IoU (Simple)} & \textbf{HD95 (Simple)} & \textbf{ASSD (Simple)} \\
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
 Tumor Core       & 0.4080 & 0.3126 & 7.75  & 2.42 \\
 Edema            & 0.3688 & 0.2854 & 12.54 & 4.76 \\
@@ -1865,7 +1874,7 @@ Enhancing Tumor  & 0.5950 & 0.4745 & 4.29  & 1.26 \\
 \vspace{1em}
 
 \textbf{Summary:}  
-Under the Full Policy, Sobel preprocessing achieves its best segmentation performance on the Enhancing Tumor class (Dice = 0.8530, IoU = 0.8093) and the lowest on Edema (Dice = 0.5979, IoU = 0.5448), with very tight boundary adherence reflected in low HD95 and ASSD values. When evaluated only on tumor‐containing slices (Simple Policy), performance declines notably across all classes—most dramatically for Tumor Core (Dice drops to 0.4080) and Edema (Dice drops to 0.3688)—highlighting the increased challenge of precise tumor delineation when empty slices are excluded. This contrast underscores the need for robust preprocessing to handle the variability of slice content in clinical applications.  
+The comprehensive evaluation confirms that Sobel preprocessing achieves its best segmentation performance on the Enhancing Tumor class (Dice = 0.8530, IoU = 0.8093) and lowest on Edema (Dice = 0.5979, IoU = 0.5448) under Full Policy, with tight boundary adherence reflected in low HD95 and ASSD values. When evaluated only on tumor‐containing slices (Simple Policy), performance declines notably across all classes—most dramatically for Tumor Core (Dice drops to 0.4080) and Edema (Dice drops to 0.3688)—highlighting the increased challenge of precise tumor delineation when empty slices are excluded.  
 
 
 \subsection{Sobel-Pipeline Per-Class Pixel Metrics}
@@ -2261,13 +2270,15 @@ To comprehensively evaluate the performance of our Gabor-processed SegNet model,
     While high scores under Full Policy may look impressive, Simple Policy results better reflect clinical deployment scenarios, where empty slices are not the bottleneck and performance on actual tumor slices is critical. The considerable gap between the two policies underlines the need for transparent metric reporting and careful interpretation on highly imbalanced, slice-based datasets like BraTS.
 \end{itemize}
 
-\textbf{Metric Values (Mean ± Std, Per Class):}
+\textbf{Quantitative Summary (mean ± std):}
+
 \vspace{1em}
+\noindent\textbf{Full Policy:}
 
 \begin{center}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Class} & \textbf{Dice (Full)} & \textbf{IoU (Full)} & \textbf{HD95 (Full)} & \textbf{ASSD (Full)} \\
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
 Tumor Core       & $0.7189 \pm 0.4081$ & $0.6956 \pm 0.4252$ & $6.24 \pm 15.68$ & $2.91 \pm 8.88$ \\
 Edema            & $0.5239 \pm 0.4303$ & $0.4793 \pm 0.4322$ & $17.26 \pm 24.71$ & $8.54 \pm 15.86$ \\
@@ -2276,21 +2287,25 @@ Enhancing Tumor  & $0.7273 \pm 0.3748$ & $0.6868 \pm 0.3974$ & $8.97 \pm 20.82$ 
 \end{tabular}
 \end{center}
 
-\vspace{0.8em}
+\vspace{1em}
+\noindent\textbf{Simple Policy (Tumor-containing slices only):}
 
-
-
-\noindent
-\hspace*{-1.5cm}
+\begin{center}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Class} & \textbf{Dice (Simple)} & \textbf{IoU (Simple)} & \textbf{HD95 (Simple)} & \textbf{ASSD (Simple)} \\
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
 Tumor Core       & $0.2093 \pm 0.2559$ & $0.1439 \pm 0.1901$ & $23.76 \pm 22.81$ & $11.08 \pm 14.49$ \\
 Edema            & $0.2612 \pm 0.3053$ & $0.1920 \pm 0.2402$ & $31.79 \pm 25.74$ & $15.73 \pm 18.71$ \\
 Enhancing Tumor  & $0.3427 \pm 0.2928$ & $0.2450 \pm 0.2170$ & $25.86 \pm 28.49$ & $11.35 \pm 17.14$ \\
 \bottomrule
 \end{tabular}
+\end{center}
+
+\vspace{1em}
+
+\textbf{Summary:}  
+The comprehensive evaluation reveals that Gabor preprocessing faces significant challenges across all tumor subtypes, with the Full Policy showing limited effectiveness and the Simple Policy exposing substantial difficulties in accurate tumor segmentation. The high standard deviations and poor Simple Policy performance indicate that Gabor's texture-oriented approach may introduce excessive complexity, leading to inconsistent segmentation results across diverse tumor presentations.
 
 \subsection{Gabor-Pipeline Per-Class Pixel Metrics}
 
@@ -2671,14 +2686,15 @@ To comprehensively evaluate the performance of our Laplacian-processed SegNet mo
 
 \clearpage
 
-\textbf{Metric Values (Mean, Per Class):}
+\textbf{Quantitative Summary (mean):}
 
+\vspace{1em}
 \noindent\textbf{Full Policy:}
 
 \begin{center}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Class} & \textbf{Dice (Full)} & \textbf{IoU (Full)} & \textbf{HD95 (Full)} & \textbf{ASSD (Full)} \\
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
 Tumor Core       & 0.7938 & 0.7593 & 2.05  & 0.75 \\
 Edema            & 0.5827 & 0.5264 & 12.21 & 5.38 \\
@@ -2687,27 +2703,25 @@ Enhancing Tumor  & 0.8410 & 0.7931 & 1.48  & 0.48 \\
 \end{tabular}
 \end{center}
 
+\vspace{1em}
+\noindent\textbf{Simple Policy (Tumor-containing slices only):}
 
-\noindent\textbf{Simple Policy:}
-
-\begin{table}[H]
-  \centering
-  \label{tab:sobel_simple_policy}
-  \begin{tabular}{lcccc}
-    \toprule
-    \textbf{Class} & \textbf{Dice (Simple)} & \textbf{IoU (Simple)} & \textbf{HD95 (Simple)} & \textbf{ASSD (Simple)} \\
-    \midrule
-    Tumor Core       & 0.4080 & 0.3126 & 7.75  & 2.42 \\
-    Edema            & 0.3688 & 0.2854 & 12.54 & 4.76 \\
-    Enhancing Tumor  & 0.5950 & 0.4745 & 4.29  & 1.26 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
+\midrule
+Tumor Core       & 0.3815 & 0.2904 & 9.12  & 3.22 \\
+Edema            & 0.3372 & 0.2518 & 22.56 & 9.93 \\
+Enhancing Tumor  & 0.5620 & 0.4532 & 5.84  & 2.15 \\
+\bottomrule
+\end{tabular}
+\end{center}
 
 \vspace{1em}
+
 \textbf{Summary:}  
-Under the Full Policy, segmentation performance is strongest for the Enhancing Tumor class (Dice = 0.8410, IoU = 0.7931) and weakest for Edema (Dice = 0.5827, IoU = 0.5264), with relatively low boundary errors. When evaluated only on tumor‐containing slices (Simple Policy), all classes exhibit marked performance drops—most dramatically for Edema (Dice falls to 0.3372 and HD95 rises to 22.56, ASSD to 9.93)—highlighting the increased difficulty of delineating edema in a clinically realistic setting. Tumor Core also declines substantially (Dice = 0.3815), underscoring the need for further model and preprocessing enhancements to handle challenging tumor subtypes.  
+The comprehensive evaluation confirms that Laplacian preprocessing achieves its strongest performance on the Enhancing Tumor class (Dice = 0.8410, IoU = 0.7931) under Full Policy, with excellent boundary precision. When evaluated only on tumor‐containing slices (Simple Policy), performance declines notably across all classes—most dramatically for Edema (Dice falls to 0.3372, HD95 rises to 22.56) and substantially for Tumor Core (Dice = 0.3815)—highlighting the increased difficulty of precise tumor delineation when empty slices are excluded.  
 
 
 \subsection{Laplacian-Pipeline Per-Class Pixel Metrics}

@@ -197,8 +197,8 @@
 \contentsline {section}{\numberline {5.11}Recommended Next Steps}{184}{section.5.11}%
 \contentsline {section}{\numberline {5.12}Long-term Vision}{184}{section.5.12}%
 \contentsline {section}{\numberline {5.13}Conclusion}{184}{section.5.13}%
-\contentsline {chapter}{Appendix}{186}{section*.106}%
+\contentsline {chapter}{Appendix}{186}{section*.105}%
 \contentsline {chapter}{\numberline {A}Lists}{187}{appendix.A}%
-\contentsline {section}{List of Abbreviations}{187}{section*.107}%
-\contentsline {section}{List of Figures}{202}{appendix*.108}%
-\contentsline {chapter}{References}{203}{appendix*.109}%
+\contentsline {section}{List of Abbreviations}{187}{section*.106}%
+\contentsline {section}{List of Figures}{202}{appendix*.107}%
+\contentsline {chapter}{References}{203}{appendix*.108}%

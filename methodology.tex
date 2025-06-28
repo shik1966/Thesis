@@ -646,7 +646,7 @@ Using four one-hot channels is standard for BraTS, avoids label overlap, and is 
     \item \textbf{Consistent preprocessing:} Apply the same normalization to all data splits to avoid inference shifts.
     \item \textbf{Track per-class metrics:} Monitor Dice (or IoU) for each tumor subregion for meaningful evaluation.
     \item \textbf{Document pipeline steps:} Clear documentation ensures reproducibility.
-    \item \textbf{Post-process “tumor core” if needed:} Compute as the union of necrotic and enhancing channels.
+    \item \textbf{Post-process "tumor core" if needed:} Compute as the union of necrotic and enhancing channels.
 \end{itemize}
 
 \noindent\textbf{Batch Size Choice:}
@@ -714,7 +714,7 @@ from tensorflow.keras.losses import CategoricalCrossentropy
 # 1) Base Categorical Cross-Entropy
 ce_loss = CategoricalCrossentropy()
 
-# 2) Multi-class Dice Loss (casts y_true->float32 so it matches y_pred’s dtype)
+# 2) Multi-class Dice Loss (casts y_true->float32 so it matches y_pred's dtype)
 def multiclass_dice_loss(y_true, y_pred, smooth=1e-6):
     """
     y_true: one-hot ground truth of shape (batch_size, H, W, 4), dtype could be uint8 or float32
@@ -743,7 +743,7 @@ def multiclass_dice_loss(y_true, y_pred, smooth=1e-6):
 def cat_dice_loss(y_true, y_pred):
     return ce_loss(y_true, y_pred) + multiclass_dice_loss(y_true, y_pred)
 
-# 4) (Optional) If you also want a “pure” Dice coefficient metric for monitoring:
+# 4) (Optional) If you also want a "pure" Dice coefficient metric for monitoring:
 def multiclass_dice_coef(y_true, y_pred, smooth=1e-6):
     y_true_f = K.reshape(y_true, (-1, 4))
     y_pred_f = K.reshape(y_pred, (-1, 4))
@@ -866,7 +866,7 @@ model.summary()
 \hline
 \textbf{Model} & \textbf{\#Classes} & \textbf{Params (M)} & \textbf{Skip?} & \textbf{Pretrained?} & \textbf{Notes} \\
 \hline
-Friend’s SegNet (VGG-style)   & 5   & 29   & No  & No  & Too heavy, no skip \\
+Friend's SegNet (VGG-style)   & 5   & 29   & No  & No  & Too heavy, no skip \\
 \hline
 SegNet\_Binary\_Heavy         & 2   & 6    & No  & No  & Binary only \\
 \hline
@@ -961,7 +961,7 @@ X_val   shape: (136, 240, 240, 3)
 Y_val   shape: (136, 240, 240, 1)
 Registered metrics: ['loss', 'compile_metrics']
 100%
- 20/20 [10:08<00:00, 28.83s/epoch, accuracy=0.995, loss=0.233, multiclass_dice_coef=0.792, val_accuracy=0.995, val_loss=0.222, val_multiclass_dice_coef=0.799]
+ 20/20 [10:08 elapsed, 28.83s/epoch, accuracy=0.995, loss=0.233, multiclass_dice_coef=0.792, val_accuracy=0.995, val_loss=0.222, val_multiclass_dice_coef=0.799]
 ...
 Epoch 20/20
 39/39 [============================] 30s 779ms/step - accuracy: 0.9956 - loss: 0.2216 - multiclass_dice_coef: 0.8003 - val_accuracy: 0.9950 - val_loss: 0.2222 - val_multiclass_dice_coef: 0.7992
@@ -1034,7 +1034,7 @@ for cls, scores in dice_scores.items():
 \noindent\textbf{Output:}
 \begin{lstlisting}
 Model loaded successfully!
-Evaluating Dice: 100\% | 135/135 [01:00&lt;00:00,  2.24it/s]
+Evaluating Dice: 100\% | 135/135 [01:00 elapsed, 2.24it/s]
 Average Dice Score per Class:
 Tumor Core (Class 1): 0.5168
 Edema (Class 2): 0.4181
@@ -1073,7 +1073,7 @@ Per-class Dice provides a rigorous, interpretable benchmark for multi-class brai
 
 \subsection{Cell 15: Compute Slicewise Dice, IoU, HD95 \& ASSD under Empty-Slice Policies}
 
-To thoroughly evaluate my model’s segmentation performance, I computed four key metrics—Dice coefficient, Intersection-over-Union (IoU), 95th-percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD)—for each tumor subregion (classes 1, 2, 4) on each test slice.
+To thoroughly evaluate my model's segmentation performance, I computed four key metrics—Dice coefficient, Intersection-over-Union (IoU), 95th-percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD)—for each tumor subregion (classes 1, 2, 4) on each test slice.
 
 \vspace{0.5em}
 \noindent\textbf{Key Steps and Metric Definitions:}
@@ -1094,10 +1094,10 @@ To thoroughly evaluate my model’s segmentation performance, I computed four ke
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textbf{“Empty Slice” Policy Choices:}
+\noindent\textbf{"Empty Slice" Policy Choices:}
 Because many test slices are empty (no tumor in both ground truth and prediction), I report results under two evaluation policies:
 \begin{itemize}
-    \item \textbf{Full Policy:} Count empty slices as perfect matches (Dice=1, IoU=1, HD95=0, ASSD=0). Aggregates over all slices, rewarding correct “no tumor” predictions.
+    \item \textbf{Full Policy:} Count empty slices as perfect matches (Dice=1, IoU=1, HD95=0, ASSD=0). Aggregates over all slices, rewarding correct "no tumor" predictions.
     \item \textbf{Simple Policy:} Exclude empty slices; compute metrics only on slices where the class is present in ground truth or prediction. Focuses on the most clinically relevant cases.
 \end{itemize}
 Formally,
@@ -1117,13 +1117,13 @@ where $N_{\text{all}}$ is the total number of slices and $N_c$ is the number of 
 
 \vspace{0.5em}
 \noindent\textbf{Interpretation:}
-Reporting both policies offers a transparent view of model behavior: “Full” reflects accuracy across all slices, including correctly predicted empty regions (common for rare tumor classes), while “Simple” focuses on true tumor-present scenarios and is a stricter test. For clinical reporting and benchmarking, it is important to specify which policy was used.
+Reporting both policies offers a transparent view of model behavior: "Full" reflects accuracy across all slices, including correctly predicted empty regions (common for rare tumor classes), while "Simple" focuses on true tumor-present scenarios and is a stricter test. For clinical reporting and benchmarking, it is important to specify which policy was used.
 
 Detailed numeric results are given in the Results section.
 
 \subsubsection{Cell 16: Compute Per-Class TP/FP/FN/TN $\rightarrow$ Precision, Recall, Specificity}
 
-To further quantify my SegNet model’s performance, I computed pixel-wise True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each non-background tumor subregion (classes 1, 2, 4). Using these counts, I derived \textbf{Precision}, \textbf{Recall (Sensitivity)}, and \textbf{Specificity} for each class, as well as the average number of FP and FN voxels per test slice.
+To further quantify my SegNet model's performance, I computed pixel-wise True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each non-background tumor subregion (classes 1, 2, 4). Using these counts, I derived \textbf{Precision}, \textbf{Recall (Sensitivity)}, and \textbf{Specificity} for each class, as well as the average number of FP and FN voxels per test slice.
 
 \vspace{1em}
 
@@ -1273,9 +1273,9 @@ The essential methodology, core algorithms, and critical analysis code have been
 
 \section{Raw Intensity Results}
 
-For our “no preprocessing” baseline, we used the native MRI intensity slices from the BraTS dataset, with no edge detection, filtering, or enhancement applied. Each modality (T1ce, T2, FLAIR) is extracted, optionally resized to the target resolution, and directly stacked as three input channels (analogous to RGB). This pipeline preserves the original anatomical contrast and spatial information of the MRI scans.
+For our "no preprocessing" baseline, we used the native MRI intensity slices from the BraTS dataset, with no edge detection, filtering, or enhancement applied. Each modality (T1ce, T2, FLAIR) is extracted, optionally resized to the target resolution, and directly stacked as three input channels (analogous to RGB). This pipeline preserves the original anatomical contrast and spatial information of the MRI scans.
 
-This approach enables us to construct a dataset of raw, unfiltered MRI inputs. Each input is a three-channel array corresponding directly to T1ce, T2, and FLAIR, and can be saved and loaded for model training and analysis. No additional spatial filtering or feature enhancement is performed—serving as a true “no preprocessing” baseline.
+This approach enables us to construct a dataset of raw, unfiltered MRI inputs. Each input is a three-channel array corresponding directly to T1ce, T2, and FLAIR, and can be saved and loaded for model training and analysis. No additional spatial filtering or feature enhancement is performed—serving as a true "no preprocessing" baseline.
 
 
 
@@ -1295,7 +1295,7 @@ The right panel shows the ground truth segmentation mask for each slice, highlig
 \textbf{Key Observations:}
 \begin{itemize}
     \item \textbf{Preservation of Original Structure:} Raw-intensity images retain all anatomical and pathological structures, but without explicit edge or texture enhancement. Tumor regions are visible through subtle intensity differences and spatial patterns.
-    \item \textbf{Baseline Representation:} This pipeline relies on the network’s ability to learn discriminative features directly from unprocessed data, serving as a control for all classical filtering approaches.
+    \item \textbf{Baseline Representation:} This pipeline relies on the network's ability to learn discriminative features directly from unprocessed data, serving as a control for all classical filtering approaches.
     \item \textbf{Mask Alignment:} In tumor-containing slices, visible abnormalities in the RGB image often correspond to the segmentation mask, though boundaries may be less pronounced than in edge-enhanced versions.
     \item \textbf{Sample Variability:} As in all pipelines, there is marked variation in tumor size and appearance. Some slices are background-only, while others show clear multi-region pathology.
 \end{itemize}
@@ -1391,7 +1391,7 @@ To comprehensively evaluate the performance of our SegNet model trained on the o
     High scores under Full Policy should be interpreted with caution, as they are strongly influenced by the large number of background slices. Simple Policy results offer a more realistic assessment of clinical segmentation performance, underscoring the need for transparent, robust evaluation in highly imbalanced datasets like BraTS.
 \end{itemize}
 
-\textbf{Quantitative Summary (mean):}
+\textbf{Quantitative Summary (mean ± std):}
 
 \vspace{1em}
 \noindent\textbf{Full Policy:}
@@ -1401,9 +1401,9 @@ To comprehensively evaluate the performance of our SegNet model trained on the o
 \toprule
 \textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
-Tumor Core       & 0.8353 & 0.7953 & 2.62 & 0.75 \\
-Edema            & 0.6336 & 0.5770 & 7.64 & 2.46 \\
-Enhancing Tumor  & 0.8730 & 0.8322 & 4.06 & 1.41 \\
+Tumor Core       & $0.8353 \pm 0.2871$ & $0.7953 \pm 0.3223$ & $2.62 \pm 6.32$ & $0.75 \pm 1.65$ \\
+Edema            & $0.6336 \pm 0.3932$ & $0.5770 \pm 0.3997$ & $7.64 \pm 12.72$ & $2.46 \pm 4.73$ \\
+Enhancing Tumor  & $0.8730 \pm 0.2458$ & $0.8322 \pm 0.2705$ & $4.06 \pm 13.88$ & $1.41 \pm 7.12$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1416,9 +1416,9 @@ Enhancing Tumor  & 0.8730 & 0.8322 & 4.06 & 1.41 \\
 \toprule
 \textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
-Tumor Core       & 0.5168 & 0.3993 & 8.60 & 2.48 \\
-Edema            & 0.4181 & 0.3281 & 14.12 & 4.55 \\
-Enhancing Tumor  & 0.6572 & 0.5469 & 11.89 & 4.14 \\
+Tumor Core       & $0.5168 \pm 0.2966$ & $0.3993 \pm 0.2587$ & $8.60 \pm 8.93$ & $2.48 \pm 2.17$ \\
+Edema            & $0.4181 \pm 0.3465$ & $0.3281 \pm 0.2942$ & $14.12 \pm 14.40$ & $4.55 \pm 5.64$ \\
+Enhancing Tumor  & $0.6572 \pm 0.2985$ & $0.5469 \pm 0.2614$ & $11.89 \pm 21.72$ & $4.14 \pm 11.71$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1428,23 +1428,14 @@ Enhancing Tumor  & 0.6572 & 0.5469 & 11.89 & 4.14 \\
 \textbf{Summary:}  
 The comprehensive evaluation confirms the effectiveness of raw intensity inputs for brain tumor segmentation, with the Full Policy highlighting strong theoretical performance across all tumor subtypes. However, the Simple Policy reveals the true challenge of tumor segmentation, particularly for diffuse regions like Edema, emphasizing the importance of careful evaluation methodology in highly imbalanced medical datasets.
 
-
-
-
-
-
-
-
-
-
 \subsection{No-Preprocessing Per-Class Pixel Metrics}
 
 To provide a granular evaluation of the segmentation model trained with raw (no-preprocessing) MRI input, we computed pixel-wise \textbf{True Positives (TP)}, \textbf{False Positives (FP)}, \textbf{False Negatives (FN)}, and \textbf{True Negatives (TN)} for each tumor class in the test set. From these, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of false positive/negative pixels per test slice.
 
-\newgeometry{left=0cm, right=0.2cm, top=0cm, bottom=0cm}
+\newgeometry{left=0.5cm, right=0.5cm, top=2.5cm, bottom=2cm}
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{truth_no.png}
+    \includegraphics[width=0.98\textwidth,height=0.75\textheight,keepaspectratio]{truth_no.png}
     \caption{Visualization of per-class pixel-level metrics (TP, FP, FN, TN, precision, recall, specificity, average FP/FN per slice) for the no-preprocessing pipeline.}
     \label{fig:raw_pixel_metrics}
 \end{figure}
@@ -1543,7 +1534,7 @@ To qualitatively assess segmentation performance on raw, unprocessed input, we v
     \includegraphics[width=\textwidth]{result4_no.png}
     \caption{\textbf{Raw Input, Ground Truth, and Predicted Mask – Example 5.}
     \newline
-    The model’s output closely matches the main tumor in shape, but the periphery shows over-segmentation. There is some correspondence in structure, but non-tumor areas are also included.}
+    The model's output closely matches the main tumor in shape, but the periphery shows over-segmentation. There is some correspondence in structure, but non-tumor areas are also included.}
     \label{fig:no_preprocessing_pred_5}
 \end{figure}
 
@@ -1881,10 +1872,10 @@ The comprehensive evaluation confirms that Sobel preprocessing achieves its best
 
 To provide a granular evaluation of our model's segmentation performance, we computed the total pixel-wise counts of True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each tumor sub-class on the test set. From these, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of FP/FN pixels per test slice.
 
-\newgeometry{left=0cm, right=0.2cm, top=0cm, bottom=0cm}
+\newgeometry{left=0.5cm, right=0.5cm, top=2.5cm, bottom=2cm}
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Metrics.png}
+    \includegraphics[width=0.98\textwidth,height=0.75\textheight,keepaspectratio]{Metrics.png}
     \label{fig:sobel_pixel_metrics}
 \end{figure}
 \restoregeometry
@@ -2728,10 +2719,10 @@ The comprehensive evaluation confirms that Laplacian preprocessing achieves its 
 
 To provide a granular evaluation of the segmentation model with Laplacian-preprocessed MRI data, we computed pixel-wise counts of True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each tumor class in the test set. From these, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of false positive/negative pixels per test slice.
 
-\newgeometry{left=0cm, right=0.2cm, top=0cm, bottom=0cm}
+\newgeometry{left=0.5cm, right=0.5cm, top=2.5cm, bottom=2cm}
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{results_laplacian.png}
+    \includegraphics[width=0.98\textwidth,height=0.75\textheight,keepaspectratio]{results_laplacian.png}
     \label{fig:laplacian_pixel_metrics}
 \end{figure}
 \restoregeometry
@@ -3282,13 +3273,13 @@ To rigorously evaluate the pixel-wise segmentation performance of the combined p
 
 \clearpage
 
-\newgeometry{left=0cm, right=0.2cm, top=0cm, bottom=0cm}
+\newgeometry{left=0.5cm, right=0.5cm, top=2.5cm, bottom=2cm}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{truths 3.png}
+    \includegraphics[width=0.98\textwidth,height=0.75\textheight,keepaspectratio]{truths 3.png}
     \caption{\textbf{Combined Pipeline Per-Class Pixel Metrics.} Pixel-level segmentation performance across the three tumor sub-classes. Rows illustrate metrics including True Positives (TP), False Positives (FP), False Negatives (FN), True Negatives (TN), Precision, Recall, Specificity, and average FP/FN per slice. High precision and recall values indicate strong segmentation accuracy, while high specificity and low FP/FN per slice indicate robust and reliable segmentation boundaries.}
     \label{fig:combined_pixel_metrics}
-\end{figure}
+\end{figure}    
 \restoregeometry
 
 \clearpage

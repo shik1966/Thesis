@@ -90,115 +90,106 @@
 \contentsline {subsection}{\numberline {3.2.13}Cell 13: Compile, Train, Save Model \& History (4-Class SegNet)}{48}{subsection.3.2.13}%
 \contentsline {subsection}{\numberline {3.2.14}Cell 14: Load Best Model and Compute Per‐Class Dice on Test Set}{50}{subsection.3.2.14}%
 \contentsline {subsection}{\numberline {3.2.15}Cell 15: Compute Slicewise Dice, IoU, HD95 \& ASSD under Empty-Slice Policies}{52}{subsection.3.2.15}%
-\contentsline {subsubsection}{Cell 16: Compute Per-Class TP/FP/FN/TN $\rightarrow $ Precision, Recall, Specificity}{53}{subsection.3.2.15}%
+\contentsline {subsubsection}{Cell 16: Compute Per-Class TP/FP/FN/TN $\rightarrow $ Precision, Recall, Specificity}{54}{subsection.3.2.15}%
 \contentsline {section}{\numberline {3.3}Raw Intensity Results}{57}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Raw-Intensity Subsampled MRI Slices: Visualization and Analysis}{57}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}No-Preprocessing Training History: Accuracy, Loss, and Dice Coefficient}{60}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}No-Preprocessing Test‐Set Metrics (Full vs. Simple Policy)}{61}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}No-Preprocessing Per-Class Pixel Metrics}{64}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}No Preprocessing Qualitative Validation: Predicted vs. Ground Truth Masks}{67}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}No-Preprocessing Qualitative Validation: Random RGB Input and Segmentation Masks}{71}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Reflections on Raw Intensity Results: The Journey Begins}{74}{subsection.3.3.7}%
-\contentsline {section}{\numberline {3.4}Sobel Results}{75}{section.3.4}%
-\contentsline {subsubsection}{Sobel Implementation Code Snippet}{75}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Sobel-Filtered Subsampled MRI Slices: Visualization and Analysis}{76}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Sobel Training History: Accuracy, Loss, and Dice Coefficient}{79}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Sobel Test‐Set Metrics (Full vs. Simple Policy)}{81}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Sobel-Pipeline Per-Class Pixel Metrics}{85}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Sobel Qualitative Validation: Predicted vs. Ground Truth Masks}{87}{subsection.3.4.5}%
-\contentsline {subsection}{\numberline {3.4.6}Sobel Qualitative Validation: Random RGB Input and Segmentation Masks}{90}{subsection.3.4.6}%
-\contentsline {subsection}{\numberline {3.4.7}Reflections on Sobel Results: Edge Detection Shows Promise but Reveals Limitations}{94}{subsection.3.4.7}%
-\contentsline {section}{\numberline {3.5}Gabor Results}{94}{section.3.5}%
-\contentsline {subsubsection}{Gabor Implementation Code Snippet}{95}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Gabor-Filtered Subsampled MRI Slices: Visualization and Analysis}{97}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Gabor Training History: Accuracy, Loss, and Dice Coefficient}{100}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Gabor Test‐Set Metrics (Full vs. Simple Policy)}{102}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Gabor-Pipeline Per-Class Pixel Metrics}{105}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}Gabor Qualitative Validation: Predicted vs. Ground Truth Masks}{108}{subsection.3.5.5}%
-\contentsline {subsection}{\numberline {3.5.6}Gabor Qualitative Validation: Random RGB Input and Segmentation Masks}{111}{subsection.3.5.6}%
-\contentsline {subsection}{\numberline {3.5.7}Reflections on Gabor Results: Texture Reveals Structure but Precision Suffers}{114}{subsection.3.5.7}%
-\contentsline {section}{\numberline {3.6}Laplacian Results}{115}{section.3.6}%
-\contentsline {subsubsection}{Laplacian Implementation Code Snippet}{116}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Laplacian-Filtered Subsampled MRI Slices: Visualization and Analysis}{117}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Laplacian Training History: Accuracy, Loss, and Dice Coefficient}{120}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Laplacian Test‐Set Metrics (Full vs. Simple Policy)}{123}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Laplacian-Pipeline Per-Class Pixel Metrics}{126}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Laplacian Qualitative Validation: Predicted vs. Ground Truth Masks}{129}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}Laplacian Qualitative Validation: Random RGB Input and Segmentation Masks}{133}{subsection.3.6.6}%
-\contentsline {subsection}{\numberline {3.6.7}Reflections on Laplacian Results: Finding Balance in Second-Derivative Features}{136}{subsection.3.6.7}%
-\contentsline {section}{\numberline {3.7}Combined Results for Sobel, Laplacian, and Gabor Feature Detectors}{137}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Implementation of Combined Sobel, Laplacian, and Gabor Feature Stack}{138}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Combined Filtered Subsampled MRI Slices: Visualization and Analysis}{140}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Combined Training History: Accuracy, Loss, and Dice Coefficient}{148}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Combined Feature Detectors Test‐Set Metrics (Full vs. Simple Policy)}{151}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Combined Pipeline Per-Class Pixel Metrics}{154}{subsection.3.7.5}%
-\contentsline {subsection}{\numberline {3.7.6}Combined Qualitative Validation: Predicted vs. Ground Truth Masks}{157}{subsection.3.7.6}%
-\contentsline {subsection}{\numberline {3.7.7}Combined Qualitative Validation: Random RGB Input and Segmentation Masks}{162}{subsection.3.7.7}%
-\contentsline {subsection}{\numberline {3.7.8}Reflections on Combined Results: The Power of Integration and Scale}{165}{subsection.3.7.8}%
-\contentsline {section}{\numberline {3.8}Research Findings Timeline: From Raw Intensities to Feature-Enhanced Segmentation}{168}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Overview}{168}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{168}{subsection.3.8.2}%
-\contentsline {subsubsection}{Initial Approach and Rationale}{168}{subsection.3.8.2}%
-\contentsline {subsubsection}{Key Findings from Raw Intensity Experiments}{168}{subsection.3.8.2}%
-\contentsline {paragraph}{Training Performance}{168}{subsection.3.8.2}%
-\contentsline {paragraph}{Class-Specific Performance Disparities}{168}{subsection.3.8.2}%
-\contentsline {paragraph}{Critical Insight}{169}{subsection.3.8.2}%
-\contentsline {subsection}{\numberline {3.8.3}Stage 2: Sobel Edge Detection Enhancement}{169}{subsection.3.8.3}%
-\contentsline {subsubsection}{Motivation for Sobel Filtering}{169}{subsection.3.8.3}%
-\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{169}{Item.32}%
-\contentsline {paragraph}{Performance Degradation}{169}{Item.32}%
-\contentsline {paragraph}{Precision-Recall Trade-offs}{170}{Item.32}%
-\contentsline {paragraph}{Critical Realization}{170}{Item.32}%
-\contentsline {subsubsection}{Research Direction Adjustment}{170}{Item.32}%
-\contentsline {subsection}{\numberline {3.8.4}Stage 3: Gabor Texture and Orientation Analysis}{170}{subsection.3.8.4}%
-\contentsline {subsubsection}{Rationale for Gabor Filtering}{170}{subsection.3.8.4}%
-\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{171}{Item.35}%
-\contentsline {paragraph}{Severe Performance Degradation}{171}{Item.35}%
-\contentsline {paragraph}{Precision-Recall Imbalance}{171}{Item.35}%
-\contentsline {subsubsection}{Critical Analysis and Lessons Learned}{171}{Item.35}%
-\contentsline {paragraph}{Over-Specialization Problem}{171}{Item.35}%
-\contentsline {paragraph}{Feature Complexity vs. Network Capacity}{171}{Item.35}%
-\contentsline {paragraph}{Need for Balanced Approach}{171}{Item.35}%
-\contentsline {subsection}{\numberline {3.8.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{172}{subsection.3.8.5}%
-\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{172}{subsection.3.8.5}%
-\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{172}{Item.39}%
-\contentsline {paragraph}{Performance Recovery}{172}{Item.39}%
-\contentsline {paragraph}{Improved Precision-Recall Balance}{172}{Item.39}%
-\contentsline {subsubsection}{Key Insights from Laplacian Success}{173}{Item.39}%
-\contentsline {paragraph}{Multi-scale Effectiveness}{173}{Item.39}%
-\contentsline {paragraph}{Second-derivative Advantage}{173}{Item.39}%
-\contentsline {paragraph}{Feature-Architecture Alignment}{173}{Item.39}%
-\contentsline {subsection}{\numberline {3.8.6}Synthesis: Evolution of Understanding}{173}{subsection.3.8.6}%
-\contentsline {subsubsection}{Progressive Insights Across Experiments}{173}{subsection.3.8.6}%
-\contentsline {subsubsection}{Final Understanding and Implications}{173}{Item.43}%
-\contentsline {chapter}{\numberline {4}conclusion}{175}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Summary of Contributions}{175}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Technical Contributions}{175}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Empirical Contributions}{176}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Key Findings and Insights}{176}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Effectiveness of Classical Feature Detection}{176}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Complementary Nature of Different Features}{176}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Challenges in Multi-class Segmentation}{177}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Importance of Realistic Evaluation}{177}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Clinical Implications}{177}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Limitations and Challenges}{177}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Concluding Remarks}{178}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Future Work}{179}{chapter.5}%
-\contentsline {section}{\numberline {5.1}3D Contextual Information Integration}{179}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Advanced Feature Detection and Representation Learning}{180}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Modern Architecture Enhancements}{180}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Loss Function Engineering and Training Strategies}{181}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Data Augmentation and Synthesis Strategies}{181}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Post-Processing and Refinement Techniques}{182}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Multi-Modal Fusion Strategies}{182}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Clinical Translation and Validation}{182}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Methodological Advances}{183}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Domain-Specific Innovations}{183}{section.5.10}%
-\contentsline {section}{\numberline {5.11}Recommended Next Steps}{184}{section.5.11}%
-\contentsline {section}{\numberline {5.12}Long-term Vision}{184}{section.5.12}%
-\contentsline {section}{\numberline {5.13}Conclusion}{184}{section.5.13}%
-\contentsline {chapter}{Appendix}{186}{section*.105}%
-\contentsline {chapter}{\numberline {A}Lists}{187}{appendix.A}%
-\contentsline {section}{List of Abbreviations}{187}{section*.106}%
-\contentsline {section}{List of Figures}{202}{appendix*.107}%
-\contentsline {chapter}{References}{203}{appendix*.108}%
+\contentsline {subsection}{\numberline {3.3.2}No-Preprocessing Training History: Accuracy, Loss, and Dice Coefficient}{61}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}No-Preprocessing Test‐Set Metrics (Full vs. Simple Policy)}{62}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}No-Preprocessing Per-Class Pixel Metrics}{65}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}No Preprocessing Qualitative Validation: Predicted vs. Ground Truth Masks}{68}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}No-Preprocessing Qualitative Validation: Random RGB Input and Segmentation Masks}{72}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Reflections on Raw Intensity Results: The Journey Begins}{75}{subsection.3.3.7}%
+\contentsline {section}{\numberline {3.4}Sobel Results}{76}{section.3.4}%
+\contentsline {subsubsection}{Sobel Implementation Code Snippet}{76}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Sobel-Filtered Subsampled MRI Slices: Visualization and Analysis}{77}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Sobel Training History: Accuracy, Loss, and Dice Coefficient}{80}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Sobel Test‐Set Metrics (Full vs. Simple Policy)}{82}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Sobel-Pipeline Per-Class Pixel Metrics}{86}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Sobel Qualitative Validation: Predicted vs. Ground Truth Masks}{88}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Gabor Qualitative Validation: Random RGB Input and Segmentation Masks}{93}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Reflections on Gabor Results: Texture Reveals Structure but Precision Suffers}{96}{subsection.3.4.7}%
+\contentsline {section}{\numberline {3.5}Laplacian Results}{97}{section.3.5}%
+\contentsline {subsubsection}{Laplacian Implementation Code Snippet}{98}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Laplacian-Filtered Subsampled MRI Slices: Visualization and Analysis}{99}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Laplacian Training History: Accuracy, Loss, and Dice Coefficient}{102}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Laplacian Test‐Set Metrics (Full vs. Simple Policy)}{105}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Laplacian-Pipeline Per-Class Pixel Metrics}{108}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Laplacian Qualitative Validation: Predicted vs. Ground Truth Masks}{111}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}Laplacian Qualitative Validation: Random RGB Input and Segmentation Masks}{115}{subsection.3.5.6}%
+\contentsline {subsection}{\numberline {3.5.7}Reflections on Laplacian Results: Finding Balance in Second-Derivative Features}{118}{subsection.3.5.7}%
+\contentsline {section}{\numberline {3.6}Combined Results for Sobel, Laplacian, and Gabor Feature Detectors}{119}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Implementation of Combined Sobel, Laplacian, and Gabor Feature Stack}{120}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Combined Filtered Subsampled MRI Slices: Visualization and Analysis}{122}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Combined Training History: Accuracy, Loss, and Dice Coefficient}{130}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Combined Feature Detectors Test‐Set Metrics (Full vs. Simple Policy)}{133}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Combined Pipeline Per-Class Pixel Metrics}{136}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Combined Qualitative Validation: Predicted vs. Ground Truth Masks}{139}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.6.7}Combined Qualitative Validation: Random RGB Input and Segmentation Masks}{144}{subsection.3.6.7}%
+\contentsline {subsection}{\numberline {3.6.8}Reflections on Combined Results: The Power of Integration and Scale}{147}{subsection.3.6.8}%
+\contentsline {section}{\numberline {3.7}Research Findings Timeline: From Raw Intensities to Feature-Enhanced Segmentation}{150}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Overview}{150}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{150}{subsection.3.7.2}%
+\contentsline {subsubsection}{Initial Approach and Rationale}{150}{subsection.3.7.2}%
+\contentsline {subsubsection}{Key Findings from Raw Intensity Experiments}{150}{subsection.3.7.2}%
+\contentsline {paragraph}{Training Performance}{150}{subsection.3.7.2}%
+\contentsline {paragraph}{Class-Specific Performance Disparities}{150}{subsection.3.7.2}%
+\contentsline {paragraph}{Critical Insight}{151}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Stage 2: Sobel Edge Detection Enhancement}{151}{subsection.3.7.3}%
+\contentsline {subsubsection}{Motivation for Sobel Filtering}{151}{subsection.3.7.3}%
+\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{151}{Item.32}%
+\contentsline {paragraph}{Performance Degradation}{151}{Item.32}%
+\contentsline {paragraph}{Precision-Recall Trade-offs}{152}{Item.32}%
+\contentsline {paragraph}{Critical Realization}{152}{Item.32}%
+\contentsline {subsubsection}{Research Direction Adjustment}{152}{Item.32}%
+\contentsline {subsection}{\numberline {3.7.4}Stage 3: Gabor Texture and Orientation Analysis}{152}{subsection.3.7.4}%
+\contentsline {subsubsection}{Rationale for Gabor Filtering}{152}{subsection.3.7.4}%
+\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{153}{Item.35}%
+\contentsline {paragraph}{Severe Performance Degradation}{153}{Item.35}%
+\contentsline {paragraph}{Precision-Recall Imbalance}{153}{Item.35}%
+\contentsline {subsubsection}{Critical Analysis and Lessons Learned}{153}{Item.35}%
+\contentsline {paragraph}{Over-Specialization Problem}{153}{Item.35}%
+\contentsline {paragraph}{Feature Complexity vs. Network Capacity}{153}{Item.35}%
+\contentsline {paragraph}{Need for Balanced Approach}{153}{Item.35}%
+\contentsline {subsection}{\numberline {3.7.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{154}{subsection.3.7.5}%
+\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{154}{subsection.3.7.5}%
+\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{154}{Item.39}%
+\contentsline {paragraph}{Performance Recovery}{154}{Item.39}%
+\contentsline {paragraph}{Improved Precision-Recall Balance}{154}{Item.39}%
+\contentsline {subsubsection}{Key Insights from Laplacian Success}{155}{Item.39}%
+\contentsline {paragraph}{Multi-scale Effectiveness}{155}{Item.39}%
+\contentsline {paragraph}{Second-derivative Advantage}{155}{Item.39}%
+\contentsline {paragraph}{Feature-Architecture Alignment}{155}{Item.39}%
+\contentsline {subsection}{\numberline {3.7.6}Synthesis: Evolution of Understanding}{155}{subsection.3.7.6}%
+\contentsline {subsubsection}{Progressive Insights Across Experiments}{155}{subsection.3.7.6}%
+\contentsline {subsubsection}{Final Understanding and Implications}{155}{Item.43}%
+\contentsline {chapter}{\numberline {4}conclusion}{157}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Summary of Contributions}{157}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Technical Contributions}{157}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Empirical Contributions}{158}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Key Findings and Insights}{158}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Effectiveness of Classical Feature Detection}{158}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Complementary Nature of Different Features}{158}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Challenges in Multi-class Segmentation}{159}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Importance of Realistic Evaluation}{159}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Clinical Implications}{159}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Limitations and Challenges}{159}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Concluding Remarks}{160}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Future Work}{161}{chapter.5}%
+\contentsline {section}{\numberline {5.1}3D Contextual Information Integration}{161}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Advanced Feature Detection and Representation Learning}{162}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Modern Architecture Enhancements}{162}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Loss Function Engineering and Training Strategies}{163}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Data Augmentation and Synthesis Strategies}{163}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Post-Processing and Refinement Techniques}{164}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Multi-Modal Fusion Strategies}{164}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Clinical Translation and Validation}{164}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Methodological Advances}{165}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Domain-Specific Innovations}{165}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Recommended Next Steps}{166}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Long-term Vision}{166}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Conclusion}{166}{section.5.13}%
+\contentsline {chapter}{Appendix}{168}{section*.89}%
+\contentsline {chapter}{\numberline {A}Lists}{169}{appendix.A}%
+\contentsline {section}{List of Abbreviations}{169}{section*.90}%
+\contentsline {section}{List of Figures}{182}{appendix*.91}%
+\contentsline {chapter}{References}{183}{appendix*.92}%

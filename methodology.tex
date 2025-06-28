@@ -91,7 +91,7 @@ The methodology is carefully structured to isolate the effect of input modality,
 
 \section{Code and Implementation}
 
-\subsubsection*{Cell 1: Mount Google Drive in Colab}
+\subsection{Cell 1: Mount Google Drive in Colab}
 
 \begin{lstlisting}[language=Python]
 # Cell 1: Mount Google Drive
@@ -108,7 +108,7 @@ Mounted at /content/drive
 \noindent\textbf{Explanation:}
 Mounting Google Drive allows the notebook to read from and write to persistent storage at \texttt{/content/drive/MyDrive/}. This ensures that data and model files are retained across sessions and can be reused or downloaded as needed.
 
-\subsubsection*{Cell 2: Force-remount Google Drive in Colab}
+\subsection{Cell 2: Force-remount Google Drive in Colab}
 
 \begin{lstlisting}[language=Python]
 # Cell 2: Force-remount Google Drive
@@ -127,7 +127,7 @@ Force-remounting is useful if the drive was unmounted, changed, or you need to r
 \clearpage
 
  
-\subsubsection*{Cell 3: Imports and Data Paths Setup}
+\subsection{Cell 3: Imports and Data Paths Setup}
 
 \begin{lstlisting}[language=Python]
 # Cell 3: Imports & Paths
@@ -176,7 +176,7 @@ print(f"Found {len(patient_folders)} patient folders in {RAW_PATH}")
 This cell imports all required libraries for data processing and model training, sets the core paths to your dataset, and counts the number of patient folders available for segmentation. This step ensures that all code later in the notebook has access to the same paths, configuration, and dependencies from the start.
 
 
-\subsubsection*{Cell 4: Build Raw $256\times256$ Dataset from NIfTI Volumes}
+\subsection{Cell 4: Build Raw $256\times256$ Dataset from NIfTI Volumes}
 
 \begin{lstlisting}[language=Python]
 # Cell 4: Build Raw 256x256 Dataset from NIfTI Volumes (no additional preprocessing)
@@ -280,7 +280,7 @@ Assigning T1-CE to R, T2 to G, and FLAIR to B is a sound choice for a from-scrat
 
 \clearpage
 
-\subsubsection*{Cell 5: Subsample 30 Patients}
+\subsection{Cell 5: Subsample 30 Patients}
 
 \begin{lstlisting}[language=Python]
 # Cell 5: Subsample 30 Patients -> 10 Large + 10 Small + 10 Zero Tumor Slices (no resizing)
@@ -384,7 +384,7 @@ This code selects a stratified subsample from the first 30 BraTS patients: 10 sl
 \noindent\textbf{Choice of $240 \times 240$ vs. $256 \times 256$ Resolution:}  
 By default, I preserve the native $240 \times 240$ pixel size of BraTS MRI slices to maintain anatomical fidelity and avoid interpolation artifacts. This also matches SegNet's downsampling structure and keeps training efficient. While resizing to $256 \times 256$ is possible (e.g., for compatibility with certain pretrained CNNs or public benchmarks), it introduces minor distortion and increases computational cost. For this project, $240 \times 240$ was chosen for minimal preprocessing and architectural alignment; resizing remains an option if needed for future experiments.
 
-\subsubsection*{Cell 6: Visualizing Raw Subsampled Slices}
+\subsection{Cell 6: Visualizing Raw Subsampled Slices}
 
 \begin{lstlisting}[language=Python]
 # Cell 6 (v_raw): Memory-map Raw Subsampled Dataset and Show Random Samples
@@ -452,7 +452,7 @@ This code randomly visualizes subsampled, raw MRI slices and their ground truth 
 \clearpage
 
 
-\subsubsection*{Cell 7: Train/Validation/Test Split of the Subsampled Dataset}
+\subsection{Cell 7: Train/Validation/Test Split of the Subsampled Dataset}
 
 \begin{lstlisting}[language=Python]
 # Cell 7: Split 900 Samples into Train/Val/Test (15% Test, then ~15% of remainder for Val)
@@ -519,7 +519,7 @@ This $70/15/15$ split ensures that I have enough data for training, a proper val
 \FloatBarrier
 
 
-\subsubsection*{Cell 8: Verifying Multi-Class Mask Values and Shapes}
+\subsection{Cell 8: Verifying Multi-Class Mask Values and Shapes}
 
 \begin{lstlisting}[language=Python]
 # Cell 8 (updated): Verify multi-class mask values and shapes
@@ -553,7 +553,7 @@ Before training, I verified that the images (\texttt{X\_data}) and masks (\textt
 \end{itemize}
 This ensures the dataset fully represents all BraTS tumor sub-regions needed for robust multi-class segmentation.
 
-\subsubsection*{Cell 9: Simple Data Generator}
+\subsection{Cell 9: Simple Data Generator}
 
 \begin{lstlisting}[language=Python]
 # Cell 9: Simple Data Generator (no augmentation), keep labels {0,1,2,4}
@@ -653,7 +653,7 @@ Using four one-hot channels is standard for BraTS, avoids label overlap, and is 
 A batch size of 16 balances memory, computation, and stable training for $240 \times 240$ inputs. Increase if GPU memory allows; decrease if resources are limited. This is a reliable, literature-backed default for medical image segmentation.
 
 
-\subsubsection*{Cell 10: Instantiate Generators for Train, Validation, and Test Splits}
+\subsection{Cell 10: Instantiate Generators for Train, Validation, and Test Splits}
 
 \begin{lstlisting}[language=Python]
 # Cell 10: Instantiate Generators for Train, Validation & Test
@@ -700,7 +700,7 @@ This cell sets up infinite generators for the train, validation, and test splits
 \end{itemize}
 
 
-\subsubsection*{Cell 11: Loss Functions for Binary and Multi-Class Segmentation}
+\subsection{Cell 11: Loss Functions for Binary and Multi-Class Segmentation}
 
 % --- Multi-Class Loss Functions (for four-class segmentation)
 \begin{lstlisting}[language=Python]
@@ -776,7 +776,7 @@ Multi-class segmentation (labels: \texttt{0, 1, 2, 4}) requires losses that can 
 \noindent\textbf{Summary:}  
 Combining CE with per-class Dice loss ensures robust, interpretable multi-class segmentation, as recommended for the BraTS dataset.
 
-\subsubsection*{Cell 12: SegNet\_Multiclass\_Enhanced (Four-Class Segmentation)}
+\subsection{Cell 12: SegNet\_Multiclass\_Enhanced (Four-Class Segmentation)}
 
 \begin{lstlisting}[language=Python]
 # Cell 12: SegNet_Multiclass_Enhanced (four-class segmentation)
@@ -832,7 +832,6 @@ model = segnet_multiclass_enhanced(input_shape=(240,240,3), n_classes=4, dropout
 model.summary()
 \end{lstlisting}
 
-\clearpage
 
 \noindent\textbf{Model Summary:}
 \begin{itemize}
@@ -891,7 +890,7 @@ MaxUnpooling SegNet (generic) & 4+  & 29   & Yes & No  & Custom layers \\
 
 \FloatBarrier
 
- \subsubsection*{Cell 13: Compile, Train, Save Model \& History (4-Class SegNet)}
+ \subsection{Cell 13: Compile, Train, Save Model \& History (4-Class SegNet)}
 
 \begin{lstlisting}[language=Python]
 # Cell 13: Compile, Train, Save Model & History
@@ -981,11 +980,7 @@ The best model weights (val Dice $\approx 0.799$) were saved at epoch 20. Potent
 Overall, the chosen architecture and loss function achieved robust four-class segmentation (Dice $\sim 0.80$) on the BraTS dataset.
 
 
-
-
-
-
-\subsubsection*{Cell 14: Load Best Model and Compute Per‐Class Dice on Test Set}
+\subsection{Cell 14: Load Best Model and Compute Per‐Class Dice on Test Set}
 
 After training, I loaded the best SegNet model and evaluated its segmentation performance on the test set by computing the Dice coefficient for each tumor subregion (Tumor Core, Edema, Enhancing Tumor).
 
@@ -1046,10 +1041,9 @@ Edema (Class 2): 0.4181
 Enhancing Tumor (Class 4): 0.6572
 \end{lstlisting}
 
-\textbf{Motivation:}
+\textbf{Explanation:}
 I used the Dice coefficient for each tumor subregion (Tumor Core, Edema, Enhancing Tumor) to fairly evaluate segmentation, since class imbalance makes pixel accuracy misleading.
 
-\clearpage
 
 \textbf{Evaluation Procedure:}
 \begin{itemize}
@@ -1077,7 +1071,7 @@ This matches clinical trends: enhancing tumors are clearer on MRI, edema boundar
 Per-class Dice provides a rigorous, interpretable benchmark for multi-class brain tumor segmentation performance.
 
 
-\subsubsection*{Cell 15: Compute Slicewise Dice, IoU, HD95 \& ASSD under Empty-Slice Policies}
+\subsection{Cell 15: Compute Slicewise Dice, IoU, HD95 \& ASSD under Empty-Slice Policies}
 
 To thoroughly evaluate my model’s segmentation performance, I computed four key metrics—Dice coefficient, Intersection-over-Union (IoU), 95th-percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD)—for each tumor subregion (classes 1, 2, 4) on each test slice.
 
@@ -1127,7 +1121,7 @@ Reporting both policies offers a transparent view of model behavior: “Full” 
 
 Detailed numeric results are given in the Results section.
 
-\subsubsection*{Cell 16: Compute Per-Class TP/FP/FN/TN $\rightarrow$ Precision, Recall, Specificity}
+\subsubsection{Cell 16: Compute Per-Class TP/FP/FN/TN $\rightarrow$ Precision, Recall, Specificity}
 
 To further quantify my SegNet model’s performance, I computed pixel-wise True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each non-background tumor subregion (classes 1, 2, 4). Using these counts, I derived \textbf{Precision}, \textbf{Recall (Sensitivity)}, and \textbf{Specificity} for each class, as well as the average number of FP and FN voxels per test slice.
 
@@ -1277,7 +1271,7 @@ The following sections present comprehensive results from our brain tumor segmen
 
 The essential methodology, core algorithms, and critical analysis code have been retained to maintain reproducibility and scientific rigor. The omitted visualization and data handling code follows standard practices and does not contain novel methodological contributions.
 
-\section*{Raw Intensity Results}
+\section{Raw Intensity Results}
 
 For our “no preprocessing” baseline, we used the native MRI intensity slices from the BraTS dataset, with no edge detection, filtering, or enhancement applied. Each modality (T1ce, T2, FLAIR) is extracted, optionally resized to the target resolution, and directly stacked as three input channels (analogous to RGB). This pipeline preserves the original anatomical contrast and spatial information of the MRI scans.
 
@@ -1286,7 +1280,7 @@ This approach enables us to construct a dataset of raw, unfiltered MRI inputs. E
 
 
 
-\subsection*{Raw-Intensity Subsampled MRI Slices: Visualization and Analysis}
+\subsection{Raw-Intensity Subsampled MRI Slices: Visualization and Analysis}
 
 To evaluate the segmentation pipeline using unprocessed MRI intensities, we visualized random samples from the raw-intensity subsampled dataset. The visualizations below were generated by loading memory-mapped, subsampled MRI slices and corresponding ground-truth masks, performing simple per-channel normalization, and displaying each slice as a normalized RGB composite alongside its mask.
 
@@ -1310,26 +1304,25 @@ The right panel shows the ground truth segmentation mask for each slice, highlig
     \centering
     \begin{minipage}{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{subsample1_no.png}
-        \caption{\textbf{Sample 1.} \emph{Left:} Raw-intensity RGB composite showing preserved anatomical structure. \emph{Right:} Segmentation mask indicates tumor presence and boundaries.}
+        \includegraphics[width=\textwidth]{subsample_no.png}
+        \caption{\textbf{Sample 1.} \emph{Left:} A slice with a large heterogeneous lesion in the right hemisphere, appearing bright on FLAIR and T1ce channels. \emph{Right:} The segmentation mask captures both the enhancing core and surrounding edema region.}
     \end{minipage}\hfill
     \begin{minipage}{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{subsample2_no.png}
-        \caption{\textbf{Sample 2.} \emph{Left:} Raw-intensity slice with moderate intensity variation. \emph{Right:} Mask shows corresponding tumor region.}
+        \includegraphics[width=\textwidth]{subsample1_no.png}
+        \caption{\textbf{Sample 2.} \emph{Left:} A slice showing a small focal tumor region near the ventricles, visible as a localized intensity increase. \emph{Right:} The mask outlines the small enhancing tumor core with minimal edema.}
     \end{minipage}
 
     \vspace{1em}
 
     \begin{minipage}{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{subsample_no.png}
-        \caption{\textbf{Sample 3.} \emph{Left:} Raw-intensity RGB image with visible normal brain anatomy. \emph{Right:} Segmentation mask for a slice with a small, peripheral lesion.}
+        \includegraphics[width=\textwidth]{subsample2_no.png}
+        \caption{\textbf{Sample 3.} \emph{Left:} A background-only slice with no visible pathology; all three modalities appear uniform. \emph{Right:} The segmentation mask is empty, confirming absence of tumor on this slice.}
     \end{minipage}
     \caption{Visualization of raw-intensity, subsampled MRI slices (left: normalized RGB composite, right: segmentation mask). Raw intensities offer a baseline for comparison with feature-enhanced pipelines such as Sobel, Gabor, or Laplacian.}
     \label{fig:raw_examples}
 \end{figure}
-
 
 \textbf{Summary:}  
 These visualizations confirm that even without preprocessing, multi-modal raw intensities contain information needed for brain tumor localization and segmentation. The contrast with feature-filtered approaches highlights the benefit (or limitations) of adding classical edge or texture enhancement to the MRI fusion pipeline.
@@ -1337,7 +1330,7 @@ These visualizations confirm that even without preprocessing, multi-modal raw in
 
 
 
-\subsection*{No-Preprocessing Training History: Accuracy, Loss, and Dice Coefficient}
+\subsection{No-Preprocessing Training History: Accuracy, Loss, and Dice Coefficient}
 
 The following results are based on the training history visualization cell:
 
@@ -1363,16 +1356,10 @@ This cell loads the training history from disk and plots the evolution of accura
 \end{figure}
 
 
-
-\vspace{1em}
 \textbf{Summary:}
 The raw-intensity (no-preprocessing) pipeline allows SegNet to learn directly from the original MRI modality signals (T1ce, T2, FLAIR) mapped to RGB. Training and validation accuracy quickly approach $99\%$, but the Dice coefficient (which reflects actual segmentation quality) rises from approximately $0.2$ to $0.8$, with validation Dice peaking at $0.799$. This demonstrates that, even without engineered features, SegNet can extract and utilize relevant patterns for four-class brain tumor segmentation.
 
-\clearpage
-
-
-
-\subsection*{No-Preprocessing Test‐Set Metrics (Full vs. Simple Policy)}
+\subsection{No-Preprocessing Test‐Set Metrics (Full vs. Simple Policy)}
 
 To comprehensively evaluate the performance of our SegNet model trained on the original raw-intensity (no-preprocessing) MRI slices, we computed four key segmentation metrics—Dice coefficient, Intersection over Union (IoU), 95th percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD)—for each tumor class (\emph{Tumor Core}, \emph{Edema}, \emph{Enhancing Tumor}). Metrics were measured under both the \textbf{Full Policy} (empty = perfect score) and the \textbf{Simple Policy} (skip empty slices). The following figure summarizes per-class performance for each metric and policy.
 
@@ -1441,7 +1428,7 @@ Enhancing Tumor  & 0.6572 & 0.5469 & 11.89 & 4.14 \\
 
 
 
-\subsection*{No-Preprocessing Per-Class Pixel Metrics}
+\subsection{No-Preprocessing Per-Class Pixel Metrics}
 
 To provide a granular evaluation of the segmentation model trained with raw (no-preprocessing) MRI input, we computed pixel-wise \textbf{True Positives (TP)}, \textbf{False Positives (FP)}, \textbf{False Negatives (FN)}, and \textbf{True Negatives (TN)} for each tumor class in the test set. From these, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of false positive/negative pixels per test slice.
 
@@ -1499,7 +1486,7 @@ Average FN per slice: Tumor Core ($47.0$), Edema ($110.9$), Enhancing Tumor ($20
 
 
 
-\subsection*{No Preprocessing Qualitative Validation: Predicted vs. Ground Truth Masks}
+\subsection{No Preprocessing Qualitative Validation: Predicted vs. Ground Truth Masks}
 \label{sec:no_preprocessing_qualitative_validation}
 
 To qualitatively assess segmentation performance on raw, unprocessed input, we visualize side-by-side comparisons of the raw RGB input, ground truth mask, and predicted mask for six randomly sampled validation slices. These results were generated by \textbf{Cell 20 (Raw/No Preprocessing): Visualize Random Validation Predictions}, which selects random samples from the raw validation set, performs inference with the trained SegNet model, and displays the three-channel raw input, ground truth mask, and model prediction for each slice.
@@ -1564,7 +1551,7 @@ To qualitatively assess segmentation performance on raw, unprocessed input, we v
 
 
 
-\subsection*{No-Preprocessing Qualitative Validation: Random RGB Input and Segmentation Masks}
+\subsection{No-Preprocessing Qualitative Validation: Random RGB Input and Segmentation Masks}
 \label{sec:no_preprocessing_qualitative_split_samples}
 
 To qualitatively validate the no-preprocessing data pipeline and confirm proper input-mask alignment, we present random examples from the training, validation, and test splits. Each figure displays a normalized raw RGB input slice alongside its corresponding segmentation mask. These samples enable direct visual assessment of tumor morphology and background structure as presented to the segmentation model, without any classical feature filtering.
@@ -1637,7 +1624,7 @@ These qualitative examples confirm that no-preprocessing inputs preserve all ori
 
 
 
-\subsection*{Reflections on Raw Intensity Results: The Journey Begins}
+\subsection{Reflections on Raw Intensity Results: The Journey Begins}
 \label{sec:raw_intensity_reflections}
 
 As I examined the results from our baseline raw intensity approach, several key insights emerged that would shape the direction of my experimental journey. The validation Dice coefficient of approximately 0.80 initially seemed promising—a solid foundation that demonstrated the inherent capability of deep learning to extract meaningful features from unprocessed MRI data. However, as I delved deeper into the qualitative validation results, a more nuanced picture emerged.
@@ -1656,7 +1643,7 @@ These observations led me to a crucial realization: while the convolutional netw
 
 The Sobel operator is a classical gradient-based filter for edge detection, computing first-order derivatives in $x$ and $y$ directions to highlight boundaries and object edges~\cite{sobel1968isotropic}. In RGB-fusion MRI segmentation, Sobel filtering enhances tumor margins and fine structures, allowing the network to leverage edge-aware features as a complementary preprocessing step to raw intensities and other filters.
 
-\subsubsection*{Sobel Implementation Code Snippet}
+\subsubsection{Sobel Implementation Code Snippet}
 
 Here is what I have changed, keeping the same code as no preprocessing but adding Sobel.
 
@@ -1693,7 +1680,7 @@ To integrate Sobel edge information into the baseline pipeline, we modified the 
 
 These changes allow for direct, controlled comparison between raw-intensity and Sobel-based models, isolating the effect of edge filtering on segmentation performance.
 
-\subsection*{Sobel-Filtered Subsampled MRI Slices: Visualization and Analysis}
+\subsection{Sobel-Filtered Subsampled MRI Slices: Visualization and Analysis}
 
 To evaluate the impact of Sobel filtering as a preprocessing step, we visualized random samples from the Sobel-subsampled dataset. The following results were generated as described in \textbf{Cell 6: Memory‐map Sobel‐Subsampled Dataset and Visualize Random Samples}, which loads the preprocessed Sobel MRI slices and ground-truth masks, applies per-channel normalization, and displays each slice as a normalized RGB composite alongside its mask.
 
@@ -1748,7 +1735,7 @@ These visualizations demonstrate that Sobel‐filtered preprocessing enhances th
 
 
 
-\subsection*{Sobel Training History: Accuracy, Loss, and Dice Coefficient}
+\subsection{Sobel Training History: Accuracy, Loss, and Dice Coefficient}
 
 The results in this section were obtained using the training history visualization cell:
 
@@ -1781,7 +1768,7 @@ This cell loads the training history dictionary from disk and plots the evolutio
 
 
 
-\subsection*{Sobel Test‐Set Metrics (Full vs. Simple Policy)}
+\subsection{Sobel Test‐Set Metrics (Full vs. Simple Policy)}
 
 To comprehensively evaluate the performance of our Sobel-processed SegNet model, we computed four key metrics—Dice coefficient, Intersection over Union (IoU), 95th percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD)—for each tumor class (\emph{Tumor Core}, \emph{Edema}, \emph{Enhancing Tumor}). Metrics were measured under two policies: the \textbf{Full Policy} (empty = perfect score) and the \textbf{Simple Policy} (skip empty slices). The following figures, generated in \texttt{Cell 17: Plot Sobel Test‐Set Metrics}, show the comparative performance per class for each metric.
 
@@ -1881,7 +1868,7 @@ Enhancing Tumor  & 0.5950 & 0.4745 & 4.29  & 1.26 \\
 Under the Full Policy, Sobel preprocessing achieves its best segmentation performance on the Enhancing Tumor class (Dice = 0.8530, IoU = 0.8093) and the lowest on Edema (Dice = 0.5979, IoU = 0.5448), with very tight boundary adherence reflected in low HD95 and ASSD values. When evaluated only on tumor‐containing slices (Simple Policy), performance declines notably across all classes—most dramatically for Tumor Core (Dice drops to 0.4080) and Edema (Dice drops to 0.3688)—highlighting the increased challenge of precise tumor delineation when empty slices are excluded. This contrast underscores the need for robust preprocessing to handle the variability of slice content in clinical applications.  
 
 
-\subsection*{Sobel-Pipeline Per-Class Pixel Metrics}
+\subsection{Sobel-Pipeline Per-Class Pixel Metrics}
 
 To provide a granular evaluation of our model's segmentation performance, we computed the total pixel-wise counts of True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each tumor sub-class on the test set. From these, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of FP/FN pixels per test slice.
 
@@ -1926,7 +1913,7 @@ Average FN per slice: Tumor Core ($59.94$), Edema ($140.46$), Enhancing Tumor ($
 
 
 
-\subsection*{Sobel Qualitative Validation: Predicted vs. Ground Truth Masks}
+\subsection{Sobel Qualitative Validation: Predicted vs. Ground Truth Masks}
 \label{sec:sobel_qualitative_validation}
 To qualitatively assess segmentation performance, we visualize side-by-side comparisons of the Sobel input, ground truth mask, and predicted mask on six randomly sampled validation slices. 
 These results are generated by \textbf{Cell 20 (Sobel): Visualize Random Validation Predictions}, which selects random samples from the Sobel validation set, performs inference with the trained SegNet model, and displays the three-channel Sobel input, ground truth mask, and model prediction for each slice.
@@ -1995,7 +1982,7 @@ These results are generated by \textbf{Cell 20 (Sobel): Visualize Random Validat
 
 
 
-\subsection*{Sobel Qualitative Validation: Random RGB Input and Segmentation Masks}
+\subsection{Sobel Qualitative Validation: Random RGB Input and Segmentation Masks}
 \label{sec:sobel_qualitative_split_samples}
 
 To qualitatively validate data preparation and label consistency, we present random examples from the training, validation, and test splits. For each sample, we display the normalized RGB input slice (red: T1CE, green: T2, blue: FLAIR) alongside its ground truth segmentation mask. This allows for quick inspection of tumor diversity, modality fusion, and segmentation targets across the dataset.
@@ -2076,7 +2063,7 @@ To qualitatively validate data preparation and label consistency, we present ran
 
 
 
-\subsection*{Reflections on Sobel Results: Edge Detection Shows Promise but Reveals Limitations}
+\subsection{Reflections on Sobel Results: Edge Detection Shows Promise but Reveals Limitations}
 \label{sec:sobel_reflections}
 
 The implementation of Sobel filtering marked my first attempt to enhance the raw MRI data with classical computer vision techniques. The results were immediately encouraging in some aspects—the visualizations showed crisp, clear edges that beautifully delineated anatomical structures and tumor boundaries. The colorful contours in the RGB composites made it visually apparent where tissue transitions occurred, addressing one of the key weaknesses I had identified in the raw intensity approach.
@@ -2104,7 +2091,7 @@ Therefore, Gabor filtering is integrated as a core preprocessing step in our pip
 
 
 
-\subsubsection*{Gabor Implementation Code Snippet}
+\subsubsection{Gabor Implementation Code Snippet}
 \label{sec:gabor_impl_code}
 
 Gabor filtering is implemented using a multi-kernel filter bank, enabling extraction of texture and orientation information at multiple scales. The code below constructs a bank of Gabor kernels with varying parameters and applies them to each 2D MRI slice, combining the responses into a single energy map per slice. This process is repeated for each MRI modality, resulting in enhanced input channels for downstream segmentation.
@@ -2169,7 +2156,7 @@ def apply_gabor(slice_2d: np.ndarray) -> np.ndarray:
 \end{lstlisting}
 
 
-\subsection*{Gabor-Filtered Subsampled MRI Slices: Visualization and Analysis}
+\subsection{Gabor-Filtered Subsampled MRI Slices: Visualization and Analysis}
 
 To assess the effect of Gabor filtering as a preprocessing step, we visualized random samples from the Gabor-subsampled dataset. The following results were generated using the same pipeline as for Sobel (see \textbf{Cell 6: Memory-map Gabor-Subsampled Dataset and Visualize Random Samples}), loading Gabor-preprocessed MRI slices and ground-truth masks, applying per-channel normalization, and displaying each slice as a normalized RGB composite with its corresponding mask.
 
@@ -2215,7 +2202,7 @@ To assess the effect of Gabor filtering as a preprocessing step, we visualized r
 
 \textbf{Summary:} These visualizations demonstrate that Gabor-filtered preprocessing provides a richer, multi-scale representation of anatomical and pathological structures in MRI, offering both texture and edge information. The strong correspondence between Gabor-enhanced features and segmentation masks supports the use of Gabor-based feature detection as a powerful alternative to classical edge detection, facilitating more robust and nuanced semantic segmentation in brain tumor analysis.
 
-\subsection*{Gabor Training History: Accuracy, Loss, and Dice Coefficient}
+\subsection{Gabor Training History: Accuracy, Loss, and Dice Coefficient}
 
 The results in this section were obtained using the training history visualization cell:
 
@@ -2239,7 +2226,7 @@ This cell loads the training history from disk and plots the evolution of accura
     \label{fig:gabor_acc_loss}
 \end{figure}
 
-\subsection*{Gabor Test‐Set Metrics (Full vs. Simple Policy)}
+\subsection{Gabor Test‐Set Metrics (Full vs. Simple Policy)}
 
 To comprehensively evaluate the performance of our Gabor-processed SegNet model, we computed four key metrics—Dice coefficient, Intersection over Union (IoU), 95th percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD)—for each tumor class (\emph{Tumor Core}, \emph{Edema}, \emph{Enhancing Tumor}). Metrics were measured under two policies: the \textbf{Full Policy} (empty = perfect score) and the \textbf{Simple Policy} (skip empty slices). The following plots summarize per-class performance for each metric.
 
@@ -2305,7 +2292,7 @@ Enhancing Tumor  & $0.3427 \pm 0.2928$ & $0.2450 \pm 0.2170$ & $25.86 \pm 28.49$
 \bottomrule
 \end{tabular}
 
-\subsection*{Gabor-Pipeline Per-Class Pixel Metrics}
+\subsection{Gabor-Pipeline Per-Class Pixel Metrics}
 
 To provide a granular evaluation of the segmentation model, we computed pixel-wise True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each tumor class in the test set. From these values, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of false positive/negative pixels per test slice.
 
@@ -2356,7 +2343,7 @@ Average FN per slice: Tumor Core ($70.01$), Edema ($238.27$), Enhancing Tumor ($
 \end{itemize}
 
 
-\subsection*{Gabor Qualitative Validation: Predicted vs. Ground Truth Masks}
+\subsection{Gabor Qualitative Validation: Predicted vs. Ground Truth Masks}
 \label{sec:gabor_qualitative_validation}
 
 To qualitatively assess segmentation performance, we visualize side-by-side comparisons of the Gabor-filtered input, ground truth mask, and predicted mask on six randomly sampled validation slices. 
@@ -2420,7 +2407,7 @@ These results are generated by \textbf{Cell 20 (Gabor): Visualize Random Validat
 
 \clearpage
 
-\subsection*{Gabor Qualitative Validation: Random RGB Input and Segmentation Masks}
+\subsection{Gabor Qualitative Validation: Random RGB Input and Segmentation Masks}
 \label{sec:gabor_qualitative_split_samples}
 
 To qualitatively validate the integrity of Gabor-based data preparation and ground-truth labels, we present random examples from the training, validation, and test splits. Each figure displays the normalized Gabor RGB input slice (after channel-wise normalization) alongside its corresponding segmentation mask, enabling visual assessment of tumor diversity, texture patterns, and segmentation targets.
@@ -2499,7 +2486,7 @@ To qualitatively validate the integrity of Gabor-based data preparation and grou
 These qualitative split-sample visualizations confirm that Gabor filtering produces diverse texture- and orientation-sensitive enhancements in the input data, which are well-aligned with a range of tumor morphologies and ground-truth segmentation targets. The examples highlight the pipeline's ability to preserve anatomical and pathological detail across both tumor-present and healthy slices.
 
 
-\subsection*{Reflections on Gabor Results: Texture Reveals Structure but Precision Suffers}
+\subsection{Reflections on Gabor Results: Texture Reveals Structure but Precision Suffers}
 \label{sec:gabor_reflections}
 
 The transition to Gabor filtering represented a fundamental shift in my approach—from edge detection to texture and orientation analysis. The multi-scale, multi-orientation filter bank was designed to capture the complex patterns and directional structures that I hypothesized were missing from both raw intensity and Sobel-based approaches. The visualization results were striking, revealing rich textural information and orientation-dependent contrasts that seemed to align well with both anatomical structures and pathological regions.
@@ -2524,7 +2511,7 @@ In the context of brain tumor MRI segmentation, Laplacian filtering is particula
 Consequently, Laplacian filtering is integrated as a core feature-detection step in our pipeline, complementing the intensity-based, Sobel, and Gabor-based preprocessing methods. This allows for a systematic comparison of classical edge and blob detection techniques in the context of RGB fusion-based brain tumor segmentation.
 
 
-\subsubsection*{Laplacian Implementation Code Snippet}
+\subsubsection{Laplacian Implementation Code Snippet}
 
 To introduce second-derivative edge and blob detection into our MRI fusion pipeline, we developed a multi-scale Laplacian-of-Gaussian (LoG) filter. The following function applies LoG at several Gaussian blur scales and combines the responses by magnitude, capturing multi-scale structural features not easily detected by first-derivative filters like Sobel or orientation-tuned filters like Gabor.
 
@@ -2568,7 +2555,7 @@ def apply_laplacian(slice_2d: np.ndarray,
 
 This function allows us to build a multi-channel Laplacian-enhanced dataset by applying \texttt{apply\_laplacian} to each MRI modality (T1ce, T2, FLAIR) and stacking the results as RGB, paralleling our approach for Sobel and Gabor preprocessing.
 
-\subsection*{Laplacian-Filtered Subsampled MRI Slices: Visualization and Analysis}
+\subsection{Laplacian-Filtered Subsampled MRI Slices: Visualization and Analysis}
 
 To evaluate the effect of Laplacian filtering as a feature-detection preprocessing step, we visualized random samples from the Laplacian-subsampled dataset. The results below were generated using the same visualization pipeline as for Sobel and Gabor (\textbf{Cell 6: Memory-map Laplacian-Subsampled Dataset and Visualize Random Samples}), loading Laplacian-preprocessed MRI slices and corresponding ground-truth masks, applying per-channel normalization, and displaying each slice as a normalized RGB composite with its mask.
 
@@ -2619,7 +2606,7 @@ These visualizations confirm that Laplacian-filtered preprocessing enriches the 
 
 
 
-\subsection*{Laplacian Training History: Accuracy, Loss, and Dice Coefficient}
+\subsection{Laplacian Training History: Accuracy, Loss, and Dice Coefficient}
 
 The results in this section were obtained using the training history visualization cell:
 
@@ -2648,7 +2635,7 @@ This cell loads the training history from disk and plots the evolution of accura
 
 \clearpage
 
-\subsection*{Laplacian Test‐Set Metrics (Full vs. Simple Policy)}
+\subsection{Laplacian Test‐Set Metrics (Full vs. Simple Policy)}
 
 To comprehensively evaluate the performance of our Laplacian-processed SegNet model, we computed four key metrics—Dice coefficient, Intersection over Union (IoU), 95th percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD)—for each tumor class (\emph{Tumor Core}, \emph{Edema}, \emph{Enhancing Tumor}). Metrics were measured under two policies: the \textbf{Full Policy} (empty = perfect score) and the \textbf{Simple Policy} (skip empty slices). The following plots summarize per-class performance for each metric.
 
@@ -2723,7 +2710,7 @@ Enhancing Tumor  & 0.8410 & 0.7931 & 1.48  & 0.48 \\
 Under the Full Policy, segmentation performance is strongest for the Enhancing Tumor class (Dice = 0.8410, IoU = 0.7931) and weakest for Edema (Dice = 0.5827, IoU = 0.5264), with relatively low boundary errors. When evaluated only on tumor‐containing slices (Simple Policy), all classes exhibit marked performance drops—most dramatically for Edema (Dice falls to 0.3372 and HD95 rises to 22.56, ASSD to 9.93)—highlighting the increased difficulty of delineating edema in a clinically realistic setting. Tumor Core also declines substantially (Dice = 0.3815), underscoring the need for further model and preprocessing enhancements to handle challenging tumor subtypes.  
 
 
-\subsection*{Laplacian-Pipeline Per-Class Pixel Metrics}
+\subsection{Laplacian-Pipeline Per-Class Pixel Metrics}
 
 To provide a granular evaluation of the segmentation model with Laplacian-preprocessed MRI data, we computed pixel-wise counts of True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each tumor class in the test set. From these, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of false positive/negative pixels per test slice.
 
@@ -2774,7 +2761,7 @@ Average FN per slice: Tumor Core ($63.64$), Edema ($146.76$), Enhancing Tumor ($
 \end{itemize}
 
 
-\subsection*{Laplacian Qualitative Validation: Predicted vs. Ground Truth Masks}
+\subsection{Laplacian Qualitative Validation: Predicted vs. Ground Truth Masks}
 \label{sec:laplacian_qualitative_validation}
 
 To qualitatively assess segmentation performance, we visualize side-by-side comparisons of the Laplacian-filtered input, ground truth mask, and predicted mask on six randomly sampled validation slices. 
@@ -2839,7 +2826,7 @@ These results are generated by \textbf{Cell 20 (Laplacian): Visualize Random Val
 \clearpage
 
 
-\subsection*{Laplacian Qualitative Validation: Random RGB Input and Segmentation Masks}
+\subsection{Laplacian Qualitative Validation: Random RGB Input and Segmentation Masks}
 \label{sec:laplacian_qualitative_split_samples}
 
 To qualitatively validate the Laplacian-based data preparation and ensure alignment with ground-truth labels, we present random examples from the training, validation, and test splits. Each figure displays a normalized Laplacian RGB input slice (after per-channel normalization) alongside its corresponding segmentation mask. These samples allow visual assessment of how multi-scale Laplacian filtering accentuates edges, anatomical details, and pathological regions across various tumor morphologies.
@@ -2911,7 +2898,7 @@ These qualitative split-sample visualizations confirm that Laplacian filtering p
 
 
 
-\subsection*{Reflections on Laplacian Results: Finding Balance in Second-Derivative Features}
+\subsection{Reflections on Laplacian Results: Finding Balance in Second-Derivative Features}
 \label{sec:laplacian_reflections}
 
 The exploration of Laplacian-of-Gaussian filtering felt like finding a middle ground in my feature detection journey. After the overly simple edge detection of Sobel and the overwhelming complexity of Gabor, the second-derivative LoG operator offered a more balanced approach—sensitive to both edges and blob-like structures that are characteristic of many tumor regions.
@@ -2943,7 +2930,7 @@ Feature detection techniques such as Sobel, Laplacian-of-Gaussian (LoG), and Gab
 
 By integrating these three complementary filtering techniques, the combined preprocessing approach aims to generate richer, more informative input representations for segmentation models. This method seeks to harness the advantages of multiple feature-extraction perspectives, potentially improving the accuracy, robustness, and generalization of brain tumor segmentation tasks. The resulting multi-feature stack significantly enriches input data complexity and captures diverse pathological features within brain MRIs.
 
-\subsection*{Implementation of Combined Sobel, Laplacian, and Gabor Feature Stack}
+\subsection{Implementation of Combined Sobel, Laplacian, and Gabor Feature Stack}
 
 The following Python implementation integrates the three feature detection techniques—Sobel, Laplacian-of-Gaussian, and Gabor—into a unified preprocessing pipeline:
 
@@ -3049,7 +3036,7 @@ This chronological order reflects a systematic approach:
 \item \textbf{Unified Combination:} Developed to capitalize on the complementary strengths of all three methods, creating a robust, multi-channel preprocessing strategy.
 \end{enumerate}
 
-\subsection*{Combined Filtered Subsampled MRI Slices: Visualization and Analysis}
+\subsection{Combined Filtered Subsampled MRI Slices: Visualization and Analysis}
 
 To evaluate the combined impact of Sobel, Laplacian-of-Gaussian (LoG), and Gabor filtering as preprocessing steps, we substantially increased our dataset size and subsampling strategy. Specifically, we first loaded all available slices from 369 patients, resulting in approximately 57,000 slices. Subsequently, we adopted a more extensive subsampling policy, selecting 10 slices each from three critical categories (largest tumors, smallest tumors, and background-only slices) per patient. This policy produced a robust subsampled dataset comprising roughly 11,000 slices.
 
@@ -3148,7 +3135,7 @@ The right panel presents corresponding ground-truth masks, clearly annotating tu
 \textbf{Summary:}  
 These combined preprocessing visualizations confirm the significant advantage of integrating Sobel, LoG, and Gabor filters into a unified feature representation. By increasing both dataset size and subsampling granularity, we have substantially enhanced the richness and diversity of the training data, improving the model’s capacity to accurately localize and segment complex tumor structures across varied presentations.
 
-\subsection*{Combined Training History: Accuracy, Loss, and Dice Coefficient}
+\subsection{Combined Training History: Accuracy, Loss, and Dice Coefficient}
 
 The results in this section were obtained from the enhanced training pipeline using a significantly expanded subsampling approach. With roughly 11,000 subsampled MRI slices (7748 training, 1661 validation, and 1661 test), the training was conducted over 20 epochs to observe the learning behavior of the SegNet model leveraging combined Sobel, Laplacian-of-Gaussian (LoG), and Gabor-filtered inputs. The training history metrics were plotted using the following visualization cell:
 
@@ -3190,7 +3177,7 @@ This cell loaded the recorded training history from disk and visualized the prog
 The comprehensive training history confirms that combining Sobel, Laplacian-of-Gaussian, and Gabor filtering, coupled with an expanded dataset and strategic subsampling, considerably improved the segmentation accuracy and stability of the SegNet model. The observed Dice coefficient and accuracy metrics clearly reflect strong model performance and robust generalization capabilities, validating our approach's effectiveness in handling complex multiclass brain tumor segmentation tasks.
 
 
-\subsection*{Combined Feature Detectors Test‐Set Metrics (Full vs. Simple Policy)}
+\subsection{Combined Feature Detectors Test‐Set Metrics (Full vs. Simple Policy)}
 
 To rigorously evaluate the performance of the SegNet model trained with our combined preprocessing pipeline (Sobel, Laplacian-of-Gaussian, and Gabor), we computed critical segmentation metrics: Dice coefficient, Intersection over Union (IoU), 95th percentile Hausdorff Distance (HD95), and Average Symmetric Surface Distance (ASSD). Metrics were evaluated per tumor class (\emph{Tumor Core}, \emph{Edema}, and \emph{Enhancing Tumor}) under two distinct policies:
 
@@ -3275,7 +3262,7 @@ Enhancing Tumor  & 0.5899 ± 0.3428 & 0.4923 ± 0.3069 & 8.25 ± 10.50 & 2.78 ±
 \textbf{Summary:}  
 The comprehensive evaluation confirms the robustness and accuracy improvements introduced by our expanded subsampling strategy and the combined preprocessing (Sobel, Laplacian-of-Gaussian, and Gabor). While the Full Policy highlights strong theoretical performance across all tumor subtypes, the Simple Policy reveals critical insights into practical segmentation challenges, emphasizing the importance of rigorous, clinically relevant evaluation protocols.
 
-\subsection*{Combined Pipeline Per-Class Pixel Metrics}
+\subsection{Combined Pipeline Per-Class Pixel Metrics}
 
 To rigorously evaluate the pixel-wise segmentation performance of the combined preprocessing pipeline (Sobel, Laplacian-of-Gaussian, and Gabor), we computed the total pixel-level counts of \textbf{True Positives (TP)}, \textbf{False Positives (FP)}, \textbf{False Negatives (FN)}, and \textbf{True Negatives (TN)} for each tumor sub-class (Tumor Core, Edema, Enhancing Tumor) across the test set. From these pixel counts, we derived per-class metrics including \textbf{precision}, \textbf{recall (sensitivity)}, \textbf{specificity}, and the average number of FP/FN pixels per slice. The combined approach leverages expanded subsampling (~11,000 slices) to provide comprehensive insights into the strengths and limitations of the preprocessing strategy.
 
@@ -3340,7 +3327,7 @@ The pixel-level metrics demonstrate that the combined preprocessing strategy eff
 
 In summary, while pixel-wise metrics reveal substantial progress, particularly for Enhancing Tumor, continued efforts to refine feature extraction and model learning strategies are essential, particularly to improve segmentation consistency for challenging, heterogeneous tumor regions like Edema and Tumor Core.
 
-\subsection*{Combined Qualitative Validation: Predicted vs. Ground Truth Masks}
+\subsection{Combined Qualitative Validation: Predicted vs. Ground Truth Masks}
 \label{sec:combined_qualitative_validation}
 
 To qualitatively assess segmentation performance across all three feature detection techniques (Sobel, Gabor, and Laplacian), we visualize side-by-side comparisons of raw input slices, ground truth masks, and predicted masks on seven randomly sampled validation slices. These results illustrate the strengths and limitations of the segmentation model trained with combined feature detectors.
@@ -3429,7 +3416,7 @@ Overall, the qualitative validation highlights the robust performance of the com
 
 \clearpage
 
-\subsection*{Combined  Qualitative Validation: Random RGB Input and Segmentation Masks}
+\subsection{Combined  Qualitative Validation: Random RGB Input and Segmentation Masks}
 \label{sec:combined_qualitative_split_samples}
 
 To qualitatively validate the final dataset generated by combining all three feature detection techniques (Sobel, Gabor, and Laplacian), we present a set of visualizations from the training, validation, and test splits. Each figure displays the normalized RGB input slice (where T1CE, T2, and FLAIR are mapped to the red, green, and blue channels, respectively, and further enhanced using the combined filtering approach) alongside its corresponding segmentation mask.
@@ -3501,7 +3488,7 @@ This unified pipeline aims to enhance edge, texture, and contrast information si
 \noindent\textbf{Summary:} The combined RGB input approach effectively captures structural, textural, and boundary information, as seen in the diversity of tumor regions and anatomical details. These visualizations confirm the success of integrating Sobel, Gabor, and Laplacian filtering for enhanced model input representation.
 
 
-\subsection*{Reflections on Combined Results: The Power of Integration and Scale}
+\subsection{Reflections on Combined Results: The Power of Integration and Scale}
 \label{sec:combined_reflections}
 
 The combined Sobel-Laplacian-Gabor approach represented the culmination of insights gathered throughout my experimental journey. By integrating all three feature detection methods and dramatically expanding the dataset to over 11,000 slices, I aimed to create a comprehensive solution that addressed the limitations observed in each individual approach.

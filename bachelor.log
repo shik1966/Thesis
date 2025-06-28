@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  28 JUN 2025 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  28 JUN 2025 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,7 +1111,7 @@ Package epstopdf Info: Source file: <GUC-logo-ss.eps>
 erted-to.pdf GUC-logo-ss.eps>
 (epstopdf)             \includegraphics on input line 35.
 Package epstopdf Info: Output file is already uptodate.
-<GUC-logo-ss-eps-converted-to.pdf, id=323, 271.0125pt x 259.97125pt>
+<GUC-logo-ss-eps-converted-to.pdf, id=531, 271.0125pt x 259.97125pt>
 File: GUC-logo-ss-eps-converted-to.pdf Graphic file (type pdf)
 <use GUC-logo-ss-eps-converted-to.pdf>
 Package pdftex.def Info: GUC-logo-ss-eps-converted-to.pdf  used on input line 3
@@ -1197,11 +1197,37 @@ Package pdftex.def Info: GUC-logo-ss-eps-converted-to.pdf  used on input line 3
 
 
 
-] [9] [10])
+] [9{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-r
+m.enc}{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm
+-mathsy.enc}]
+Overfull \hbox (0.6203pt too wide) in paragraph at lines 92--92
+ [][] [][][]\T1/lmr/m/n/12 Cell 15: Com-pute Slice-wise Dice, IoU, HD95 & ASSD 
+un-der Empty- 
+ []
+
+[10]
+Overfull \hbox (1.63475pt too wide) in paragraph at lines 122--122
+ [][] [][][]\T1/lmr/m/n/12 Laplacian-Filtered Sub-sam-pled MRI Slices: Vi-su-al
+-iza-tion and Anal- 
+ []
+
+
+Overfull \hbox (20.08653pt too wide) in paragraph at lines 128--128
+ [][] [][][]\T1/lmr/m/n/12 Reflections on Lapla-cian Re-sults: Find-ing Bal-anc
+e in Second-Derivative 
+ []
+
+
+Overfull \hbox (2.45325pt too wide) in paragraph at lines 131--131
+ [][] [][][]\T1/lmr/m/n/12 Combined Fil-tered Sub-sam-pled MRI Slices: Vi-su-al
+-iza-tion and Anal- 
+ []
+
+[11] [12])
 \tf@toc=\write5
 \openout5 = `bachelor.toc'.
 
- [11]
+ [13]
 \openout2 = `introduction.aux'.
 
  (introduction.tex
@@ -1265,10 +1291,8 @@ Chapter 3.
 
 
 
-{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.en
-c}{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mat
-hsy.enc}{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
-lm-mathit.enc}] [28] [29]
+{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathi
+t.enc}] [28] [29]
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 96.
 LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <10> not available
@@ -1277,7 +1301,27 @@ LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 97.
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 99.
- [30] [31
+ [30]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 179.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 179.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 179.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 179.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 179.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 179.
+
+[31
 
 ] [32] [33] [34
 
@@ -1360,19 +1404,17 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[45] [46] [47]
+[45] [46]
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 845.
+(Font)              scaled to size 10.79993pt on input line 844.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 866.
+(Font)              <5> on input line 865.
 
-Underfull \hbox (badness 1168) in paragraph at lines 882--883
+Underfull \hbox (badness 1168) in paragraph at lines 881--882
 \T1/lmr/m/n/8 small datasets, sharp
  []
 
-[48
-
-] [49]
+[47] [48]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�\lst@EC�).
 
@@ -1380,7 +1422,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965  20/
+l.964  20/
             20 [10:08<00:00, 28.83s/epoch, accuracy=0.995, loss=0.23...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1396,7 +1438,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965  20/20 [
+l.964  20/20 [
                   10:08<00:00, 28.83s/epoch, accuracy=0.995, loss=0.23...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1412,7 +1454,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965  20/20 [10:08<00:00, 28.
+l.964  20/20 [10:08<00:00, 28.
                                     83s/epoch, accuracy=0.995, loss=0.23...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1428,7 +1470,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965 ...[10:08<00:00, 28.83s/epoch, accuracy=
+l.964 ...[10:08<00:00, 28.83s/epoch, accuracy=
                                                   0.995, loss=0.233, mul...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1444,7 +1486,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965 ...��28.83s/epoch, accuracy=0.995, loss=
+l.964 ...��28.83s/epoch, accuracy=0.995, loss=
                                                   0.233, multiclass_dice_c...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1460,7 +1502,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965 ...95, loss=0.233, multiclass_dice_coef=
+l.964 ...95, loss=0.233, multiclass_dice_coef=
                                                   0.792, val_accuracy=0.99...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1476,7 +1518,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965 ...lticlass_dice_coef=0.792, val_accuracy=
+l.964 ...lticlass_dice_coef=0.792, val_accuracy=
                                                   0.995, val_loss=0.222,�...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1492,7 +1534,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965 ...=0.792, val_accuracy=0.995, val_loss=
+l.964 ...=0.792, val_accuracy=0.995, val_loss=
                                                   0.222, val_multiclass_di...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1508,7 +1550,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.965 ...l_loss=0.222, val_multiclass_dice_coef=
+l.964 ...l_loss=0.222, val_multiclass_dice_coef=
                                                   0.799]
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1516,64 +1558,66 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[50] [51] [52]
-Overfull \hbox (70.61372pt too wide) detected at line 1098
+[49] [50] [51]
+Overfull \hbox (70.61372pt too wide) detected at line 1092
 []
  []
 
-[53
-
-] [54{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
-mathex.enc}] [55] [56] [57] [58] [59]
-<subsample1_no.png, id=1552, 461.8053pt x 255.8358pt>
-File: subsample1_no.png Graphic file (type png)
-<use subsample1_no.png>
-Package pdftex.def Info: subsample1_no.png  used on input line 1313.
-(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
-
-Underfull \hbox (badness 1509) in paragraph at lines 1314--1314
-\T1/lmr/m/n/12 intensity RGB com-pos-ite show-ing pre-
- []
-
-<subsample2_no.png, id=1554, 461.8053pt x 255.8358pt>
-File: subsample2_no.png Graphic file (type png)
-<use subsample2_no.png>
-Package pdftex.def Info: subsample2_no.png  used on input line 1318.
-(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
-<subsample_no.png, id=1555, 461.8053pt x 255.8358pt>
+[52{C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
+thex.enc}] [53] [54] [55] [56] [57]
+<subsample_no.png, id=1827, 461.8053pt x 255.8358pt>
 File: subsample_no.png Graphic file (type png)
 <use subsample_no.png>
-Package pdftex.def Info: subsample_no.png  used on input line 1326.
+Package pdftex.def Info: subsample_no.png  used on input line 1307.
 (pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
-[60
+<subsample1_no.png, id=1829, 461.8053pt x 255.8358pt>
+File: subsample1_no.png Graphic file (type png)
+<use subsample1_no.png>
+Package pdftex.def Info: subsample1_no.png  used on input line 1312.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+<subsample2_no.png, id=1830, 461.8053pt x 255.8358pt>
+File: subsample2_no.png Graphic file (type png)
+<use subsample2_no.png>
+Package pdftex.def Info: subsample2_no.png  used on input line 1320.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
 
-] [61 <./subsample1_no.png> <./subsample2_no.png> <./subsample_no.png>]
-<dice_no.png, id=1568, 387.3672pt x 339.669pt>
+Underfull \hbox (badness 3108) in paragraph at lines 1321--1321
+[]\T1/lmr/m/n/12 Figure 3.3: |\T1/lmr/bx/n/12 Sam-ple 3. \T1/lmr/m/it/12 Left: 
+\T1/lmr/m/n/12 A
+ []
+
+
+Underfull \hbox (badness 4242) in paragraph at lines 1321--1321
+\T1/lmr/m/n/12 background-only slice with no vis-i-ble
+ []
+
+[58
+
+] [59 <./subsample_no.png> <./subsample1_no.png> <./subsample2_no.png>]
+<dice_no.png, id=1843, 387.3672pt x 339.669pt>
 File: dice_no.png Graphic file (type png)
 <use dice_no.png>
-Package pdftex.def Info: dice_no.png  used on input line 1351.
+Package pdftex.def Info: dice_no.png  used on input line 1344.
 (pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
-<accuracy and loss_no.png, id=1569, 859.2903pt x 354.123pt>
+<accuracy and loss_no.png, id=1844, 859.2903pt x 354.123pt>
 File: accuracy and loss_no.png Graphic file (type png)
 <use accuracy and loss_no.png>
-Package pdftex.def Info: accuracy and loss_no.png  used on input line 1359.
+Package pdftex.def Info: accuracy and loss_no.png  used on input line 1352.
 (pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
 
-[62 <./dice_no.png>] [63 <./accuracy and loss_no.png>]
-<results_no.png, id=1583, 875.1897pt x 1164.2697pt>
+[60 <./dice_no.png>]
+<results_no.png, id=1852, 875.1897pt x 1164.2697pt>
 File: results_no.png Graphic file (type png)
 <use results_no.png>
-Package pdftex.def Info: results_no.png  used on input line 1381.
+Package pdftex.def Info: results_no.png  used on input line 1368.
 (pdftex.def)             Requested size: 443.9066pt x 590.51865pt.
- [64
-
-] [65 <./results_no.png>]
-Overfull \hbox (27.67229pt too wide) in paragraph at lines 1446--1447
+ [61 <./accuracy and loss_no.png>] [62 <./results_no.png>]
+Overfull \hbox (27.67229pt too wide) in paragraph at lines 1433--1434
 \T1/lmr/m/n/12 To pro-vide a gran-u-lar eval-u-a-tion of the seg-men-ta-tion mo
 del trained with raw (no-preprocessing)
  []
 
-[66] [67]
+[63] [64]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1606,165 +1650,165 @@ del trained with raw (no-preprocessing)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<truth_no.png, id=1602, 1015.3935pt x 895.4253pt>
+<truth_no.png, id=1873, 1015.3935pt x 895.4253pt>
 File: truth_no.png Graphic file (type png)
 <use truth_no.png>
-Package pdftex.def Info: truth_no.png  used on input line 1451.
+Package pdftex.def Info: truth_no.png  used on input line 1438.
 (pdftex.def)             Requested size: 597.51212pt x 526.91638pt.
 
-Overfull \hbox (5.6947pt too wide) in paragraph at lines 1451--1452
+Overfull \hbox (5.6947pt too wide) in paragraph at lines 1438--1439
  [][] 
  []
 
-[68 <./truth_no.png>]
-Overfull \hbox (2.7768pt too wide) in paragraph at lines 1463--1464
+[65 <./truth_no.png>]
+Overfull \hbox (2.7768pt too wide) in paragraph at lines 1450--1451
 []\T1/lmr/bx/n/12 Precision: \T1/lmr/m/n/12 High-est for Tu-mor Core ($\OT1/lmr
 /m/n/12 0\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 805$\T1/lmr/m/n/12 ), mod-er-ate for
  En-hanc-ing Tu-mor ($\OT1/lmr/m/n/12 0\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 733$\T
 1/lmr/m/n/12 ),
  []
 
-[69
+[66
 
 
 ]
-<result_no.png, id=1614, 829.6596pt x 252.945pt>
+<result_no.png, id=1885, 829.6596pt x 252.945pt>
 File: result_no.png Graphic file (type png)
 <use result_no.png>
-Package pdftex.def Info: result_no.png  used on input line 1509.
+Package pdftex.def Info: result_no.png  used on input line 1496.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result1_no.png, id=1615, 829.6596pt x 252.945pt>
+<result1_no.png, id=1886, 829.6596pt x 252.945pt>
 File: result1_no.png Graphic file (type png)
 <use result1_no.png>
-Package pdftex.def Info: result1_no.png  used on input line 1520.
+Package pdftex.def Info: result1_no.png  used on input line 1507.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [70 <./result_no.png>]
-<result2_no.png, id=1622, 829.6596pt x 252.945pt>
+ [67 <./result_no.png>]
+<result2_no.png, id=1893, 829.6596pt x 252.945pt>
 File: result2_no.png Graphic file (type png)
 <use result2_no.png>
-Package pdftex.def Info: result2_no.png  used on input line 1529.
+Package pdftex.def Info: result2_no.png  used on input line 1516.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result3_no.png, id=1623, 829.6596pt x 252.945pt>
+<result3_no.png, id=1894, 829.6596pt x 252.945pt>
 File: result3_no.png Graphic file (type png)
 <use result3_no.png>
-Package pdftex.def Info: result3_no.png  used on input line 1538.
+Package pdftex.def Info: result3_no.png  used on input line 1525.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [71 <./result1_no.png> <./result2_no.png>]
-<result4_no.png, id=1632, 829.6596pt x 252.945pt>
+ [68 <./result1_no.png> <./result2_no.png>]
+<result4_no.png, id=1903, 829.6596pt x 252.945pt>
 File: result4_no.png Graphic file (type png)
 <use result4_no.png>
-Package pdftex.def Info: result4_no.png  used on input line 1547.
+Package pdftex.def Info: result4_no.png  used on input line 1534.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result5_no.png, id=1633, 829.6596pt x 252.945pt>
+<result5_no.png, id=1904, 829.6596pt x 252.945pt>
 File: result5_no.png Graphic file (type png)
 <use result5_no.png>
-Package pdftex.def Info: result5_no.png  used on input line 1556.
+Package pdftex.def Info: result5_no.png  used on input line 1543.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [72 <./result3_no.png> <./result4_no.png>] [73 <./result5_no.png>]
-<train_no.png, id=1648, 461.8053pt x 255.8358pt>
+ [69 <./result3_no.png> <./result4_no.png>] [70 <./result5_no.png>]
+<train_no.png, id=1919, 461.8053pt x 255.8358pt>
 File: train_no.png Graphic file (type png)
 <use train_no.png>
-Package pdftex.def Info: train_no.png  used on input line 1576.
+Package pdftex.def Info: train_no.png  used on input line 1563.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<train1_no.png, id=1649, 461.8053pt x 255.8358pt>
+<train1_no.png, id=1920, 461.8053pt x 255.8358pt>
 File: train1_no.png Graphic file (type png)
 <use train1_no.png>
-Package pdftex.def Info: train1_no.png  used on input line 1586.
+Package pdftex.def Info: train1_no.png  used on input line 1573.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [74
+ [71
 
  <./train_no.png>]
-<val_no.png, id=1657, 461.8053pt x 255.8358pt>
+<val_no.png, id=1927, 461.8053pt x 255.8358pt>
 File: val_no.png Graphic file (type png)
 <use val_no.png>
-Package pdftex.def Info: val_no.png  used on input line 1596.
+Package pdftex.def Info: val_no.png  used on input line 1583.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<val1_no.png, id=1658, 461.8053pt x 255.8358pt>
+<val1_no.png, id=1928, 461.8053pt x 255.8358pt>
 File: val1_no.png Graphic file (type png)
 <use val1_no.png>
-Package pdftex.def Info: val1_no.png  used on input line 1606.
+Package pdftex.def Info: val1_no.png  used on input line 1593.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [75 <./train1_no.png> <./val_no.png>]
-<test_no.png, id=1667, 461.8053pt x 255.8358pt>
+ [72 <./train1_no.png> <./val_no.png>]
+<test_no.png, id=1938, 461.8053pt x 255.8358pt>
 File: test_no.png Graphic file (type png)
 <use test_no.png>
-Package pdftex.def Info: test_no.png  used on input line 1616.
+Package pdftex.def Info: test_no.png  used on input line 1603.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<test1_no.png, id=1668, 461.8053pt x 255.8358pt>
+<test1_no.png, id=1939, 461.8053pt x 255.8358pt>
 File: test1_no.png Graphic file (type png)
 <use test1_no.png>
-Package pdftex.def Info: test1_no.png  used on input line 1626.
+Package pdftex.def Info: test1_no.png  used on input line 1613.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [76 <./val1_no.png> <./test_no.png>]
-[77 <./test1_no.png>] [78] [79]
-<subsample1.png, id=1709, 383.93437pt x 213.04594pt>
+ [73 <./val1_no.png> <./test_no.png>]
+[74 <./test1_no.png>] [75] [76]
+<subsample1.png, id=1980, 383.93437pt x 213.04594pt>
 File: subsample1.png Graphic file (type png)
 <use subsample1.png>
-Package pdftex.def Info: subsample1.png  used on input line 1721.
+Package pdftex.def Info: subsample1.png  used on input line 1708.
 (pdftex.def)             Requested size: 217.42265pt x 120.65074pt.
-<subsample2.png, id=1710, 382.42876pt x 218.31563pt>
+<subsample2.png, id=1981, 382.42876pt x 218.31563pt>
 File: subsample2.png Graphic file (type png)
 <use subsample2.png>
-Package pdftex.def Info: subsample2.png  used on input line 1726.
+Package pdftex.def Info: subsample2.png  used on input line 1713.
 (pdftex.def)             Requested size: 217.42265pt x 124.11806pt.
-<subsample3.png, id=1711, 384.6872pt x 215.30438pt>
+<subsample3.png, id=1982, 384.6872pt x 215.30438pt>
 File: subsample3.png Graphic file (type png)
 <use subsample3.png>
-Package pdftex.def Info: subsample3.png  used on input line 1734.
+Package pdftex.def Info: subsample3.png  used on input line 1721.
 (pdftex.def)             Requested size: 217.42265pt x 121.6899pt.
- [80
+ [77
 
-] [81 <./subsample1.png> <./subsample2.png> <./subsample3.png>] [82
+] [78 <./subsample1.png> <./subsample2.png> <./subsample3.png>] [79
 
 ]
-<Dice coefficient.png, id=1729, 319.94531pt x 282.30469pt>
+<Dice coefficient.png, id=2000, 319.94531pt x 282.30469pt>
 File: Dice coefficient.png Graphic file (type png)
 <use Dice coefficient.png>
-Package pdftex.def Info: Dice coefficient.png  used on input line 1764.
+Package pdftex.def Info: Dice coefficient.png  used on input line 1751.
 (pdftex.def)             Requested size: 452.9679pt x 399.68224pt.
-<accuracy and loss.png, id=1730, 719.68875pt x 297.36093pt>
+<accuracy and loss.png, id=2001, 719.68875pt x 297.36093pt>
 File: accuracy and loss.png Graphic file (type png)
 <use accuracy and loss.png>
-Package pdftex.def Info: accuracy and loss.png  used on input line 1772.
+Package pdftex.def Info: accuracy and loss.png  used on input line 1759.
 (pdftex.def)             Requested size: 439.37941pt x 181.5487pt.
- [83
+ [80
 
  <./Dice coefficient.png>]
-Overfull \hbox (1.46973pt too wide) in paragraph at lines 1786--1787
+Overfull \hbox (1.46973pt too wide) in paragraph at lines 1773--1774
 \T1/lmr/m/n/12 centile Haus-dorff Dis-tance (HD95), and Av-er-age Sym-met-ric S
 ur-face Dis-tance (ASSD)^^Vfor
  []
 
-<HD95.png, id=1737, 730.98094pt x 244.66406pt>
+<HD95.png, id=2008, 730.98094pt x 244.66406pt>
 File: HD95.png Graphic file (type png)
 <use HD95.png>
-Package pdftex.def Info: HD95.png  used on input line 1790.
+Package pdftex.def Info: HD95.png  used on input line 1777.
 (pdftex.def)             Requested size: 730.97916pt x 244.66345pt.
-[84 <./accuracy and loss.png>]
-<IoU.png, id=1744, 730.98094pt x 238.64156pt>
+[81 <./accuracy and loss.png>]
+<IoU.png, id=2015, 730.98094pt x 238.64156pt>
 File: IoU.png Graphic file (type png)
 <use IoU.png>
-Package pdftex.def Info: IoU.png  used on input line 1799.
+Package pdftex.def Info: IoU.png  used on input line 1786.
 (pdftex.def)             Requested size: 452.9679pt x 147.87976pt.
-<ASSD.png, id=1745, 730.22812pt x 245.41687pt>
+<ASSD.png, id=2016, 730.22812pt x 245.41687pt>
 File: ASSD.png Graphic file (type png)
 <use ASSD.png>
-Package pdftex.def Info: ASSD.png  used on input line 1807.
+Package pdftex.def Info: ASSD.png  used on input line 1794.
 (pdftex.def)             Requested size: 452.9679pt x 152.23552pt.
- [85 <./HD95.png> <./IoU.png>]
-<dice.png, id=1754, 731.73375pt x 240.9pt>
+ [82 <./HD95.png> <./IoU.png>]
+<dice.png, id=2025, 731.73375pt x 240.9pt>
 File: dice.png Graphic file (type png)
 <use dice.png>
-Package pdftex.def Info: dice.png  used on input line 1815.
+Package pdftex.def Info: dice.png  used on input line 1802.
 (pdftex.def)             Requested size: 452.9679pt x 149.12486pt.
- [86 <./ASSD.png> <./dice.png>] [87
+ [83 <./ASSD.png> <./dice.png>] [84
 
 ]
-Overfull \hbox (37.55519pt too wide) in paragraph at lines 1867--1876
+Overfull \hbox (37.55519pt too wide) in paragraph at lines 1854--1863
  [] 
  []
 
-[88]
+[85]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1797,149 +1841,167 @@ Overfull \hbox (37.55519pt too wide) in paragraph at lines 1867--1876
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Metrics.png, id=1772, 1019.7297pt x 895.4253pt>
+<Metrics.png, id=2043, 1019.7297pt x 895.4253pt>
 File: Metrics.png Graphic file (type png)
 <use Metrics.png>
-Package pdftex.def Info: Metrics.png  used on input line 1891.
+Package pdftex.def Info: Metrics.png  used on input line 1878.
 (pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
 
-Overfull \hbox (5.71011pt too wide) in paragraph at lines 1891--1893
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 1878--1880
  [][] 
  []
 
-[89 <./Metrics.png>]
-<results.png, id=1779, 829.6596pt x 252.945pt>
+[86 <./Metrics.png>]
+Overfull \hbox (1.00574pt too wide) in paragraph at lines 1916--1916
+|[]\T1/lmr/bx/n/14.4 Sobel Qual-i-ta-tive Val-i-da-tion: Pre-dicted vs. Ground 
+Truth
+ []
+
+<results.png, id=2050, 829.6596pt x 252.945pt>
 File: results.png Graphic file (type png)
 <use results.png>
-Package pdftex.def Info: results.png  used on input line 1936.
+Package pdftex.def Info: results.png  used on input line 1923.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [90
+[87
 
 
 ]
-<results1.png, id=1784, 829.6596pt x 252.945pt>
+<results1.png, id=2055, 829.6596pt x 252.945pt>
 File: results1.png Graphic file (type png)
 <use results1.png>
-Package pdftex.def Info: results1.png  used on input line 1946.
+Package pdftex.def Info: results1.png  used on input line 1933.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<results2.png, id=1785, 829.6596pt x 252.945pt>
+<results2.png, id=2056, 829.6596pt x 252.945pt>
 File: results2.png Graphic file (type png)
 <use results2.png>
-Package pdftex.def Info: results2.png  used on input line 1956.
+Package pdftex.def Info: results2.png  used on input line 1943.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [91 <./results.png> <./results1.png>]
-<results3.png, id=1794, 829.6596pt x 252.945pt>
+ [88 <./results.png> <./results1.png>]
+<results3.png, id=2065, 829.6596pt x 252.945pt>
 File: results3.png Graphic file (type png)
 <use results3.png>
-Package pdftex.def Info: results3.png  used on input line 1966.
+Package pdftex.def Info: results3.png  used on input line 1953.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<results4.png, id=1795, 829.6596pt x 252.945pt>
+<results4.png, id=2066, 829.6596pt x 252.945pt>
 File: results4.png Graphic file (type png)
 <use results4.png>
-Package pdftex.def Info: results4.png  used on input line 1976.
+Package pdftex.def Info: results4.png  used on input line 1963.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [92 <./results2.png> <./results3.png>]
-<results5.png, id=1805, 829.6596pt x 252.945pt>
+ [89 <./results2.png> <./results3.png>]
+<results5.png, id=2075, 829.6596pt x 252.945pt>
 File: results5.png Graphic file (type png)
 <use results5.png>
-Package pdftex.def Info: results5.png  used on input line 1986.
+Package pdftex.def Info: results5.png  used on input line 1973.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<train.png, id=1806, 461.8053pt x 255.8358pt>
+<train.png, id=2076, 461.8053pt x 255.8358pt>
 File: train.png Graphic file (type png)
 <use train.png>
-Package pdftex.def Info: train.png  used on input line 2007.
+Package pdftex.def Info: train.png  used on input line 1994.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [93 <./results4.png> <./results5.png>]
-<test1.png, id=1815, 461.8053pt x 255.8358pt>
+ [90 <./results4.png> <./results5.png>]
+<test1.png, id=2086, 461.8053pt x 255.8358pt>
 File: test1.png Graphic file (type png)
 <use test1.png>
-Package pdftex.def Info: test1.png  used on input line 2018.
+Package pdftex.def Info: test1.png  used on input line 2005.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<test.png, id=1816, 461.8053pt x 255.8358pt>
+<test.png, id=2087, 461.8053pt x 255.8358pt>
 File: test.png Graphic file (type png)
 <use test.png>
-Package pdftex.def Info: test.png  used on input line 2029.
+Package pdftex.def Info: test.png  used on input line 2016.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [94 <./train.png> <./test1.png>]
-<val1.png, id=1825, 461.8053pt x 255.8358pt>
+ [91 <./train.png> <./test1.png>]
+<val1.png, id=2096, 461.8053pt x 255.8358pt>
 File: val1.png Graphic file (type png)
 <use val1.png>
-Package pdftex.def Info: val1.png  used on input line 2040.
+Package pdftex.def Info: val1.png  used on input line 2027.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<val.png, id=1826, 461.8053pt x 255.8358pt>
+<val.png, id=2097, 461.8053pt x 255.8358pt>
 File: val.png Graphic file (type png)
 <use val.png>
-Package pdftex.def Info: val.png  used on input line 2051.
+Package pdftex.def Info: val.png  used on input line 2038.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [95 <./test.png> <./val1.png>]
-<train1.png, id=1835, 461.8053pt x 255.8358pt>
+
+[92 <./test.png> <./val1.png>]
+<train1.png, id=2106, 461.8053pt x 255.8358pt>
 File: train1.png Graphic file (type png)
 <use train1.png>
-Package pdftex.def Info: train1.png  used on input line 2062.
+Package pdftex.def Info: train1.png  used on input line 2049.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [96 <./val.png> <./train1.png>] [97
+ [93 <./val.png> <./train1.png>]
+Overfull \hbox (18.91818pt too wide) in paragraph at lines 2066--2066
+|[]\T1/lmr/bx/n/14.4 Reflections on So-bel Re-sults: Edge De-tec-tion Shows Pro
+mise
+ []
 
-] [98] [99
+[94
 
-] [100]
-<subsample1_gabor.png, id=1914, 461.8053pt x 255.8358pt>
-File: subsample1_gabor.png Graphic file (type png)
-<use subsample1_gabor.png>
-Package pdftex.def Info: subsample1_gabor.png  used on input line 2194.
-(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
-<subsample2_gabor.png, id=1915, 461.8053pt x 255.8358pt>
-File: subsample2_gabor.png Graphic file (type png)
-<use subsample2_gabor.png>
-Package pdftex.def Info: subsample2_gabor.png  used on input line 2199.
-(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
-<subsample3_gabor.png, id=1916, 461.8053pt x 255.8358pt>
-File: subsample3_gabor.png Graphic file (type png)
-<use subsample3_gabor.png>
-Package pdftex.def Info: subsample3_gabor.png  used on input line 2207.
-(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
- [101
-
-] [102 <./subsample1_gabor.png> <./subsample2_gabor.png> <./subsample3_gabor.pn
-g>]
-<dice_gabor.png, id=1929, 387.3672pt x 339.669pt>
-File: dice_gabor.png Graphic file (type png)
-<use dice_gabor.png>
-Package pdftex.def Info: dice_gabor.png  used on input line 2228.
-(pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
- [103
+] [95] [96
 
 ]
-<accuracy and loss_gabor.png, id=1934, 859.2903pt x 354.123pt>
+Overfull \hbox (2.76015pt too wide) in paragraph at lines 2159--2159
+|[]\T1/lmr/bx/n/14.4 Gabor-Filtered Sub-sam-pled MRI Slices: Vi-su-al-iza-tion 
+and
+ []
+
+[97]
+<subsample1_gabor.png, id=2185, 461.8053pt x 255.8358pt>
+File: subsample1_gabor.png Graphic file (type png)
+<use subsample1_gabor.png>
+Package pdftex.def Info: subsample1_gabor.png  used on input line 2181.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+<subsample2_gabor.png, id=2186, 461.8053pt x 255.8358pt>
+File: subsample2_gabor.png Graphic file (type png)
+<use subsample2_gabor.png>
+Package pdftex.def Info: subsample2_gabor.png  used on input line 2186.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+<subsample3_gabor.png, id=2187, 461.8053pt x 255.8358pt>
+File: subsample3_gabor.png Graphic file (type png)
+<use subsample3_gabor.png>
+Package pdftex.def Info: subsample3_gabor.png  used on input line 2194.
+(pdftex.def)             Requested size: 217.42265pt x 120.44974pt.
+ [98
+
+] [99 <./subsample1_gabor.png> <./subsample2_gabor.png> <./subsample3_gabor.png
+>]
+<dice_gabor.png, id=2200, 387.3672pt x 339.669pt>
+File: dice_gabor.png Graphic file (type png)
+<use dice_gabor.png>
+Package pdftex.def Info: dice_gabor.png  used on input line 2215.
+(pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
+ [100
+
+]
+<accuracy and loss_gabor.png, id=2205, 859.2903pt x 354.123pt>
 File: accuracy and loss_gabor.png Graphic file (type png)
 <use accuracy and loss_gabor.png>
-Package pdftex.def Info: accuracy and loss_gabor.png  used on input line 2236.
+Package pdftex.def Info: accuracy and loss_gabor.png  used on input line 2223.
 (pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
- [104 <./dice_gabor.png>]
-Overfull \hbox (1.46973pt too wide) in paragraph at lines 2244--2245
+ [101 <./dice_gabor.png>]
+Overfull \hbox (1.46973pt too wide) in paragraph at lines 2231--2232
 \T1/lmr/m/n/12 centile Haus-dorff Dis-tance (HD95), and Av-er-age Sym-met-ric S
 ur-face Dis-tance (ASSD)^^Vfor
  []
 
-<simple and full policy.png, id=1942, 875.1897pt x 1164.2697pt>
+<simple and full policy.png, id=2212, 875.1897pt x 1164.2697pt>
 File: simple and full policy.png Graphic file (type png)
 <use simple and full policy.png>
-Package pdftex.def Info: simple and full policy.png  used on input line 2248.
+Package pdftex.def Info: simple and full policy.png  used on input line 2235.
 (pdftex.def)             Requested size: 452.9679pt x 602.58128pt.
-[105 <./accuracy and loss_gabor.png>]
+[102 <./accuracy and loss_gabor.png>]
 Overfull \vbox (8.0744pt too high) has occurred while \output is active []
 
 
-[106 <./simple and full policy.png>]
-Overfull \hbox (4.11557pt too wide) in paragraph at lines 2281--2290
+[103 <./simple and full policy.png>]
+Overfull \hbox (4.11557pt too wide) in paragraph at lines 2268--2277
  [] 
  []
 
-[107]
-Overfull \hbox (0.36835pt too wide) in paragraph at lines 2296--2307
+[104]
+Overfull \hbox (0.36835pt too wide) in paragraph at lines 2283--2294
 |  [] 
  []
 
-[108]
+[105]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1972,147 +2034,147 @@ Overfull \hbox (0.36835pt too wide) in paragraph at lines 2296--2307
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<metrics_gabor.png, id=1964, 1019.7297pt x 895.4253pt>
+<metrics_gabor.png, id=2235, 1019.7297pt x 895.4253pt>
 File: metrics_gabor.png Graphic file (type png)
 <use metrics_gabor.png>
-Package pdftex.def Info: metrics_gabor.png  used on input line 2315.
+Package pdftex.def Info: metrics_gabor.png  used on input line 2302.
 (pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
 
-Overfull \hbox (5.71011pt too wide) in paragraph at lines 2315--2317
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 2302--2304
  [][] 
  []
 
-[109 <./metrics_gabor.png>] [110
+[106 <./metrics_gabor.png>] [107
 
 
 ]
-Overfull \hbox (6.01096pt too wide) in paragraph at lines 2359--2359
-|\T1/lmr/bx/n/14.4 Gabor Qual-i-ta-tive Val-i-da-tion: Pre-dicted vs. Ground Tr
-uth Masks| 
+Overfull \hbox (7.33875pt too wide) in paragraph at lines 2346--2346
+|[]\T1/lmr/bx/n/14.4 Gabor Qual-i-ta-tive Val-i-da-tion: Pre-dicted vs. Ground 
+Truth
  []
 
-<result_gabor.png, id=1976, 829.6596pt x 252.945pt>
+<result_gabor.png, id=2246, 829.6596pt x 252.945pt>
 File: result_gabor.png Graphic file (type png)
 <use result_gabor.png>
-Package pdftex.def Info: result_gabor.png  used on input line 2367.
+Package pdftex.def Info: result_gabor.png  used on input line 2354.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result1_gabor.png, id=1977, 829.6596pt x 252.945pt>
+<result1_gabor.png, id=2247, 829.6596pt x 252.945pt>
 File: result1_gabor.png Graphic file (type png)
 <use result1_gabor.png>
-Package pdftex.def Info: result1_gabor.png  used on input line 2378.
+Package pdftex.def Info: result1_gabor.png  used on input line 2365.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-[111 <./result_gabor.png>]
-<result2_gabor.png, id=1984, 829.6596pt x 252.945pt>
+[108 <./result_gabor.png>]
+<result2_gabor.png, id=2255, 829.6596pt x 252.945pt>
 File: result2_gabor.png Graphic file (type png)
 <use result2_gabor.png>
-Package pdftex.def Info: result2_gabor.png  used on input line 2387.
+Package pdftex.def Info: result2_gabor.png  used on input line 2374.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result3_gabor.png, id=1985, 829.6596pt x 252.945pt>
+<result3_gabor.png, id=2256, 829.6596pt x 252.945pt>
 File: result3_gabor.png Graphic file (type png)
 <use result3_gabor.png>
-Package pdftex.def Info: result3_gabor.png  used on input line 2396.
+Package pdftex.def Info: result3_gabor.png  used on input line 2383.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result4_gabor.png, id=1986, 829.6596pt x 252.945pt>
+<result4_gabor.png, id=2257, 829.6596pt x 252.945pt>
 File: result4_gabor.png Graphic file (type png)
 <use result4_gabor.png>
-Package pdftex.def Info: result4_gabor.png  used on input line 2405.
+Package pdftex.def Info: result4_gabor.png  used on input line 2392.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [112 <./result1_gabor.png> <./result2_gabor.png> <./result3_gabor.png>]
-<result5_gabor.png, id=1997, 829.6596pt x 252.945pt>
+ [109 <./result1_gabor.png> <./result2_gabor.png> <./result3_gabor.png>]
+<result5_gabor.png, id=2268, 829.6596pt x 252.945pt>
 File: result5_gabor.png Graphic file (type png)
 <use result5_gabor.png>
-Package pdftex.def Info: result5_gabor.png  used on input line 2414.
+Package pdftex.def Info: result5_gabor.png  used on input line 2401.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [113 <./result4_gabor.png> <./result5_gabor.png>]
-<train1_gabor.png, id=2006, 461.8053pt x 255.8358pt>
+ [110 <./result4_gabor.png> <./result5_gabor.png>]
+<train1_gabor.png, id=2277, 461.8053pt x 255.8358pt>
 File: train1_gabor.png Graphic file (type png)
 <use train1_gabor.png>
-Package pdftex.def Info: train1_gabor.png  used on input line 2432.
+Package pdftex.def Info: train1_gabor.png  used on input line 2419.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<train_gabor.png, id=2007, 461.8053pt x 255.8358pt>
+<train_gabor.png, id=2278, 461.8053pt x 255.8358pt>
 File: train_gabor.png Graphic file (type png)
 <use train_gabor.png>
-Package pdftex.def Info: train_gabor.png  used on input line 2443.
+Package pdftex.def Info: train_gabor.png  used on input line 2430.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [114
+ [111
 
  <./train1_gabor.png>]
-<val_gabor.png, id=2014, 461.8053pt x 255.8358pt>
+<val_gabor.png, id=2285, 461.8053pt x 255.8358pt>
 File: val_gabor.png Graphic file (type png)
 <use val_gabor.png>
-Package pdftex.def Info: val_gabor.png  used on input line 2454.
+Package pdftex.def Info: val_gabor.png  used on input line 2441.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<val1_gabor.png, id=2015, 461.8053pt x 255.8358pt>
+<val1_gabor.png, id=2286, 461.8053pt x 255.8358pt>
 File: val1_gabor.png Graphic file (type png)
 <use val1_gabor.png>
-Package pdftex.def Info: val1_gabor.png  used on input line 2465.
+Package pdftex.def Info: val1_gabor.png  used on input line 2452.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [115 <./train_gabor.png> <./val_gabor.png>]
-<test_gabor.png, id=2024, 461.8053pt x 255.8358pt>
+ [112 <./train_gabor.png> <./val_gabor.png>]
+<test_gabor.png, id=2295, 461.8053pt x 255.8358pt>
 File: test_gabor.png Graphic file (type png)
 <use test_gabor.png>
-Package pdftex.def Info: test_gabor.png  used on input line 2476.
+Package pdftex.def Info: test_gabor.png  used on input line 2463.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
-<test1_gabor.png, id=2025, 461.8053pt x 255.8358pt>
+<test1_gabor.png, id=2296, 461.8053pt x 255.8358pt>
 File: test1_gabor.png Graphic file (type png)
 <use test1_gabor.png>
-Package pdftex.def Info: test1_gabor.png  used on input line 2487.
+Package pdftex.def Info: test1_gabor.png  used on input line 2474.
 (pdftex.def)             Requested size: 362.37569pt x 200.76128pt.
- [116 <./val1_gabor.png> <./test_gabor.png>] [117 <./test1_gabor.png>] [118] [1
-19] [120]
+ [113 <./val1_gabor.png> <./test_gabor.png>] [114 <./test1_gabor.png>] [115] [1
+16] [117]
 File: subsample1.png Graphic file (type png)
 <use subsample1.png>
-Package pdftex.def Info: subsample1.png  used on input line 2595.
+Package pdftex.def Info: subsample1.png  used on input line 2582.
 (pdftex.def)             Requested size: 217.42265pt x 120.65074pt.
 File: subsample2.png Graphic file (type png)
 <use subsample2.png>
-Package pdftex.def Info: subsample2.png  used on input line 2600.
+Package pdftex.def Info: subsample2.png  used on input line 2587.
 (pdftex.def)             Requested size: 217.42265pt x 124.11806pt.
 File: subsample3.png Graphic file (type png)
 <use subsample3.png>
-Package pdftex.def Info: subsample3.png  used on input line 2608.
+Package pdftex.def Info: subsample3.png  used on input line 2595.
 (pdftex.def)             Requested size: 217.42265pt x 121.6899pt.
- [121
+ [118
 
 ]
-[122]
-<dice_laplacian.png, id=2100, 387.3672pt x 339.669pt>
+[119]
+<dice_laplacian.png, id=2370, 387.3672pt x 339.669pt>
 File: dice_laplacian.png Graphic file (type png)
 <use dice_laplacian.png>
-Package pdftex.def Info: dice_laplacian.png  used on input line 2632.
+Package pdftex.def Info: dice_laplacian.png  used on input line 2619.
 (pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
- [123
+ [120
 
 ]
-<accuracy and loss_laplacian.png, id=2105, 859.2903pt x 354.123pt>
+<accuracy and loss_laplacian.png, id=2376, 859.2903pt x 354.123pt>
 File: accuracy and loss_laplacian.png Graphic file (type png)
 <use accuracy and loss_laplacian.png>
 Package pdftex.def Info: accuracy and loss_laplacian.png  used on input line 26
-40.
+27.
 (pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
- [124 <./dice_laplacian.png>] [125 <./accuracy and loss_laplacian.png>]
-Overfull \hbox (1.46973pt too wide) in paragraph at lines 2653--2654
+ [121 <./dice_laplacian.png>] [122 <./accuracy and loss_laplacian.png>]
+Overfull \hbox (1.46973pt too wide) in paragraph at lines 2640--2641
 \T1/lmr/m/n/12 centile Haus-dorff Dis-tance (HD95), and Av-er-age Sym-met-ric S
 ur-face Dis-tance (ASSD)^^Vfor
  []
 
-<metrics_laplacian.png, id=2118, 875.1897pt x 1164.2697pt>
+<metrics_laplacian.png, id=2389, 875.1897pt x 1164.2697pt>
 File: metrics_laplacian.png Graphic file (type png)
 <use metrics_laplacian.png>
-Package pdftex.def Info: metrics_laplacian.png  used on input line 2657.
+Package pdftex.def Info: metrics_laplacian.png  used on input line 2644.
 (pdftex.def)             Requested size: 452.9679pt x 602.58128pt.
-[126
+[123
 
 ]
 Overfull \vbox (8.0744pt too high) has occurred while \output is active []
 
 
-[127 <./metrics_laplacian.png>] [128]
-Overfull \hbox (37.55519pt too wide) in paragraph at lines 2709--2718
+[124 <./metrics_laplacian.png>] [125]
+Overfull \hbox (37.55519pt too wide) in paragraph at lines 2696--2705
  [][] 
  []
 
-[129
+[126
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2147,201 +2209,206 @@ Overfull \hbox (37.55519pt too wide) in paragraph at lines 2709--2718
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<results_laplacian.png, id=2139, 1019.7297pt x 895.4253pt>
+<results_laplacian.png, id=2410, 1019.7297pt x 895.4253pt>
 File: results_laplacian.png Graphic file (type png)
 <use results_laplacian.png>
-Package pdftex.def Info: results_laplacian.png  used on input line 2733.
+Package pdftex.def Info: results_laplacian.png  used on input line 2720.
 (pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
 
-Overfull \hbox (5.71011pt too wide) in paragraph at lines 2733--2735
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 2720--2722
  [][] 
  []
 
-[130 <./results_laplacian.png>] [131
+[127 <./results_laplacian.png>] [128
 
 
 ]
-<result_laplacian.png, id=2150, 829.6596pt x 252.945pt>
+<result_laplacian.png, id=2421, 829.6596pt x 252.945pt>
 File: result_laplacian.png Graphic file (type png)
 <use result_laplacian.png>
-Package pdftex.def Info: result_laplacian.png  used on input line 2785.
+Package pdftex.def Info: result_laplacian.png  used on input line 2772.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result1_laplacian.png, id=2151, 829.6596pt x 252.945pt>
+<result1_laplacian.png, id=2422, 829.6596pt x 252.945pt>
 File: result1_laplacian.png Graphic file (type png)
 <use result1_laplacian.png>
-Package pdftex.def Info: result1_laplacian.png  used on input line 2796.
+Package pdftex.def Info: result1_laplacian.png  used on input line 2783.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [132 <./result_laplacian.png>]
-<result2_laplacian.png, id=2158, 829.6596pt x 252.945pt>
+ [129 <./result_laplacian.png>]
+<result2_laplacian.png, id=2429, 829.6596pt x 252.945pt>
 File: result2_laplacian.png Graphic file (type png)
 <use result2_laplacian.png>
-Package pdftex.def Info: result2_laplacian.png  used on input line 2805.
+Package pdftex.def Info: result2_laplacian.png  used on input line 2792.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result3_laplacian.png, id=2159, 829.6596pt x 252.945pt>
+<result3_laplacian.png, id=2430, 829.6596pt x 252.945pt>
 File: result3_laplacian.png Graphic file (type png)
 <use result3_laplacian.png>
-Package pdftex.def Info: result3_laplacian.png  used on input line 2814.
+Package pdftex.def Info: result3_laplacian.png  used on input line 2801.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [133 <./result1_laplacian.png> <./result2_laplacian.png>]
-<result4_laplacian.png, id=2168, 829.6596pt x 252.945pt>
+ [130 <./result1_laplacian.png> <./result2_laplacian.png>]
+<result4_laplacian.png, id=2439, 829.6596pt x 252.945pt>
 File: result4_laplacian.png Graphic file (type png)
 <use result4_laplacian.png>
-Package pdftex.def Info: result4_laplacian.png  used on input line 2823.
+Package pdftex.def Info: result4_laplacian.png  used on input line 2810.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result5_laplacian.png, id=2169, 829.6596pt x 252.945pt>
+<result5_laplacian.png, id=2440, 829.6596pt x 252.945pt>
 File: result5_laplacian.png Graphic file (type png)
 <use result5_laplacian.png>
-Package pdftex.def Info: result5_laplacian.png  used on input line 2832.
+Package pdftex.def Info: result5_laplacian.png  used on input line 2819.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [134 <./result3_laplacian.png> <./result4_laplacian.png>] [135 <./result5_lapl
+ [131 <./result3_laplacian.png> <./result4_laplacian.png>] [132 <./result5_lapl
 acian.png>]
-<Train_laplacian.png, id=2185, 462.528pt x 255.8358pt>
+<Train_laplacian.png, id=2456, 462.528pt x 255.8358pt>
 File: Train_laplacian.png Graphic file (type png)
 <use Train_laplacian.png>
-Package pdftex.def Info: Train_laplacian.png  used on input line 2851.
+Package pdftex.def Info: Train_laplacian.png  used on input line 2838.
 (pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
-<Train1_laplacian.png, id=2186, 462.528pt x 255.8358pt>
+<Train1_laplacian.png, id=2457, 462.528pt x 255.8358pt>
 File: Train1_laplacian.png Graphic file (type png)
 <use Train1_laplacian.png>
-Package pdftex.def Info: Train1_laplacian.png  used on input line 2861.
+Package pdftex.def Info: Train1_laplacian.png  used on input line 2848.
 (pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
- [136
+ [133
 
  <./Train_laplacian.png>]
-<val_laplacian.png, id=2193, 462.528pt x 255.8358pt>
+<val_laplacian.png, id=2464, 462.528pt x 255.8358pt>
 File: val_laplacian.png Graphic file (type png)
 <use val_laplacian.png>
-Package pdftex.def Info: val_laplacian.png  used on input line 2871.
+Package pdftex.def Info: val_laplacian.png  used on input line 2858.
 (pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
-<val1_laplacian.png, id=2194, 462.528pt x 255.8358pt>
+<val1_laplacian.png, id=2465, 462.528pt x 255.8358pt>
 File: val1_laplacian.png Graphic file (type png)
 <use val1_laplacian.png>
-Package pdftex.def Info: val1_laplacian.png  used on input line 2881.
+Package pdftex.def Info: val1_laplacian.png  used on input line 2868.
 (pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
- [137 <./Train1_laplacian.png> <./val_laplacian.png>]
-<test_laplacian.png, id=2203, 462.528pt x 255.8358pt>
+ [134 <./Train1_laplacian.png> <./val_laplacian.png>]
+<test_laplacian.png, id=2474, 462.528pt x 255.8358pt>
 File: test_laplacian.png Graphic file (type png)
 <use test_laplacian.png>
-Package pdftex.def Info: test_laplacian.png  used on input line 2891.
+Package pdftex.def Info: test_laplacian.png  used on input line 2878.
 (pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
-<test1_laplacian.png, id=2204, 462.528pt x 255.8358pt>
+<test1_laplacian.png, id=2475, 462.528pt x 255.8358pt>
 File: test1_laplacian.png Graphic file (type png)
 <use test1_laplacian.png>
-Package pdftex.def Info: test1_laplacian.png  used on input line 2901.
+Package pdftex.def Info: test1_laplacian.png  used on input line 2888.
 (pdftex.def)             Requested size: 362.37569pt x 200.44897pt.
- [138 <./val1_laplacian.png> <./test_laplacian.png>] [139 <./test1_laplacian.pn
-g>] [140]
-Overfull \hbox (7.08643pt too wide) in paragraph at lines 2940--2941
+ [135 <./val1_laplacian.png> <./test_laplacian.png>]
+Overfull \hbox (21.23715pt too wide) in paragraph at lines 2901--2901
+|[]\T1/lmr/bx/n/14.4 Reflections on Lapla-cian Re-sults: Find-ing Bal-ance in S
+econd-
+ []
+
+[136 <./test1_laplacian.png>] [137]
+Overfull \hbox (7.08643pt too wide) in paragraph at lines 2927--2928
 []\T1/lmr/bx/n/12 Laplacian-of-Gaussian Fil-ter-ing \T1/lmr/m/n/12 ac-cen-tu-at
 es re-gions with rapid in-ten-sity changes,
  []
 
 
-Overfull \hbox (25.48274pt too wide) in paragraph at lines 2948--2949
+Overfull \hbox (25.48274pt too wide) in paragraph at lines 2935--2936
 \T1/lmr/m/n/12 The fol-low-ing Python im-ple-men-ta-tion in-te-grates the three
  fea-ture de-tec-tion tech-niques^^VSobel,
  []
 
-[141] [142] [143] [144]
-Overfull \hbox (5.28288pt too wide) in paragraph at lines 3072--3073
+[138] [139] [140] [141]
+Overfull \hbox (5.28288pt too wide) in paragraph at lines 3059--3060
 \T1/lmr/m/n/12 mance across di-verse mor-pholo-gies, small tu-mors, large le-si
 ons, and even background-
  []
 
-<sub1.png, id=2334, 534.0753pt x 286.9119pt>
+<sub1.png, id=2605, 534.0753pt x 286.9119pt>
 File: sub1.png Graphic file (type png)
 <use sub1.png>
-Package pdftex.def Info: sub1.png  used on input line 3078.
+Package pdftex.def Info: sub1.png  used on input line 3065.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
-<sub2.png, id=2335, 534.0753pt x 286.9119pt>
+<sub2.png, id=2606, 534.0753pt x 286.9119pt>
 File: sub2.png Graphic file (type png)
 <use sub2.png>
-Package pdftex.def Info: sub2.png  used on input line 3085.
+Package pdftex.def Info: sub2.png  used on input line 3072.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
-[145
+[142
 
  <./sub1.png>]
-<sub3.png, id=2342, 534.0753pt x 286.9119pt>
+<sub3.png, id=2613, 534.0753pt x 286.9119pt>
 File: sub3.png Graphic file (type png)
 <use sub3.png>
-Package pdftex.def Info: sub3.png  used on input line 3092.
+Package pdftex.def Info: sub3.png  used on input line 3079.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
-<sub4.png, id=2343, 534.0753pt x 286.9119pt>
+<sub4.png, id=2614, 534.0753pt x 286.9119pt>
 File: sub4.png Graphic file (type png)
 <use sub4.png>
-Package pdftex.def Info: sub4.png  used on input line 3099.
+Package pdftex.def Info: sub4.png  used on input line 3086.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
- [146 <./sub2.png> <./sub3.png>]
-<sub5.png, id=2353, 534.0753pt x 286.9119pt>
+ [143 <./sub2.png> <./sub3.png>]
+<sub5.png, id=2623, 534.0753pt x 286.9119pt>
 File: sub5.png Graphic file (type png)
 <use sub5.png>
-Package pdftex.def Info: sub5.png  used on input line 3106.
+Package pdftex.def Info: sub5.png  used on input line 3093.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
-<sub6.png, id=2354, 534.0753pt x 286.9119pt>
+<sub6.png, id=2624, 534.0753pt x 286.9119pt>
 File: sub6.png Graphic file (type png)
 <use sub6.png>
-Package pdftex.def Info: sub6.png  used on input line 3113.
+Package pdftex.def Info: sub6.png  used on input line 3100.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
- [147 <./sub4.png> <./sub5.png>]
-<sub7.png, id=2363, 534.0753pt x 286.9119pt>
+ [144 <./sub4.png> <./sub5.png>]
+<sub7.png, id=2634, 534.0753pt x 286.9119pt>
 File: sub7.png Graphic file (type png)
 <use sub7.png>
-Package pdftex.def Info: sub7.png  used on input line 3120.
+Package pdftex.def Info: sub7.png  used on input line 3107.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
-<sub8.png, id=2364, 534.0753pt x 286.9119pt>
+<sub8.png, id=2635, 534.0753pt x 286.9119pt>
 File: sub8.png Graphic file (type png)
 <use sub8.png>
-Package pdftex.def Info: sub8.png  used on input line 3127.
+Package pdftex.def Info: sub8.png  used on input line 3114.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
- [148 <./sub6.png> <./sub7.png>]
-<sub9.png, id=2373, 534.0753pt x 286.9119pt>
+ [145 <./sub6.png> <./sub7.png>]
+<sub9.png, id=2644, 534.0753pt x 286.9119pt>
 File: sub9.png Graphic file (type png)
 <use sub9.png>
-Package pdftex.def Info: sub9.png  used on input line 3134.
+Package pdftex.def Info: sub9.png  used on input line 3121.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
-<sub10.png, id=2374, 534.0753pt x 286.9119pt>
+<sub10.png, id=2645, 534.0753pt x 286.9119pt>
 File: sub10.png Graphic file (type png)
 <use sub10.png>
-Package pdftex.def Info: sub10.png  used on input line 3141.
+Package pdftex.def Info: sub10.png  used on input line 3128.
 (pdftex.def)             Requested size: 407.66833pt x 219.0053pt.
- [149 <./sub8.png> <./sub9.png>] [150 <./sub10.png>] [151
+ [146 <./sub8.png> <./sub9.png>] [147 <./sub10.png>] [148
 
 ]
-<dice 3.png, id=2393, 387.3672pt x 339.669pt>
+<dice 3.png, id=2664, 387.3672pt x 339.669pt>
 File: dice 3.png Graphic file (type png)
 <use dice 3.png>
-Package pdftex.def Info: dice 3.png  used on input line 3163.
+Package pdftex.def Info: dice 3.png  used on input line 3150.
 (pdftex.def)             Requested size: 452.9679pt x 397.21417pt.
-<accuracy and loss 3.png, id=2394, 859.2903pt x 354.123pt>
+<accuracy and loss 3.png, id=2665, 859.2903pt x 354.123pt>
 File: accuracy and loss 3.png Graphic file (type png)
 <use accuracy and loss 3.png>
-Package pdftex.def Info: accuracy and loss 3.png  used on input line 3171.
+Package pdftex.def Info: accuracy and loss 3.png  used on input line 3158.
 (pdftex.def)             Requested size: 452.9679pt x 186.67383pt.
- [152
+ [149
 
  <./dice 3.png>]
-Overfull \hbox (5.97147pt too wide) in paragraph at lines 3189--3191
+Overfull \hbox (5.97147pt too wide) in paragraph at lines 3176--3178
 []\T1/lmr/bx/n/12 Summary: \T1/lmr/m/n/12 The com-pre-hen-sive train-ing his-to
 ry con-firms that com-bin-ing So-bel, Laplacian-
  []
 
-[153 <./accuracy and loss 3.png>] [154]
-<metrics 3.png, id=2412, 875.1897pt x 1164.2697pt>
+[150 <./accuracy and loss 3.png>] [151]
+<metrics 3.png, id=2683, 875.1897pt x 1164.2697pt>
 File: metrics 3.png Graphic file (type png)
 <use metrics 3.png>
-Package pdftex.def Info: metrics 3.png  used on input line 3208.
+Package pdftex.def Info: metrics 3.png  used on input line 3195.
 (pdftex.def)             Requested size: 430.31812pt x 572.45134pt.
- [155
+ [152
 
  <./metrics 3.png>]
-Overfull \hbox (4.59416pt too wide) in paragraph at lines 3233--3234
+Overfull \hbox (4.59416pt too wide) in paragraph at lines 3220--3221
 \T1/lmr/m/n/12 En-hanc-ing Tu-mor main-tains rel-a-tively strong met-rics com-p
 ared to other classes,
  []
 
-[156
+[153
 
-] [157]
+] [154]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -2374,138 +2441,138 @@ ared to other classes,
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<truths 3.png, id=2427, 1019.7297pt x 895.4253pt>
+<truths 3.png, id=2698, 1019.7297pt x 895.4253pt>
 File: truths 3.png Graphic file (type png)
 <use truths 3.png>
-Package pdftex.def Info: truths 3.png  used on input line 3287.
+Package pdftex.def Info: truths 3.png  used on input line 3274.
 (pdftex.def)             Requested size: 597.52753pt x 524.6893pt.
 
-Overfull \hbox (5.71011pt too wide) in paragraph at lines 3287--3288
+Overfull \hbox (5.71011pt too wide) in paragraph at lines 3274--3275
  [][] 
  []
 
-[158
+[155
 
 
- <./truths 3.png>] [159
+ <./truths 3.png>] [156
 
 
 ]
-<result7 3.png, id=2439, 829.6596pt x 252.945pt>
+<result7 3.png, id=2710, 829.6596pt x 252.945pt>
 File: result7 3.png Graphic file (type png)
 <use result7 3.png>
-Package pdftex.def Info: result7 3.png  used on input line 3351.
+Package pdftex.def Info: result7 3.png  used on input line 3338.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result1 3.png, id=2440, 829.6596pt x 252.945pt>
+<result1 3.png, id=2711, 829.6596pt x 252.945pt>
 File: result1 3.png Graphic file (type png)
 <use result1 3.png>
-Package pdftex.def Info: result1 3.png  used on input line 3361.
+Package pdftex.def Info: result1 3.png  used on input line 3348.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [160 <./result7 3.png>]
-<result2 3.png, id=2447, 829.6596pt x 252.945pt>
+ [157 <./result7 3.png>]
+<result2 3.png, id=2718, 829.6596pt x 252.945pt>
 File: result2 3.png Graphic file (type png)
 <use result2 3.png>
-Package pdftex.def Info: result2 3.png  used on input line 3371.
+Package pdftex.def Info: result2 3.png  used on input line 3358.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result3 3.png, id=2448, 829.6596pt x 252.945pt>
+<result3 3.png, id=2719, 829.6596pt x 252.945pt>
 File: result3 3.png Graphic file (type png)
 <use result3 3.png>
-Package pdftex.def Info: result3 3.png  used on input line 3381.
+Package pdftex.def Info: result3 3.png  used on input line 3368.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [161 <./result1 3.png> <./result2 3.png>]
-<result4 3.png, id=2457, 829.6596pt x 252.945pt>
+ [158 <./result1 3.png> <./result2 3.png>]
+<result4 3.png, id=2728, 829.6596pt x 252.945pt>
 File: result4 3.png Graphic file (type png)
 <use result4 3.png>
-Package pdftex.def Info: result4 3.png  used on input line 3391.
+Package pdftex.def Info: result4 3.png  used on input line 3378.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
-<result5 3.png, id=2458, 829.6596pt x 252.945pt>
+<result5 3.png, id=2729, 829.6596pt x 252.945pt>
 File: result5 3.png Graphic file (type png)
 <use result5 3.png>
-Package pdftex.def Info: result5 3.png  used on input line 3401.
+Package pdftex.def Info: result5 3.png  used on input line 3388.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
- [162 <./result3 3.png> <./result4 3.png>]
-<result6 3.png, id=2467, 829.6596pt x 252.945pt>
+ [159 <./result3 3.png> <./result4 3.png>]
+<result6 3.png, id=2738, 829.6596pt x 252.945pt>
 File: result6 3.png Graphic file (type png)
 <use result6 3.png>
-Package pdftex.def Info: result6 3.png  used on input line 3411.
+Package pdftex.def Info: result6 3.png  used on input line 3398.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
 
-Overfull \hbox (0.32024pt too wide) in paragraph at lines 3422--3423
+Overfull \hbox (0.32024pt too wide) in paragraph at lines 3409--3410
 []\T1/lmr/m/n/12 The model demon-strates strong seg-men-ta-tion per-for-mance f
 or large and well-defined
  []
 
-[163 <./result5 3.png> <./result6 3.png>] [164]
-<train 3.png, id=2481, 534.0753pt x 286.9119pt>
+[160 <./result5 3.png> <./result6 3.png>] [161]
+<train 3.png, id=2751, 534.0753pt x 286.9119pt>
 File: train 3.png Graphic file (type png)
 <use train 3.png>
-Package pdftex.def Info: train 3.png  used on input line 3443.
+Package pdftex.def Info: train 3.png  used on input line 3430.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
-<test 3.png, id=2482, 534.0753pt x 286.9119pt>
+<test 3.png, id=2752, 534.0753pt x 286.9119pt>
 File: test 3.png Graphic file (type png)
 <use test 3.png>
-Package pdftex.def Info: test 3.png  used on input line 3453.
+Package pdftex.def Info: test 3.png  used on input line 3440.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
- [165
+ [162
 
  <./train 3.png>]
-<train1 3.png, id=2489, 534.0753pt x 286.9119pt>
+<train1 3.png, id=2760, 534.0753pt x 286.9119pt>
 File: train1 3.png Graphic file (type png)
 <use train1 3.png>
-Package pdftex.def Info: train1 3.png  used on input line 3463.
+Package pdftex.def Info: train1 3.png  used on input line 3450.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
-<test1 3.png, id=2490, 534.0753pt x 286.9119pt>
+<test1 3.png, id=2761, 534.0753pt x 286.9119pt>
 File: test1 3.png Graphic file (type png)
 <use test1 3.png>
-Package pdftex.def Info: test1 3.png  used on input line 3473.
+Package pdftex.def Info: test1 3.png  used on input line 3460.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
- [166 <./test 3.png> <./train1 3.png>]
-<val 3.png, id=2499, 534.0753pt x 286.9119pt>
+ [163 <./test 3.png> <./train1 3.png>]
+<val 3.png, id=2770, 534.0753pt x 286.9119pt>
 File: val 3.png Graphic file (type png)
 <use val 3.png>
-Package pdftex.def Info: val 3.png  used on input line 3483.
+Package pdftex.def Info: val 3.png  used on input line 3470.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
-<val1 3.png, id=2500, 534.0753pt x 286.9119pt>
+<val1 3.png, id=2771, 534.0753pt x 286.9119pt>
 File: val1 3.png Graphic file (type png)
 <use val1 3.png>
-Package pdftex.def Info: val1 3.png  used on input line 3493.
+Package pdftex.def Info: val1 3.png  used on input line 3480.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
- [167 <./test1 3.png> <./val 3.png>] [168 <./val1 3.png>] [169] [170]
-Overfull \hbox (1.43294pt too wide) in paragraph at lines 3544--3544
+ [164 <./test1 3.png> <./val 3.png>] [165 <./val1 3.png>] [166] [167]
+Overfull \hbox (1.43294pt too wide) in paragraph at lines 3531--3531
 |[]\T1/lmr/bx/n/14.4 Stage 1: Es-tab-lish-ing the No-Preprocessing Base-line (R
 aw
  []
 
-[171
+[168
 
 ]
-Overfull \hbox (6.3591pt too wide) in paragraph at lines 3572--3573
+Overfull \hbox (6.3591pt too wide) in paragraph at lines 3559--3560
 \T1/lmr/m/n/12 Based on the base-line find-ing that tu-mor bound-ary de-lin-eat
 ion was prob-lem-atic^^Vespecially
  []
 
-[172] [173] [174] [175]
-Overfull \hbox (21.93178pt too wide) in paragraph at lines 3680--3681
+[169] [170] [171] [172]
+Overfull \hbox (21.93178pt too wide) in paragraph at lines 3667--3668
 [] []\T1/lmr/bx/n/12 Sec-ond-deriva-tive Ad-van-tage[] \T1/lmr/m/n/12 The su-pe
 -rior per-for-mance of Lapla-cian (second-derivative)
  []
 
-[176]) [177]
+[173]) [174]
 \openout2 = `conclusion.aux'.
 
  (conclusion.tex
 Chapter 4.
-[178
+[175
 
 
 
 
-] [179] [180]) [181]
+] [176] [177]) [178]
 \openout2 = `future_work.aux'.
 
  (future_work.tex
 Chapter 5.
-[182
+[179
 
 
 
@@ -2516,16 +2583,16 @@ Overfull \hbox (3.91902pt too wide) in paragraph at lines 28--29
 n of wavelet trans-forms or other multi-
  []
 
-[183] [184] [185]
+[180] [181] [182]
 Overfull \hbox (2.9706pt too wide) in paragraph at lines 144--145
 []\T1/lmr/bx/n/12 Tumor Growth Mod-el-ing\T1/lmr/m/n/12 : In-cor-po-rat-ing bi-
 o-log-i-cal con-straints and tu-mor growth
  []
 
-[186]) [187] [188]
+[183]) [184] [185]
 \openout2 = `appendix.aux'.
 
- (appendix.tex [189
+ (appendix.tex [186
 
 
 
@@ -2536,52 +2603,46 @@ Appendix A.
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 10.
 
-[190
+[187
 
-] [191] [192] (bachelor.lof
-Overfull \hbox (3.37776pt too wide) in paragraph at lines 7--7
- [][] [][][]\T1/lmr/bx/n/12 Sample 1. \T1/lmr/m/it/12 Left: \T1/lmr/m/n/12 Raw-
-intensity RGB com-pos-ite show-ing pre-served anatom- 
- []
-
-[193
+] [188] [189] (bachelor.lof [190
 
 
-] [194]
+] [191]
 Overfull \hbox (2.39513pt too wide) in paragraph at lines 24--24
  \T1/lmr/bx/n/12 Left: \T1/lmr/m/n/12 Raw RGB in-put, pre-dom-i-nantly back-gro
 und with brain edge. \T1/lmr/bx/n/12 Right: 
  []
 
-[195] [196] [197] [198]
+[192] [193] [194] [195]
 Overfull \hbox (15.00739pt too wide) in paragraph at lines 59--59
  \T1/lmr/m/n/12 The model cap-tures the gen-eral lo-ca-tion of the tu-mor, but 
 under-segmentation 
  []
 
-[199]
+[196]
 Overfull \hbox (10.27802pt too wide) in paragraph at lines 64--64
  \T1/lmr/bx/n/12 Left: \T1/lmr/m/n/12 Gabor-filtered RGB in-put with mul-ti-ple
  ori-en-ta-tion high-lights. \T1/lmr/bx/n/12 Right: 
  []
 
-[200] [201]
+[197] [198]
 Overfull \hbox (35.76578pt too wide) in paragraph at lines 83--83
  \T1/lmr/m/n/12 shows a siz-able tu-mor, re-flect-ing the method's ca-pa-bil-it
 y to en-hance segmentation- 
  []
 
-[202] [203] [204])
+[199] [200] [201])
 \tf@lof=\write6
 \openout6 = `bachelor.lof'.
 
-) [205]
+) [202]
 Overfull \hbox (19.57465pt too wide) in paragraph at lines 172--172
 \T1/lmr/m/n/12 Ac-cessed: 2024. 2022. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : [][]$
 \T1/fvm/m/n/12 https : / / medium . com / @RaghavPrabhu / understanding -[]
  []
 
-[206
+[203
 
 
 
@@ -2598,7 +2659,7 @@ Overfull \hbox (7.07153pt too wide) in paragraph at lines 172--172
 
  []
 
-[207] [208] (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux)
+[204] [205] (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux)
 (abstract.aux) (introduction.aux) (background.aux) (methodology.aux)
 (conclusion.aux) (future_work.aux) (appendix.aux))
  ***********
@@ -2606,19 +2667,19 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `bachelor.out' has not changed.
-(rerunfilecheck)             Checksum: 1F926D12E9529134207B57215DECBAE1;16488.
+(rerunfilecheck)             Checksum: 2AFAB4D88692771EB50356ACB9D62E5A;35995.
 Package logreq Info: Writing requests to 'bachelor.run.xml'.
 \openout1 = `bachelor.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28648 strings out of 474486
- 499782 string characters out of 5740887
- 2435542 words of memory out of 5000000
- 49100 multiletter control sequences out of 15000+600000
- 623695 words of font info for 78 fonts, out of 8000000 for 9000
+ 28768 strings out of 474486
+ 501757 string characters out of 5740887
+ 2436542 words of memory out of 5000000
+ 49164 multiletter control sequences out of 15000+600000
+ 634509 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,12n,133p,1910b,2290s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,12n,133p,1910b,2298s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmb8a.p
 fb><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.
 pfb><C:/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmro8
@@ -2638,9 +2699,9 @@ ib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/User
 s/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 :/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.p
 fb>
-Output written on bachelor.pdf (219 pages, 8709112 bytes).
+Output written on bachelor.pdf (218 pages, 8761916 bytes).
 PDF statistics:
- 3565 PDF objects out of 3580 (max. 8388607)
- 1393 named destinations out of 1440 (max. 500000)
- 1161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3848 PDF objects out of 4296 (max. 8388607)
+ 1444 named destinations out of 1728 (max. 500000)
+ 1577 words of extra memory for PDF output out of 10000 (max. 10000000)
 

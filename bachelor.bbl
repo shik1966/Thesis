@@ -229,6 +229,80 @@
     \field{year}{2023}
   \endentry
 
+  \entry{paperswithcode2023segnet}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=wCP}{%
+         prefix={with},
+         prefixi={w\bibinitperiod},
+         family={Code},
+         familyi={C\bibinitperiod},
+         given={Papers},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CPw1}
+    \strng{fullhash}{CPw1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{note}{Accessed: 2024}
+    \field{title}{SegNet: A Deep Convolutional Encoder-Decoder Architecture for
+  Image Segmentation}
+    \verb{url}
+    \verb https://paperswithcode.com/paper/segnet-a-deep-convolutional-encoder-
+    \verb decoder
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{researchgate2023modalities}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=CR}{%
+         family={Community},
+         familyi={C\bibinitperiod},
+         given={ResearchGate},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CR1}
+    \strng{fullhash}{CR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{note}{Accessed: 2024}
+    \field{title}{Multi-modal MRI Analysis: T1, T2, FLAIR, and T1c Modalities}
+    \verb{url}
+    \verb https://www.researchgate.net/publication/multimodal-mri-analysis
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{medium2022cnn}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=CM}{%
+         family={Contributors},
+         familyi={C\bibinitperiod},
+         given={Medium},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CM1}
+    \strng{fullhash}{CM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{note}{Accessed: 2024}
+    \field{title}{A Comprehensive Guide to Convolutional Neural Networks}
+    \verb{url}
+    \verb https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neura
+    \verb l-network-cnn-deep-learning
+    \endverb
+    \field{year}{2022}
+  \endentry
+
   \entry{cui2021gansegnet}{article}{}
     \true{moreauthor}
     \true{morelabelname}
@@ -252,6 +326,28 @@
     \field{volume}{9}
     \field{journaltitle}{IEEE Access}
     \field{year}{2021}
+  \endentry
+
+  \entry{datacamp2023cnn}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=D}{%
+         family={DataCamp},
+         familyi={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{D1}
+    \strng{fullhash}{D1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{note}{Accessed: 2024}
+    \field{title}{Convolutional Neural Networks (CNNs) Tutorial}
+    \verb{url}
+    \verb https://www.datacamp.com/tutorial/convolutional-neural-networks-pytho
+    \verb n
+    \endverb
+    \field{year}{2023}
   \endentry
 
   \entry{fathi2013automatic}{article}{}
@@ -384,6 +480,29 @@
     \field{year}{2013}
   \endentry
 
+  \entry{guide2024segmentation}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=GCV}{%
+         family={Guide},
+         familyi={G\bibinitperiod},
+         given={Computer\bibnamedelima Vision},
+         giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GCV1}
+    \strng{fullhash}{GCV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{note}{Accessed: 2024}
+    \field{title}{Image Segmentation Techniques: A Complete Guide}
+    \verb{url}
+    \verb https://www.computervisionguide.com/image-segmentation
+    \endverb
+    \field{year}{2024}
+  \endentry
+
   \entry{kasar2024comparative}{inproceedings}{}
     \true{moreauthor}
     \true{morelabelname}
@@ -406,6 +525,31 @@
     \field{title}{Comparative analysis of U-Net and SegNet for brain tumor
   segmentation}
     \field{year}{2024}
+  \endentry
+
+  \entry{fezan2023segmentation}{misc}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{1}{}{%
+      {{hash=KF}{%
+         family={Kazmi},
+         familyi={K\bibinitperiod},
+         given={Fezan},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KF+1}
+    \strng{fullhash}{KF+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{note}{Accessed: 2024}
+    \field{title}{Advanced Segmentation Techniques in Medical Imaging}
+    \verb{url}
+    \verb https://www.researchgate.net/publication/segmentation-techniques
+    \endverb
+    \field{year}{2023}
   \endentry
 
   \entry{litjens2017survey}{article}{}
@@ -487,6 +631,29 @@
     \field{year}{2025}
   \endentry
 
+  \entry{nature2023mri}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=RN}{%
+         family={Reviews},
+         familyi={R\bibinitperiod},
+         given={Nature},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RN1}
+    \strng{fullhash}{RN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{note}{Accessed: 2024}
+    \field{title}{MRI Techniques and Applications in Medical Imaging}
+    \verb{url}
+    \verb https://www.nature.com/articles/mri-techniques-applications
+    \endverb
+    \field{year}{2023}
+  \endentry
+
   \entry{ronneberger2015unet}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=RO}{%
@@ -552,6 +719,29 @@
     \field{year}{1968}
   \endentry
 
+  \entry{oecd2023dice}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=SOH}{%
+         family={Statistics},
+         familyi={S\bibinitperiod},
+         given={OECD\bibnamedelima Health},
+         giveni={O\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SOH1}
+    \strng{fullhash}{SOH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{note}{Accessed: 2024}
+    \field{title}{Dice Coefficient and Medical Image Evaluation Metrics}
+    \verb{url}
+    \verb https://www.oecd.org/health/dice-coefficient-evaluation
+    \endverb
+    \field{year}{2023}
+  \endentry
+
   \entry{vedhasri2024segmentation}{article}{}
     \name{author}{2}{}{%
       {{hash=VM}{%
@@ -579,6 +769,29 @@
     \field{volume}{48}
     \field{journaltitle}{Journal of Medical Systems}
     \field{year}{2024}
+  \endentry
+
+  \entry{ieee2023dnn}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=XI}{%
+         family={Xplore},
+         familyi={X\bibinitperiod},
+         given={IEEE},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XI1}
+    \strng{fullhash}{XI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{note}{Accessed: 2024}
+    \field{title}{Deep Neural Networks: Fundamentals and Applications}
+    \verb{url}
+    \verb https://ieeexplore.ieee.org/document/deep-neural-networks
+    \endverb
+    \field{year}{2023}
   \endentry
 
   \entry{zhou20193dsegnet}{article}{}

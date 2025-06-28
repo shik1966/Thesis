@@ -1,8 +1,10 @@
 
 \documentclass[12pt,a4paper]{report}  % Changed from book to report to match conclusion.tex
-\UseRawInputEncoding
 
 % === Packages (Updated to match conclusion.tex) ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{amsmath}
@@ -43,7 +45,13 @@
 
 % === Formatting (from conclusion.tex) ===
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1em}
+\setlength{\parskip}{0.7em}
+
+% === Reduce chapter/section spacing ===
+\usepackage{titlesec}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+\titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing*{\subsection}{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 % === Listings Setup (from conclusion.tex) ===
 \definecolor{codebg}{rgb}{0.97,0.97,0.97}

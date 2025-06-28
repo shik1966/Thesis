@@ -49,7 +49,7 @@ No intensity normalization, histogram matching, or augmentation was performed at
 The core segmentation network is based on the \textbf{SegNet} architecture---an encoder-decoder convolutional network designed for pixel-wise semantic segmentation~\cite{badrinarayanan2017segnet}. In this work:
 \begin{itemize}
     \item The \textbf{encoder} comprises stacked convolutional blocks with interleaved max-pooling layers, closely mirroring the VGG16 backbone.
-    \item The \textbf{decoder} mirrors the encoder, employing transposed convolutions ("learned upsampling") and skip connections to recover spatial detail.
+    \item The \textbf{decoder} mirrors the encoder, employing transposed convolutions (``learned upsampling'') and skip connections to recover spatial detail.
     \item \textbf{Dropout layers} are added after pooling to reduce overfitting.
     \item The final layer outputs a 4-channel softmax probability map (for each tissue class: 0, 1, 2, 4).
 \end{itemize}
@@ -147,7 +147,7 @@ from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.callbacks import ModelCheckpoint
 import tensorflow.keras.backend as K
 
-# — Data directories (raw NIfTI volumes only) —
+# - Data directories (raw NIfTI volumes only) -
 BASE_PATH = '/content/drive/MyDrive/segnet/data'
 RAW_PATH  = os.path.join(
     BASE_PATH,
@@ -155,7 +155,7 @@ RAW_PATH  = os.path.join(
     'MICCAI_BraTS2020_TrainingData'
 )
 
-print("�� Raw data folder (NIfTI volumes):", RAW_PATH)
+print("Raw data folder (NIfTI volumes):", RAW_PATH)
 
 # Count how many patient subfolders are in RAW_PATH
 all_entries     = os.listdir(RAW_PATH)
@@ -163,7 +163,7 @@ patient_folders = [
     p for p in all_entries
     if os.path.isdir(os.path.join(RAW_PATH, p))
 ]
-print(f"�� Found {len(patient_folders)} patient folders in {RAW_PATH}")
+print(f"Found {len(patient_folders)} patient folders in {RAW_PATH}")
 \end{lstlisting}
 
 \noindent\textbf{Output: }
@@ -179,9 +179,9 @@ This cell imports all required libraries for data processing and model training,
 \subsubsection*{Cell 4: Build Raw $256\times256$ Dataset from NIfTI Volumes}
 
 \begin{lstlisting}[language=Python]
-# Cell 4: Build Raw 256×256 Dataset from NIfTI Volumes (no additional preprocessing)
+# Cell 4: Build Raw 256x256 Dataset from NIfTI Volumes (no additional preprocessing)
 # Purpose: Load the three MRI modalities and segmentation masks slice-by-slice,
-#          resize to 256×256, stack the modalities into a 3-channel array,
+#          resize to 256x256, stack the modalities into a 3-channel array,
 #          and save X_raw/Y_raw .npy files for fast reload.
 
 # 1) Define where we will save/load the "raw" .npy files
@@ -194,13 +194,13 @@ def load_nii(fp):
     return nib.load(fp).get_fdata()
 
 # 3) Build or load raw arrays
-#    We no longer apply Sobel or other filters—just resize the original intensities.
+#    We no longer apply Sobel or other filters---just resize the original intensities.
 if os.path.exists(X_PATH_RAW) and os.path.exists(Y_PATH_RAW):
-    print("✅ Loading raw X/Y memmaps from disk…")
+    print("Loading raw X/Y memmaps from disk...")
     X_raw = np.load(X_PATH_RAW, mmap_mode='r')   # shape: (N_slices, 256, 256, 3)
     Y_raw = np.load(Y_PATH_RAW, mmap_mode='r')   # shape: (N_slices, 256, 256)
 else:
-    print("⚙️  Building raw dataset from patient folders (no Sobel)…")
+    print("Building raw dataset from patient folders (no Sobel)...")
     Xs, Ys = [], []
 
     # Choose only the first 30 patients
@@ -223,7 +223,7 @@ else:
         # Process each axial slice of this patient
         for i in range(t1ce.shape[2]):
             # Stack the three raw-intensity slices (T1CE, T2, FLAIR) into a 3-channel array
-            # and resize to 256×256
+            # and resize to 256x256
             rgb_raw = np.stack([
                 cv2.resize(t1ce[:, :, i], (256, 256), interpolation=cv2.INTER_AREA),
                 cv2.resize(t2[:, :, i], (256, 256), interpolation=cv2.INTER_AREA),
@@ -242,12 +242,12 @@ else:
     np.save(Y_PATH_RAW, Y_raw)
 
 # 4) Final sanity check
-print("✅ Raw shapes:", X_raw.shape, Y_raw.shape)
+print("Raw shapes:", X_raw.shape, Y_raw.shape)
 \end{lstlisting}
 
 \noindent\textbf{Output}
 \begin{lstlisting}[style=output]
-Loading raw X/Y memmaps from disk…
+Loading raw X/Y memmaps from disk...
 Raw shapes: (4650, 256, 256, 3) (4650, 256, 256)
 \end{lstlisting}
 
@@ -283,17 +283,17 @@ Assigning T1-CE to R, T2 to G, and FLAIR to B is a sound choice for a from-scrat
 \subsubsection*{Cell 5: Subsample 30 Patients}
 
 \begin{lstlisting}[language=Python]
-# Cell 5: Subsample 30 Patients → 10 Large + 10 Small + 10 Zero Tumor Slices (no resizing)
+# Cell 5: Subsample 30 Patients -> 10 Large + 10 Small + 10 Zero Tumor Slices (no resizing)
 # Purpose: For each of the first 30 patients, pick 10 slices with the largest tumor,
 #          10 slices with the smallest (but nonzero) tumor, and 10 truly empty slices.
-#          Stack the three raw‐intensity modalities (no Sobel) into a (H×W×3) array and save.
+#          Stack the three raw-intensity modalities (no Sobel) into a (HxWx3) array and save.
 
 import random
-# ────────────────────────────────────────────────────────────────────────────────
+# --------------------------------------------------------------------------------
 NUM_PAT       = 30    # only process the first 30 patients
-SEL_LARGE     = 10    # number of largest‐tumor slices per patient
+SEL_LARGE     = 10    # number of largest-tumor slices per patient
 SEL_SMALL     = 10    # number of smallest (nonzero) tumor slices per patient
-SEL_ZERO      = 10    # number of zero‐tumor slices per patient
+SEL_ZERO      = 10    # number of zero-tumor slices per patient
 FORCE_REBUILD = False # set to False if you want to load an existing .npy instead of rebuilding
 
 # Paths where we'll save the resulting subsampled arrays:
@@ -316,18 +316,18 @@ def process_custom_slices():
         fl   = load_nii(os.path.join(pth, f"{pid}_flair.nii"))
         seg  = load_nii(os.path.join(pth, f"{pid}_seg.nii")).astype(np.uint8)
 
-        # 3) Compute "tumor area" for each axial slice
+        # 3) Compute tumor area for each axial slice
         areas = seg.reshape(-1, seg.shape[2]).sum(axis=0)
         # 4) Build lists of indices:
         pos_idxs  = [i for i, a in enumerate(areas) if a > 0]
         zero_idxs = [i for i, a in enumerate(areas) if a == 0]
-        # 5) Pick the largest‐tumor slices
+        # 5) Pick the largest-tumor slices
         pos_sorted_desc = sorted(pos_idxs, key=lambda i: areas[i], reverse=True)
         large_idxs      = pos_sorted_desc[: min(SEL_LARGE, len(pos_sorted_desc))]
-        # 6) Pick the smallest nonzero‐tumor slices
+        # 6) Pick the smallest nonzero-tumor slices
         pos_sorted_asc  = sorted(pos_idxs, key=lambda i: areas[i])
         small_idxs      = pos_sorted_asc[: min(SEL_SMALL, len(pos_sorted_asc))]
-        # 7) Randomly sample up to SEL_ZERO from the zero‐tumor indices:
+        # 7) Randomly sample up to SEL_ZERO from the zero-tumor indices:
         if len(zero_idxs) > SEL_ZERO:
             zero_sel = random.sample(zero_idxs, SEL_ZERO)
         else:
@@ -336,7 +336,7 @@ def process_custom_slices():
         final_idxs = large_idxs + small_idxs + zero_sel
         if len(final_idxs) == 0:
             continue
-        # 9) For each selected slice index i, stack the three raw‐intensity modalities
+        # 9) For each selected slice index i, stack the three raw-intensity modalities
         for i in final_idxs:
             rgb = np.stack([
                 t1ce[:, :, i],
@@ -351,18 +351,18 @@ def process_custom_slices():
     Ys_arr = np.stack(Ys, axis=0)
     return Xs_arr, Ys_arr
 
-# Save or load these "no‐resize" subsampled arrays
+# Save or load these no-resize subsampled arrays
 if (not FORCE_REBUILD) and os.path.exists(X_PATH_SUB) and os.path.exists(Y_PATH_SUB):
-    print("✅ Loading existing subsampled raw dataset…")
+    print("Loading existing subsampled raw dataset...")
     Xs = np.load(X_PATH_SUB, mmap_mode='r')
     Ys = np.load(Y_PATH_SUB, mmap_mode='r')
 else:
-    print("⚙️  Building custom subsampled raw dataset …")
+    print("Building custom subsampled raw dataset ...")
     Xs, Ys = process_custom_slices()
     os.makedirs(os.path.dirname(X_PATH_SUB), exist_ok=True)
     np.save(X_PATH_SUB, Xs)
     np.save(Y_PATH_SUB, Ys)
-    print(f"✅ Saved to:\n  {X_PATH_SUB}\n  {Y_PATH_SUB}")
+    print(f"Saved to:\n  {X_PATH_SUB}\n  {Y_PATH_SUB}")
 
 # 11) Final sanity check
 print("Subsampled shapes (no resize):", Xs.shape, Ys.shape)
@@ -372,7 +372,7 @@ print("Subsampled shapes (no resize):", Xs.shape, Ys.shape)
 
 \noindent\textbf{Output}
 \begin{lstlisting}[style=output]
-Loading existing subsampled raw dataset…
+Loading existing subsampled raw dataset...
 Subsampled shapes (no resize): (900, 240, 240, 3) (900, 240, 240)
 \end{lstlisting}
 
@@ -388,7 +388,7 @@ By default, I preserve the native $240 \times 240$ pixel size of BraTS MRI slice
 
 \begin{lstlisting}[language=Python]
 # Cell 6 (v_raw): Memory-map Raw Subsampled Dataset and Show Random Samples
-# Purpose: Load the "no-resize" subsampled raw arrays (H×W×3), normalize per-channel,
+# Purpose: Load the "no-resize" subsampled raw arrays (HxWx3), normalize per-channel,
 # and visualize a few random slices in true RGB.
 
 import numpy as np
@@ -411,7 +411,7 @@ random_indices = np.random.choice(len(X_data), size=num_display, replace=False)
 
 # 4) Plot each chosen slice side-by-side
 for idx in random_indices:
-    # Extract raw (H×W×3) slice
+    # Extract raw (HxWx3) slice
     raw_rgb = X_data[idx]  # intensities not yet in [0,1]
 
     # Normalize each channel independently to [0,1]
@@ -420,7 +420,7 @@ for idx in random_indices:
     norm_rgb = raw_rgb.astype('float32') / channel_max[None, None, :]
 
     # Extract mask
-    mask_2d = Y_data[idx]  # values ∈ {0,1}
+    mask_2d = Y_data[idx]  # values in {0,1}
 
     # Plot
     fig, ax = plt.subplots(1, 2, figsize=(8, 4))
@@ -475,8 +475,8 @@ X_trainval, X_test, Y_trainval, Y_test = train_test_split(
     shuffle=True
 )
 
-# 4) Of the remaining 85%, take ~17.65% (≈15% of original 900) for validation
-#    17.65% of 85% ≈ 15% overall. So test_size = 0.1765 here.
+# 4) Of the remaining 85%, take ~17.65% (approximately 15% of original 900) for validation
+#    17.65% of 85% approximately equals 15% overall. So test_size = 0.1765 here.
 X_train, X_val, Y_train, Y_val = train_test_split(
     X_trainval, Y_trainval,
     test_size=0.1765,
@@ -484,18 +484,18 @@ X_train, X_val, Y_train, Y_val = train_test_split(
     shuffle=True
 )
 
-print(f"✅ Dataset split complete:")
-print(f"  – Train : {len(X_train)} samples")
-print(f"  – Val   : {len(X_val)} samples")
-print(f"  – Test  : {len(X_test)} samples")
+print(f"Dataset split complete:")
+print(f"  - Train : {len(X_train)} samples")
+print(f"  - Val   : {len(X_val)} samples")
+print(f"  - Test  : {len(X_test)} samples")
 \end{lstlisting}
 
 \noindent\textbf{Output:}
 \begin{lstlisting}[style=output]
-✅ Dataset split complete:
-  – Train : 629 samples
-  – Val   : 136 samples
-  – Test  : 135 samples
+Dataset split complete:
+  - Train : 629 samples
+  - Val   : 136 samples
+  - Test  : 135 samples
 \end{lstlisting}
 
 \clearpage
@@ -522,23 +522,23 @@ This $70/15/15$ split ensures that I have enough data for training, a proper val
 \subsubsection*{Cell 8: Verifying Multi-Class Mask Values and Shapes}
 
 \begin{lstlisting}[language=Python]
-# Cell 8 (updated): Verify multi‐class mask values and shapes
+# Cell 8 (updated): Verify multi-class mask values and shapes
 import numpy as np
 
-# (Assuming you already `memmap`‐loaded X_data, Y_data in Cell 6)
+# (Assuming you already `memmap`-loaded X_data, Y_data in Cell 6)
 print("X_data shape:", X_data.shape)     # e.g. (900, 240, 240, 3)
 print("Y_data shape:", Y_data.shape)     # e.g. (900, 240, 240)
 
 unique_vals = np.unique(Y_data)
-print("�� Unique mask values:", unique_vals)
-# e.g. [0 1 2 4] → good, we have four classes
+print("Unique mask values:", unique_vals)
+# e.g. [0 1 2 4] -> good, we have four classes
 \end{lstlisting}
 
 \noindent\textbf{Output:}
 \begin{lstlisting}[style=output]
 X_data shape: (900, 240, 240, 3)
 Y_data shape: (900, 240, 240)
-�� Unique mask values: [0 1 2 4]
+Unique mask values: [0 1 2 4]
 \end{lstlisting}
 
 \noindent\textbf{Explanation:}
@@ -558,7 +558,7 @@ This ensures the dataset fully represents all BraTS tumor sub-regions needed for
 \begin{lstlisting}[language=Python]
 # Cell 9: Simple Data Generator (no augmentation), keep labels {0,1,2,4}
 # Purpose: Yield (X_batch, Y_batch_onehot) with four channels:
-#          ch0 → label 0, ch1 → label 1, ch2 → label 2, ch3 → label 4.
+#          ch0 -> label 0, ch1 -> label 1, ch2 -> label 2, ch3 -> label 4.
 
 import numpy as np
 
@@ -575,7 +575,7 @@ def data_gen(X_array, Y_array, batch_size=16):
         Y_array = np.expand_dims(Y_array, axis=-1)
 
     while True:
-        # Shuffle indices each "epoch"
+        # Shuffle indices each epoch
         indices = np.arange(N)
         np.random.shuffle(indices)
 
@@ -596,7 +596,7 @@ def data_gen(X_array, Y_array, batch_size=16):
 
             yield Xb, Yb_onehot
 
-print("✅ data_gen defined.")
+print("data_gen defined.")
 Xb, Yb = next(data_gen(X_train, Y_train, batch_size=4))
 print("One batch Xb:", Xb.shape, "Yb:", Yb.shape, 
       "unique labels in Yb:", np.unique(Yb))
@@ -627,12 +627,12 @@ This ensures the data is ready for input into Keras/TensorFlow segmentation mode
 
 \noindent\textbf{Why Four Classes?}
 
-The BraTS convention uses four channels: background, tumor core (necrotic/non-enhancing), edema, and enhancing tumor. "Tumor core" as a union can be computed later if needed, so a fifth channel is unnecessary and can create ambiguity.
+The BraTS convention uses four channels: background, tumor core (necrotic/non-enhancing), edema, and enhancing tumor. ``Tumor core'' as a union can be computed later if needed, so a fifth channel is unnecessary and can create ambiguity.
 
 \noindent\textbf{Practical Notes:}
 \begin{itemize}
     \item Four-channel output aligns with standard BraTS benchmarks and keeps the model simple.
-    \item At inference, predicted masks are reconstructed via argmax; "tumor core" can be formed by merging relevant channels if required.
+    \item At inference, predicted masks are reconstructed via argmax; ``tumor core'' can be formed by merging relevant channels if required.
 \end{itemize}
 
 \noindent\textbf{Summary:}
@@ -704,22 +704,22 @@ This cell sets up infinite generators for the train, validation, and test splits
 
 % --- Multi-Class Loss Functions (for four-class segmentation)
 \begin{lstlisting}[language=Python]
-# Cell 11: Loss Functions for Multi‐Class Segmentation
-# Purpose: Define Categorical Cross‐Entropy + Multiclass‐Dice, and combine them.
+# Cell 11: Loss Functions for Multi-Class Segmentation
+# Purpose: Define Categorical Cross-Entropy + Multiclass-Dice, and combine them.
 
 import tensorflow as tf
 import tensorflow.keras.backend as K
 from tensorflow.keras.losses import CategoricalCrossentropy
 
-# 1) Base Categorical Cross‐Entropy
+# 1) Base Categorical Cross-Entropy
 ce_loss = CategoricalCrossentropy()
 
-# 2) Multi‐class Dice Loss (casts y_true→float32 so it matches y_pred’s dtype)
+# 2) Multi-class Dice Loss (casts y_true->float32 so it matches y_pred’s dtype)
 def multiclass_dice_loss(y_true, y_pred, smooth=1e-6):
     """
-    y_true: one‐hot ground truth of shape (batch_size, H, W, 4), dtype could be uint8 or float32
+    y_true: one-hot ground truth of shape (batch_size, H, W, 4), dtype could be uint8 or float32
     y_pred: model output, shape (batch_size, H, W, 4), dtype float32 (after softmax)
-    We flatten both to shape (total_pixels, 4), cast y_true→float32, then compute per‐class Dice.
+    We flatten both to shape (total_pixels, 4), cast y_true to float32, then compute per-class Dice.
     """
     # 2a) Flatten to (batch_size * H * W, 4)
     y_true_f = K.reshape(y_true, (-1, 4))
@@ -729,7 +729,7 @@ def multiclass_dice_loss(y_true, y_pred, smooth=1e-6):
     y_true_f = K.cast(y_true_f, 'float32')
     # y_pred_f is already float32, so no need to cast
 
-    # 2c) Compute intersection & union per class (axis=0 → over all pixels)
+    # 2c) Compute intersection & union per class (axis=0 -> over all pixels)
     intersection = K.sum(y_true_f * y_pred_f, axis=0)
     union        = K.sum(y_true_f, axis=0) + K.sum(y_pred_f, axis=0)
 
@@ -753,7 +753,7 @@ def multiclass_dice_coef(y_true, y_pred, smooth=1e-6):
     dice_scores  = (2.0 * intersection + smooth) / (union + smooth)
     return K.mean(dice_scores)
 
-print("✅ Cell 11: multiclass_dice_loss and cat_dice_loss defined.")
+print("Cell 11: multiclass_dice_loss and cat_dice_loss defined.")
 \end{lstlisting}
 
 
@@ -825,7 +825,7 @@ def segnet_multiclass_enhanced(input_shape=(240,240,3), n_classes=4, dropout=0.2
     d1 = Conv2DTranspose(64, 3, strides=2, padding='same')(d2)
     d1 = concatenate([d1, e1])
     d1 = conv_block(d1, 64)
-    # Final 1×1 convolution → 4-channel softmax
+    # Final 1x1 convolution -> 4-channel softmax
     out = Conv2D(n_classes, 1, padding='same', activation='softmax')(d1)
     return Model(inp, out, name="SegNet_Multiclass_Enhanced")
 model = segnet_multiclass_enhanced(input_shape=(240,240,3), n_classes=4, dropout=0.2)
@@ -837,14 +837,14 @@ model.summary()
 \noindent\textbf{Model Summary:}
 \begin{itemize}
     \item \textbf{Input:} (240, 240, 3)
-    \item \textbf{Output:} (240, 240, 4) — per-pixel softmax over \{0, 1, 2, 4\}
+    \item \textbf{Output:} (240, 240, 4) --- per-pixel softmax over \{0, 1, 2, 4\}
     \item \textbf{Params:} $\sim$8.6M, with skip connections and learned upsampling
     \item \textbf{Regularization:} BatchNorm and Dropout at each block
 \end{itemize}
 
 \noindent\textbf{Why \texttt{SegNet\_Multiclass\_Enhanced}?}
 \begin{itemize}
-    \item \textbf{Four-Class Output:} Natively supports all required BraTS labels—no custom label remapping needed.
+    \item \textbf{Four-Class Output:} Natively supports all required BraTS labels---no custom label remapping needed.
     \item \textbf{Skip Connections:} Preserve spatial detail for small tumors and sharp boundaries.
     \item \textbf{Efficient \& Practical:} Moderate size fits on standard GPUs and avoids overfitting to limited data.
     \item \textbf{Learned Upsampling:} Conv2DTranspose layers improve mask sharpness.
@@ -895,8 +895,8 @@ MaxUnpooling SegNet (generic) & 4+  & 29   & Yes & No  & Custom layers \\
 
 \begin{lstlisting}[language=Python]
 # Cell 13: Compile, Train, Save Model & History
-# Purpose: Build & compile the chosen SegNet for 4‐class segmentation, train for N epochs,
-#          save the best‐weights HDF5 to Drive, and store the training history.
+# Purpose: Build & compile the chosen SegNet for 4-class segmentation, train for N epochs,
+#          save the best-weights HDF5 to Drive, and store the training history.
 !pip install tqdm
 import os
 import numpy as np
@@ -944,12 +944,12 @@ history = model.fit(
 )
 # 7) Save final model & training history
 model.save("/content/drive/MyDrive/segnet/models/segnet_multiclass_final.h5")
-print("✅ Final model saved to Drive.")
+print("Final model saved to Drive.")
 np.save(
     "/content/drive/MyDrive/segnet/data/history_multiclass.npy",
     history.history
 )
-print("✅ Training history saved to history_multiclass.npy")
+print("Training history saved to history_multiclass.npy")
 \end{lstlisting}
 
 
@@ -965,9 +965,9 @@ Registered metrics: ['loss', 'compile_metrics']
  20/20 [10:08<00:00, 28.83s/epoch, accuracy=0.995, loss=0.233, multiclass_dice_coef=0.792, val_accuracy=0.995, val_loss=0.222, val_multiclass_dice_coef=0.799]
 ...
 Epoch 20/20
-39/39 ━━━━━━━━━━━━━━━━━━━━ 30s 779ms/step - accuracy: 0.9956 - loss: 0.2216 - multiclass_dice_coef: 0.8003 - val_accuracy: 0.9950 - val_loss: 0.2222 - val_multiclass_dice_coef: 0.7992
-✅ Final model saved to Drive.
-✅ Training history saved to history_multiclass.npy
+39/39 [============================] 30s 779ms/step - accuracy: 0.9956 - loss: 0.2216 - multiclass_dice_coef: 0.8003 - val_accuracy: 0.9950 - val_loss: 0.2222 - val_multiclass_dice_coef: 0.7992
+Final model saved to Drive.
+Training history saved to history_multiclass.npy
 \end{lstlisting}
 
 \noindent\textbf{Explanation:}
@@ -1002,7 +1002,7 @@ model = keras.models.load_model(
         'multiclass_dice_coef': multiclass_dice_coef
     }
 )
-print("✅ Model loaded successfully!")
+print("Model loaded successfully!")
 
 # 2) Compute Dice for each class {1,2,4}
 def compute_dice_scores_by_class(model, X_data, Y_data):
@@ -1029,7 +1029,7 @@ def compute_dice_scores_by_class(model, X_data, Y_data):
 dice_scores = compute_dice_scores_by_class(model, X_test, Y_test)
 
 # 3) Report per-class Dice
-print("\n�� Average Dice Score per Class:")
+print("\nAverage Dice Score per Class:")
 label_names = {1: "Tumor Core", 2: "Edema", 4: "Enhancing Tumor"}
 for cls, scores in dice_scores.items():
     mean_dice = np.mean(scores) if len(scores) > 0 else 0.0
@@ -1038,9 +1038,9 @@ for cls, scores in dice_scores.items():
 
 \noindent\textbf{Output:}
 \begin{lstlisting}
-✅ Model loaded successfully!
-Evaluating Dice: 100%|██████████| 135/135 [01:00<00:00,  2.24it/s]
-�� Average Dice Score per Class:
+Model loaded successfully!
+Evaluating Dice: 100\% | 135/135 [01:00&lt;00:00,  2.24it/s]
+Average Dice Score per Class:
 Tumor Core (Class 1): 0.5168
 Edema (Class 2): 0.4181
 Enhancing Tumor (Class 4): 0.6572
@@ -1169,10 +1169,113 @@ Detailed results and discussion for each class are presented in the Results sect
 
 To qualitatively assess my SegNet model, I visualized side-by-side comparisons of the input RGB slice, ground truth mask, and predicted segmentation for randomly chosen validation samples. The following code block shows how these visualizations were generated:
 
+\begin{lstlisting}[language=Python]
+# Cell XX: Visualize Random Validation Predictions
+# Purpose: Show side-by-side comparisons of input, ground truth, and predicted masks
 
-\clearpage
+import numpy as np
+import matplotlib.pyplot as plt
+
+# -- 1) Pick a few random samples from the validation set ----------------------
+num_samples = 7
+indices = np.random.choice(len(X_val), num_samples, replace=False)
+sample_images = X_val[indices]           # shape = (num_samples, H, W, 3)
+# Y_val has shape (N, H, W, 1); squeeze to (N, H, W) so cmap works
+sample_masks = Y_val[indices].squeeze(-1)  # shape = (num_samples, H, W)
+
+# -- 2) Run model inference on those samples --------------------------------
+# (Assumes `model` is already loaded and compiled)
+predictions = model.predict(sample_images)  # shape = (num_samples, H, W, 4)
+
+# -- 3) Plot each sample: [Input | Ground Truth | Prediction] ---------------
+for i in range(num_samples):
+    plt.figure(figsize=(15, 4))
+
+    # (a) Input RGB image
+    plt.subplot(1, 3, 1)
+    plt.imshow(sample_images[i].astype('uint8'))
+    plt.title("Input RGB Image")
+    plt.axis("off")
+
+    # (b) Ground truth mask (values in {0,1,2,4})
+    plt.subplot(1, 3, 2)
+    plt.imshow(sample_masks[i], cmap="jet", vmin=0, vmax=4)
+    plt.title("Ground Truth Mask")
+    plt.axis("off")
+
+    # (c) Predicted mask: argmax over 4 channels -> class indices in {0,1,2,3}, then map to {0,1,2,4}
+    pred_idx = np.argmax(predictions[i], axis=-1)            # in {0,1,2,3}
+    idx2label = np.array([0, 1, 2, 4], dtype=np.uint8)
+    pred_label = idx2label[pred_idx]                         # in {0,1,2,4}
+
+    plt.subplot(1, 3, 3)
+    plt.imshow(pred_label, cmap="jet", vmin=0, vmax=4)
+    plt.title("Predicted Mask")
+    plt.axis("off")
+
+    plt.show()
+\end{lstlisting}
+
+Additionally, to provide a comprehensive view of the dataset across all splits, the following code demonstrates how to visualize random samples from the training, validation, and test sets with proper normalization:
+
+\begin{lstlisting}[language=Python]
+# Cell ZZ: Visualize Random MRI Slices + Masks (in "Cell 6" style)
+# Purpose: Pick two random examples from each split (Train/Val/Test), normalize each
+#          3-channel MRI slice per-channel to [0,1], and display alongside its mask.
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# -- 1) Assume X_train, Y_train, X_val, Y_val, X_test, Y_test are already defined --
+
+for dataset_name, dataset_X, dataset_Y in [
+    ("Train",      X_train, Y_train),
+    ("Validation", X_val,   Y_val),
+    ("Test",       X_test,  Y_test)
+]:
+    # Pick two random indices (without replacement)
+    indices = np.random.choice(len(dataset_X), size=2, replace=False)
+
+    for idx in indices:
+        raw_rgb = dataset_X[idx]            # shape = (H, W, 3), arbitrary intensities
+        mask_2d = dataset_Y[idx].squeeze()  # shape = (H, W), integer labels
+
+        # Normalize each channel of raw_rgb independently to [0,1]
+        channel_max = raw_rgb.reshape(-1, 3).max(axis=0)
+        channel_max[channel_max == 0] = 1.0
+        norm_rgb = raw_rgb.astype("float32") / channel_max[None, None, :]
+
+        # Plot side-by-side
+        fig, ax = plt.subplots(1, 2, figsize=(8, 4))
+        fig.suptitle(f"{dataset_name} Sample #{idx}", fontsize=14)
+
+        # --- Left: True-color MRI slice ----------------------------------------
+        ax[0].imshow(norm_rgb)
+        ax[0].set_title("Input RGB Slice (normalized)")
+        ax[0].axis("off")
+
+        # --- Right: Ground-Truth Mask --------------------------------------
+        ax[1].imshow(mask_2d, cmap="gray")
+        ax[1].set_title("Segmentation Mask")
+        ax[1].axis("off")
+
+        plt.show()
+\end{lstlisting}
 
 
+
+\noindent\textbf{Note on Results Presentation:}
+
+The following sections present comprehensive results from our brain tumor segmentation experiments across different preprocessing approaches (raw intensity, Sobel, Gabor, Laplacian, and combined features). For brevity and focus on key findings, several auxiliary code cells have been omitted from this presentation. These omitted cells primarily handle:
+
+\begin{itemize}
+    \item Loading saved model weights and training histories from disk
+    \item Generating and displaying charts, graphs, and visualization plots
+    \item Computing and formatting metric tables and statistical summaries
+    \item Saving processed results and figures to output directories
+\end{itemize}
+
+The essential methodology, core algorithms, and critical analysis code have been retained to maintain reproducibility and scientific rigor. The omitted visualization and data handling code follows standard practices and does not contain novel methodological contributions.
 
 \section*{Raw Intensity Results}
 
@@ -1392,10 +1495,6 @@ Average FN per slice: Tumor Core ($47.0$), Edema ($110.9$), Enhancing Tumor ($20
 \end{itemize}
 
 
-\clearpage
-
-
-
 \FloatBarrier
 
 
@@ -1562,7 +1661,7 @@ The Sobel operator is a classical gradient-based filter for edge detection, comp
 Here is what I have changed, keeping the same code as no preprocessing but adding Sobel.
 
 \begin{lstlisting}[language=Python]
-#Cell 3.x (updated): Sobel helper without normalization ─────────────────────
+#Cell 3.x (updated): Sobel helper without normalization -------------------------
 import cv2
 import numpy as np
 
@@ -1571,7 +1670,7 @@ def apply_sobel(slice_2d):
     Compute the Sobel gradient magnitude of a single 2D slice.
     Returns a float32 array of raw gradient magnitudes.
     """
-    # 1) Compute x‐ and y‐gradients
+    # 1) Compute x- and y-gradients
     grad_x = cv2.Sobel(slice_2d, cv2.CV_64F, 1, 0, ksize=3)
     grad_y = cv2.Sobel(slice_2d, cv2.CV_64F, 0, 1, ksize=3)
     # 2) Magnitude
@@ -1717,7 +1816,7 @@ To comprehensively evaluate the performance of our Sobel-processed SegNet model,
 
     \caption{\textbf{Dice Coefficient for Each Tumor Subtype.}
     Dice scores are highest under the Full Policy, with values above 0.80 for \emph{Tumor Core} and \emph{Enhancing Tumor}. The Simple Policy results in reduced Dice, especially for \emph{Edema} and \emph{Tumor Core}, reflecting the challenge of segmenting these subtypes in non-empty slices.}
-    \label{fig:sobel_dice}
+    \label{fig:sobel_dice_comparison}
 \end{figure}
 
 \clearpage
@@ -2430,7 +2529,7 @@ Consequently, Laplacian filtering is integrated as a core feature-detection step
 To introduce second-derivative edge and blob detection into our MRI fusion pipeline, we developed a multi-scale Laplacian-of-Gaussian (LoG) filter. The following function applies LoG at several Gaussian blur scales and combines the responses by magnitude, capturing multi-scale structural features not easily detected by first-derivative filters like Sobel or orientation-tuned filters like Gabor.
 
 \begin{lstlisting}[language=Python]
-# ─── Cell 3.x (updated): Multi‐scale Laplacian helper ────────────────────────────
+# --- Cell 3.x (updated): Multi-scale Laplacian helper ----------------------------
 import cv2
 import numpy as np
 
@@ -2438,16 +2537,16 @@ def apply_laplacian(slice_2d: np.ndarray,
                     sigmas: tuple[float, ...] = (1.0, 2.0, 4.0),
                     ksize: int = 3) -> np.ndarray:
     """
-    Apply a Laplacian‐of‐Gaussian (LoG) filter at multiple scales and
+    Apply a Laplacian-of-Gaussian (LoG) filter at multiple scales and
     combine the responses by magnitude.
 
     Parameters:
       - slice_2d: 2D NumPy array (single modality slice)
-      - sigmas:   sequence of Gaussian σ values for pre‐blurring
-      - ksize:    kernel size for the Laplacian (odd integer ≥ 1)
+      - sigmas:   sequence of Gaussian sigma values for pre-blurring
+      - ksize:    kernel size for the Laplacian (odd integer >= 1)
 
     Returns:
-      A float32 array of combined Laplacian responses (H×W).
+      A float32 array of combined Laplacian responses (HxW).
     """
     # ensure float32 for consistent filtering
     img = slice_2d.astype(np.float32)
@@ -2456,7 +2555,7 @@ def apply_laplacian(slice_2d: np.ndarray,
     for sigma in sigmas:
         # 1) Gaussian blur at this scale
         blurred = cv2.GaussianBlur(img, (0, 0), sigmaX=sigma, sigmaY=sigma)
-        # 2) Laplacian (second‐derivative) edge/blob detection
+        # 2) Laplacian (second-derivative) edge/blob detection
         resp = cv2.Laplacian(blurred, ddepth=cv2.CV_32F, ksize=ksize)
         responses.append(resp)
 
@@ -2849,7 +2948,7 @@ By integrating these three complementary filtering techniques, the combined prep
 The following Python implementation integrates the three feature detection techniques—Sobel, Laplacian-of-Gaussian, and Gabor—into a unified preprocessing pipeline:
 
 \begin{lstlisting}[language=Python]
-# ─── Cell 3.x (Combo): Sobel + |LoG| + Gabor Feature Stack ─────────────────────
+# --- Cell 3.x (Combo): Sobel + |LoG| + Gabor Feature Stack -------------------
 import cv2
 import numpy as np
 
@@ -2937,7 +3036,7 @@ def apply_combined_features(slice_2d: np.ndarray) -> np.ndarray:
     # Stack as RGB: [Sobel, LoG, Gabor]
     return np.stack([s, l, g], axis=-1)
 
-print("✅ Multi-feature helper defined (Sobel + |LoG| + Gabor).")
+print("Multi-feature helper defined (Sobel + |LoG| + Gabor).")
 
 \end{lstlisting}
 

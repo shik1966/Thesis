@@ -1,7 +1,6 @@
 % Abstract
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-
 Brain tumor segmentation in magnetic resonance imaging (MRI) is a critical task in medical image analysis, essential for diagnosis, treatment planning, and patient monitoring. This thesis presents a comprehensive study on enhancing brain tumor segmentation through the integration of classical feature detection techniques with the SegNet deep learning architecture. The primary contribution is the development and evaluation of an RGB fusion approach that combines multiple MRI modalities (T1-contrast enhanced, T2-weighted, and FLAIR) with various preprocessing strategies to improve segmentation accuracy.
 
 The research systematically evaluates five preprocessing approaches: raw intensity (baseline), Sobel edge detection, Gabor texture filtering, Laplacian-of-Gaussian blob detection, and a combined feature stack integrating all three classical filters. Each approach transforms the multi-modal MRI data into RGB-like three-channel inputs, leveraging the complementary information from different feature extraction methods. The enhanced SegNet architecture, featuring skip connections and learned upsampling, is trained on the BraTS2020 dataset with a carefully designed subsampling strategy that balances tumor size variability and computational efficiency.

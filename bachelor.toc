@@ -14,135 +14,135 @@
 \contentsline {subsection}{\numberline {2.1.1}Thesis Topic}{6}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Introduction}{6}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Traditional Methods in Brain Tumor Segmentation}{7}{subsection.2.1.3}%
-\contentsline {subsubsection}{Classical Image Processing Approaches}{7}{section*.4}%
-\contentsline {subsubsection}{Machine Learning with Handcrafted Features}{7}{section*.5}%
-\contentsline {subsection}{\numberline {2.1.4}Transition to Deep Learning-Based Segmentation}{8}{subsection.2.1.4}%
-\contentsline {subsubsection}{Early Applications of CNNs}{8}{section*.6}%
-\contentsline {subsubsection}{Fully Convolutional Networks (FCNs)}{8}{section*.7}%
-\contentsline {subsubsection}{Emergence of Encoder–Decoder Architectures}{8}{section*.8}%
-\contentsline {subsection}{\numberline {2.1.5}Encoder–Decoder Architectures: U-Net vs. SegNet}{9}{subsection.2.1.5}%
-\contentsline {subsubsection}{U-Net and Its Dominance in Medical Imaging}{9}{section*.9}%
-\contentsline {subsubsection}{SegNet: Design, Advantages, and Limitations}{9}{section*.10}%
-\contentsline {paragraph}{Architectural Overview}{9}{section*.11}%
-\contentsline {paragraph}{Pooling Index Transfer Mechanism}{9}{section*.13}%
-\contentsline {paragraph}{Comparative Advantages}{9}{section*.14}%
-\contentsline {paragraph}{Limitations and Trade-Offs}{10}{section*.15}%
+\contentsline {subsubsection}{Classical Image Processing Approaches}{7}{subsection.2.1.3}%
+\contentsline {subsubsection}{Machine Learning with Handcrafted Features}{7}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Transition to Deep Learning-Based Segmentation}{7}{subsection.2.1.4}%
+\contentsline {subsubsection}{Early Applications of CNNs}{7}{subsection.2.1.4}%
+\contentsline {subsubsection}{Fully Convolutional Networks (FCNs)}{8}{subsection.2.1.4}%
+\contentsline {subsubsection}{Emergence of Encoder–Decoder Architectures}{8}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Encoder–Decoder Architectures: U-Net vs. SegNet}{8}{subsection.2.1.5}%
+\contentsline {subsubsection}{U-Net and Its Dominance in Medical Imaging}{8}{subsection.2.1.5}%
+\contentsline {subsubsection}{SegNet: Design, Advantages, and Limitations}{9}{subsection.2.1.5}%
+\contentsline {paragraph}{Architectural Overview}{9}{subsection.2.1.5}%
+\contentsline {paragraph}{Pooling Index Transfer Mechanism}{9}{figure.caption.4}%
+\contentsline {paragraph}{Comparative Advantages}{9}{figure.caption.4}%
+\contentsline {paragraph}{Limitations and Trade-Offs}{10}{figure.caption.4}%
 \contentsline {subsection}{\numberline {2.1.6}Preprocessing and Feature-Based Enhancements}{10}{subsection.2.1.6}%
-\contentsline {subsubsection}{Standard Preprocessing Techniques in MRI Segmentation}{10}{section*.16}%
-\contentsline {subsubsection}{Feature Detection and Augmentation}{10}{section*.17}%
-\contentsline {subsubsection}{Impact of Preprocessing on Segmentation Quality}{11}{section*.18}%
-\contentsline {subsubsection}{Discussion on Preprocessing Impact and Feature Fusion}{11}{section*.20}%
-\contentsline {subsection}{\numberline {2.1.7}Detailed Analysis of SegNet-Based Studies}{12}{subsection.2.1.7}%
-\contentsline {subsubsection}{Modified SegNet with Hybrid Feature Extraction}{12}{section*.21}%
-\contentsline {subsubsection}{SegNet Optimized via Evolutionary Algorithms}{12}{section*.22}%
-\contentsline {subsubsection}{Comparative Evaluation of U-Net and SegNet}{12}{section*.23}%
-\contentsline {subsubsection}{3D-SegNet: Extension to Volumetric Data}{13}{section*.24}%
-\contentsline {subsubsection}{GAN-SegNet and Adversarial Training Approaches}{13}{section*.25}%
-\contentsline {subsubsection}{Hybrid and Ensemble Approaches}{13}{section*.26}%
-\contentsline {subsection}{\numberline {2.1.8}Synthesis and Rationale for a SegNet-Based, Feature-Detection Approach}{14}{subsection.2.1.8}%
+\contentsline {subsubsection}{Standard Preprocessing Techniques in MRI Segmentation}{10}{subsection.2.1.6}%
+\contentsline {subsubsection}{Feature Detection and Augmentation}{10}{subsection.2.1.6}%
+\contentsline {subsubsection}{Impact of Preprocessing on Segmentation Quality}{10}{subsection.2.1.6}%
+\contentsline {subsubsection}{Discussion on Preprocessing Impact and Feature Fusion}{11}{figure.caption.5}%
+\contentsline {subsection}{\numberline {2.1.7}Detailed Analysis of SegNet-Based Studies}{11}{subsection.2.1.7}%
+\contentsline {subsubsection}{Modified SegNet with Hybrid Feature Extraction}{11}{subsection.2.1.7}%
+\contentsline {subsubsection}{SegNet Optimized via Evolutionary Algorithms}{12}{subsection.2.1.7}%
+\contentsline {subsubsection}{Comparative Evaluation of U-Net and SegNet}{12}{subsection.2.1.7}%
+\contentsline {subsubsection}{3D-SegNet: Extension to Volumetric Data}{12}{subsection.2.1.7}%
+\contentsline {subsubsection}{GAN-SegNet and Adversarial Training Approaches}{13}{subsection.2.1.7}%
+\contentsline {subsubsection}{Hybrid and Ensemble Approaches}{13}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Synthesis and Rationale for a SegNet-Based, Feature-Detection Approach}{13}{subsection.2.1.8}%
 \contentsline {subsection}{\numberline {2.1.9}Future Research Directions and Emerging Trends}{14}{subsection.2.1.9}%
-\contentsline {subsection}{\numberline {2.1.10}Conclusion}{15}{subsection.2.1.10}%
-\contentsline {section}{\numberline {2.2}Key Background Terms}{16}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Core Deep Learning Concepts}{16}{subsection.2.2.1}%
-\contentsline {subsubsection}{Convolutional Neural Networks (CNNs)}{16}{section*.27}%
-\contentsline {subsubsection}{Convolutional Filters and Feature Detection}{17}{section*.28}%
-\contentsline {subsubsection}{Pooling Layers (Downsampling)}{17}{section*.29}%
-\contentsline {subsubsection}{Semantic Segmentation}{18}{section*.30}%
-\contentsline {subsubsection}{Encoder–Decoder Architecture}{19}{section*.31}%
-\contentsline {subsection}{\numberline {2.2.2}SegNet Architecture for Semantic Segmentation}{20}{subsection.2.2.2}%
-\contentsline {subsubsection}{Overview}{20}{section*.32}%
-\contentsline {subsubsection}{Encoder}{20}{section*.33}%
-\contentsline {subsubsection}{Decoder}{20}{section*.34}%
-\contentsline {subsubsection}{Intuition Behind Unpooling}{21}{section*.35}%
-\contentsline {subsubsection}{Pooling-Index Transfer}{21}{section*.36}%
-\contentsline {subsubsection}{Summary}{21}{section*.37}%
-\contentsline {subsection}{\numberline {2.2.3}Additional Key Concepts}{22}{subsection.2.2.3}%
-\contentsline {subsubsection}{Pooling Index Transfer (Detailed)}{22}{section*.38}%
-\contentsline {subsubsection}{MRI Modalities (T1, T2, FLAIR)}{23}{section*.39}%
-\contentsline {paragraph}{T1-weighted MRI}{23}{section*.40}%
-\contentsline {paragraph}{T2-weighted MRI}{23}{section*.41}%
-\contentsline {paragraph}{FLAIR (Fluid-Attenuated Inversion Recovery)}{23}{section*.42}%
-\contentsline {subsubsection}{Dice Score}{24}{section*.43}%
-\contentsline {subsection}{\numberline {2.2.4}Why SegNet?}{25}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Implementation Progress}{27}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Methodology, Implementation and Results}{28}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Methodology Overview}{28}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Dataset and Problem Formulation}{28}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Experimental Design and Preprocessing Choices}{28}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Dataset Construction and Splitting}{29}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Model Architecture}{29}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Training Protocol}{30}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Evaluation Metrics and Metric Computation Policies}{30}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Summary}{31}{subsection.3.1.7}%
-\contentsline {section}{\numberline {3.2}Code and Implementation}{31}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Sobel Results}{79}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Gabor Results}{100}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Laplacian Results}{120}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Combined Results for Sobel, Laplacian, and Gabor Feature Detectors}{142}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Research Findings Timeline: From Raw Intensities to Feature-Enhanced Segmentation}{172}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Overview}{172}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{172}{subsection.3.7.2}%
-\contentsline {subsubsection}{Initial Approach and Rationale}{172}{section*.200}%
-\contentsline {subsubsection}{Key Findings from Raw Intensity Experiments}{172}{section*.201}%
-\contentsline {paragraph}{Training Performance}{172}{section*.202}%
-\contentsline {paragraph}{Class-Specific Performance Disparities}{173}{section*.203}%
-\contentsline {paragraph}{Critical Insight}{173}{section*.204}%
-\contentsline {subsection}{\numberline {3.7.3}Stage 2: Sobel Edge Detection Enhancement}{173}{subsection.3.7.3}%
-\contentsline {subsubsection}{Motivation for Sobel Filtering}{173}{section*.205}%
-\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{173}{section*.206}%
-\contentsline {paragraph}{Performance Degradation}{174}{section*.207}%
-\contentsline {paragraph}{Precision-Recall Trade-offs}{174}{section*.208}%
-\contentsline {paragraph}{Critical Realization}{174}{section*.209}%
-\contentsline {subsubsection}{Research Direction Adjustment}{174}{section*.210}%
-\contentsline {subsection}{\numberline {3.7.4}Stage 3: Gabor Texture and Orientation Analysis}{174}{subsection.3.7.4}%
-\contentsline {subsubsection}{Rationale for Gabor Filtering}{174}{section*.211}%
-\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{175}{section*.212}%
-\contentsline {paragraph}{Severe Performance Degradation}{175}{section*.213}%
-\contentsline {paragraph}{Precision-Recall Imbalance}{175}{section*.214}%
-\contentsline {subsubsection}{Critical Analysis and Lessons Learned}{175}{section*.215}%
-\contentsline {paragraph}{Over-Specialization Problem}{175}{section*.216}%
-\contentsline {paragraph}{Feature Complexity vs. Network Capacity}{176}{section*.217}%
-\contentsline {paragraph}{Need for Balanced Approach}{176}{section*.218}%
-\contentsline {subsection}{\numberline {3.7.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{176}{subsection.3.7.5}%
-\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{176}{section*.219}%
-\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{176}{section*.220}%
-\contentsline {paragraph}{Performance Recovery}{176}{section*.221}%
-\contentsline {paragraph}{Improved Precision-Recall Balance}{177}{section*.222}%
-\contentsline {subsubsection}{Key Insights from Laplacian Success}{177}{section*.223}%
-\contentsline {paragraph}{Multi-scale Effectiveness}{177}{section*.224}%
-\contentsline {paragraph}{Second-derivative Advantage}{177}{section*.225}%
-\contentsline {paragraph}{Feature-Architecture Alignment}{177}{section*.226}%
-\contentsline {subsection}{\numberline {3.7.6}Synthesis: Evolution of Understanding}{177}{subsection.3.7.6}%
-\contentsline {subsubsection}{Progressive Insights Across Experiments}{177}{section*.227}%
-\contentsline {subsubsection}{Final Understanding and Implications}{178}{section*.228}%
-\contentsline {chapter}{\numberline {4}conclusion}{179}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Summary of Contributions}{179}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Technical Contributions}{179}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Empirical Contributions}{180}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Key Findings and Insights}{180}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Effectiveness of Classical Feature Detection}{180}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Complementary Nature of Different Features}{180}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Challenges in Multi-class Segmentation}{181}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Importance of Realistic Evaluation}{181}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Clinical Implications}{181}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Limitations and Challenges}{182}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Concluding Remarks}{182}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Future Work}{184}{chapter.5}%
-\contentsline {section}{\numberline {5.1}3D Contextual Information Integration}{184}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Advanced Feature Detection and Representation Learning}{185}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Modern Architecture Enhancements}{185}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Loss Function Engineering and Training Strategies}{186}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Data Augmentation and Synthesis Strategies}{186}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Post-Processing and Refinement Techniques}{187}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Multi-Modal Fusion Strategies}{187}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Clinical Translation and Validation}{188}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Methodological Advances}{188}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Domain-Specific Innovations}{189}{section.5.10}%
-\contentsline {section}{\numberline {5.11}Recommended Next Steps}{189}{section.5.11}%
-\contentsline {section}{\numberline {5.12}Long-term Vision}{189}{section.5.12}%
-\contentsline {section}{\numberline {5.13}Conclusion}{190}{section.5.13}%
-\contentsline {chapter}{Appendix}{191}{section*.229}%
-\contentsline {chapter}{\numberline {A}Lists}{192}{appendix.A}%
-\contentsline {section}{List of Abbreviations}{192}{section*.230}%
-\contentsline {section}{List of Figures}{205}{appendix*.231}%
-\contentsline {chapter}{References}{206}{appendix*.232}%
+\contentsline {subsection}{\numberline {2.1.10}Conclusion}{14}{subsection.2.1.10}%
+\contentsline {section}{\numberline {2.2}Key Background Terms}{15}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Core Deep Learning Concepts}{15}{subsection.2.2.1}%
+\contentsline {subsubsection}{Convolutional Neural Networks (CNNs)}{15}{subsection.2.2.1}%
+\contentsline {subsubsection}{Convolutional Filters and Feature Detection}{16}{subsection.2.2.1}%
+\contentsline {subsubsection}{Pooling Layers (Downsampling)}{16}{subsection.2.2.1}%
+\contentsline {subsubsection}{Semantic Segmentation}{17}{subsection.2.2.1}%
+\contentsline {subsubsection}{Encoder–Decoder Architecture}{18}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}SegNet Architecture for Semantic Segmentation}{19}{subsection.2.2.2}%
+\contentsline {subsubsection}{Overview}{19}{subsection.2.2.2}%
+\contentsline {subsubsection}{Encoder}{19}{subsection.2.2.2}%
+\contentsline {subsubsection}{Decoder}{19}{subsection.2.2.2}%
+\contentsline {subsubsection}{Intuition Behind Unpooling}{20}{subsection.2.2.2}%
+\contentsline {subsubsection}{Pooling-Index Transfer}{20}{subsection.2.2.2}%
+\contentsline {subsubsection}{Summary}{20}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Additional Key Concepts}{21}{subsection.2.2.3}%
+\contentsline {subsubsection}{Pooling Index Transfer (Detailed)}{21}{subsection.2.2.3}%
+\contentsline {subsubsection}{MRI Modalities (T1, T2, FLAIR)}{22}{subsection.2.2.3}%
+\contentsline {paragraph}{T1-weighted MRI}{22}{subsection.2.2.3}%
+\contentsline {paragraph}{T2-weighted MRI}{22}{subsection.2.2.3}%
+\contentsline {paragraph}{FLAIR (Fluid-Attenuated Inversion Recovery)}{22}{subsection.2.2.3}%
+\contentsline {subsubsection}{Dice Score}{23}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Why SegNet?}{24}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Implementation Progress}{26}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Methodology, Implementation and Results}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodology Overview}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Dataset and Problem Formulation}{27}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Experimental Design and Preprocessing Choices}{27}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Dataset Construction and Splitting}{28}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Model Architecture}{28}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Training Protocol}{29}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Evaluation Metrics and Metric Computation Policies}{29}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Summary}{29}{subsection.3.1.7}%
+\contentsline {section}{\numberline {3.2}Code and Implementation}{30}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Sobel Results}{78}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Gabor Results}{97}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Laplacian Results}{118}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Combined Results for Sobel, Laplacian, and Gabor Feature Detectors}{140}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Research Findings Timeline: From Raw Intensities to Feature-Enhanced Segmentation}{171}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Overview}{171}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{171}{subsection.3.7.2}%
+\contentsline {subsubsection}{Initial Approach and Rationale}{171}{subsection.3.7.2}%
+\contentsline {subsubsection}{Key Findings from Raw Intensity Experiments}{171}{subsection.3.7.2}%
+\contentsline {paragraph}{Training Performance}{171}{subsection.3.7.2}%
+\contentsline {paragraph}{Class-Specific Performance Disparities}{171}{subsection.3.7.2}%
+\contentsline {paragraph}{Critical Insight}{172}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Stage 2: Sobel Edge Detection Enhancement}{172}{subsection.3.7.3}%
+\contentsline {subsubsection}{Motivation for Sobel Filtering}{172}{subsection.3.7.3}%
+\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{172}{Item.32}%
+\contentsline {paragraph}{Performance Degradation}{172}{Item.32}%
+\contentsline {paragraph}{Precision-Recall Trade-offs}{173}{Item.32}%
+\contentsline {paragraph}{Critical Realization}{173}{Item.32}%
+\contentsline {subsubsection}{Research Direction Adjustment}{173}{Item.32}%
+\contentsline {subsection}{\numberline {3.7.4}Stage 3: Gabor Texture and Orientation Analysis}{173}{subsection.3.7.4}%
+\contentsline {subsubsection}{Rationale for Gabor Filtering}{173}{subsection.3.7.4}%
+\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{174}{Item.35}%
+\contentsline {paragraph}{Severe Performance Degradation}{174}{Item.35}%
+\contentsline {paragraph}{Precision-Recall Imbalance}{174}{Item.35}%
+\contentsline {subsubsection}{Critical Analysis and Lessons Learned}{174}{Item.35}%
+\contentsline {paragraph}{Over-Specialization Problem}{174}{Item.35}%
+\contentsline {paragraph}{Feature Complexity vs. Network Capacity}{174}{Item.35}%
+\contentsline {paragraph}{Need for Balanced Approach}{174}{Item.35}%
+\contentsline {subsection}{\numberline {3.7.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{175}{subsection.3.7.5}%
+\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{175}{subsection.3.7.5}%
+\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{175}{Item.39}%
+\contentsline {paragraph}{Performance Recovery}{175}{Item.39}%
+\contentsline {paragraph}{Improved Precision-Recall Balance}{175}{Item.39}%
+\contentsline {subsubsection}{Key Insights from Laplacian Success}{176}{Item.39}%
+\contentsline {paragraph}{Multi-scale Effectiveness}{176}{Item.39}%
+\contentsline {paragraph}{Second-derivative Advantage}{176}{Item.39}%
+\contentsline {paragraph}{Feature-Architecture Alignment}{176}{Item.39}%
+\contentsline {subsection}{\numberline {3.7.6}Synthesis: Evolution of Understanding}{176}{subsection.3.7.6}%
+\contentsline {subsubsection}{Progressive Insights Across Experiments}{176}{subsection.3.7.6}%
+\contentsline {subsubsection}{Final Understanding and Implications}{176}{Item.43}%
+\contentsline {chapter}{\numberline {4}conclusion}{178}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Summary of Contributions}{178}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Technical Contributions}{178}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Empirical Contributions}{179}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Key Findings and Insights}{179}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Effectiveness of Classical Feature Detection}{179}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Complementary Nature of Different Features}{179}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Challenges in Multi-class Segmentation}{180}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Importance of Realistic Evaluation}{180}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Clinical Implications}{180}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Limitations and Challenges}{180}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Concluding Remarks}{181}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Future Work}{182}{chapter.5}%
+\contentsline {section}{\numberline {5.1}3D Contextual Information Integration}{182}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Advanced Feature Detection and Representation Learning}{183}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Modern Architecture Enhancements}{183}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Loss Function Engineering and Training Strategies}{184}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Data Augmentation and Synthesis Strategies}{184}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Post-Processing and Refinement Techniques}{185}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Multi-Modal Fusion Strategies}{185}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Clinical Translation and Validation}{185}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Methodological Advances}{186}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Domain-Specific Innovations}{186}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Recommended Next Steps}{187}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Long-term Vision}{187}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Conclusion}{187}{section.5.13}%
+\contentsline {chapter}{Appendix}{189}{section*.106}%
+\contentsline {chapter}{\numberline {A}Lists}{190}{appendix.A}%
+\contentsline {section}{List of Abbreviations}{190}{section*.107}%
+\contentsline {section}{List of Figures}{203}{appendix*.108}%
+\contentsline {chapter}{References}{204}{appendix*.109}%

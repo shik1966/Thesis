@@ -40,57 +40,47 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: bachelor-blx.bib
 Database file #2: bachelor.bib
-Warning--I didn't find a database entry for "datacamp2023cnn"
-Warning--I didn't find a database entry for "medium2022cnn"
-Warning--I didn't find a database entry for "ieee2023dnn"
-Warning--I didn't find a database entry for "guide2024segmentation"
-Warning--I didn't find a database entry for "paperswithcode2023segnet"
-Warning--I didn't find a database entry for "fezan2023segmentation"
-Warning--I didn't find a database entry for "nature2023mri"
-Warning--I didn't find a database entry for "researchgate2023modalities"
-Warning--I didn't find a database entry for "oecd2023dice"
 Biblatex version: 3.19
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 21 entries,
+You've used 30 entries,
             6399 wiz_defined-function locations,
-            1344 strings with 12593 characters,
-and the built_in function-call counts, 128837 in all, are:
-= -- 9524
-> -- 2102
-< -- 542
-+ -- 3472
-- -- 896
-* -- 9407
-:= -- 14245
+            1371 strings with 13767 characters,
+and the built_in function-call counts, 168990 in all, are:
+= -- 12119
+> -- 2806
+< -- 758
++ -- 4295
+- -- 1150
+* -- 12151
+:= -- 18053
 add.period$ -- 0
-call.type$ -- 21
-change.case$ -- 218
+call.type$ -- 30
+change.case$ -- 299
 chr.to.int$ -- 42
-cite$ -- 40
-duplicate$ -- 13934
-empty$ -- 11560
-format.name$ -- 1254
-if$ -- 26285
+cite$ -- 58
+duplicate$ -- 18423
+empty$ -- 15561
+format.name$ -- 1677
+if$ -- 34753
 int.to.chr$ -- 0
-int.to.str$ -- 44
+int.to.str$ -- 62
 missing$ -- 0
-newline$ -- 592
-num.names$ -- 853
-pop$ -- 7025
+newline$ -- 804
+num.names$ -- 1222
+pop$ -- 10022
 preamble$ -- 1
-purify$ -- 306
+purify$ -- 405
 quote$ -- 0
-skip$ -- 3289
+skip$ -- 4675
 stack$ -- 0
-substring$ -- 16688
-swap$ -- 2860
-text.length$ -- 558
-text.prefix$ -- 20
+substring$ -- 20854
+swap$ -- 3922
+text.length$ -- 774
+text.prefix$ -- 29
 top$ -- 1
-type$ -- 702
+type$ -- 1008
 warning$ -- 0
-while$ -- 1784
+while$ -- 2261
 width$ -- 0
-write$ -- 572
-(There were 9 warnings)
+write$ -- 775

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  28 JUN 2025 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  28 JUN 2025 15:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2534,54 +2534,54 @@ o-log-i-cal con-straints and tu-mor growth
 Appendix A.
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 9.
+(hyperref)                be the same. Added a new anchor on input line 10.
 
 [190
 
-] (bachelor.lof
+] [191] [192] (bachelor.lof
 Overfull \hbox (3.37776pt too wide) in paragraph at lines 7--7
  [][] [][][]\T1/lmr/bx/n/12 Sample 1. \T1/lmr/m/it/12 Left: \T1/lmr/m/n/12 Raw-
 intensity RGB com-pos-ite show-ing pre-served anatom- 
  []
 
-[191
+[193
 
 
-] [192]
+] [194]
 Overfull \hbox (2.39513pt too wide) in paragraph at lines 24--24
  \T1/lmr/bx/n/12 Left: \T1/lmr/m/n/12 Raw RGB in-put, pre-dom-i-nantly back-gro
 und with brain edge. \T1/lmr/bx/n/12 Right: 
  []
 
-[193] [194] [195] [196]
+[195] [196] [197] [198]
 Overfull \hbox (15.00739pt too wide) in paragraph at lines 59--59
  \T1/lmr/m/n/12 The model cap-tures the gen-eral lo-ca-tion of the tu-mor, but 
 under-segmentation 
  []
 
-[197]
+[199]
 Overfull \hbox (10.27802pt too wide) in paragraph at lines 64--64
  \T1/lmr/bx/n/12 Left: \T1/lmr/m/n/12 Gabor-filtered RGB in-put with mul-ti-ple
  ori-en-ta-tion high-lights. \T1/lmr/bx/n/12 Right: 
  []
 
-[198] [199]
+[200] [201]
 Overfull \hbox (35.76578pt too wide) in paragraph at lines 83--83
  \T1/lmr/m/n/12 shows a siz-able tu-mor, re-flect-ing the method's ca-pa-bil-it
 y to en-hance segmentation- 
  []
 
-[200] [201] [202])
+[202] [203] [204])
 \tf@lof=\write6
 \openout6 = `bachelor.lof'.
 
-) [203]
+) [205]
 Overfull \hbox (19.57465pt too wide) in paragraph at lines 172--172
 \T1/lmr/m/n/12 Ac-cessed: 2024. 2022. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : [][]$
 \T1/fvm/m/n/12 https : / / medium . com / @RaghavPrabhu / understanding -[]
  []
 
-[204
+[206
 
 
 
@@ -2598,7 +2598,7 @@ Overfull \hbox (7.07153pt too wide) in paragraph at lines 172--172
 
  []
 
-[205] [206] (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux)
+[207] [208] (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux)
 (abstract.aux) (introduction.aux) (background.aux) (methodology.aux)
 (conclusion.aux) (future_work.aux) (appendix.aux))
  ***********
@@ -2612,10 +2612,10 @@ Package logreq Info: Writing requests to 'bachelor.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28655 strings out of 474486
- 499925 string characters out of 5740887
+ 28648 strings out of 474486
+ 499782 string characters out of 5740887
  2435542 words of memory out of 5000000
- 49109 multiletter control sequences out of 15000+600000
+ 49100 multiletter control sequences out of 15000+600000
  623695 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,12n,133p,1910b,2290s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2638,9 +2638,9 @@ ib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/User
 s/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 :/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.p
 fb>
-Output written on bachelor.pdf (217 pages, 8705356 bytes).
+Output written on bachelor.pdf (219 pages, 8709112 bytes).
 PDF statistics:
- 3556 PDF objects out of 3580 (max. 8388607)
- 1391 named destinations out of 1440 (max. 500000)
+ 3565 PDF objects out of 3580 (max. 8388607)
+ 1393 named destinations out of 1440 (max. 500000)
  1161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

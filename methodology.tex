@@ -3361,20 +3361,24 @@ To qualitatively assess segmentation performance across all three feature detect
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{result5 3.png}
-    \caption{\textbf{Raw Input, Ground Truth, and Predicted Mask – Example 6.}
+    \caption{\textbf{Raw Input, Ground Truth, and Predicted Mask – Example 5.}
     \newline
-    This challenging case highlights a limitation of the model. The ground truth shows small tumor lesions, while the predicted mask incorrectly shows no tumor presence, underscoring the difficulty in accurately detecting small or subtle lesions.}
-    \label{fig:combined_pred_6}
+    \textbf{Left:} Three‐channel MRI slice (T1ce red, T2 green, FLAIR blue) showing a clearly visible tumor region. 
+    \textbf{Middle:} Ground truth mask delineating tumor core (blue), enhancing tumor (red), and edema (green). 
+    \textbf{Right:} Predicted mask almost perfectly overlaps the ground truth, accurately capturing all three subregions with only minimal boundary deviation.}
+    \label{fig:combined_pred_5}
 \end{figure}
 
-% Example 7
+% Example 7: Missed Small Lesion
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{result6 3.png}
-    \caption{\textbf{Raw Input, Ground Truth, and Predicted Mask – Example 7.}
+    \caption{\textbf{Raw Input, Ground Truth, and Predicted Mask – Example 6.}
     \newline
-    Another true negative example, with both ground truth and predicted masks showing no tumor presence. This reinforces the model's strong specificity and capability to correctly identify healthy slices without false-positive predictions.}
-    \label{fig:combined_pred_7}
+    \textbf{Left:} Three‐channel MRI slice (T1ce red, T2 green, FLAIR blue) showing a small tumor lesion.  
+    \textbf{Middle:} Ground truth mask highlights a tiny enhancing tumor region (red) surrounded by edema (green).  
+    \textbf{Right:} Predicted mask is completely empty, indicating the model failed to detect this subtle lesion and underscoring a limitation in sensitivity for small tumor foci.}
+    \label{fig:combined_pred_6}
 \end{figure}
 
 
@@ -3427,6 +3431,7 @@ This unified pipeline aims to enhance edge, texture, and contrast information si
     \textbf{Right:} Mask shows absence of labeled tumor, denoting healthy slice.}
     \label{fig:combined_test_2391}
 \end{figure}
+
 
 
 \begin{figure}[H]

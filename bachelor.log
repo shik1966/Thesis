@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  29 JUN 2025 05:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  29 JUN 2025 06:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2248,10 +2248,10 @@ Package pdftex.def Info: result5 3.png  used on input line 3363.
 <result6 3.png, id=2702, 829.6596pt x 252.945pt>
 File: result6 3.png Graphic file (type png)
 <use result6 3.png>
-Package pdftex.def Info: result6 3.png  used on input line 3373.
+Package pdftex.def Info: result6 3.png  used on input line 3375.
 (pdftex.def)             Requested size: 452.9679pt x 138.09737pt.
 
-Overfull \hbox (0.32024pt too wide) in paragraph at lines 3384--3385
+Overfull \hbox (0.32024pt too wide) in paragraph at lines 3388--3389
 []\T1/lmr/m/n/12 The model demon-strates strong seg-men-ta-tion per-for-mance f
 or large and well-defined
  []
@@ -2260,69 +2260,70 @@ or large and well-defined
 <train1 3.png, id=2711, 534.0753pt x 286.9119pt>
 File: train1 3.png Graphic file (type png)
 <use train1 3.png>
-Package pdftex.def Info: train1 3.png  used on input line 3403.
+Package pdftex.def Info: train1 3.png  used on input line 3407.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
-<train 3.png, id=2712, 534.0753pt x 286.9119pt>
+ [154]
+<train 3.png, id=2716, 534.0753pt x 286.9119pt>
 File: train 3.png Graphic file (type png)
 <use train 3.png>
-Package pdftex.def Info: train 3.png  used on input line 3413.
+Package pdftex.def Info: train 3.png  used on input line 3417.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
- [154 <./train1 3.png>]
-<test 3.png, id=2719, 534.0753pt x 286.9119pt>
+<test 3.png, id=2717, 534.0753pt x 286.9119pt>
 File: test 3.png Graphic file (type png)
 <use test 3.png>
-Package pdftex.def Info: test 3.png  used on input line 3423.
+Package pdftex.def Info: test 3.png  used on input line 3427.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
-<test1 3.png, id=2720, 534.0753pt x 286.9119pt>
+ [155 <./train1 3.png> <./train 3.png>]
+<test1 3.png, id=2726, 534.0753pt x 286.9119pt>
 File: test1 3.png Graphic file (type png)
 <use test1 3.png>
-Package pdftex.def Info: test1 3.png  used on input line 3434.
+Package pdftex.def Info: test1 3.png  used on input line 3439.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
- [155 <./train 3.png> <./test 3.png>]
-<val 3.png, id=2729, 534.0753pt x 286.9119pt>
+<val 3.png, id=2727, 534.0753pt x 286.9119pt>
 File: val 3.png Graphic file (type png)
 <use val 3.png>
-Package pdftex.def Info: val 3.png  used on input line 3444.
+Package pdftex.def Info: val 3.png  used on input line 3449.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
-<val1 3.png, id=2730, 534.0753pt x 286.9119pt>
+ [156 <./test 3.png> <./test1 3.png>]
+<val1 3.png, id=2737, 534.0753pt x 286.9119pt>
 File: val1 3.png Graphic file (type png)
 <use val1 3.png>
-Package pdftex.def Info: val1 3.png  used on input line 3454.
+Package pdftex.def Info: val1 3.png  used on input line 3459.
 (pdftex.def)             Requested size: 362.37569pt x 194.67284pt.
- [156 <./test1 3.png> <./val 3.png>] [157 <./val1 3.png>] [158]
-Overfull \hbox (1.43294pt too wide) in paragraph at lines 3505--3505
+ [157 <./val 3.png> <./val1 3.png>] [158]
+Overfull \hbox (1.43294pt too wide) in paragraph at lines 3510--3510
 |[]\T1/lmr/bx/n/14.4 Stage 1: Es-tab-lish-ing the No-Preprocessing Base-line (R
 aw
  []
 
 [159]
-Overfull \hbox (6.3591pt too wide) in paragraph at lines 3533--3534
+Overfull \hbox (6.3591pt too wide) in paragraph at lines 3538--3539
 \T1/lmr/m/n/12 Based on the base-line find-ing that tu-mor bound-ary de-lin-eat
 ion was prob-lem-atic^^Vespecially
  []
 
 [160] [161] [162] [163]
-Overfull \hbox (21.93178pt too wide) in paragraph at lines 3641--3642
+Overfull \hbox (21.93178pt too wide) in paragraph at lines 3646--3647
 [] []\T1/lmr/bx/n/12 Sec-ond-deriva-tive Ad-van-tage[] \T1/lmr/m/n/12 The su-pe
 -rior per-for-mance of Lapla-cian (second-derivative)
  []
 
-[164]) [165]
+[164] [165]) [166]
 \openout2 = `conclusion.aux'.
 
  (conclusion.tex
 Chapter 4.
-[166
+[167
 
 
 
 
-] [167] [168]) [169]
+] [168] [169]) [170]
 \openout2 = `future_work.aux'.
 
  (future_work.tex
 Chapter 5.
-[170
+[171
 
 
 
@@ -2333,16 +2334,16 @@ Overfull \hbox (3.91902pt too wide) in paragraph at lines 28--29
 n of wavelet trans-forms or other multi-
  []
 
-[171] [172] [173]
+[172] [173] [174]
 Overfull \hbox (2.9706pt too wide) in paragraph at lines 144--145
 []\T1/lmr/bx/n/12 Tumor Growth Mod-el-ing\T1/lmr/m/n/12 : In-cor-po-rat-ing bi-
 o-log-i-cal con-straints and tu-mor growth
  []
 
-[174]) [175] [176]
+[175]) [176] [177]
 \openout2 = `appendix.aux'.
 
- (appendix.tex [177
+ (appendix.tex [178
 
 
 
@@ -2353,40 +2354,40 @@ Appendix A.
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 10.
 
-[178
+[179
 
-] [179] [180] (bachelor.lof [181
+] [180] [181] (bachelor.lof [182
 
 
-] [182] [183] [184] [185]
+] [183] [184] [185] [186]
 Overfull \hbox (15.00739pt too wide) in paragraph at lines 59--59
  \T1/lmr/m/n/12 The model cap-tures the gen-eral lo-ca-tion of the tu-mor, but 
 under-segmentation 
  []
 
-[186]
+[187]
 Overfull \hbox (10.27802pt too wide) in paragraph at lines 64--64
  \T1/lmr/bx/n/12 Left: \T1/lmr/m/n/12 Gabor-filtered RGB in-put with mul-ti-ple
  ori-en-ta-tion high-lights. \T1/lmr/bx/n/12 Right: 
  []
 
-[187] [188]
+[188] [189]
 Overfull \hbox (35.76578pt too wide) in paragraph at lines 83--83
  \T1/lmr/m/n/12 shows a siz-able tu-mor, re-flect-ing the method's ca-pa-bil-it
 y to en-hance segmentation- 
  []
 
-[189] [190] [191])
+[190] [191] [192])
 \tf@lof=\write6
 \openout6 = `bachelor.lof'.
 
-) [192]
+) [193]
 Overfull \hbox (19.57465pt too wide) in paragraph at lines 172--172
 \T1/lmr/m/n/12 Ac-cessed: 2024. 2022. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : [][]$
 \T1/fvm/m/n/12 https : / / medium . com / @RaghavPrabhu / understanding -[]
  []
 
-[193
+[194
 
 
 
@@ -2403,7 +2404,7 @@ Overfull \hbox (7.07153pt too wide) in paragraph at lines 172--172
 
  []
 
-[194] [195] (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux)
+[195] [196] (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux)
 (abstract.aux) (introduction.aux) (background.aux) (methodology.aux)
 (conclusion.aux) (future_work.aux) (appendix.aux))
  ***********
@@ -2421,8 +2422,8 @@ Package logreq Info: Writing requests to 'bachelor.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28724 strings out of 474486
- 501109 string characters out of 5740887
+ 28725 strings out of 474486
+ 501117 string characters out of 5740887
  2436542 words of memory out of 5000000
  49133 multiletter control sequences out of 15000+600000
  634509 words of font info for 87 fonts, out of 8000000 for 9000
@@ -2447,9 +2448,9 @@ ib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/User
 s/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 :/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.p
 fb>
-Output written on bachelor.pdf (208 pages, 8654316 bytes).
+Output written on bachelor.pdf (209 pages, 8655442 bytes).
 PDF statistics:
- 3757 PDF objects out of 4296 (max. 8388607)
- 1431 named destinations out of 1440 (max. 500000)
+ 3762 PDF objects out of 4296 (max. 8388607)
+ 1432 named destinations out of 1440 (max. 500000)
  1567 words of extra memory for PDF output out of 10000 (max. 10000000)
 

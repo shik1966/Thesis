@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  29 JUN 2025 06:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.26)  29 JUN 2025 06:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -982,32 +982,35 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 14
-3.
+4.
  (C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (bachelor.aux (GUC_TitlePage.aux) (acknowledgments.aux) (abstract.aux)
-(introduction.aux) (background.aux) (methodology.aux) (conclusion.aux)
-(future_work.aux) (appendix.aux))
+(introduction.aux) (background.aux) (methodology.aux
+
+LaTeX Warning: Label `fig:combined_pred_5' multiply defined.
+
+) (conclusion.aux) (future_work.aux) (appendix.aux))
 \openout1 = `bachelor.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
 \c@lstlisting=\count461
 
 (C:\Users\Shakib's PC\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
@@ -1035,7 +1038,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 -sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 143.
+Package hyperref Info: Link coloring ON on input line 144.
  (bachelor.out) (bachelor.out)
 \@outlinefile=\write4
 \openout4 = `bachelor.out'.
@@ -1093,8 +1096,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bachelor.bbl' found.
  (bachelor.bbl)
-Package biblatex Info: Reference section=0 on input line 143.
-Package biblatex Info: Reference segment=0 on input line 143.
+Package biblatex Info: Reference section=0 on input line 144.
+Package biblatex Info: Reference segment=0 on input line 144.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -2382,7 +2385,7 @@ y to en-hance segmentation-
 \openout6 = `bachelor.lof'.
 
 ) [193]
-Overfull \hbox (19.57465pt too wide) in paragraph at lines 172--172
+Overfull \hbox (19.57465pt too wide) in paragraph at lines 173--173
 \T1/lmr/m/n/12 Ac-cessed: 2024. 2022. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : [][]$
 \T1/fvm/m/n/12 https : / / medium . com / @RaghavPrabhu / understanding -[]
  []
@@ -2392,13 +2395,13 @@ Overfull \hbox (19.57465pt too wide) in paragraph at lines 172--172
 
 
 ]
-Overfull \hbox (1.00975pt too wide) in paragraph at lines 172--172
+Overfull \hbox (1.00975pt too wide) in paragraph at lines 173--173
 \T1/lmr/m/n/12 mark (BRATS)^^Q. In: \T1/lmr/m/it/12 IEEE Trans-ac-tions on Med-
 i-cal Imag-ing \T1/lmr/m/n/12 34.10 (2015), pp. 1993^^U
  []
 
 
-Overfull \hbox (7.07153pt too wide) in paragraph at lines 172--172
+Overfull \hbox (7.07153pt too wide) in paragraph at lines 173--173
 \T1/lmr/m/n/12 Ac-cessed: 2024. 2023. \T1/lmr/m/sc/12 url\T1/lmr/m/n/12 : [][]$
 \T1/fvm/m/n/12 https : / / www . oecd . org / health / dice -[] coefficient -[]
 
@@ -2413,7 +2416,7 @@ L3 programming layer <2024-01-04>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `bachelor.out' has not changed.
 (rerunfilecheck)             Checksum: C9B89C9B6CFDE6C87230B4A930404533;35995.
@@ -2423,8 +2426,8 @@ Package logreq Info: Writing requests to 'bachelor.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  28725 strings out of 474486
- 501117 string characters out of 5740887
- 2436542 words of memory out of 5000000
+ 501105 string characters out of 5740887
+ 2437542 words of memory out of 5000000
  49133 multiletter control sequences out of 15000+600000
  634509 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2448,9 +2451,9 @@ ib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/User
 s/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 :/Users/Shakib's PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.p
 fb>
-Output written on bachelor.pdf (209 pages, 8655442 bytes).
+Output written on bachelor.pdf (209 pages, 8656242 bytes).
 PDF statistics:
- 3762 PDF objects out of 4296 (max. 8388607)
+ 3764 PDF objects out of 4296 (max. 8388607)
  1432 named destinations out of 1440 (max. 500000)
  1567 words of extra memory for PDF output out of 10000 (max. 10000000)
 

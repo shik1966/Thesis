@@ -1052,6 +1052,8 @@ I used the Dice coefficient for each tumor subregion (Tumor Core, Edema, Enhanci
     \item Averaged Dice scores across eligible slices.
 \end{itemize}
 
+\clearpage
+
 \textbf{Findings:}
 \begin{itemize}
     \item Enhancing Tumor: Dice = 0.6572 (best segmented)
@@ -1256,7 +1258,7 @@ for dataset_name, dataset_X, dataset_Y in [
         plt.show()
 \end{lstlisting}
 
-
+\clearpage
 
 \noindent\textbf{Note on Results Presentation:}
 
@@ -1290,7 +1292,6 @@ The left panel in each figure displays the raw MRI slice, where the three modali
 \textbf{Segmentation Mask:}  
 The right panel shows the ground truth segmentation mask for each slice, highlighting the annotated tumor sub-regions and background.
 
-\clearpage
 
 \textbf{Key Observations:}
 \begin{itemize}
@@ -1408,7 +1409,8 @@ Enhancing Tumor  & $0.8730 \pm 0.2458$ & $0.8322 \pm 0.2705$ & $4.06 \pm 13.88$ 
 \end{tabular}
 \end{center}
 
-\vspace{1em}
+\clearpage
+
 \noindent\textbf{Simple Policy (Tumor-containing slices only):}
 
 \begin{center}
@@ -1472,6 +1474,8 @@ Enhancing Tumor  & 14,422 & 5,240   & 2,813   & 7,753,525 & 0.733 & 0.837 \\
 Specificity for each class: Tumor Core ($0.9998$), Edema ($0.9976$), Enhancing Tumor ($0.9993$).\\
 Average FP per slice: Tumor Core ($14.2$), Edema ($137.7$), Enhancing Tumor ($38.8$).\\
 Average FN per slice: Tumor Core ($47.0$), Edema ($110.9$), Enhancing Tumor ($20.8$).
+
+\clearpage
 
 \textbf{Interpretation:}
 \begin{itemize}
@@ -1558,43 +1562,46 @@ To qualitatively validate the no-preprocessing data pipeline and confirm proper 
 
 \textbf{Mask color legend:} Black (0) = Background, Dark gray (1) = Tumor Core, Medium gray (2) = Edema, Near-white (4) = Enhancing Tumor.
 
+\begin{itemize}
+    \item \textbf{Integrity Check:} By inspecting raw RGB and mask alignment, we confirm there are no mis-registrations or off-by-one slice indexing errors.
+    \item \textbf{Contrast \& Structure:} Raw intensities retain full soft-tissue contrast; tumors appear as subtle intensity anomalies whose visibility varies across modalities.
+    \item \textbf{Label Coverage:} We see a wide variety of lesion appearances—from large, heterogeneous masses to small, punctate enhancements—as well as background-only slices.
+    \item \textbf{Baseline Reference:} This unfiltered representation provides a control against which to compare Sobel, LoG and Gabor feature-enhanced pipelines.
+\end{itemize}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{train_no.png}
-    \caption{\textbf{Training Sample \#33.}
-    \newline
-    \textbf{Left:} Raw-intensity RGB input (normalized).
-    \textbf{Right:} Segmentation mask showing a large, heterogeneous tumor region—raw intensities provide a realistic view of inherent contrast and tumor complexity.}
+    \includegraphics[width=0.8\textwidth]{train1_no.png}
+    \caption{\textbf{Training Sample \#33.} 
+    \emph{Left:} Raw three-channel MRI composite shows intricate sulcal and ventricular anatomy. 
+    \emph{Right:} The mask highlights a large, irregular tumor involving both edema and enhancing regions.}
     \label{fig:no_preprocessing_train_sample_33}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{train1_no.png}
+    \includegraphics[width=0.8\textwidth]{train_no.png}
     \caption{\textbf{Training Sample \#302.}
-    \newline
-    \textbf{Left:} Raw-intensity RGB with visible anatomical features.
-    \textbf{Right:} Mask contains multiple subregions, demonstrating sensitivity to both major and minor tumor components in the unfiltered data.}
+    \emph{Left:} RGB input reveals strong T2/FLAIR hyperintensity at the lesion margins. 
+    \emph{Right:} Ground truth delineates multiple sub-regions, illustrating the complexity the network must learn from raw data.}
     \label{fig:no_preprocessing_train_sample_302}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{val_no.png}
+    \includegraphics[width=0.8\textwidth]{val1_no.png}
     \caption{\textbf{Validation Sample \#113.}
-    \newline
-    \textbf{Left:} Raw RGB input, anatomical complexity preserved.
-    \textbf{Right:} Mask shows multiple, spatially distinct tumor regions—model faces the full variability of MRI presentation without preprocessing.}
+    \emph{Left:} Composite intensities preserve fine gyral patterns. 
+    \emph{Right:} Mask shows spatially distinct tumor cores, testing the model’s ability to generalize to heterogeneous lesion geometries.}
     \label{fig:no_preprocessing_val_sample_113}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{val1_no.png}
+    \includegraphics[width=0.8\textwidth]{val_no.png}
     \caption{\textbf{Validation Sample \#64.}
-    \newline
-    \textbf{Left:} Raw RGB input, predominantly background with brain edge.
-    \textbf{Right:} Mask is empty, exemplifying specificity to normal structure and absence of false positives in non-tumor slices.}
+    \emph{Left:} Mostly background with clear boundary at the brain cortex. 
+    \emph{Right:} Empty mask confirms correct identification of non-tumor slices, important for high specificity.}
     \label{fig:no_preprocessing_val_sample_64}
 \end{figure}
 
@@ -1602,9 +1609,8 @@ To qualitatively validate the no-preprocessing data pipeline and confirm proper 
     \centering
     \includegraphics[width=0.8\textwidth]{test_no.png}
     \caption{\textbf{Test Sample \#122.}
-    \newline
-    \textbf{Left:} Raw RGB input (normalized), clear anatomical and pathological contrast.
-    \textbf{Right:} Mask displays a single, sharply defined tumor region, highlighting model ability to localize true positives even in unfiltered inputs.}
+    \emph{Left:} Raw channels exhibit mixed contrast—some regions are bright in T1ce, others in FLAIR. 
+    \emph{Right:} Single cohesive tumor region in the mask demonstrates that the challenges of variable intensity profiles must be learned from raw data.}
     \label{fig:no_preprocessing_test_sample_122}
 \end{figure}
 
@@ -1612,16 +1618,18 @@ To qualitatively validate the no-preprocessing data pipeline and confirm proper 
     \centering
     \includegraphics[width=0.8\textwidth]{test1_no.png}
     \caption{\textbf{Test Sample \#9.}
-    \newline
-    \textbf{Left:} Raw RGB slice, no visible tumor.
-    \textbf{Right:} Empty mask, verifying that the model can distinguish background and avoid false tumor prediction.}
+    \emph{Left:} All channels appear unremarkable with no evident lesion signal. 
+    \emph{Right:} Empty mask verifies correct handling of background-only cases, reducing risk of false positives.}
     \label{fig:no_preprocessing_test_sample_9}
 \end{figure}
 
-\textbf{Summary:}
-These qualitative examples confirm that no-preprocessing inputs preserve all original intensity structure, anatomical complexity, and variability. Tumor and background regions are presented to the model as in the real clinical context. The figures illustrate a range of morphologies, sizes, and split membership, validating the integrity of data and masks throughout the pipeline.
-
-
+\textbf{Key Takeaways:}
+\begin{itemize}
+    \item The raw-only input faithfully preserves every anatomical and pathological cue, but leaves all feature extraction to the CNN.
+    \item Tumor regions vary widely in size, shape, and contrast—raw intensities provide a challenging baseline for boundary localization.
+    \item Background slices are correctly identified, confirming that the pipeline does not introduce spurious activations.
+    \item These visualizations set a clear reference: any classical pre-filtering (e.g., Sobel, LoG, Gabor) must demonstrably enhance boundary clarity or textural cues beyond what the network can learn from raw data alone.
+\end{itemize}
 
 
 \subsection{Reflections on Raw Intensity Results: The Journey Begins}
@@ -1642,6 +1650,9 @@ These observations led me to a crucial realization: while the convolutional netw
 \label{sec:sobel_results}
 
 The Sobel operator is a classical gradient-based filter for edge detection, computing first-order derivatives in $x$ and $y$ directions to highlight boundaries and object edges~\cite{sobel1968isotropic}. In RGB-fusion MRI segmentation, Sobel filtering enhances tumor margins and fine structures, allowing the network to leverage edge-aware features as a complementary preprocessing step to raw intensities and other filters.
+
+\clearpage
+
 
 \subsubsection{Sobel Implementation Code Snippet}
 
@@ -1690,9 +1701,6 @@ The left panel of each figure shows the Sobel‐filtered MRI slice, where the th
 \textbf{Segmentation Mask:}
 The right panel displays the corresponding segmentation mask for each slice, indicating the annotated tumor region(s) and background.
 
-
-\clearpage
-
 \textbf{Key Observations:}
 \begin{itemize}
     \item \textbf{Edge Clarity:} Sobel filtering produces clear, crisp outlines of anatomical structures and tumor margins, enabling better distinction of tissue boundaries compared to raw intensities.
@@ -1725,46 +1733,34 @@ The right panel displays the corresponding segmentation mask for each slice, ind
     \label{fig:sobel_examples}
 \end{figure}
 
-\clearpage
-
 \textbf{Summary:}
 These visualizations demonstrate that Sobel‐filtered preprocessing enhances the edge information in the MRI data, providing clearer demarcation of anatomical and pathological features. The strong visual correspondence between Sobel contours and segmentation masks supports the effectiveness of Sobel-based feature detection as an aid for semantic segmentation models in brain tumor MRI analysis.
 
 
 
-
-
-
 \subsection{Sobel Training History: Accuracy, Loss, and Dice Coefficient}
 
-The results in this section were obtained using the training history visualization cell:
-
-\textbf{\# Cell 16: Plot Sobel Training History (Accuracy, Loss, Dice)}
-
-This cell loads the training history dictionary from disk and plots the evolution of accuracy, loss, and Dice coefficient for both training and validation sets over 20 epochs of training the SegNet model on the Sobel‐filtered dataset.
-
-\clearpage
-
+Training history was visualized using \textbf{Cell 16: Plot Sobel Training History}, plotting accuracy, loss, and Dice coefficient evolution over 20 epochs for the SegNet model on Sobel‐filtered data.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Dice coefficient.png}
-    \caption{\textbf{Multiclass Dice Coefficient vs. Epoch.}
-    This plot displays the multiclass Dice coefficient on both training and validation sets for each epoch. Both curves show steady improvement, with validation Dice tracking the training trend but exhibiting higher fluctuation. This demonstrates that the network is learning to segment tumor regions better as training progresses, though validation Dice shows more volatility due to the small dataset size and the inherent difficulty of multiclass brain tumor segmentation.}
+    \includegraphics[width=0.85\textwidth]{Dice coefficient.png}
+    \caption{\textbf{Multiclass Dice Coefficient vs. Epoch.} Both training and validation curves show steady improvement, with validation Dice exhibiting higher fluctuation due to dataset size and multiclass segmentation complexity.}
     \label{fig:sobel_dice}
 \end{figure}
 
+\vspace{-0.5em}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.97\textwidth]{accuracy and loss.png}
-    \caption{\textbf{Left: Multiclass Accuracy vs. Epoch. Right: Multiclass Loss vs. Epoch.}
-    The left plot shows that training and validation accuracy both improve rapidly in early epochs and plateau near 99\%, with validation accuracy exhibiting early spikes due to limited data and class imbalance. The right plot presents the multiclass loss, which decreases sharply for both training and validation sets in the first few epochs, then stabilizes at low values, confirming effective learning. Validation loss is initially high and erratic but follows a downward trend similar to training loss. Together, these metrics confirm successful training and generalization of the SegNet model with Sobel‐filtered inputs.}
+    \includegraphics[width=0.85\textwidth]{accuracy and loss.png}
+    \caption{\textbf{Multiclass Accuracy and Loss vs. Epoch.} \emph{Left:} Accuracy improves rapidly to 99\% with early validation spikes due to data limitations. \emph{Right:} Loss decreases sharply and stabilizes, confirming effective learning and generalization.}
     \label{fig:sobel_acc_loss}
 \end{figure}
 
+\vspace{-0.5em}
 
-
-
+The metrics demonstrate successful SegNet training: validation Dice tracks training trends despite fluctuations, accuracy plateaus quickly near 99\%, and loss converges to stable values, validating Sobel preprocessing effectiveness.
 
 
 
@@ -1830,7 +1826,9 @@ To comprehensively evaluate the performance of our Sobel-processed SegNet model,
     While Sobel filtering enhances model ability to segment distinct, well-bounded tumor structures (especially Enhancing Tumor), segmenting complex or less-defined regions (like Edema and Tumor Core) remains a significant challenge, particularly under realistic evaluation conditions. Reporting both policies is crucial for transparency and comparability on imbalanced medical datasets.
 \end{itemize}
 
-\textbf{Quantitative Summary (mean):}
+\clearpage
+
+\textbf{Quantitative Summary (mean ± std):}
 
 \vspace{1em}
 \noindent\textbf{Full Policy:}
@@ -1840,9 +1838,9 @@ To comprehensively evaluate the performance of our Sobel-processed SegNet model,
 \toprule
 \textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
-Tumor Core       & 0.8027 & 0.7709 & 2.03 & 0.63 \\
-Edema            & 0.5979 & 0.5448 & 6.40 & 2.43 \\
-Enhancing Tumor  & 0.8530 & 0.8093 & 1.38 & 0.41 \\
+Tumor Core       & $0.8027 \pm 0.3360$ & $0.7709 \pm 0.3625$ & $2.03 \pm 4.10$ & $0.63 \pm 1.31$ \\
+Edema            & $0.5979 \pm 0.4103$ & $0.5448 \pm 0.4108$ & $6.40 \pm 10.29$ & $2.43 \pm 7.09$ \\
+Enhancing Tumor  & $0.8530 \pm 0.2625$ & $0.8093 \pm 0.2936$ & $1.38 \pm 2.74$ & $0.41 \pm 0.72$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1855,9 +1853,9 @@ Enhancing Tumor  & 0.8530 & 0.8093 & 1.38 & 0.41 \\
 \toprule
 \textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
-Tumor Core       & 0.4080 & 0.3126 & 7.75  & 2.42 \\
-Edema            & 0.3688 & 0.2854 & 12.54 & 4.76 \\
-Enhancing Tumor  & 0.5950 & 0.4745 & 4.29  & 1.26 \\
+Tumor Core       & $0.4080 \pm 0.3242$ & $0.3126 \pm 0.2813$ & $7.75 \pm 4.46$  & $2.42 \pm 1.50$ \\
+Edema            & $0.3688 \pm 0.3459$ & $0.2854 \pm 0.2820$ & $12.54 \pm 11.43$ & $4.76 \pm 9.35$ \\
+Enhancing Tumor  & $0.5950 \pm 0.2921$ & $0.4745 \pm 0.2481$ & $4.29 \pm 3.29$  & $1.26 \pm 0.72$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1991,6 +1989,17 @@ To qualitatively validate data preparation and label consistency, we present ran
 
 \begin{figure}[H]
     \centering
+    \includegraphics[width=0.8\textwidth]{train1.png}
+    \caption{\textbf{Training Sample \#626.}
+    \newline
+    \textbf{Left:} Input RGB slice with strong anatomical edges.
+    \textbf{Right:} Mask reveals a classic ring-enhancing tumor.
+    }
+    \label{fig:train_sample_626}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.8\textwidth]{train.png}
     \caption{\textbf{Training Sample \#434.}
     \newline
@@ -2044,16 +2053,6 @@ To qualitatively validate data preparation and label consistency, we present ran
     \label{fig:val_sample_38}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{train1.png}
-    \caption{\textbf{Training Sample \#626.}
-    \newline
-    \textbf{Left:} Input RGB slice with strong anatomical edges.
-    \textbf{Right:} Mask reveals a classic ring-enhancing tumor.
-    }
-    \label{fig:train_sample_626}
-\end{figure}
 
 
 \clearpage
@@ -2095,9 +2094,6 @@ Therefore, Gabor filtering is integrated as a core preprocessing step in our pip
 \label{sec:gabor_impl_code}
 
 Gabor filtering is implemented using a multi-kernel filter bank, enabling extraction of texture and orientation information at multiple scales. The code below constructs a bank of Gabor kernels with varying parameters and applies them to each 2D MRI slice, combining the responses into a single energy map per slice. This process is repeated for each MRI modality, resulting in enhanced input channels for downstream segmentation.
-
-
-\clearpage
 
 Before constructing the Gabor-preprocessed dataset, we first define a helper to build a multi-kernel Gabor filter bank and an \texttt{apply\_gabor} function that applies all kernels to a 2D image slice. The filter responses are combined via magnitude pooling to capture energy across orientations and frequencies, producing a robust feature map for each MRI channel.
 
@@ -2164,8 +2160,6 @@ To assess the effect of Gabor filtering as a preprocessing step, we visualized r
 
 \textbf{Segmentation Mask:} The right panel displays the segmentation mask for each slice, indicating annotated tumor regions and background.
 
-\clearpage
-
 \textbf{Key Observations:}
 \begin{itemize}
     \item \textbf{Texture and Orientation Enhancement:} Gabor filtering highlights not only major tumor boundaries but also underlying microstructural and textural patterns that might otherwise be missed. The images show orientation-dependent contrasts and smooth transitions, especially in regions with subtle or diffuse abnormalities.
@@ -2198,33 +2192,31 @@ To assess the effect of Gabor filtering as a preprocessing step, we visualized r
     \label{fig:gabor_examples}
 \end{figure}
 
-\clearpage
-
 \textbf{Summary:} These visualizations demonstrate that Gabor-filtered preprocessing provides a richer, multi-scale representation of anatomical and pathological structures in MRI, offering both texture and edge information. The strong correspondence between Gabor-enhanced features and segmentation masks supports the use of Gabor-based feature detection as a powerful alternative to classical edge detection, facilitating more robust and nuanced semantic segmentation in brain tumor analysis.
 
 \subsection{Gabor Training History: Accuracy, Loss, and Dice Coefficient}
 
-The results in this section were obtained using the training history visualization cell:
-
-\textbf{\# Cell 16: Plot Gabor Training History (Accuracy, Loss, Dice)}
-
-This cell loads the training history from disk and plots the evolution of accuracy, loss, and Dice coefficient for both training and validation sets over 20 epochs of training the SegNet model on the Gabor-filtered dataset.
+Training history was visualized using \textbf{Cell 16: Plot Gabor Training History}, plotting accuracy, loss, and Dice coefficient evolution over 20 epochs for the SegNet model on Gabor-filtered data.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{dice_gabor.png}
-    \caption{\textbf{Multiclass Dice Coefficient vs. Epoch (Gabor Filtered).}
-    This plot displays the multiclass Dice coefficient on both training and validation sets for each epoch. Both curves show steady improvement, with the validation Dice closely tracking the training trend but exhibiting higher fluctuations. This pattern indicates that the network learns to segment tumor regions more accurately over time, though validation Dice may fluctuate due to dataset size and the inherent complexity of brain tumor segmentation.}
+    \includegraphics[width=0.85\textwidth]{dice_gabor.png}
+    \caption{\textbf{Multiclass Dice Coefficient vs. Epoch (Gabor Filtered).} Both training and validation curves show steady improvement, with validation Dice exhibiting higher fluctuations due to dataset size and segmentation complexity.}
     \label{fig:gabor_dice}
 \end{figure}
 
+\vspace{-0.5em}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{accuracy and loss_gabor.png}
-    \caption{\textbf{Left: Multiclass Accuracy vs. Epoch. Right: Multiclass Loss vs. Epoch (Gabor Filtered).}
-    The left panel shows that both training and validation accuracy improve rapidly in the initial epochs and approach near-perfect values, with occasional fluctuations due to data variability. The right panel shows the multiclass loss, which decreases sharply for both training and validation sets, confirming that the model is learning effectively on the Gabor-filtered data. The trends are consistent with effective training and reasonable generalization on the validation set.}
+    \includegraphics[width=1.0\textwidth]{accuracy and loss_gabor.png}
+    \caption{\textbf{Multiclass Accuracy and Loss vs. Epoch (Gabor Filtered).} \emph{Left:} Accuracy improves rapidly to near-perfect values with occasional fluctuations. \emph{Right:} Loss decreases sharply, confirming effective learning on Gabor-filtered data.}
     \label{fig:gabor_acc_loss}
 \end{figure}
+
+\vspace{-0.5em}
+
+The metrics demonstrate effective SegNet training: validation Dice tracks training trends despite fluctuations, accuracy plateaus quickly near perfect values, and loss converges sharply, validating Gabor preprocessing effectiveness for texture-based feature extraction.
 
 \subsection{Gabor Test‐Set Metrics (Full vs. Simple Policy)}
 
@@ -2260,6 +2252,8 @@ To comprehensively evaluate the performance of our Gabor-processed SegNet model,
     \item \textbf{Clinical Implication:}
     While high scores under Full Policy may look impressive, Simple Policy results better reflect clinical deployment scenarios, where empty slices are not the bottleneck and performance on actual tumor slices is critical. The considerable gap between the two policies underlines the need for transparent metric reporting and careful interpretation on highly imbalanced, slice-based datasets like BraTS.
 \end{itemize}
+
+\clearpage
 
 \textbf{Quantitative Summary (mean ± std):}
 
@@ -2302,10 +2296,10 @@ The comprehensive evaluation reveals that Gabor preprocessing faces significant 
 
 To provide a granular evaluation of the segmentation model, we computed pixel-wise True Positives (TP), False Positives (FP), False Negatives (FN), and True Negatives (TN) for each tumor class in the test set. From these values, we derived per-class \textbf{precision}, \textbf{recall} (sensitivity), \textbf{specificity}, and the average number of false positive/negative pixels per test slice.
 
-\newgeometry{left=0cm, right=0.2cm, top=0cm, bottom=0cm}
+\newgeometry{left=0.5cm, right=0.5cm, top=2.5cm, bottom=2cm}
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{metrics_gabor.png}
+    \includegraphics[width=0.98\textwidth,height=0.75\textheight,keepaspectratio]{metrics_gabor.png}
     \label{fig:gabor_pixel_metrics}
 \end{figure}
 \restoregeometry
@@ -2377,7 +2371,7 @@ These results are generated by \textbf{Cell 20 (Gabor): Visualize Random Validat
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{result2_gabor.png}
+    \includegraphics[width=\textwidth]{result3_gabor.png}
     \caption{\textbf{Gabor Input, Ground Truth, and Predicted Mask – Example 3.}
     \newline
     An example of a true negative: both ground truth and prediction indicate no tumor presence, demonstrating the model's high specificity in healthy slices.}
@@ -2386,7 +2380,7 @@ These results are generated by \textbf{Cell 20 (Gabor): Visualize Random Validat
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{result3_gabor.png}
+    \includegraphics[width=\textwidth]{result2_gabor.png}
     \caption{\textbf{Gabor Input, Ground Truth, and Predicted Mask – Example 4.}
     \newline
     The model captures the general location of the tumor, but under-segmentation occurs, with the predicted mask smaller than ground truth.}
@@ -2466,7 +2460,7 @@ To qualitatively validate the integrity of Gabor-based data preparation and grou
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{test_gabor.png}
+    \includegraphics[width=0.8\textwidth]{test1_gabor.png}
     \caption{\textbf{Test Sample \#14.}
     \newline
     \textbf{Left:} Normalized Gabor input slice.
@@ -2477,7 +2471,7 @@ To qualitatively validate the integrity of Gabor-based data preparation and grou
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{test1_gabor.png}
+    \includegraphics[width=0.8\textwidth]{test_gabor.png}
     \caption{\textbf{Test Sample \#127.}
     \newline
     \textbf{Left:} Gabor RGB input with strong directional features.
@@ -2604,42 +2598,33 @@ The right panel shows the corresponding ground truth mask for each slice, identi
     \caption{Visualization of Laplacian-filtered, subsampled MRI slices (left: Laplacian RGB composite, right: segmentation mask). Laplacian filtering enhances edge, contour, and blob information at multiple scales, providing the network with complementary features for accurate tumor localization and segmentation.}
     \label{fig:laplacian_examples}
 \end{figure}
-
-\clearpage
-
+\vspace{-0.5em}
 \textbf{Summary:}  
 These visualizations confirm that Laplacian-filtered preprocessing enriches the anatomical and pathological information available to the segmentation model, offering detailed edge and blob cues that are highly relevant for tumor boundary delineation. The correspondence between Laplacian-enhanced features and segmentation masks supports the utility of second-derivative filtering as a classical feature extraction approach for RGB fusion-based brain tumor analysis.
 
 
-
 \subsection{Laplacian Training History: Accuracy, Loss, and Dice Coefficient}
 
-The results in this section were obtained using the training history visualization cell:
+\textbf{\# Cell 16: Plot Laplacian Training History (Accuracy, Loss, Dice)} loads training history and plots accuracy, loss, and Dice evolution over 20 epochs on Laplacian-filtered data.
 
-\textbf{\# Cell 16: Plot Laplacian Training History (Accuracy, Loss, Dice)}
-
-This cell loads the training history from disk and plots the evolution of accuracy, loss, and Dice coefficient for both training and validation sets over 20 epochs of training the SegNet model on the Laplacian-filtered dataset.
-
+\vspace{-0.5em}
 \begin{figure}[H]
     \centering
-    \includegraphics[width= 1\textwidth]{dice_laplacian.png}
-    \caption{\textbf{Multiclass Dice Coefficient vs. Epoch (Laplacian Filtered).}
-    This plot displays the multiclass Dice coefficient on both training and validation sets for each epoch. The curves demonstrate consistent improvement throughout training, with validation Dice closely tracking the training Dice. Notably, the model surpasses a Dice of 0.70 on the validation set by the final epochs, indicating strong segmentation performance with Laplacian-preprocessed inputs. Occasional fluctuations are observed in the validation Dice due to dataset variability and segmentation difficulty.}
+    \includegraphics[width=0.85\textwidth]{dice_laplacian.png}
+    \caption{\textbf{Multiclass Dice Coefficient vs. Epoch (Laplacian Filtered).} Validation Dice reaches 0.70+ by final epochs, demonstrating strong Laplacian preprocessing effectiveness.}
     \label{fig:laplacian_dice}
 \end{figure}
 
+\vspace{-0.5em}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{accuracy and loss_laplacian.png}
-    \caption{\textbf{Left: Multiclass Accuracy vs. Epoch. Right: Multiclass Loss vs. Epoch (Laplacian Filtered).}
-    The left panel shows both training and validation accuracy improving rapidly, plateauing near 99\% after the first few epochs. The right panel presents the multiclass loss, which decreases sharply at the start and then stabilizes at low values, confirming that the network learns robustly from Laplacian-filtered inputs. Small differences between training and validation trends reflect minor generalization gaps and sample variability, consistent with other feature-extracted pipelines.}
+    \includegraphics[width=0.85\textwidth]{accuracy and loss_laplacian.png}
+    \caption{\textbf{Accuracy \& Loss vs. Epoch (Laplacian).} Rapid convergence with accuracy plateauing at 99\% and loss stabilizing at low values.}
     \label{fig:laplacian_acc_loss}
 \end{figure}
 
-\vspace{1em}
-\textbf{Summary:} The training history confirms that Laplacian-based preprocessing provides a strong signal for the SegNet model, enabling rapid and stable convergence. The Dice coefficient approaches 0.71 on the validation set, and accuracy remains above 99\% after only a few epochs. This demonstrates that multi-scale Laplacian-of-Gaussian filtering is highly effective for enhancing both boundary and blob-like features in brain tumor MRI, leading to robust learning and high segmentation quality.
-
-\clearpage
+\vspace{-0.5em}
+\textbf{Summary:} Laplacian preprocessing enables rapid SegNet convergence with validation Dice approaching 0.71 and 99\% accuracy, confirming the effectiveness of multi-scale LoG filtering for boundary and blob enhancement in brain tumor segmentation.
 
 \subsection{Laplacian Test‐Set Metrics (Full vs. Simple Policy)}
 
@@ -2677,7 +2662,7 @@ To comprehensively evaluate the performance of our Laplacian-processed SegNet mo
 
 \clearpage
 
-\textbf{Quantitative Summary (mean):}
+\textbf{Quantitative Summary (mean ± std):}
 
 \vspace{1em}
 \noindent\textbf{Full Policy:}
@@ -2687,9 +2672,9 @@ To comprehensively evaluate the performance of our Laplacian-processed SegNet mo
 \toprule
 \textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
-Tumor Core       & 0.7938 & 0.7593 & 2.05  & 0.75 \\
-Edema            & 0.5827 & 0.5264 & 12.21 & 5.38 \\
-Enhancing Tumor  & 0.8410 & 0.7931 & 1.48  & 0.48 \\
+Tumor Core       & $0.7938 \pm 0.3364$ & $0.7593 \pm 0.3671$ & $2.05 \pm 3.77$  & $0.75 \pm 1.38$ \\
+Edema            & $0.5827 \pm 0.4050$ & $0.5264 \pm 0.4102$ & $12.21 \pm 18.76$ & $5.38 \pm 11.59$ \\
+Enhancing Tumor  & $0.8410 \pm 0.2643$ & $0.7931 \pm 0.3031$ & $1.48 \pm 2.71$  & $0.48 \pm 0.76$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -2702,9 +2687,9 @@ Enhancing Tumor  & 0.8410 & 0.7931 & 1.48  & 0.48 \\
 \toprule
 \textbf{Class} & \textbf{Dice} & \textbf{IoU} & \textbf{HD95} & \textbf{ASSD} \\
 \midrule
-Tumor Core       & 0.3815 & 0.2904 & 9.12  & 3.22 \\
-Edema            & 0.3372 & 0.2518 & 22.56 & 9.93 \\
-Enhancing Tumor  & 0.5620 & 0.4532 & 5.84  & 2.15 \\
+Tumor Core       & $0.3815 \pm 0.2908$ & $0.2780 \pm 0.2381$ & $7.32 \pm 3.47$  & $2.67 \pm 1.30$ \\
+Edema            & $0.3372 \pm 0.3129$ & $0.2478 \pm 0.2402$ & $22.56 \pm 20.41$ & $9.93 \pm 14.24$ \\
+Enhancing Tumor  & $0.5620 \pm 0.2650$ & $0.4301 \pm 0.2150$ & $4.60 \pm 2.90$  & $1.48 \pm 0.54$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -2785,7 +2770,7 @@ These results are generated by \textbf{Cell 20 (Laplacian): Visualize Random Val
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{result1_laplacian.png}
+    \includegraphics[width=\textwidth]{result2_laplacian.png}
     \caption{\textbf{Laplacian Input, Ground Truth, and Predicted Mask – Example 2.}
     \newline
     Both the ground truth and predicted masks contain clear tumor regions, with the model capturing the main structure but some fine details and boundaries being missed or smoothed out.}
@@ -2794,7 +2779,7 @@ These results are generated by \textbf{Cell 20 (Laplacian): Visualize Random Val
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{result2_laplacian.png}
+    \includegraphics[width=\textwidth]{result4_laplacian.png}
     \caption{\textbf{Laplacian Input, Ground Truth, and Predicted Mask – Example 3.}
     \newline
     An example of a true negative slice: both ground truth and prediction are empty, demonstrating high model specificity and low false positive rate.}
@@ -2803,7 +2788,7 @@ These results are generated by \textbf{Cell 20 (Laplacian): Visualize Random Val
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{result3_laplacian.png}
+    \includegraphics[width=\textwidth]{result5_laplacian.png}
     \caption{\textbf{Laplacian Input, Ground Truth, and Predicted Mask – Example 4.}
     \newline
     Here, the model does not predict the very small lesion marked in the ground truth, reflecting a tendency to miss subtle or tiny abnormalities in challenging cases.}
@@ -2812,7 +2797,7 @@ These results are generated by \textbf{Cell 20 (Laplacian): Visualize Random Val
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{result4_laplacian.png}
+    \includegraphics[width=\textwidth]{result3_laplacian.png}
     \caption{\textbf{Laplacian Input, Ground Truth, and Predicted Mask – Example 5.}
     \newline
     In this case, the model accurately detects the main tumor regions but may undersegment the lesion’s periphery. The main tumor mass is well localized, supporting the benefit of Laplacian edge-based preprocessing for boundary detection.}
@@ -2821,7 +2806,7 @@ These results are generated by \textbf{Cell 20 (Laplacian): Visualize Random Val
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{result5_laplacian.png}
+    \includegraphics[width=\textwidth]{result1_laplacian.png}
     \caption{\textbf{Laplacian Input, Ground Truth, and Predicted Mask – Example 6.}
     \newline
     Another small lesion example: the model’s prediction closely matches the annotated tumor, though some discrepancies remain for the tiniest structures.}
@@ -3055,7 +3040,6 @@ The left panel in each figure represents MRI slices processed using combined fea
 \textbf{Segmentation Mask:}  
 The right panel presents corresponding ground-truth masks, clearly annotating tumor regions and differentiating tumor sub-regions (Tumor Core, Edema, Enhancing Tumor).
 
-\clearpage
 
 \textbf{Key Observations:}
 \begin{itemize}
@@ -3116,23 +3100,9 @@ The right panel presents corresponding ground-truth masks, clearly annotating tu
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{sub8.png}
-    \caption{\textbf{Combined Features Sample 8.} Effective delineation of tumor boundary enhanced by texture and edge information.}
-    \label{fig:combined_sub8}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
     \includegraphics[width=0.9\textwidth]{sub9.png}
     \caption{\textbf{Combined Features Sample 9.} Clear distinction between pathological and normal tissues due to multi-filter preprocessing.}
     \label{fig:combined_sub9}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{sub10.png}
-    \caption{\textbf{Combined Features Sample 10.} Strong visual correlation between preprocessed features and segmentation mask, even for challenging scenarios.}
-    \label{fig:combined_sub10}
 \end{figure}
 
 \clearpage
@@ -3419,8 +3389,6 @@ To qualitatively assess segmentation performance across all three feature detect
 
 Overall, the qualitative validation highlights the robust performance of the combined Sobel, Gabor, and Laplacian feature detector-based SegNet model while identifying areas for further refinement, particularly in the accurate delineation of diffuse boundaries and detection of subtle abnormalities.
 
-\clearpage
-
 \subsection{Combined  Qualitative Validation: Random RGB Input and Segmentation Masks}
 \label{sec:combined_qualitative_split_samples}
 
@@ -3432,12 +3400,22 @@ This unified pipeline aims to enhance edge, texture, and contrast information si
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{train 3.png}
+    \includegraphics[width=0.8\textwidth]{train1 3.png}
     \caption{\textbf{Training Sample \#8297.}
     \newline
     \textbf{Left:} Combined RGB input with subtle tumor. 
     \textbf{Right:} Small white tumor region in bottom-right quadrant.}
     \label{fig:combined_train_8297}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{train 3.png}
+    \caption{\textbf{Training Sample \#9332.}
+    \newline
+    \textbf{Left:} RGB input shows high-contrast tumor structure.
+    \textbf{Right:} Extensive tumor area with overlapping labels.}
+    \label{fig:combined_train_9332}
 \end{figure}
 
 \begin{figure}[H]
@@ -3450,15 +3428,6 @@ This unified pipeline aims to enhance edge, texture, and contrast information si
     \label{fig:combined_test_2391}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{train1 3.png}
-    \caption{\textbf{Training Sample \#9332.}
-    \newline
-    \textbf{Left:} RGB input shows high-contrast tumor structure.
-    \textbf{Right:} Extensive tumor area with overlapping labels.}
-    \label{fig:combined_train_9332}
-\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -3525,7 +3494,7 @@ Looking back at the complete experimental journey—from raw intensity through i
 
 This work demonstrates that while modern deep learning can extract features automatically, there remains substantial value in incorporating domain knowledge through classical computer vision techniques. The future of medical image analysis may well lie in such hybrid approaches that combine the pattern recognition power of neural networks with the interpretable, theoretically-grounded features of traditional image processing.
 
-\clearpage
+
 
 \section{Research Findings Timeline: From Raw Intensities to Feature-Enhanced Segmentation}
 

@@ -46,6 +46,32 @@ German University in Cairo
 - **Clinical Reality**: Need for accurate segmentation on standard hardware
 - **Domain Knowledge**: Underutilized classical features (edges, textures, blobs) in deep learning pipelines
 
+Slide 3: Motivation & Problem
+🔹 Why Brain Tumor Segmentation Matters
+
+Guides treatment (surgery, radiotherapy)
+
+Enables tumor volume monitoring
+
+Manual segmentation is time-consuming and subjective
+
+Fast, accurate tools are critical for clinical decisions
+
+🔹 The Challenge
+
+Deep models (e.g., U-Net) need high-end GPUs
+
+Classical methods are fast but inaccurate
+
+Raw MRI lacks expert-recognized features
+
+🔹 Research Gap
+
+Can we merge classical vision (edges, textures) with deep learning?
+
+Goal: Accurate, efficient segmentation on standard hardware
+
+
 ---
 
 ## Slide 4: Research Objectives & Questions

@@ -89,32 +89,61 @@ Goal: Accurate, efficient segmentation on standard hardware
 
 ---
 
+
+Feature-enhanced MRI preprocessing
+
+SegNet adaptation for multi-class segmentation
+
+Evaluate classical feature detectors
+
+Assess clinical efficiency and feasibility
+
+
+
 ## Slide 5: Background - Brain Tumor Segmentation
 
-### MRI Modalities Used
-- **T1-CE**: Contrast-enhanced, highlights tumor boundaries
-- **T2**: Shows tumor and edema regions
-- **FLAIR**: Suppresses cerebrospinal fluid, reveals edema
+### MRI Modalities in Brain Tumor Analysis
+- **T1-CE (Red Channel)**: Contrast-enhanced T1, highlights active tumor boundaries and blood-brain barrier breakdown
+- **T2 (Green Channel)**: Visualizes tumor extent and surrounding edema with high water content
+- **FLAIR (Blue Channel)**: Suppresses cerebrospinal fluid, clearly reveals edema near ventricles
+- **Note**: T1 modality excluded based on supervisor's clinical expertise
 
-### Target Regions
-- **Tumor Core (TC)**: Solid tumor regions
-- **Peritumoral Edema (ED)**: Surrounding swelling
-- **Enhancing Tumor (ET)**: Active tumor regions
+### Target Regions (BraTS Labels)
+- **Tumor Core (Label 1)**: Solid tumor mass including necrotic and non-enhancing regions
+- **Peritumoral Edema (Label 2)**: Surrounding tissue swelling, visible on T2 and FLAIR
+- **Enhancing Tumor (Label 4)**: Active tumor regions with contrast enhancement
+- **Background (Label 0)**: Normal brain tissue and structures
+
+### Clinical Significance
+- Each region provides distinct diagnostic information
+- Multi-label segmentation guides treatment planning
+- Accurate delineation critical for monitoring tumor progression
 
 ---
 
-## Slide 6: Why SegNet Architecture?
+## Slide 6: Why SegNet & Our Enhancements
 
-### SegNet Advantages
-✅ **Memory Efficient**: Stores only pooling indices (not full feature maps like U-Net)  
-✅ **Preserves Spatial Information**: Through index-based unpooling  
-✅ **Clinical Feasibility**: Lower GPU memory requirements  
+### Original SegNet Advantages
+- ✅ **Memory Efficient**: Stores only pooling indices (not full feature maps like U-Net)  
+- ✅ **Preserves Spatial Information**: Through index-based unpooling  
+- ✅ **Clinical Feasibility**: Lower GPU memory requirements  
+
+### Our Enhanced Architecture
+- **Input/Output**: (240, 240, 3) → (240, 240, 4) for direct multi-class prediction
+- **Balanced Size**: ~8.6M parameters (vs. 29M in VGG-style)
+- **Skip Connections**: Preserve fine spatial details for precise boundaries
+- **Modern Features**: BatchNorm & Dropout for robust training
+
+### Key Improvements
+- **Learned Upsampling**: Conv2DTranspose for sharper masks
+- **Multi-Class Native**: Direct BraTS label prediction {0,1,2,4}
+- **Standard Layers**: Easy to modify and extend
+- **Hybrid Approach**: Classical preprocessing + deep learning
 
 ### Our Enhancement
 - **Feature-based preprocessing** to compensate for architectural limitations
 - **RGB fusion approach** for multi-modal integration
 - **Classical + Deep Learning** hybrid methodology
-
 ---
 
 ## Slide 7: Classical Feature Detection Techniques
@@ -141,9 +170,9 @@ Goal: Accurate, efficient segmentation on standard hardware
 
 **Step 1**: Extract features from each MRI modality  
 **Step 2**: Create RGB-like representations:
-- **R Channel**: T1-CE (or T1-CE + Sobel)
-- **G Channel**: T2 (or T2 + Gabor) 
-- **B Channel**: FLAIR (or FLAIR + Laplacian)
+- **R Channel**: T1-CE 
+- **G Channel**: T2  
+- **B Channel**: FLAIR 
 
 **Step 3**: Feed enhanced RGB images to SegNet
 
@@ -156,12 +185,46 @@ Goal: Accurate, efficient segmentation on standard hardware
 
 ---
 
+## Slide 8b: Data Preprocessing Details
+
+### Image Resolution
+- **Native Resolution**: 240×240 pixels
+- **Preserved Original Size**: Avoid interpolation artifacts
+- **Architectural Alignment**: Matches SegNet's downsampling structure
+
+### Preprocessing Steps
+1. **Slice Selection**: 
+   - 10 largest tumor slices
+   - 10 smallest tumor slices
+   - 10 background slices
+2. **Channel Stacking**:
+   - Stack modalities as RGB
+   - Maintain original intensities
+3. **Normalization**:
+   - Scale to [0,1] range
+   - Per-channel normalization
+
+### Design Choices
+- **No Resizing**: Preserve anatomical fidelity
+- **No Additional Filtering**: Clean baseline for feature comparison
+- **Minimal Processing**: Reduce artifacts and distortion
+
+---
+
 ## Slide 9: Experimental Setup
 
-### Dataset: BraTS2020
-- **Training**: 369 patients
-- **Validation**: 125 patients  
-- **Subsampling strategy**: Balance tumor size variability
+### Dataset Construction
+- **Source**: BraTS2020 (369 total patients)
+- **Subsampled Dataset**: 900 carefully selected slices
+- **Selection Strategy**: Per patient
+  - 10 largest tumor slices
+  - 10 smallest tumor slices
+  - 10 background slices
+
+### Dataset Split
+- **Training**: 629 samples (70%)
+- **Validation**: 136 samples (15%)
+- **Test**: 135 samples (15%)
 
 ### Evaluation Metrics
 - **Dice Coefficient**: Overlap measure
@@ -332,3 +395,34 @@ Goal: Accurate, efficient segmentation on standard hardware
 - Additional visual results
 - Statistical significance tests
 - Architecture diagrams 
+
+---
+
+## Backup Slide: SegNet Architecture Key Terms
+
+### Semantic Segmentation
+- **Definition**: Pixel-wise classification of image regions
+- **Goal**: Each pixel assigned to a specific class (e.g., tumor types)
+- **Output**: Label map same size as input image
+
+### Encoder-Decoder Structure
+- **Encoder**: Extracts features through convolution & pooling
+  - Convolutional layers: Apply learned filters to detect patterns
+  - Max-pooling: Reduces spatial size, captures dominant features
+  - Pooling indices: Store locations of maximum values
+
+- **Decoder**: Reconstructs segmentation from features
+  - Conv2DTranspose: Learned upsampling for resolution recovery
+  - Unpooling: Uses stored indices to restore spatial information
+  - Skip connections: Preserve fine details from encoder
+
+### Key Components
+- **Filters**: Learnable patterns for feature detection (e.g., edges, textures)
+- **Feature Maps**: Results of applying filters to input/intermediate layers
+- **BatchNorm**: Stabilizes training by normalizing layer outputs
+- **Dropout**: Prevents overfitting by randomly deactivating neurons
+
+### Memory Efficiency
+- Traditional U-Net: Stores full feature maps (~8-12GB)
+- Our SegNet: Only stores pooling indices (~4-6GB)
+- Enables deployment on standard clinical hardware 

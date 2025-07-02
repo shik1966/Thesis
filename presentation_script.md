@@ -51,28 +51,42 @@ The key research questions I wanted to answer were: Can classical features impro
 
 ---
 
-## **Slide 5: Background - Brain Tumor Segmentation** (1.5 minutes)
+## **Slide 5: Background - Brain Tumor Segmentation** (2 minutes)
 **Script:**
-"For context, brain tumor segmentation uses multiple MRI modalities. T1-contrast enhanced highlights tumor boundaries, T2 shows tumor and edema regions, and FLAIR reveals edema by suppressing cerebrospinal fluid.
+"Let me explain the key components of brain tumor segmentation. We work with three complementary MRI modalities, each providing unique information. T1 with contrast enhancement, which we map to our red channel, highlights active tumor boundaries where the blood-brain barrier is compromised. T2, our green channel, shows the full extent of the tumor and surrounding edema due to its sensitivity to water content. FLAIR, mapped to blue, suppresses cerebrospinal fluid signal, making edema near the ventricles much clearer.
 
-We segment three critical regions: tumor core for solid tumor regions, peritumoral edema showing surrounding swelling, and enhancing tumor indicating active tumor regions. Each has different clinical significance for treatment planning."
+It's worth noting that while the BraTS dataset includes T1 modality, we excluded it based on my supervisor's clinical expertise, focusing on the most diagnostically relevant contrasts.
+
+We segment three distinct tumor regions, each with specific BraTS labels: Tumor Core, labeled as 1, includes both necrotic and non-enhancing tumor mass. Peritumoral Edema, label 2, represents surrounding tissue swelling, particularly visible on T2 and FLAIR. Enhancing Tumor, label 4, indicates active tumor regions that light up with contrast. Everything else is labeled as background, label 0.
+
+This multi-label approach is crucial because each region provides unique diagnostic information, guides treatment decisions, and helps monitor tumor progression over time."
 
 **Key Points:**
-- Explain why multiple modalities are needed
-- Connect to clinical relevance
+- Emphasize how each modality contributes unique information
+- Explain the T1 exclusion decision confidently
+- Connect labels to clinical significance
+- Highlight the importance of multi-label segmentation
 
 ---
 
-## **Slide 6: Why SegNet Architecture?** (2 minutes)
+## **Slide 6: Why SegNet & Our Enhancements** (3 minutes)
 **Script:**
-"I chose SegNet because it's uniquely memory-efficient. Unlike U-Net which stores full feature maps requiring 8-12 GB of GPU memory, SegNet only stores pooling indices and uses them for unpooling. This reduces memory requirements by about 50% while preserving spatial information.
+"I chose SegNet because it's uniquely memory-efficient. Unlike U-Net which stores full feature maps requiring 8-12 GB of GPU memory, SegNet only stores pooling indices and uses them for unpooling. This reduces memory requirements by about 50% while preserving spatial information. It is also more clinically feasible 
 
-However, SegNet can produce smoother segmentations than desired. My innovation was to enhance it with classical feature detection in the preprocessing stage, creating a hybrid approach that maintains efficiency while improving accuracy."
+However, SegNet can produce smoother segmentations than desired. My innovation was to enhance it with classical feature detection in the preprocessing stage, creating a hybrid approach that maintains efficiency while improving accuracy.
+
+Let me explain our specific enhancements in detail. We designed the network to take 240x240 three-channel inputs, preserving the native BraTS resolution without interpolation. The output directly produces four-class predictions, mapping to the BraTS labels {0,1,2,4} for background, tumor core, edema, and enhancing tumor.
+
+A critical design choice was the model size. At 8.6 million parameters, it's substantially lighter than VGG-style SegNets with 29 million parameters, yet more capable than simple binary variants. We added skip connections to preserve fine spatial details and implemented learned upsampling through Conv2DTranspose layers, which produces sharper segmentation masks compared to simple unpooling. For robustness, we incorporated modern features like BatchNorm and Dropout at each block.
+
+This hybrid design combines the best of both worlds - SegNet's memory efficiency with modern architectural improvements. It's practical for clinical deployment, handles multi-class prediction natively, and remains easy to modify thanks to standard Keras layers. Most importantly, it creates a foundation for our feature-enhanced preprocessing approach, bridging classical computer vision with deep learning."
 
 **Key Points:**
-- Clearly explain the architectural advantage
-- Justify your choice vs. alternatives
-- Introduce your innovation
+- Start with original SegNet advantages and limitations
+- Explain each enhancement's purpose
+- Emphasize practical clinical considerations
+- Connect to overall hybrid approach strategy
+- Show understanding of model scaling trade-offs
 
 ---
 
@@ -80,38 +94,57 @@ However, SegNet can produce smoother segmentations than desired. My innovation w
 **Script:**
 "I evaluated three classical methods: Sobel edge detection captures tumor boundaries and structural edges - exactly what we need for precise segmentation. Gabor texture analysis captures texture patterns in different orientations, which is effective for heterogeneous tumor regions. Laplacian-of-Gaussian detects blob-like structures and fine details, useful for identifying tumor cores.
 
-Each method provides complementary information that raw intensities alone cannot capture."
+Each method provides complementary information that raw intensities alone cannot capture. Sobel detects edges and boundaries crucial for tumor delineation. Gabor filters capture texture patterns at different orientations, important for heterogeneous tumor regions with varying internal structures. Laplacian-of-Gaussian detects blob-like structures and fine details, perfect for identifying tumor cores.
 
-**Key Points:**
-- Explain the rationale for each method
-- Emphasize complementary nature
-- Connect to specific segmentation challenges
+I chose these three because they represent different categories of feature detection - edge detection, texture analysis, and blob detection - and are well-established in medical image analysis. They complement each other and cover the main visual features radiologists look for.
+
+Finally, I combined all three methods to see what would happen when we integrate their complementary strengths - creating a comprehensive feature representation that leverages the synergistic effects of multiple classical techniques."
 
 ---
 
 ## **Slide 8: RGB Fusion Approach** (2 minutes)
 **Script:**
-"Here's my novel preprocessing pipeline: First, I extract features from each MRI modality. Then I create RGB-like representations by mapping T1-contrast enhanced to the red channel, T2 to green, and FLAIR to blue. For enhanced versions, I add the corresponding features - Sobel edges, Gabor textures, or Laplacian details.
+"Let me explain my preprocessing pipeline. First, I established a baseline by carefully mapping the MRI modalities to specific RGB channels. I assigned T1-contrast enhanced to red because enhancing tumors appear brightest in T1CE, making them naturally stand out. T2 went to the green channel as it provides excellent soft tissue contrast and edema visibility. FLAIR was mapped to blue, which works well for highlighting suppressed CSF signals and peripheral edema. This creates an intuitive visualization where active tumors appear reddish, edema shows in green-blue tones, and normal tissue maintains balanced intensity.
 
-I tested five approaches: raw intensity as baseline, then Sobel-enhanced, Gabor-enhanced, Laplacian-enhanced, and a combined approach integrating all three classical filters."
+Then, I systematically explored feature enhancement. For each modality, I applied Sobel filtering to enhance edge information, capturing sharp tumor boundaries. With Gabor filters, I extracted texture patterns at multiple scales and orientations, particularly effective for heterogeneous regions. The Laplacian-of-Gaussian operator helped detect both fine edges and blob-like structures characteristic of tumor cores. Finally, I developed a combined approach that integrated all three feature detectors to leverage their complementary strengths.
+
+In total, I evaluated five distinct approaches: raw intensity baseline, Sobel edge detection, Gabor texture analysis, Laplacian blob detection, and the combined feature stack. Each method was carefully tuned for medical imaging characteristics and evaluated using multiple performance metrics."
 
 **Key Points:**
-- Walk through the pipeline step by step
-- Emphasize the systematic evaluation approach
-- Highlight the novelty of the RGB fusion
+- Explain the rationale behind RGB channel mapping
+- Detail how each feature detector enhances specific tumor characteristics
+- Emphasize the systematic progression from simple to complex
+- Highlight the innovation of combining all three methods
+
+---
+
+## **Slide 8b: Data Preprocessing Details** (1.5 minutes)
+**Script:**
+"Let me explain the key preprocessing decisions in my pipeline. I chose to preserve the native 240×240 pixel resolution of the BraTS MRI slices, rather than resizing to 256×256. This decision was crucial for maintaining anatomical fidelity and avoiding interpolation artifacts. It also aligns perfectly with SegNet's downsampling structure, keeping our training efficient.
+
+For each patient, I carefully selected a balanced set of slices: 10 with the largest tumor areas to capture complex cases, 10 with the smallest tumors to ensure sensitivity to subtle abnormalities, and 10 background slices to train the model on healthy tissue. The modalities were stacked as RGB channels while maintaining their original intensities, with only minimal normalization to the [0,1] range applied per channel.
+
+These choices reflect a deliberate minimalist approach - avoiding unnecessary preprocessing steps that could introduce artifacts or distortions. This creates a clean baseline for evaluating our feature detection methods and ensures that any improvements we see are genuinely from our enhancement techniques rather than preprocessing artifacts."
+
+**Key Points:**
+- Justify the resolution choice
+- Explain the balanced sampling strategy
+- Emphasize minimal preprocessing philosophy
+- Connect to feature detection evaluation
 
 ---
 
 ## **Slide 9: Experimental Setup** (1.5 minutes)
 **Script:**
-"I used the BraTS2020 dataset with 369 training patients and 125 validation patients. My subsampling strategy balanced tumor size variability - selecting large tumor slices, small tumor slices, and background slices from each patient.
+"Starting with the complete BraTS2020 dataset of 369 patients, I constructed a balanced dataset of 900 total slices using a careful subsampling strategy. For each patient, I selected 10 slices with the largest tumor areas, 10 with the smallest nonzero tumor areas, and 10 background slices to ensure representation of all cases.
 
-I evaluated using standard metrics: Dice coefficient for overlap, IoU for intersection over union, and Hausdorff distance for boundary accuracy. Importantly, I used a dual evaluation policy - Full policy including all slices, and Simple policy with only tumor-containing slices, which gives more realistic clinical performance."
+This carefully curated dataset was then split into 629 training samples (70%), 136 validation samples (15%), and 135 test samples (15%), maintaining stratification across tumor sizes. For evaluation, I used standard metrics: Dice coefficient for overlap, IoU for intersection over union, and Hausdorff distance for boundary accuracy. Importantly, I employed a dual evaluation policy - Full policy including all slices, and Simple policy with only tumor-containing slices, which provides a more realistic assessment of clinical performance."
 
 **Key Points:**
-- Justify your experimental design
-- Explain why dual evaluation is important
-- Show you understand real-world vs. idealized metrics
+- Explain the balanced subsampling approach
+- Detail the precise dataset splits
+- Emphasize the importance of dual evaluation
+- Connect metrics to clinical relevance
 
 ---
 
@@ -213,6 +246,18 @@ A: "Feature extraction adds 2-3 seconds per case, but we save 50% GPU memory. Fo
 
 **Q: "Statistical significance?"**
 A: "I used standard BraTS evaluation protocols. While the improvements are modest, they're consistent and demonstrate the principle. Larger studies would be needed for clinical deployment."
+
+**Q: "Why did you choose these specific three classical methods for Slide 7?"**
+A: "I selected Sobel, Gabor, and Laplacian-of-Gaussian because they capture fundamentally different image properties that are clinically relevant. Sobel detects edges and boundaries, which are crucial for tumor delineation. Gabor filters capture texture patterns at different orientations, important for heterogeneous tumor regions that have varying internal structures. Laplacian-of-Gaussian detects blob-like structures and fine details, perfect for identifying tumor cores. These three methods complement each other and cover the main visual features radiologists look for."
+
+**Q: "Did you experiment with other classical feature detection methods?"**
+A: "I focused on these three because they represent different categories of feature detection - edge detection, texture analysis, and blob detection. I did consider methods like Harris corner detection and SIFT, but they're more suited for natural images rather than medical imaging. The methods I chose are well-established in medical image analysis and have proven effectiveness for MRI data."
+
+**Q: "How do you handle parameter tuning for the classical methods?"**
+A: "That's a great question and actually one of the limitations I acknowledge. For this study, I used standard parameters - Sobel with 3x3 kernels, Gabor with frequency 0.6 and orientation angles from 0° to 135°, and LoG with sigma 1.0. Ideally, these should be optimized for each dataset, which represents an opportunity for future work using automated parameter optimization techniques."
+
+**Q: "How do the classical features integrate with the original MRI intensity values?"**
+A: "The features are added to the corresponding intensity values in each channel before normalization. So for example, in the red channel, we have T1-contrast + Sobel edges, in green we have T2 + texture features, and in blue we have FLAIR + LoG features. This preserves the original anatomical information while enhancing structural details the CNN can learn from."
 
 ### **Timing Tips:**
 - Practice with a timer - aim for 18 minutes max

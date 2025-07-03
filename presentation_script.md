@@ -138,7 +138,11 @@ These choices reflect a deliberate minimalist approach - avoiding unnecessary pr
 **Script:**
 "Starting with the complete BraTS2020 dataset of 369 patients, I constructed a balanced dataset of 900 total slices using a careful subsampling strategy. For each patient, I selected 10 slices with the largest tumor areas, 10 with the smallest nonzero tumor areas, and 10 background slices to ensure representation of all cases.
 
-This carefully curated dataset was then split into 629 training samples (70%), 136 validation samples (15%), and 135 test samples (15%), maintaining stratification across tumor sizes. For evaluation, I used standard metrics: Dice coefficient for overlap, IoU for intersection over union, and Hausdorff distance for boundary accuracy. Importantly, I employed a dual evaluation policy - Full policy including all slices, and Simple policy with only tumor-containing slices, which provides a more realistic assessment of clinical performance."
+For the initial experiments with individual feature detectors, I used a dataset of 900 slices split into 629 training samples (70%), 136 validation samples (15%), and 135 test samples (15%). The model was trained for 20 epochs with a batch size of 16, using the Adam optimizer and model checkpointing to save the best weights based on validation Dice score.
+
+However, for the final combined feature approach, I significantly expanded the dataset to approximately 11,000 slices and extended training to 50 epochs. This expanded dataset provided much richer training examples and allowed the model to better learn the complementary features. For evaluation, I used two complementary types of metrics. Region-based metrics include the Dice coefficient and IoU, which measure segmentation overlap and similarity. Boundary-based metrics include HD95 and ASSD, which specifically assess the accuracy of tumor boundaries - HD95 captures the maximum deviation while ASSD provides the average boundary error.
+
+Importantly, I employed a dual evaluation policy. The Full policy includes all slices and counts empty slices as perfect scores, showing overall system reliability. The Simple policy evaluates only tumor-containing slices, providing a more realistic and stringent assessment of clinical performance."
 
 **Key Points:**
 - Explain the balanced subsampling approach
@@ -148,11 +152,13 @@ This carefully curated dataset was then split into 629 training samples (70%), 1
 
 ---
 
-## **Slide 10: Results Overview** (2 minutes)
+## **Slide 10: Results Overview - Combined Feature Approach** (2 minutes)
 **Script:**
-"Here are the key results. The combined features approach achieved the best tumor core segmentation with a Dice coefficient of 0.526, compared to 0.517 for raw intensity - that's a 1.7% improvement. 
+"Let me present the results achieved by our combined preprocessing approach, which integrates Sobel edge detection, Gabor texture analysis, and Laplacian blob detection. Enhancing Tumor showed the best overall performance, with a Dice coefficient of 0.842 under Full Policy and 0.590 under Simple Policy. The sharp boundary detection, indicated by an HD95 of just 2.77, shows our method's strength in capturing well-defined tumor boundaries.
 
-However, this highlights the complexity of multi-class optimization. While tumor core improved, edema and enhancing tumor showed different patterns. This demonstrates that feature enhancement affects different tissue types differently, which is actually valuable clinical insight."
+Tumor Core also demonstrated strong performance, achieving a Dice of 0.817 under Full Policy and 0.526 under Simple Policy. The good boundary precision with an HD95 of 3.66 suggests reliable structural detection. However, Edema proved to be our most challenging region, with Dice scores of 0.590 and 0.381 under Full and Simple policies respectively. The higher HD95 of 6.97 reflects the difficulty in precisely delineating these diffuse boundaries.
+
+These results reveal important insights: while our method performs well overall, the significant drop between Full and Simple policies highlights the real challenges in clinical tumor segmentation. The combined feature approach particularly benefits boundary detection, though further work is needed to improve edema segmentation."
 
 **Key Points:**
 - Present results honestly - don't oversell

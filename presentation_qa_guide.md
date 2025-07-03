@@ -352,6 +352,73 @@ This balanced approach prevents bias and improves generalization.
 
 ## Slide 9: Experimental Setup
 
+**If Asked**: "Can you explain the different evaluation metrics?" [Slide 9]
+```
+We use two types of complementary metrics:
+1. Region-Based Metrics:
+   - Dice: Measures overlap between prediction and ground truth
+   - IoU: Stricter measure of overlap (Intersection/Union)
+   Both assess overall segmentation quality
+
+2. Boundary-Based Metrics:
+   - HD95: 95th percentile of boundary distances
+   - ASSD: Average distance between boundaries
+   These specifically evaluate boundary precision
+
+This combination provides a comprehensive evaluation of both region accuracy and boundary precision.
+```
+
+**If Asked**: "How do ASSD and HD95 differ in evaluating boundaries?" [Slide 9]
+```
+These metrics capture different aspects of boundary accuracy:
+- HD95 (95th Hausdorff Distance):
+  * Measures maximum boundary deviation
+  * Sensitive to outliers and worst-case errors
+  * Important for safety-critical regions
+
+- ASSD (Average Symmetric Surface Distance):
+  * Measures average boundary error
+  * More stable, overall boundary assessment
+  * Better reflects typical performance
+
+Together they provide both worst-case and average-case boundary accuracy.
+```
+
+**If Asked**: "Why did you choose these specific training parameters?" [Slide 9]
+```
+The training setup was carefully designed:
+1. Initial Experiments (20 epochs):
+   - Quick convergence observed by epoch 15-20
+   - Validation Dice plateaued around 0.80
+   - Batch size 16 balanced memory and stability
+   - Adam optimizer for reliable convergence
+
+2. Combined Approach (50 epochs):
+   - Larger dataset required more training time
+   - More complex features to learn
+   - Better generalization achieved
+   - Still maintained efficient training time
+```
+
+**If Asked**: "Why expand the dataset for the combined approach?" [Slide 9]
+```
+The expansion to 11,000 slices was motivated by several factors:
+1. Feature Complexity:
+   - Combined features provide richer information
+   - More data needed to learn feature interactions
+   - Better coverage of tumor variations
+
+2. Model Stability:
+   - Larger dataset reduces overfitting
+   - More robust feature learning
+   - Better generalization to new cases
+
+3. Results:
+   - Smoother learning curves
+   - More consistent performance
+   - Better handling of challenging cases
+```
+
 **If Asked**: "Why did you choose this specific subsampling strategy?" [Slide 9]
 ```
 Starting with the full BraTS2020 dataset of 369 patients, our strategy was designed to ensure balanced representation:

@@ -182,11 +182,32 @@ Looking at our prediction examples, we can see both strengths and limitations. L
 For Slide 10d - Data Samples & Next Steps:
 Our dataset split of 629 training, 136 validation, and 135 test samples provided good coverage of tumor variations. The fuzzy predictions suggested the model needs help identifying tissue boundaries, leading us to explore edge detection techniques next."
 
-**Key Points:**
-- Emphasize the strong baseline but clear limitations
-- Highlight the gap between Full and Simple policies
-- Use visual examples to illustrate challenges
-- Set up the motivation for edge detection
+## Slide 10a: Raw Intensity Baseline Training Performance
+
+> “Let me start by showing the training performance of our SegNet model using raw MRI intensities, without any feature engineering or preprocessing.
+>
+> As you can see from the training history, the Dice coefficient started quite low, around 0.2, but improved steadily throughout the 20 epochs. By the end of training, both the training and validation Dice coefficients reached about 0.8, and—importantly—these curves tracked each other closely. This close tracking is a strong indicator of good generalization, meaning the model isn't just memorizing the training data, but is actually learning patterns that transfer well to new, unseen cases.
+>
+> If we look at the accuracy and loss curves, we see that both training and validation accuracy rapidly climbed above 99% within just a few epochs, and the loss dropped sharply before stabilizing. This tells us that the model is learning efficiently from the raw MRI signals, which in our case are the T1ce, T2, and FLAIR modalities mapped to RGB channels.
+>
+> The key takeaway here is that even without any explicit feature extraction, SegNet is able to extract and utilize relevant patterns from the original MRI data for four-class brain tumor segmentation. However, as we'll see in the next part of the slide, high accuracy doesn't always mean high-quality segmentation—especially when it comes to the more challenging tumor regions.”
+
+## Slide 10a: Explaining the Four Metric Boxes
+
+Box 1: Dice Coefficient (Overlap Similarity)
+> “In the first box, we see the Dice coefficient, which measures how well our predicted tumor regions overlap with the ground truth. Under the Full Policy, the scores look strong across all tumor types, but when we switch to the Simple Policy—focusing only on slices that actually contain tumors—there's a dramatic drop. This highlights that the model performs well on easy, empty slices, but real tumor segmentation is much more challenging. Among the classes, enhancing tumor is segmented best, while edema remains the most difficult. This gap between policies really shows the importance of evaluating on clinically relevant cases.”
+
+Box 2: IoU (Intersection over Union)
+> “The second box shows the IoU, a stricter measure of overlap than Dice. Here, the drop from Full to Simple Policy is even more pronounced, especially for the harder classes. IoU is more sensitive to small errors at the boundaries, so these results reveal that our model's segmentations are often not as precise as they appear under the Full Policy. This underlines the need for better boundary delineation, especially for challenging tumor regions.”
+
+Box 3: HD95 (95th Percentile Hausdorff Distance)
+> “The third box presents the HD95, which measures the worst-case boundary error. Under the Full Policy, the errors seem low, but this is mostly due to the large number of empty slices. When we look at the Simple Policy, boundary errors increase significantly, especially for edema. This means that, in the most difficult cases, our model can be off by a considerable margin—something that's critical for surgical planning, where precise boundaries are essential.”
+
+Box 4: ASSD (Average Symmetric Surface Distance)
+> “Finally, the fourth box shows the ASSD, which reflects the average boundary error. Again, we see that errors are much lower under the Full Policy, but nearly double when we focus on tumor-containing slices. This consistent increase across all tumor types tells us that, in realistic clinical scenarios, our model's average boundary accuracy is a real limitation. It's a reminder that average performance can mask important challenges in the most relevant cases.”
+
+Transition/Wrap-up:
+> “So, across all four metrics, the key takeaway is that while our model performs well on the overall dataset, the real challenge—and the real test of clinical utility—comes when we focus on the cases that matter most: those with actual tumors. This is why we emphasize the Simple Policy results in our evaluation.”
 
 ## **Slides 11a-d: Sobel Edge Detection Results** (2.5 minutes)
 **Script:**

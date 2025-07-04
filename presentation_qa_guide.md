@@ -542,6 +542,38 @@ The baseline results revealed important clinical considerations:
 These findings guided our subsequent feature enhancement strategies.
 ```
 
+## Slide 10a: Metric Boxes (Dice, IoU, HD95, ASSD)
+
+**If Asked**: "Why do the metrics look so much better under Full Policy than Simple Policy?"
+```
+Full Policy includes many empty/background slices, which are easy to segment and inflate the scores. Simple Policy focuses only on tumor-containing slices, revealing the true challenge of accurate tumor segmentation. The drop in all metrics under Simple Policy shows that real clinical cases are much harder for the model.
+```
+
+**If Asked**: "What does the Dice coefficient tell us in this context?"
+```
+Dice measures the overlap between predicted and true tumor regions. High Dice under Full Policy means the model is good at identifying background, but the lower Dice under Simple Policy shows that actual tumor segmentation is much more difficult, especially for edema.
+```
+
+**If Asked**: "Why is IoU lower than Dice, and why does it drop more?"
+```
+IoU is a stricter metric than Dice, penalizing small errors at the boundaries more heavily. The larger drop from Full to Simple Policy in IoU highlights that the model's segmentations are less precise than they appear when evaluated on all slices.
+```
+
+**If Asked**: "What do the HD95 and ASSD metrics mean for clinical practice?"
+```
+HD95 measures the worst-case boundary error, and ASSD measures the average boundary error. Under Full Policy, these errors look small, but under Simple Policy, they increase significantly—especially for edema. This means that in real tumor cases, the model's boundaries can be off by several millimeters, which is critical for surgical planning and treatment.
+```
+
+**If Asked**: "Which tumor type is hardest to segment and why?"
+```
+Edema is consistently the hardest to segment across all metrics. Its boundaries are diffuse and irregular, making it difficult for the model to distinguish from normal tissue. This is reflected in the lower Dice and IoU, and higher HD95 and ASSD for edema compared to other tumor types.
+```
+
+**If Asked**: "What is the main takeaway from comparing Full and Simple Policy?"
+```
+The main takeaway is that metrics can be misleading if we don't focus on clinically relevant cases. Full Policy overestimates performance by including easy, empty slices. Simple Policy gives a more honest assessment of the model's true clinical utility.
+```
+
 ## Slide 11: Sobel Edge Detection Results
 
 **If Asked**: "Why did Sobel filtering perform worse than raw intensities?"

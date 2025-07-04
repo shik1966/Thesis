@@ -279,6 +279,9 @@ Assess clinical efficiency and feasibility
 
 ### Test Set Metrics: Full vs Simple Policy Analysis
 
+
+Part 1
+
 **Box 1: Dice Coefficient (Overlap Similarity)**
 - **Full Policy**: Strong performance across all classes (0.63-0.87)
 - **Simple Policy**: Dramatic drops reveal true challenge (0.42-0.66)
@@ -302,6 +305,20 @@ Assess clinical efficiency and feasibility
 - **Simple Policy**: Increased errors (2.48-4.55 voxels) reveal typical boundary issues
 - **Key Insight**: Average boundary deviation doubles under realistic conditions
 - **Clinical Reality**: Consistent boundary inaccuracy across tumor types
+
+
+Part 2
+
+**Box 1: Precision, Recall, and Specificity**
+- **Precision**: Highest for Tumor Core, meaning its positive predictions are most reliable, but it also has the lowest recall—so it misses more true tumor pixels. Enhancing Tumor achieves the best recall, detecting most of the actual tumor, while Edema lags behind in both precision and recall. All classes have very high specificity, reflecting the dominance of background pixels in the images.
+- **Interpretation**: High precision means few false alarms, high recall means few missed tumors, and high specificity means the model rarely mistakes healthy tissue for tumor. The trade-off between precision and recall is especially clear for Tumor Core (conservative but under-sensitive) and Edema (hardest to segment overall).
+
+**Box 2: Truth Values (TP, FP, FN, TN)**
+- **True Positives (TP)**: Edema has the highest count, followed by Enhancing Tumor and Tumor Core, reflecting their prevalence in the dataset.
+- **False Positives (FP)**: Edema also has the highest FP, indicating more over-segmentation, while Tumor Core is more conservative.
+- **False Negatives (FN)**: Edema again leads, showing the model's difficulty in detecting all true tumor pixels, especially for diffuse regions.
+- **True Negatives (TN)**: Extremely high for all classes due to the large amount of background in brain MRIs.
+- **Interpretation**: Edema is the most challenging class, with the highest FP and FN per slice and lower precision/recall. Enhancing Tumor is detected most completely (best recall), while Tumor Core is detected most reliably when predicted (best precision), but is often missed. Overall, the model captures major tumor structures but struggles with subtle or diffuse regions, especially Edema.
 
 ### Key Observations
 ✅ Direct learning from original MRI modalities successful  

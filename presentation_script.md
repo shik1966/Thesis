@@ -152,35 +152,147 @@ Importantly, I employed a dual evaluation policy. The Full policy includes all s
 
 ---
 
-## **Slide 10: Results Overview - Combined Feature Approach** (2 minutes)
+## **Slides 10a-d: Raw Intensity Results** (2.5 minutes)
 **Script:**
-"Let me present the results achieved by our combined preprocessing approach, which integrates Sobel edge detection, Gabor texture analysis, and Laplacian blob detection. Enhancing Tumor showed the best overall performance, with a Dice coefficient of 0.842 under Full Policy and 0.590 under Simple Policy. The sharp boundary detection, indicated by an HD95 of just 2.77, shows our method's strength in capturing well-defined tumor boundaries.
+"Let me walk you through our baseline results using raw MRI intensities without any preprocessing.
 
-Tumor Core also demonstrated strong performance, achieving a Dice of 0.817 under Full Policy and 0.526 under Simple Policy. The good boundary precision with an HD95 of 3.66 suggests reliable structural detection. However, Edema proved to be our most challenging region, with Dice scores of 0.590 and 0.381 under Full and Simple policies respectively. The higher HD95 of 6.97 reflects the difficulty in precisely delineating these diffuse boundaries.
+For Slide 10a - Training Performance:
+The training history reveals three distinct phases. We saw rapid improvement in the first 8 epochs, with Dice coefficient rising from 0.20 to 0.67. This was followed by steady refinement, reaching a plateau around 0.80. Most importantly, our validation Dice stabilized at 0.799, with close tracking between training and validation curves indicating good generalization.
 
-These results reveal important insights: while our method performs well overall, the significant drop between Full and Simple policies highlights the real challenges in clinical tumor segmentation. The combined feature approach particularly benefits boundary detection, though further work is needed to improve edema segmentation."
+For Slide 10b - Test Set Metrics:
+Under Full Policy, which includes empty slices, we achieved strong results: Tumor Core Dice of 0.835, Edema 0.634, and Enhancing Tumor 0.873. However, the Simple Policy, excluding empty slices, revealed the true challenge - with Dice scores dropping by 38-34% across all classes.
+
+Let me explain the pixel-level analysis, which gives us deeper insights. Looking at True Positives - the pixels we correctly identified as tumor - Edema had the highest count at 43,447, followed by Enhancing Tumor at 14,422 and Tumor Core at 7,907. These numbers reflect the relative sizes of these tumor regions in our dataset.
+
+For False Positives - where we incorrectly labeled healthy tissue as tumor - Edema again showed the highest count at 18,589. This translates to about 138 false positive pixels per slice on average, indicating the model tends to over-segment edema regions. In contrast, Tumor Core had only 14 false positives per slice, showing more conservative predictions.
+
+False Negatives - actual tumor pixels we missed - were also highest for Edema at 14,965 total, or about 111 per slice. This means we're missing significant portions of edema regions. Tumor Core had 47 false negatives per slice, explaining its low recall of 0.555.
+
+The precision values tell us how reliable our positive predictions are. Tumor Core achieved the highest precision at 0.805, meaning when we predict tumor core, we're correct 80.5% of the time. Edema's lower precision of 0.700 reflects its tendency to over-segment.
+
+Recall, or sensitivity, measures how well we detect actual tumor pixels. Enhancing Tumor performed best with 0.837 recall, detecting 83.7% of true enhancing tumor pixels. Tumor Core's low recall of 0.555 means we're missing almost half of the actual tumor core regions.
+
+Specificity was extremely high across all classes - above 0.997 - which simply reflects that we correctly identify most background pixels. With millions of background pixels, even small error rates translate to the false positive counts we see.
+
+These pixel-level metrics reveal that while our baseline performs reasonably well overall, it struggles with precise boundary delineation, particularly for the diffuse edema regions. This motivated our exploration of edge detection techniques."
+
+For Slide 10c - Qualitative Analysis:
+Looking at our prediction examples, we can see both strengths and limitations. Large tumors are generally captured but with over-segmentation. Small lesions are frequently missed or misidentified. The boundary precision is notably fuzzy, with imprecise edges.
+
+For Slide 10d - Data Samples & Next Steps:
+Our dataset split of 629 training, 136 validation, and 135 test samples provided good coverage of tumor variations. The fuzzy predictions suggested the model needs help identifying tissue boundaries, leading us to explore edge detection techniques next."
 
 **Key Points:**
-- Present results honestly - don't oversell
-- Acknowledge complexity
-- Frame challenges as insights, not failures
+- Emphasize the strong baseline but clear limitations
+- Highlight the gap between Full and Simple policies
+- Use visual examples to illustrate challenges
+- Set up the motivation for edge detection
+
+## **Slides 11a-d: Sobel Edge Detection Results** (2.5 minutes)
+**Script:**
+"Moving to our first feature enhancement approach using Sobel edge detection.
+
+For Slide 11a - Implementation & Training:
+We implemented Sobel filtering to enhance boundary information, computing gradient magnitude in both x and y directions. Training showed steady improvement but with more fluctuations than the baseline.
+
+For Slide 11b - Test Performance:
+The results were surprising - while precision remained high at 0.806 for tumor core, recall actually decreased to 0.433 compared to raw intensity's 0.555. This suggested that pure edge enhancement might be removing important contextual information.
+
+Looking at the pixel-level analysis reveals why Sobel struggled. For True Positives, we saw fewer correctly identified pixels: Edema at 39,450, Enhancing Tumor at 12,192, and Tumor Core at only 6,166. The edge filtering was making the model more conservative in its predictions.
+
+False Positives decreased for Tumor Core to just 11 per slice, showing the model became very cautious about predicting tumor core. However, Edema still had 117 false positives per slice, indicating persistent over-segmentation issues. The precision improvement for Tumor Core (0.806) came at the cost of missing many actual tumor pixels.
+
+False Negatives increased dramatically - Tumor Core had 60 false negatives per slice compared to 47 with raw intensities. This explains the recall drop from 0.555 to 0.433. We were missing even more actual tumor tissue than before.
+
+The high specificity (>0.998) remained excellent, but the precision-recall trade-off was unfavorable. While we reduced false alarms, we were missing too much actual tumor tissue. This suggested that edge information alone was insufficient for robust segmentation.
+
+For Slide 11c - Qualitative Results:
+The visual examples show clearer anatomical boundaries, but this didn't translate to better segmentation. Examples 1, 2, and 4 demonstrate improved edge definition but also reveal a tendency toward under-segmentation.
+
+For Slide 11d - Critical Learning:
+This experiment taught us that while edge information was valuable, it wasn't sufficient by itself. We needed to capture more complex tissue characteristics, leading us to explore texture analysis through Gabor filtering."
+
+## **Slides 12a-d: Gabor Results** (2.5 minutes)
+**Script:**
+"Our next approach leveraged Gabor filters for texture analysis.
+
+For Slide 12a - Implementation & Training:
+We designed a multi-scale, multi-orientation Gabor filter bank to capture texture patterns. However, training showed higher fluctuations and lower overall performance, with validation Dice only reaching about 0.70.
+
+For Slide 12b - Performance Decline:
+The results were concerning - tumor core Dice plummeted to 0.209 under Simple Policy, a 59% decrease from baseline. We saw severe over-segmentation with 112.4 false positives per slice for enhancing tumor.
+
+The pixel-level metrics revealed the extent of Gabor's problems. True Positives dropped dramatically: Tumor Core to just 4,806, Edema to 26,245, and Enhancing Tumor to 10,033. The complex texture features were confusing the model's ability to make confident predictions.
+
+False Positives skyrocketed across all classes. Enhancing Tumor had 112 false positives per slice - nearly triple the raw intensity baseline. Tumor Core had 54 per slice, and Edema had 92 per slice. The model was seeing tumor patterns everywhere due to the rich texture representations.
+
+False Negatives were equally problematic. Tumor Core had 70 false negatives per slice, meaning we were missing large portions of actual tumor tissue. Edema had a staggering 238 false negatives per slice - more than double the baseline.
+
+Precision collapsed across all classes: Tumor Core fell to 0.398, Enhancing Tumor to 0.398, while only Edema maintained reasonable precision at 0.678. Recall was similarly poor except for Enhancing Tumor at 0.582. The complex Gabor features created too much noise for effective decision-making.
+
+For Slide 12c - Qualitative Analysis:
+The predictions show clear problems - complete misses of small lesions, severe under-segmentation, and fragmentary predictions. Only the true negatives remained reliable.
+
+For Slide 12d - Critical Learning:
+This experiment revealed a crucial insight: more complex features aren't always better. The rich, multi-dimensional Gabor features may have introduced too much complexity for the model to learn effectively."
+
+## **Slides 13a-d: Laplacian Results** (2.5 minutes)
+**Script:**
+"Learning from previous attempts, we turned to Laplacian-of-Gaussian filtering.
+
+For Slide 13a - Multi-Scale Implementation:
+We implemented LoG filtering at multiple scales to capture both edge and blob-like structures. Training showed more stability than Gabor, with validation Dice reaching 0.71.
+
+For Slide 13b - Performance Recovery:
+Results showed significant improvement - tumor core precision reached 0.777, the highest among all methods. However, edema remained challenging with 203.7 false positives per slice.
+
+The pixel-level analysis showed Laplacian's balanced approach. True Positives improved over Gabor: Tumor Core at 5,667, Edema at 38,600, and Enhancing Tumor at 12,780. The second-derivative features provided better structural information than pure texture analysis.
+
+False Positives showed mixed results. Tumor Core achieved excellent control at just 12 per slice - the best of any method. However, Edema spiked to 204 false positives per slice, indicating the blob detection was triggering on normal tissue variations. Enhancing Tumor had 62 per slice, moderate but manageable.
+
+False Negatives remained concerning for Tumor Core at 64 per slice, explaining the low recall of 0.398. Edema had 147 false negatives per slice, and Enhancing Tumor had 33 per slice. The conservative nature of LoG filtering was missing subtle tumor regions.
+
+The precision-recall balance showed Laplacian's strength in avoiding false alarms (highest precision for Tumor Core at 0.777) but weakness in comprehensive detection. This suggested that while LoG features were valuable, they needed to be combined with other approaches for optimal performance.
+
+For Slide 13c - Qualitative Validation:
+The predictions show better structural capture and more stable performance than Gabor, though some boundary smoothing and detail loss remained evident.
+
+For Slide 13d - Strategic Integration:
+This experiment suggested we needed to combine the strengths of multiple approaches rather than relying on any single feature type."
+
+## **Slides 14a-d: Combined Results** (2.5 minutes)
+**Script:**
+"Finally, let me present our combined feature detection approach.
+
+For Slide 14a - Integration Strategy:
+We integrated Sobel, Laplacian, and Gabor features while expanding our dataset to 11,000 slices. This provided both richer features and more robust training examples.
+
+For Slide 14b - Optimal Performance:
+The results validated our approach - enhancing tumor achieved a Dice of 0.843, with better precision-recall balance (0.757/0.716) than any individual method.
+
+The pixel-level analysis demonstrated the power of feature integration. True Positives increased substantially: Tumor Core to 260,079, Edema to 612,185, and Enhancing Tumor to 284,888. The expanded dataset and combined features enabled much more confident tumor detection.
+
+False Positives showed the benefits of feature moderation. Tumor Core had 80 per slice - higher than Laplacian alone but with much better recall. Edema had 149 per slice, improved from Laplacian's 204. Enhancing Tumor achieved excellent control at 55 per slice while maintaining strong detection.
+
+False Negatives demonstrated the improved sensitivity. Tumor Core had 74 per slice, achieving the best precision-recall balance of any method. Edema had 177 per slice, and Enhancing Tumor had 68 per slice. The combined features helped the model detect subtle tumor patterns while avoiding false alarms.
+
+The final precision-recall metrics showed optimal balance: Tumor Core (0.661/0.679), Edema (0.712/0.676), and Enhancing Tumor (0.757/0.716). Each feature type moderated the others' weaknesses - Sobel's edges prevented Gabor's over-sensitivity, Gabor's textures enriched Sobel's simplicity, and Laplacian provided balanced intermediate detection.
+
+For Slide 14c - Qualitative Success:
+Examples 2-5 demonstrate accurate segmentation of complex tumor structures with improved boundary definition. However, Example 6 reminds us that small lesion detection remains challenging.
+
+For Slide 14d - Research Journey:
+This final experiment proved that thoughtful feature engineering, combined with adequate data scale, can significantly enhance deep learning performance. The 33% improvement in Simple Policy tumor core Dice validates our hybrid approach."
+
+**Key Points:**
+- Emphasize the progression of understanding
+- Highlight how each method informed the next
+- Use specific metrics to demonstrate improvements
+- Connect to broader implications for medical imaging
 
 ---
 
-## **Slide 11-13: Individual Results** (3 minutes total)
-**Script:**
-"Let me show you some visual results. The baseline raw intensity approach shows the limitations - smoother boundaries and missed fine details. The combined features approach shows sharper boundaries and better detail preservation.
-
-Each individual method contributed differently: Sobel excelled at boundary delineation, Gabor captured texture patterns effectively, and Laplacian highlighted fine structural details. The synergistic effect of combining all three created the most comprehensive feature representation."
-
-**Key Points:**
-- Use visuals to support your claims
-- Explain what the audience is seeing
-- Connect back to your methodology rationale
-
----
-
-## **Slide 14: Computational Efficiency** (1.5 minutes)
+## **Slide 15: Computational Efficiency** (1.5 minutes)
 **Script:**
 "Critically for clinical deployment, we maintained computational efficiency. Our SegNet plus features approach uses only 4-6 GB of GPU memory compared to 8-12 GB for standard U-Net - a 50% reduction. Feature extraction adds only 2-3 seconds per case, which is acceptable for clinical workflow."
 
@@ -191,7 +303,7 @@ Each individual method contributed differently: Sobel excelled at boundary delin
 
 ---
 
-## **Slide 15: Key Contributions** (2 minutes)
+## **Slide 16: Key Contributions** (2 minutes)
 **Script:**
 "My main contributions are: First, a novel preprocessing pipeline that's the first systematic evaluation of classical features with SegNet. Second, comprehensive feature analysis validated on the standard BraTS dataset. Third, a clinically feasible solution that maintains memory efficiency. Fourth, demonstrated performance improvements with better boundary precision."
 
@@ -202,7 +314,7 @@ Each individual method contributed differently: Sobel excelled at boundary delin
 
 ---
 
-## **Slide 16-17: Limitations & Future Work** (2 minutes)
+## **Slide 17: Limitations & Future Work** (2 minutes)
 **Script:**
 "I acknowledge several limitations: the 2D slice-based approach could benefit from 3D volumetric processing, feature parameters required manual tuning, and I focused only on SegNet architecture.
 

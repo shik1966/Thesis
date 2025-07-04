@@ -78,8 +78,8 @@
 \newlabel{fig:no_preprocessing_train_sample_33}{{3.15}{71}{\textbf {Training Sample \#33.} \emph {Left:} Raw three-channel MRI composite shows intricate sulcal and ventricular anatomy. \emph {Right:} The mask highlights a large, irregular tumor involving both edema and enhancing regions}{figure.caption.18}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces \textbf  {Training Sample \#302.} \emph  {Left:} RGB input reveals strong T2/FLAIR hyperintensity at the lesion margins. \emph  {Right:} Ground truth delineates multiple sub-regions, illustrating the complexity the network must learn from raw data.}}{72}{figure.caption.19}\protected@file@percent }
 \newlabel{fig:no_preprocessing_train_sample_302}{{3.16}{72}{\textbf {Training Sample \#302.} \emph {Left:} RGB input reveals strong T2/FLAIR hyperintensity at the lesion margins. \emph {Right:} Ground truth delineates multiple sub-regions, illustrating the complexity the network must learn from raw data}{figure.caption.19}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces \textbf  {Validation Sample \#113.} \emph  {Left:} Composite intensities preserve fine gyral patterns. \emph  {Right:} Mask shows spatially distinct tumor cores, testing the model’s ability to generalize to heterogeneous lesion geometries.}}{72}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:no_preprocessing_val_sample_113}{{3.17}{72}{\textbf {Validation Sample \#113.} \emph {Left:} Composite intensities preserve fine gyral patterns. \emph {Right:} Mask shows spatially distinct tumor cores, testing the model’s ability to generalize to heterogeneous lesion geometries}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces \textbf  {Validation Sample \#113.} \emph  {Left:} Composite intensities preserve fine gyral patterns. \emph  {Right:} Mask shows spatially distinct tumor cores, testing the model's ability to generalize to heterogeneous lesion geometries.}}{72}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:no_preprocessing_val_sample_113}{{3.17}{72}{\textbf {Validation Sample \#113.} \emph {Left:} Composite intensities preserve fine gyral patterns. \emph {Right:} Mask shows spatially distinct tumor cores, testing the model's ability to generalize to heterogeneous lesion geometries}{figure.caption.20}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces \textbf  {Validation Sample \#64.} \emph  {Left:} Mostly background with clear boundary at the brain cortex. \emph  {Right:} Empty mask confirms correct identification of non-tumor slices, important for high specificity.}}{73}{figure.caption.21}\protected@file@percent }
 \newlabel{fig:no_preprocessing_val_sample_64}{{3.18}{73}{\textbf {Validation Sample \#64.} \emph {Left:} Mostly background with clear boundary at the brain cortex. \emph {Right:} Empty mask confirms correct identification of non-tumor slices, important for high specificity}{figure.caption.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces \textbf  {Test Sample \#122.} \emph  {Left:} Raw channels exhibit mixed contrast—some regions are bright in T1ce, others in FLAIR. \emph  {Right:} Single cohesive tumor region in the mask demonstrates that the challenges of variable intensity profiles must be learned from raw data.}}{73}{figure.caption.22}\protected@file@percent }
@@ -112,7 +112,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.30}{\ignorespaces \textbf  {Dice Coefficient for Each Tumor Subtype.} Dice scores are highest under the Full Policy, with values above 0.80 for \emph  {Tumor Core} and \emph  {Enhancing Tumor}. The Simple Policy results in reduced Dice, especially for \emph  {Edema} and \emph  {Tumor Core}, reflecting the challenge of segmenting these subtypes in non-empty slices.}}{82}{figure.caption.30}\protected@file@percent }
 \newlabel{fig:sobel_dice_comparison}{{3.30}{82}{\textbf {Dice Coefficient for Each Tumor Subtype.} Dice scores are highest under the Full Policy, with values above 0.80 for \emph {Tumor Core} and \emph {Enhancing Tumor}. The Simple Policy results in reduced Dice, especially for \emph {Edema} and \emph {Tumor Core}, reflecting the challenge of segmenting these subtypes in non-empty slices}{figure.caption.30}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Sobel-Pipeline Per-Class Pixel Metrics}{84}{subsection.3.4.4}\protected@file@percent }
-\newlabel{fig:sobel_pixel_metrics}{{\caption@xref {fig:sobel_pixel_metrics}{ on input line 1877}}{85}{Sobel-Pipeline Per-Class Pixel Metrics}{figure.caption.31}{}}
+\newlabel{fig:sobel_pixel_metrics}{{\caption@xref {fig:sobel_pixel_metrics}{ on input line 1873}}{85}{Sobel-Pipeline Per-Class Pixel Metrics}{figure.caption.31}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Sobel Qualitative Validation: Predicted vs. Ground Truth Masks}{86}{subsection.3.4.5}\protected@file@percent }
 \newlabel{sec:sobel_qualitative_validation}{{3.4.5}{86}{Sobel Qualitative Validation: Predicted vs. Ground Truth Masks}{subsection.3.4.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.31}{\ignorespaces \textbf  {Sobel Input, Ground Truth, and Predicted Mask – Example 1.} \newline  The left panel shows the three-channel Sobel-processed MRI slice (edge-enhanced). The middle panel displays the ground truth tumor segmentation mask, while the right panel shows the SegNet model's predicted segmentation. Here, the model accurately captures the core tumor regions and most of the edema, with some minor discrepancies around the margins. }}{87}{figure.caption.32}\protected@file@percent }
@@ -162,7 +162,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.49}{\ignorespaces  \textbf  {Gabor Test-Set Metrics for Each Tumor Subtype (Full vs. Simple Policy).} }}{100}{figure.caption.47}\protected@file@percent }
 \newlabel{fig:gabor_testset_metrics}{{3.49}{100}{\textbf {Gabor Test-Set Metrics for Each Tumor Subtype (Full vs. Simple Policy).}}{figure.caption.47}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Gabor-Pipeline Per-Class Pixel Metrics}{102}{subsection.3.5.4}\protected@file@percent }
-\newlabel{fig:gabor_pixel_metrics}{{\caption@xref {fig:gabor_pixel_metrics}{ on input line 2303}}{103}{Gabor-Pipeline Per-Class Pixel Metrics}{figure.caption.48}{}}
+\newlabel{fig:gabor_pixel_metrics}{{\caption@xref {fig:gabor_pixel_metrics}{ on input line 2299}}{103}{Gabor-Pipeline Per-Class Pixel Metrics}{figure.caption.48}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}Gabor Qualitative Validation: Predicted vs. Ground Truth Masks}{105}{subsection.3.5.5}\protected@file@percent }
 \newlabel{sec:gabor_qualitative_validation}{{3.5.5}{105}{Gabor Qualitative Validation: Predicted vs. Ground Truth Masks}{subsection.3.5.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.50}{\ignorespaces \textbf  {Gabor Input, Ground Truth, and Predicted Mask – Example 1.} \newline  \textbf  {Left:} The three-channel Gabor-processed MRI slice highlights orientation and texture features. \textbf  {Middle:} Ground truth mask for tumor segmentation. \textbf  {Right:} The model's predicted segmentation. This sample shows the model successfully localizing the main tumor region, though fine boundaries remain challenging.}}{105}{figure.caption.49}\protected@file@percent }
@@ -211,7 +211,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.68}{\ignorespaces  \textbf  {Laplacian Test-Set Metrics for Each Tumor Subtype (Full vs. Simple Policy).} }}{119}{figure.caption.64}\protected@file@percent }
 \newlabel{fig:laplacian_testset_metrics}{{3.68}{119}{\textbf {Laplacian Test-Set Metrics for Each Tumor Subtype (Full vs. Simple Policy).}}{figure.caption.64}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Laplacian-Pipeline Per-Class Pixel Metrics}{121}{subsection.3.6.4}\protected@file@percent }
-\newlabel{fig:laplacian_pixel_metrics}{{\caption@xref {fig:laplacian_pixel_metrics}{ on input line 2711}}{122}{Laplacian-Pipeline Per-Class Pixel Metrics}{figure.caption.65}{}}
+\newlabel{fig:laplacian_pixel_metrics}{{\caption@xref {fig:laplacian_pixel_metrics}{ on input line 2707}}{122}{Laplacian-Pipeline Per-Class Pixel Metrics}{figure.caption.65}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}Laplacian Qualitative Validation: Predicted vs. Ground Truth Masks}{124}{subsection.3.6.5}\protected@file@percent }
 \newlabel{sec:laplacian_qualitative_validation}{{3.6.5}{124}{Laplacian Qualitative Validation: Predicted vs. Ground Truth Masks}{subsection.3.6.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.69}{\ignorespaces \textbf  {Laplacian Input, Ground Truth, and Predicted Mask – Example 1.} \newline  \textbf  {Left:} The three-channel Laplacian-processed MRI slice, enhancing edge and blob structures across modalities. \textbf  {Middle:} Ground truth tumor mask. \textbf  {Right:} Predicted mask. The model successfully captures the general tumor region, but some under- or over-segmentation is visible at the boundaries.}}{124}{figure.caption.66}\protected@file@percent }
@@ -222,10 +222,10 @@
 \newlabel{fig:laplacian_pred_3}{{3.71}{125}{\textbf {Laplacian Input, Ground Truth, and Predicted Mask – Example 3.} \newline An example of a true negative slice: both ground truth and prediction are empty, demonstrating high model specificity and low false positive rate}{figure.caption.68}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.72}{\ignorespaces \textbf  {Laplacian Input, Ground Truth, and Predicted Mask – Example 4.} \newline  Here, the model does not predict the very small lesion marked in the ground truth, reflecting a tendency to miss subtle or tiny abnormalities in challenging cases.}}{126}{figure.caption.69}\protected@file@percent }
 \newlabel{fig:laplacian_pred_4}{{3.72}{126}{\textbf {Laplacian Input, Ground Truth, and Predicted Mask – Example 4.} \newline Here, the model does not predict the very small lesion marked in the ground truth, reflecting a tendency to miss subtle or tiny abnormalities in challenging cases}{figure.caption.69}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.73}{\ignorespaces \textbf  {Laplacian Input, Ground Truth, and Predicted Mask – Example 5.} \newline  In this case, the model accurately detects the main tumor regions but may undersegment the lesion’s periphery. The main tumor mass is well localized, supporting the benefit of Laplacian edge-based preprocessing for boundary detection.}}{126}{figure.caption.70}\protected@file@percent }
-\newlabel{fig:laplacian_pred_5}{{3.73}{126}{\textbf {Laplacian Input, Ground Truth, and Predicted Mask – Example 5.} \newline In this case, the model accurately detects the main tumor regions but may undersegment the lesion’s periphery. The main tumor mass is well localized, supporting the benefit of Laplacian edge-based preprocessing for boundary detection}{figure.caption.70}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.74}{\ignorespaces \textbf  {Laplacian Input, Ground Truth, and Predicted Mask – Example 6.} \newline  Another small lesion example: the model’s prediction closely matches the annotated tumor, though some discrepancies remain for the tiniest structures.}}{127}{figure.caption.71}\protected@file@percent }
-\newlabel{fig:laplacian_pred_6}{{3.74}{127}{\textbf {Laplacian Input, Ground Truth, and Predicted Mask – Example 6.} \newline Another small lesion example: the model’s prediction closely matches the annotated tumor, though some discrepancies remain for the tiniest structures}{figure.caption.71}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.73}{\ignorespaces \textbf  {Laplacian Input, Ground Truth, and Predicted Mask – Example 5.} \newline  In this case, the model accurately detects the main tumor regions but may undersegment the lesion's periphery. The main tumor mass is well localized, supporting the benefit of Laplacian edge-based preprocessing for boundary detection.}}{126}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:laplacian_pred_5}{{3.73}{126}{\textbf {Laplacian Input, Ground Truth, and Predicted Mask – Example 5.} \newline In this case, the model accurately detects the main tumor regions but may undersegment the lesion's periphery. The main tumor mass is well localized, supporting the benefit of Laplacian edge-based preprocessing for boundary detection}{figure.caption.70}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.74}{\ignorespaces \textbf  {Laplacian Input, Ground Truth, and Predicted Mask – Example 6.} \newline  Another small lesion example: the model's prediction closely matches the annotated tumor, though some discrepancies remain for the tiniest structures.}}{127}{figure.caption.71}\protected@file@percent }
+\newlabel{fig:laplacian_pred_6}{{3.74}{127}{\textbf {Laplacian Input, Ground Truth, and Predicted Mask – Example 6.} \newline Another small lesion example: the model's prediction closely matches the annotated tumor, though some discrepancies remain for the tiniest structures}{figure.caption.71}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}Laplacian Qualitative Validation: Random RGB Input and Segmentation Masks}{128}{subsection.3.6.6}\protected@file@percent }
 \newlabel{sec:laplacian_qualitative_split_samples}{{3.6.6}{128}{Laplacian Qualitative Validation: Random RGB Input and Segmentation Masks}{subsection.3.6.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.75}{\ignorespaces \textbf  {Training Sample \#32.} \newline  \textbf  {Left:} Laplacian-filtered RGB input (normalized, strong edge and boundary enhancement). \textbf  {Right:} Segmentation mask with a large, multi-region tumor—Laplacian filtering reveals subtle internal structures and delineates tumor boundaries.}}{128}{figure.caption.72}\protected@file@percent }
@@ -263,8 +263,8 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.88}{\ignorespaces \textbf  {Combined Features Sample 9.} Clear distinction between pathological and normal tissues due to multi-filter preprocessing.}}{140}{figure.caption.85}\protected@file@percent }
 \newlabel{fig:combined_sub9}{{3.88}{140}{\textbf {Combined Features Sample 9.} Clear distinction between pathological and normal tissues due to multi-filter preprocessing}{figure.caption.85}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Combined Training History: Accuracy, Loss, and Dice Coefficient}{141}{subsection.3.7.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.89}{\ignorespaces \textbf  {Combined Multiclass Dice Coefficient vs. Epoch.} The multiclass Dice coefficient curves illustrate steady improvement over epochs, with a notable spike in the final epoch. Initially, the model started from a low Dice value (around 0.24), progressively improving, and ultimately achieving a substantial increase to approximately 0.77 (training) and 0.72 (validation). This demonstrates that the expanded subsampling and combined preprocessing significantly enhance the model’s segmentation capability. The fluctuations observed are typical for challenging segmentation tasks, especially considering the complexity and variability of the dataset.}}{142}{figure.caption.86}\protected@file@percent }
-\newlabel{fig:combined_dice}{{3.89}{142}{\textbf {Combined Multiclass Dice Coefficient vs. Epoch.} The multiclass Dice coefficient curves illustrate steady improvement over epochs, with a notable spike in the final epoch. Initially, the model started from a low Dice value (around 0.24), progressively improving, and ultimately achieving a substantial increase to approximately 0.77 (training) and 0.72 (validation). This demonstrates that the expanded subsampling and combined preprocessing significantly enhance the model’s segmentation capability. The fluctuations observed are typical for challenging segmentation tasks, especially considering the complexity and variability of the dataset}{figure.caption.86}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.89}{\ignorespaces \textbf  {Combined Multiclass Dice Coefficient vs. Epoch.} The multiclass Dice coefficient curves illustrate steady improvement over epochs, with a notable spike in the final epoch. Initially, the model started from a low Dice value (around 0.24), progressively improving, and ultimately achieving a substantial increase to approximately 0.77 (training) and 0.72 (validation). This demonstrates that the expanded subsampling and combined preprocessing significantly enhance the model's segmentation capability. The fluctuations observed are typical for challenging segmentation tasks, especially considering the complexity and variability of the dataset.}}{142}{figure.caption.86}\protected@file@percent }
+\newlabel{fig:combined_dice}{{3.89}{142}{\textbf {Combined Multiclass Dice Coefficient vs. Epoch.} The multiclass Dice coefficient curves illustrate steady improvement over epochs, with a notable spike in the final epoch. Initially, the model started from a low Dice value (around 0.24), progressively improving, and ultimately achieving a substantial increase to approximately 0.77 (training) and 0.72 (validation). This demonstrates that the expanded subsampling and combined preprocessing significantly enhance the model's segmentation capability. The fluctuations observed are typical for challenging segmentation tasks, especially considering the complexity and variability of the dataset}{figure.caption.86}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.90}{\ignorespaces \textbf  {Combined Multiclass Accuracy and Loss vs. Epoch.} \emph  {Left:} Accuracy rapidly improved during initial epochs, stabilizing close to 99\% on both training and validation datasets, indicating effective learning and robust generalization despite minor fluctuations due to data complexity. \emph  {Right:} The loss curve sharply decreased over the initial epochs before settling at lower values, clearly showing that the model effectively converged. Validation loss initially fluctuated more significantly but ultimately converged to a stable, low value, aligning closely with training loss.}}{143}{figure.caption.87}\protected@file@percent }
 \newlabel{fig:combined_acc_loss}{{3.90}{143}{\textbf {Combined Multiclass Accuracy and Loss vs. Epoch.} \emph {Left:} Accuracy rapidly improved during initial epochs, stabilizing close to 99\% on both training and validation datasets, indicating effective learning and robust generalization despite minor fluctuations due to data complexity. \emph {Right:} The loss curve sharply decreased over the initial epochs before settling at lower values, clearly showing that the model effectively converged. Validation loss initially fluctuated more significantly but ultimately converged to a stable, low value, aligning closely with training loss}{figure.caption.87}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}Combined Feature Detectors Test‐Set Metrics (Full vs. Simple Policy)}{144}{subsection.3.7.4}\protected@file@percent }
@@ -307,44 +307,37 @@
 \newlabel{sec:combined_reflections}{{3.7.8}{158}{Reflections on Combined Results: The Power of Integration and Scale}{subsection.3.7.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.8}Research Findings Timeline: From Raw Intensities to Feature-Enhanced Segmentation}{159}{section.3.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.8.1}Overview}{159}{subsection.3.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{159}{subsection.3.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Initial Approach and Rationale}{159}{subsection.3.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{160}{subsection.3.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Initial Approach and Rationale}{160}{subsection.3.8.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Key Findings from Raw Intensity Experiments}{160}{subsection.3.8.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Training Performance}{160}{subsection.3.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Class-Specific Performance Disparities}{160}{subsection.3.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Critical Insight}{160}{subsection.3.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Comprehensive Performance Metrics}{160}{subsection.3.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Critical Insight}{161}{subsection.3.8.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.8.3}Stage 2: Sobel Edge Detection Enhancement}{161}{subsection.3.8.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Motivation for Sobel Filtering}{161}{subsection.3.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{161}{Item.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Performance Degradation}{161}{Item.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Precision-Recall Trade-offs}{161}{Item.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Critical Realization}{161}{Item.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Research Direction Adjustment}{162}{Item.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{161}{subsection.3.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Performance Degradation}{162}{subsection.3.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Critical Realization}{162}{subsection.3.8.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.8.4}Stage 3: Gabor Texture and Orientation Analysis}{162}{subsection.3.8.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Rationale for Gabor Filtering}{162}{subsection.3.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{162}{Item.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Severe Performance Degradation}{162}{Item.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Precision-Recall Imbalance}{163}{Item.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Critical Analysis and Lessons Learned}{163}{Item.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Over-Specialization Problem}{163}{Item.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Feature Complexity vs. Network Capacity}{163}{Item.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Need for Balanced Approach}{163}{Item.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{163}{subsection.3.8.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{163}{subsection.3.8.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{164}{Item.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Performance Recovery}{164}{Item.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Improved Precision-Recall Balance}{164}{Item.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Key Insights from Laplacian Success}{164}{Item.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Multi-scale Effectiveness}{164}{Item.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Second-derivative Advantage}{165}{Item.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Feature-Architecture Alignment}{165}{Item.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.6}Synthesis: Evolution of Understanding}{165}{subsection.3.8.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Progressive Insights Across Experiments}{165}{subsection.3.8.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Final Understanding and Implications}{165}{Item.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{163}{subsection.3.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Severe Performance Degradation}{163}{subsection.3.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Over-Specialization Problem}{163}{subsection.3.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{164}{subsection.3.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{164}{subsection.3.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{164}{subsection.3.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Performance Recovery}{165}{subsection.3.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.6}Stage 5: Combined Feature Detection Approach}{165}{subsection.3.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Motivation for Integration}{165}{subsection.3.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Combined Results: Synergistic Performance}{165}{subsection.3.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Optimal Balance Achievement}{166}{subsection.3.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.7}Synthesis: Evolution of Understanding}{166}{subsection.3.8.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Comparative Performance Analysis}{166}{subsection.3.8.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Key Insights and Implications}{167}{subsection.3.8.7}\protected@file@percent }
 \@setckpt{methodology}{
-\setcounter{page}{167}
+\setcounter{page}{168}
 \setcounter{equation}{0}
-\setcounter{enumi}{4}
+\setcounter{enumi}{5}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
@@ -353,7 +346,7 @@
 \setcounter{part}{0}
 \setcounter{chapter}{3}
 \setcounter{section}{8}
-\setcounter{subsection}{6}
+\setcounter{subsection}{7}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
@@ -362,9 +355,9 @@
 \setcounter{lstnumber}{91}
 \setcounter{parentequation}{0}
 \setcounter{section@level}{0}
-\setcounter{Item}{43}
+\setcounter{Item}{34}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{101}
+\setcounter{bookmark@seq@number}{102}
 \setcounter{float@type}{16}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}

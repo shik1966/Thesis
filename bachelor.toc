@@ -137,68 +137,61 @@
 \contentsline {subsection}{\numberline {3.7.8}Reflections on Combined Results: The Power of Integration and Scale}{158}{subsection.3.7.8}%
 \contentsline {section}{\numberline {3.8}Research Findings Timeline: From Raw Intensities to Feature-Enhanced Segmentation}{159}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}Overview}{159}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{159}{subsection.3.8.2}%
-\contentsline {subsubsection}{Initial Approach and Rationale}{159}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.2}Stage 1: Establishing the No-Preprocessing Baseline (Raw Intensities)}{160}{subsection.3.8.2}%
+\contentsline {subsubsection}{Initial Approach and Rationale}{160}{subsection.3.8.2}%
 \contentsline {subsubsection}{Key Findings from Raw Intensity Experiments}{160}{subsection.3.8.2}%
 \contentsline {paragraph}{Training Performance}{160}{subsection.3.8.2}%
-\contentsline {paragraph}{Class-Specific Performance Disparities}{160}{subsection.3.8.2}%
-\contentsline {paragraph}{Critical Insight}{160}{subsection.3.8.2}%
+\contentsline {paragraph}{Comprehensive Performance Metrics}{160}{subsection.3.8.2}%
+\contentsline {paragraph}{Critical Insight}{161}{subsection.3.8.2}%
 \contentsline {subsection}{\numberline {3.8.3}Stage 2: Sobel Edge Detection Enhancement}{161}{subsection.3.8.3}%
 \contentsline {subsubsection}{Motivation for Sobel Filtering}{161}{subsection.3.8.3}%
-\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{161}{Item.32}%
-\contentsline {paragraph}{Performance Degradation}{161}{Item.32}%
-\contentsline {paragraph}{Precision-Recall Trade-offs}{161}{Item.32}%
-\contentsline {paragraph}{Critical Realization}{161}{Item.32}%
-\contentsline {subsubsection}{Research Direction Adjustment}{162}{Item.32}%
+\contentsline {subsubsection}{Sobel Results and Unexpected Findings}{161}{subsection.3.8.3}%
+\contentsline {paragraph}{Performance Degradation}{162}{subsection.3.8.3}%
+\contentsline {paragraph}{Critical Realization}{162}{subsection.3.8.3}%
 \contentsline {subsection}{\numberline {3.8.4}Stage 3: Gabor Texture and Orientation Analysis}{162}{subsection.3.8.4}%
 \contentsline {subsubsection}{Rationale for Gabor Filtering}{162}{subsection.3.8.4}%
-\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{162}{Item.35}%
-\contentsline {paragraph}{Severe Performance Degradation}{162}{Item.35}%
-\contentsline {paragraph}{Precision-Recall Imbalance}{163}{Item.35}%
-\contentsline {subsubsection}{Critical Analysis and Lessons Learned}{163}{Item.35}%
-\contentsline {paragraph}{Over-Specialization Problem}{163}{Item.35}%
-\contentsline {paragraph}{Feature Complexity vs. Network Capacity}{163}{Item.35}%
-\contentsline {paragraph}{Need for Balanced Approach}{163}{Item.35}%
-\contentsline {subsection}{\numberline {3.8.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{163}{subsection.3.8.5}%
-\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{163}{subsection.3.8.5}%
-\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{164}{Item.39}%
-\contentsline {paragraph}{Performance Recovery}{164}{Item.39}%
-\contentsline {paragraph}{Improved Precision-Recall Balance}{164}{Item.39}%
-\contentsline {subsubsection}{Key Insights from Laplacian Success}{164}{Item.39}%
-\contentsline {paragraph}{Multi-scale Effectiveness}{164}{Item.39}%
-\contentsline {paragraph}{Second-derivative Advantage}{165}{Item.39}%
-\contentsline {paragraph}{Feature-Architecture Alignment}{165}{Item.39}%
-\contentsline {subsection}{\numberline {3.8.6}Synthesis: Evolution of Understanding}{165}{subsection.3.8.6}%
-\contentsline {subsubsection}{Progressive Insights Across Experiments}{165}{subsection.3.8.6}%
-\contentsline {subsubsection}{Final Understanding and Implications}{165}{Item.43}%
-\contentsline {chapter}{\numberline {4}conclusion}{167}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Summary of Contributions}{167}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Technical Contributions}{167}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Empirical Contributions}{168}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Key Findings and Insights}{168}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Effectiveness of Classical Feature Detection}{168}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Complementary Nature of Different Features}{168}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Challenges in Multi-class Segmentation}{169}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Importance of Realistic Evaluation}{169}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Clinical Implications}{169}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Limitations and Challenges}{169}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Concluding Remarks}{170}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Future Work}{171}{chapter.5}%
-\contentsline {section}{\numberline {5.1}3D Contextual Information Integration}{171}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Advanced Feature Detection and Representation Learning}{172}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Modern Architecture Enhancements}{172}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Loss Function Engineering and Training Strategies}{173}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Data Augmentation and Synthesis Strategies}{173}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Post-Processing and Refinement Techniques}{174}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Multi-Modal Fusion Strategies}{174}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Clinical Translation and Validation}{174}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Methodological Advances}{175}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Domain-Specific Innovations}{175}{section.5.10}%
-\contentsline {section}{\numberline {5.11}Recommended Next Steps}{176}{section.5.11}%
-\contentsline {section}{\numberline {5.12}Long-term Vision}{176}{section.5.12}%
-\contentsline {section}{\numberline {5.13}Conclusion}{176}{section.5.13}%
-\contentsline {chapter}{Appendix}{178}{section*.103}%
-\contentsline {chapter}{\numberline {A}Lists}{179}{appendix.A}%
-\contentsline {section}{List of Abbreviations}{179}{section*.104}%
-\contentsline {section}{List of Figures}{193}{appendix*.105}%
-\contentsline {chapter}{References}{194}{appendix*.106}%
+\contentsline {subsubsection}{Gabor Results: A Concerning Decline}{163}{subsection.3.8.4}%
+\contentsline {paragraph}{Severe Performance Degradation}{163}{subsection.3.8.4}%
+\contentsline {paragraph}{Over-Specialization Problem}{163}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}Stage 4: Laplacian Multi-Scale Edge and Blob Detection}{164}{subsection.3.8.5}%
+\contentsline {subsubsection}{Strategic Pivot to Laplacian Filtering}{164}{subsection.3.8.5}%
+\contentsline {subsubsection}{Laplacian Results: Recovery and Optimization}{164}{subsection.3.8.5}%
+\contentsline {paragraph}{Performance Recovery}{165}{subsection.3.8.5}%
+\contentsline {subsection}{\numberline {3.8.6}Stage 5: Combined Feature Detection Approach}{165}{subsection.3.8.6}%
+\contentsline {subsubsection}{Motivation for Integration}{165}{subsection.3.8.6}%
+\contentsline {subsubsection}{Combined Results: Synergistic Performance}{165}{subsection.3.8.6}%
+\contentsline {paragraph}{Optimal Balance Achievement}{166}{subsection.3.8.6}%
+\contentsline {subsection}{\numberline {3.8.7}Synthesis: Evolution of Understanding}{166}{subsection.3.8.7}%
+\contentsline {subsubsection}{Comparative Performance Analysis}{166}{subsection.3.8.7}%
+\contentsline {subsubsection}{Key Insights and Implications}{167}{subsection.3.8.7}%
+\contentsline {chapter}{\numberline {4}conclusion}{168}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Summary of Contributions}{168}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Technical Contributions}{168}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Empirical Contributions}{169}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Key Findings and Insights}{169}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Effectiveness of Classical Feature Detection}{169}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Complementary Nature of Different Features}{169}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Challenges in Multi-class Segmentation}{170}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Importance of Realistic Evaluation}{170}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Clinical Implications}{170}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Limitations and Challenges}{170}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Concluding Remarks}{171}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Future Work}{172}{chapter.5}%
+\contentsline {section}{\numberline {5.1}3D Contextual Information Integration}{172}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Advanced Feature Detection and Representation Learning}{173}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Modern Architecture Enhancements}{173}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Loss Function Engineering and Training Strategies}{174}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Data Augmentation and Synthesis Strategies}{174}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Post-Processing and Refinement Techniques}{175}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Multi-Modal Fusion Strategies}{175}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Clinical Translation and Validation}{175}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Methodological Advances}{176}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Domain-Specific Innovations}{176}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Recommended Next Steps}{177}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Long-term Vision}{177}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Conclusion}{177}{section.5.13}%
+\contentsline {chapter}{Appendix}{179}{section*.103}%
+\contentsline {chapter}{\numberline {A}Lists}{180}{appendix.A}%
+\contentsline {section}{List of Abbreviations}{180}{section*.104}%
+\contentsline {section}{List of Figures}{194}{appendix*.105}%
+\contentsline {chapter}{References}{195}{appendix*.106}%

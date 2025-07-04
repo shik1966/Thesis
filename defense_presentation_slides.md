@@ -309,16 +309,26 @@ Part 1
 
 Part 2
 
+### Script for Pixel-Level Metrics (Part 2)
+
 **Box 1: Precision, Recall, and Specificity**
-- **Precision**: Highest for Tumor Core, meaning its positive predictions are most reliable, but it also has the lowest recall—so it misses more true tumor pixels. Enhancing Tumor achieves the best recall, detecting most of the actual tumor, while Edema lags behind in both precision and recall. All classes have very high specificity, reflecting the dominance of background pixels in the images.
-- **Interpretation**: High precision means few false alarms, high recall means few missed tumors, and high specificity means the model rarely mistakes healthy tissue for tumor. The trade-off between precision and recall is especially clear for Tumor Core (conservative but under-sensitive) and Edema (hardest to segment overall).
+> “In this box, we're looking at three important metrics that help us understand the model's behavior for each tumor class:
+>
+> - **Precision** tells us how often the model's positive predictions are actually correct. Here, Tumor Core stands out with the highest precision, meaning when the model predicts tumor core, it's usually right. However, it also has the lowest recall, so it misses more true tumor pixels.
+> - **Recall** (or sensitivity) measures how many of the actual tumor pixels the model successfully detects. Enhancing Tumor achieves the best recall, meaning it finds most of the actual tumor, while Edema lags behind in both precision and recall.
+> - **Specificity** shows how well the model avoids labeling healthy tissue as tumor. All classes have very high specificity, which reflects the dominance of background pixels in these images.
+>
+> The key takeaway is that high precision means few false alarms, high recall means few missed tumors, and high specificity means the model rarely mistakes healthy tissue for tumor. The trade-off between precision and recall is especially clear for Tumor Core, which is conservative but under-sensitive, and for Edema, which is the hardest to segment overall.”
 
 **Box 2: Truth Values (TP, FP, FN, TN)**
-- **True Positives (TP)**: Edema has the highest count, followed by Enhancing Tumor and Tumor Core, reflecting their prevalence in the dataset.
-- **False Positives (FP)**: Edema also has the highest FP, indicating more over-segmentation, while Tumor Core is more conservative.
-- **False Negatives (FN)**: Edema again leads, showing the model's difficulty in detecting all true tumor pixels, especially for diffuse regions.
-- **True Negatives (TN)**: Extremely high for all classes due to the large amount of background in brain MRIs.
-- **Interpretation**: Edema is the most challenging class, with the highest FP and FN per slice and lower precision/recall. Enhancing Tumor is detected most completely (best recall), while Tumor Core is detected most reliably when predicted (best precision), but is often missed. Overall, the model captures major tumor structures but struggles with subtle or diffuse regions, especially Edema.
+> “In the second box, we break down the raw counts of the model's predictions:
+>
+> - **True Positives (TP):** Edema has the highest count, followed by Enhancing Tumor and Tumor Core. This reflects their prevalence in the dataset.
+> - **False Positives (FP):** Edema also has the highest number of false positives, indicating more over-segmentation, while Tumor Core is more conservative.
+> - **False Negatives (FN):** Again, Edema leads, showing the model's difficulty in detecting all true tumor pixels, especially for these diffuse regions.
+> - **True Negatives (TN):** These are extremely high for all classes, simply because there's so much background in brain MRIs.
+>
+> The main interpretation is that Edema is the most challenging class, with the highest false positives and false negatives per slice, and lower precision and recall. Enhancing Tumor is detected most completely, while Tumor Core is detected most reliably when predicted, but is often missed. Overall, the model captures major tumor structures but still struggles with subtle or diffuse regions, especially Edema.”
 
 ### Key Observations
 ✅ Direct learning from original MRI modalities successful  
